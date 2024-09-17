@@ -17,6 +17,22 @@ Site Oficial do Visual Studio Code: https://code.visualstudio.com/<br>
 Site Oficial do Visual Studio Code Web: https://vscode.dev/<br>
 Link do Marketplace: https://marketplace.visualstudio.com/VSCode
 
+OBSERVAÇÃO IMPORTANTE: COMENTAR NO VÍDEO DO INSTALAÇÃO DO VSCODE SE VOCÊ CONSEGUIU FAZER A INSTALAÇÃO COM A SEGUINTE FRASE: Instalação do VSCODE Cisco realizado com sucesso!!! #BoraParaPrática
+
+#boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #cisco #infracisco #desafiovaamonde #desafioboraparapratica #desafiocisco #desafioinfracisco
+
+Conteúdo estudado nessa instalação:<br>
+#01_ Verificando as Informações do Sistema Operacional Linux Mint<br
+#02_ Atualização do Sistema Operacional Linux Mint<br>
+#03_ Instalando as Dependências do VSCode no Linux Mint<br>
+#04_ Baixando o Microsoft Visual Studio Code VSCode para o Linux<br>
+#05_ Instalando o VSCode utilizando o Gdebi-Gtk no Linux Mint<br>
+#06_ Verificando o novo repositório do VSCode no MintUpdate<br>
+#07_ Iniciando o VSCode no Linux Mint<br>
+#08_ Configurando o VSCode como Aplicativo de Preferência no Linux Mint<br>
+#09_ Instalando e Configurando as Principais Extensões do Cisco no VSCode<br>
+#10_ Configurações básicas do VSCode para funcionar perfeitamente no Linux Mint<br>
+
 O QUE É E PARA QUE SERVER O VSCODE: O Visual Studio Code é um editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS. Ele inclui suporte para depuração, controle de versionamento Git incorporado, realce de sintaxe, complementação inteligente de código, snippets e refatoração de código.
 
 #01_ Verificando as Informações do Sistema Operacional Linux Mint<br>
@@ -32,20 +48,20 @@ sudo cat /etc/lsb-release
 
 #modo gráfico para verificar as informações de sistema operacional e hardware
 Menu
-	Informações do Sistema
+  Informações do Sistema
 ```
 
 #02_ Atualização do Sistema Operacional Linux Mint<br>
 ```bash
 #atualizando o sistema operacional via MintUpdate (Recomendado)
-_ Atualização do sistema utilizando o MintUpdate;
-_ Atualização do sistema utilizando o Apt;
+A) Atualização do sistema utilizando o MintUpdate;
+B) Atualização do sistema utilizando o Apt;
 
 #atualizando o sistema operacional via Terminal
 #atalho para acessar o Terminal
 Terminal: Ctrl + Alt + T
 
-#recomendo utilizando o comando: apt - o comando: apt-get e considerado obsoleto
+#recomendo utilizando o comando: apt - o comando: apt-get é considerado obsoleto
 sudo apt update
 sudo apt upgrade
 sudo apt full-upgrade
@@ -55,13 +71,13 @@ sudo apt autoclean
 sudo apt clean
 ```
 
-#03_ Instalando as Dependências do Microsoft Visual Studio Code VSCode no Linux Mint<br>
+#03_ Instalando as Dependências do VSCode no Linux Mint<br>
 ```bash
 #instalando as dependências do VSCode no Linux Mint 22.x
 sudo apt install vim git python3 python3-pip cloc
 ```
 
-#04_ Baixando o Microsoft Visual Studio Code VSCode para o Linux Mint<br>
+#04_ Baixando o Microsoft Visual Studio Code VSCode para o Linux<br>
 ```bash
 #link de download oficial do VSCode
 Link de download: https://code.visualstudio.com/download
@@ -69,7 +85,7 @@ Link de download: https://code.visualstudio.com/download
     Salvar aquivo
 ```
 
-#05_ Instalando o Microsoft Visual Studio Code VSCode utilizando o Gdebi-Gtk no Linux Mint<br>
+#05_ Instalando o VSCode utilizando o Gdebi-Gtk no Linux Mint<br>
 ```bash
 #instalação em modo gráfico (indicado)
 Arquivos
@@ -79,23 +95,23 @@ Arquivos
     <Fechar>
 ```
 
-#06_ Verificando o novo repositório do Microsoft Visual Studio Code VSCode no MintUpdate<br>
+#06_ Verificando o novo repositório do VSCode no MintUpdate<br>
 ```bash
 #verificando o novo repositório no Linux Mint
 Menu
-	MintUpdate
-		Editar
-			Fontes de Programas
-				(Digite a senha do seu usuário)
-					Repositórios Adicionais
-						Habilitado: Microsoft / Stable - code
-					Chaves de Autenticação
-						Microsoft (Release signing)
-			<Fechar>
-	<Fechar>
+  MintUpdate
+    Editar
+      Fontes de Programas
+        (Digite a senha do seu usuário)
+          Repositórios Adicionais
+            Habilitado: Microsoft / Stable - code
+          Chaves de Autenticação
+            Microsoft (Release signing)
+      <Fechar>
+  <Fechar>
 ```
 
-#07_ Iniciando o Microsoft Visual Studio Code VSCode no Linux Mint<br>
+#07_ Iniciando o VSCode no Linux Mint<br>
 ```bash
 #iniciando o VSCode no Linux Mint
 Menu
@@ -106,7 +122,7 @@ Menu
       Disable: Mostrar página inicial na inicialização
 ```
 
-#08_ Configurando o Microsoft Visual Studio Code VSCode como Aplicativo de Preferência no Linux Mint<br>
+#08_ Configurando o VSCode como Aplicativo de Preferência no Linux Mint<br>
 ```bash
 #configuração básica do VSCode no Linux Mint
 Menu
@@ -116,7 +132,7 @@ Menu
       Código fonte: Visual Studio Code
 ```
 
-#09_ Instalando e Configurando as Principais Extensões Microsoft Visual Studio Code VSCode<br>
+#09_ Instalando e Configurando as Principais Extensões do Cisco no VSCode<br>
 ```bash
 #Instalação das Extensões Básicas do VSCode
 Portuguese (Brazil) Language Pack for Visual Studio Code
@@ -125,47 +141,47 @@ Portuguese (Brazil) Language Pack for Visual Studio Code
 #Configuração da Extensão Code Spell Checker
 Brazilian Portuguese - Code Spell Checker (Corretor Ortográfico de Código)
 Manter selecionado a extensão: Brazilian Portuguese - Code Spell Checker
-	Pressionar F1
-		Show Spell Checker Configuration Info
-			User
-				Language
-					English (en_us)
-					Portuguese (pt_br)
-					Portuguese - Brazil (pt-br)
-				File Types and Programming Languages
-					shellscript, python, markdown, etc...
+  Pressionar F1
+    Show Spell Checker Configuration Info
+      User
+        Language
+          English (en_us)
+          Portuguese (pt_br)
+          Portuguese - Brazil (pt-br)
+        File Types and Programming Languages
+          shellscript, python, markdown, etc...
 
 Code Spell Checker
-	(Sem necessidade de configuração)
+  (Sem necessidade de configuração)
 
 Cisco IOS Syntax
-	(Sem necessidade de configuração)
-	(Salvar o arquivo com a extensão: .ios)
+  (Sem necessidade de configuração)
+  (Salvar o arquivo com a extensão: .ios)
 
 Cisco IOS-XR Syntax
-	(Sem necessidade de configuração)
-	(Salvar o arquivo com a extensão: .xr)
+  (Sem necessidade de configuração)
+  (Salvar o arquivo com a extensão: .xr)
 
 Cisco Config Highlight
-	(Sem necessidade de configuração)
+  (Sem necessidade de configuração)
 ```
 
-#10_ Configurações básicas do Microsoft Visual Studio Code VSCode para funcionar perfeitamente no Linux Mint<br>
+#10_ Configurações básicas do VSCode para funcionar perfeitamente no Linux Mint<br>
 ```bash
 #Configurações Básicas de Produtividade do VSCode no Linux Mint
 Gerenciar
-	Configurações
-		Code Spell Checker
-			C Spell: Enabled Language Ids: 
-				Adicionar Item: shellscript
-			C Spell: Language: en,pt,pt-BR
-			C Spell: Max Duplicate Problems: 500000
-			C Spell: Max Number Of Problems: 500000
-		Editor
-			Editor: Tab Size: 4
-			Editor: Detect Indentation: False (Off)
-			Editor: Insert Spaces: False (On)
-			Render Whitespace: All
-		Files
-			Files: Eol: \n (LF)
+  Configurações
+    Code Spell Checker
+      C Spell: Enabled Language Ids: 
+        Adicionar Item: shellscript
+      C Spell: Language: en,pt,pt-BR
+      C Spell: Max Duplicate Problems: 500000
+      C Spell: Max Number Of Problems: 500000
+    Editor
+      Editor: Tab Size: 4
+      Editor: Detect Indentation: False (Off)
+      Editor: Insert Spaces: False (On)
+      Render Whitespace: All
+    Files
+      Files: Eol: \n (LF)
 ```
