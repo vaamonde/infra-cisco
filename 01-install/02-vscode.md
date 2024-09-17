@@ -13,14 +13,6 @@
 #Testado e homologado o Cisco Packet Tracer 8.2.x x64<br>
 #Testado e homologado o Microsoft Visual Studio Code VSCode no Linux Mint 22 Wilma<br>
 
-Site Oficial do Visual Studio Code: https://code.visualstudio.com/<br>
-Site Oficial do Visual Studio Code Web: https://vscode.dev/<br>
-Link do Marketplace: https://marketplace.visualstudio.com/VSCode
-
-OBSERVAÇÃO IMPORTANTE: COMENTAR NO VÍDEO DO INSTALAÇÃO DO VSCODE SE VOCÊ CONSEGUIU FAZER A INSTALAÇÃO COM A SEGUINTE FRASE: Instalação do VSCODE Cisco realizado com sucesso!!! #BoraParaPrática
-
-#boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #cisco #infracisco #desafiovaamonde #desafioboraparapratica #desafiocisco #desafioinfracisco
-
 Conteúdo estudado nessa instalação:<br>
 #01_ Verificando as Informações do Sistema Operacional Linux Mint<br
 #02_ Atualização do Sistema Operacional Linux Mint<br>
@@ -32,6 +24,14 @@ Conteúdo estudado nessa instalação:<br>
 #08_ Configurando o VSCode como Aplicativo de Preferência no Linux Mint<br>
 #09_ Instalando e Configurando as Principais Extensões do Cisco no VSCode<br>
 #10_ Configurações básicas do VSCode para funcionar perfeitamente no Linux Mint<br>
+
+OBSERVAÇÃO IMPORTANTE: COMENTAR NO VÍDEO DO INSTALAÇÃO DO VSCODE SE VOCÊ CONSEGUIU FAZER A INSTALAÇÃO COM A SEGUINTE FRASE: Instalação do VSCODE Cisco realizado com sucesso!!! #BoraParaPrática
+
+#boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #cisco #infracisco #desafiovaamonde #desafioboraparapratica #desafiocisco #desafioinfracisco
+
+Site Oficial do Visual Studio Code: https://code.visualstudio.com/<br>
+Site Oficial do Visual Studio Code Web: https://vscode.dev/<br>
+Link do Marketplace: https://marketplace.visualstudio.com/VSCode
 
 O QUE É E PARA QUE SERVER O VSCODE: O Visual Studio Code é um editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS. Ele inclui suporte para depuração, controle de versionamento Git incorporado, realce de sintaxe, complementação inteligente de código, snippets e refatoração de código.
 
