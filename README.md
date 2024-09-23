@@ -118,10 +118,33 @@ G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração
 
 ## **🛰️ Apresentação do Curso GRATUITO de Infraestrutura de Redes Cisco (Packet Tracer e Rack Cisco) 🚀**
 
-Vídeo de apresentação do NOVO Curso de Infraestrutura de Rede utilizando o Cisco Packet e Rack Cisco do Projeto do Bora para Prática. O objetivo desse curso é mostrar os procedimentos básicos para baixar e instalar a versão do Cisco Packet Tracer no seu computador local, com o objeto de criar cenários de rede mais realista e próximo da realidade, implementar e configurar as principais tecnologias de rede e interconexões remotas, depois mostar os procedimentos para criar um projeto de Rack Cisco Completo.
+Vídeo de apresentação do NOVO Curso de Infraestrutura de Rede utilizando o Cisco Packet e Rack Cisco do Projeto do Bora para Prática. O objetivo desse curso é mostrar os procedimentos básicos para baixar e instalar a versão do Cisco Packet Tracer no seu computador local, com o objeto de criar cenários de rede mais realista e próximo da realidade, implementar e configurar as principais tecnologias de rede e interconexões remotas, depois mostrar os procedimentos para criar um projeto de Rack Cisco Completo.
 
 O QUE É E PARA QUE SERVER O CISCO PACKET TRACER: O Packet Tracer é um programa educacional gratuito que permite simular uma rede de computadores, através de equipamentos e configurações presente em situações reais. O programa apresenta uma interface gráfica simples, com suportes multimídia que auxiliam na confecção das simulações.
 
 [![Apresentação do Curso](http://img.youtube.com/vi/I_Z3-7ls1VU/0.jpg)](https://www.youtube.com/watch?v=I_Z3-7ls1VU "Apresentação do Curso")
 
 Link da vídeo aula: https://www.youtube.com/watch?v=I_Z3-7ls1VU
+
+# PRIMEIRA ETAPA: INSTALAÇÃO DO CISCO PACKET TRACER E VSCODE NO LINUX MINT 22 E NO MICROSOFT WINDOWS
+
+## **🛰️ Instalação do Cisco Packet Tracer no Linux Mint 22 e Microsoft Windows Infraestrutura de Redes Cisco 🚀**
+
+Vídeo de instalação e configuração do Cisco Packet Tracer no sistema operacional GNU/Linux Mint e no Microsoft Windows do Projeto do Bora para Prática. O objetivo desse vídeo é mostrar os procedimentos básicos para você fazer uma conta na Academia da Cisca a famosa Netacad, baixar as versões do Packet Tracer e instalar no sistema operacional GNU/Linux Mint 22 e Microsoft Windows 10 todos em 64 Bits.
+
+Conteúdo estudado nessa instalação:<br>
+#01_ Verificando as Informações do Sistema Operacional Linux Mint<br>
+#02_ Atualização do Sistema Operacional Linux Mint<br>
+#03_ Download do Cisco Packet Tracer para Linux<br>
+#04_ Instalação das Dependências e Bibliotecas do Cisco Packet Tracer no Linux Mint<br>
+#05_ Instalando o Cisco Packet Tracer no Linux Mint<br>
+#06_ Verificando se todas as Bibliotecas do Cisco Packet foram instaladas no Linux Mint<br>
+#07_ Executando o Cisco Packet Tracer pela Primeira Vez no Linux Mint<br>
+#08_ Configurações Básicas do Cisco Packet Tracer no Linux Mint<br>
+#09_ Download do Cisco Packet Tracer para Windows<br>
+
+[![Instalação Packet Tracer](http://img.youtube.com/vi/GVG1LrHN2Cg/0.jpg)](https://www.youtube.com/watch?v=GVG1LrHN2Cg "Instalação Packet Tracer")
+
+Link da vídeo aula: https://www.youtube.com/watch?v=GVG1LrHN2Cg
+
+Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/01-install/01-packettracer.md

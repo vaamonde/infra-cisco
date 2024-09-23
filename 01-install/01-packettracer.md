@@ -7,8 +7,8 @@
 #Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem<br>
 #YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 #Data de criação: 16/09/2024<br>
-#Data de atualização: 17/09/2024<br>
-#Versão: 0.02<br>
+#Data de atualização: 23/09/2024<br>
+#Versão: 0.03<br>
 #Testado e homologado no Linux Mint 22 Wilma x64<br>
 #Testado e homologado o Cisco Packet Tracer 8.2.x x64<br>
 
@@ -21,6 +21,7 @@ Conteúdo estudado nessa instalação:<br>
 #06_ Verificando se todas as Bibliotecas do Cisco Packet foram instaladas no Linux Mint<br>
 #07_ Executando o Cisco Packet Tracer pela Primeira Vez no Linux Mint<br>
 #08_ Configurações Básicas do Cisco Packet Tracer no Linux Mint<br>
+#09_ Download do Cisco Packet Tracer para Windows<br>
 
 OBSERVAÇÃO IMPORTANTE: COMENTAR NO VÍDEO DO INSTALAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A INSTALAÇÃO COM A SEGUINTE FRASE: Instalação do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática
 
@@ -32,6 +33,10 @@ Site Oficial do Dev do Cisco Packet Tracer: https://www.packettracernetwork.com/
 MEGA.nz do Projeto Bora para Prática: https://mega.nz/folder/Co9GHIyK#2kzNnN7XzImP01M1SyRm2g/folder/vll2iSDI
 
 O QUE É E PARA QUE SERVER O CISCO PACKET TRACER: O Packet Tracer é um programa educacional gratuito que permite simular uma rede de computadores, através de equipamentos e configurações presente em situações reais. O programa apresenta uma interface gráfica simples, com suportes multimídia que auxiliam na confecção das simulações.
+
+[![Instalação Packet Tracer](http://img.youtube.com/vi/GVG1LrHN2Cg/0.jpg)](https://www.youtube.com/watch?v=GVG1LrHN2Cg "Instalação Packet Tracer")
+
+Link da vídeo aula: https://www.youtube.com/watch?v=GVG1LrHN2Cg
 
 #01_ Verificando as Informações do Sistema Operacional Linux Mint<br>
 ```bash
@@ -117,7 +122,7 @@ sudo dpkg -i libssl1.1_1.1.1*.deb
 #opção da contra barra (\): criar uma quebra de linha no terminal
 sudo apt install libqt5networkauth5 libqt5script5 libqt5scripttools5 libqt5texttospeech5 libqt5positioning5 \
 libqt5qml5 libqt5webchannel5 libqt5qmlmodels5 libqt5quick5 libqt5webenginecore5 libqt5webenginewidgets5 git \
-vim python3 libqt5websockets5 libqt5multimedia5
+vim python3 libqt5websockets5 libqt5multimedia5 libqt5xml5t64 libqt5sql5t64xx
 ```
 
 #05_ Instalando o Cisco Packet Tracer no Linux Mint<br>
@@ -125,7 +130,8 @@ vim python3 libqt5websockets5 libqt5multimedia5
 #instalar o Cisco Packet Tracer em modo Gráfico no Linux Mint 22.x
 01) Na pasta de Download, clicar duas vezes no Instalador do Cisco Packet Tracer;
 02) Na tela do Gdebi clique em: <Instalar Pacote>.
-    (Digite a sua senha para instalar o pacote)
+    (Digite a sua senha para instalar o pacote clique em: <Autenticar>)
+    Software adicional deve ser instalado: <Continuar>
 03) Na tela: Software License Agreement clique em: <Next>
 04) Marque a opção: do you accept the terms of this EULA?: <Yes> clique em: <Next>
 
@@ -137,13 +143,13 @@ vim python3 libqt5websockets5 libqt5multimedia5
 Terminal: Ctrl + Alt + T
 
 #instalando o Cisco Packet Tracer via linha de comando no Linux Mint 22.x
-#opção do comando dpkg: -i (install)
+#opção do comando dpkg: -i (install), * (all/tudo)
 sudo dpkg -i CiscoPacketTracer*.deb
   Na tela de: Configurando PacketTracer pressione Enter em: <OK>
   Na tela de: Do you accept the terms of this EULA? selecione: <Sim> e <Enter>
 ```
 
-#06_ Verificando se todas as Bibliotecas do Cisco Packet foram instaladas no Linux Mint<br>
+#06_ Verificando se todas as Bibliotecas do Cisco Packet Tracer foram instaladas no Linux Mint<br>
 ```bash
 #atalho para acessar o Terminal
 Terminal: Ctrl + Alt + T
@@ -162,16 +168,98 @@ sudo ldd /opt/pt/bin/PacketTracer | grep "not found"
 #execução do Cisco Packet Tracer via Menu do Linux Mint
 Menu
   Busca Indexada: Packet Tracer
+    Would you like to run multi-user when application starts? <Yes>
 
 #execução do Cisco Packet Tracer via Terminal do Linux Mint
 Terminal: Ctrl + Alt + T
   packettracer
 
 #se autenticação do Netacad no Cisco Packet Tracer
+Sign in using one of the following options:
+  (ON) Keep me logged in (for 3 months)
+  Login server: Worldwide
+  <Cisco Network Academy>
+
+#verificando a versão do Cisco Packet Tracer
+Help
+  About
+    Version: 8.2.2.x
 ```
 
 #08_ Configurações Básicas do Cisco Packet Tracer no Linux Mint<br>
 ```bash
+#habilitando recursos importantes no Cisco Packet Tracer
+Options
+  Preferences
+    Interface
+      (OFF) Show Device Model Labels (DISABLE)
+      (OFF) Show Device Name Labels (DISABLE)
+      (ON) Align logical workspace objects (ENABLE)
+      (ON) Enable Cable Length Effects (ENABLE)
+      (ON) Align physical workspace objects (ENABLE)
+    Show/Hide
+      (ON) Show Wireless Boundary (ENABLE)
+      (ON) Show Wireless Color Gradient (ENABLE)
+  <Close>
+```
+
+#09_ Download do Cisco Packet Tracer para Windows<br>
+```bash
+Link Oficial do Netacad: https://www.netacad.com/pt-br/courses/packet-tracer
+Link Oficial do Packet Tracer Network: https://www.packettracernetwork.com/
+Link do Mega.nz do Bora para Prática: https://mega.nz/folder/Co9GHIyK#2kzNnN7XzImP01M1SyRm2g/folder/vll2iSDI
+
+DICA: RECOMENDO VOCÊ FAZER UMA CONTA NO NETACAD DA CISCO NO CURSO GRATUITO DO CISCO PACKET TRACER 
+DISPONÍVEL NA PLATAFORMA NO LINK: 
+
+Link: https://skillsforall.com/pt/learningcollections/cisco-packet-tracer?courseLang=pt-BR
+
+PARA CRIAR UMA CONTA NO NETACAD ACESSE O LINK: https://id.cisco.com/signin/register
+
+#baixando o Cisco PAcket Tracer pelo Netacad
+Legacy Netacad
+  Resources
+    Download Packet Tracer
+      Windows Desktop Version 8.2.x English
+        Selecionar: 64 Bit Download
+
+#instalando o Cisco Packet Tracer no Windows 10
+Explorador de Arquivos
+  Pasta Download
+    Clicar duas vezes no software: CiscoPacketTracer*.exe
+
+Deseja permitir que este aplicativo faça alterações no seu dispositivo?
+  <Sim>
+
+Setup - Cisco Packet Tracer 8.2.x-64Bit
+  License Agreement
+    (ON) I accept the agreement
+  <Next>
+  Select Destination Location
+    Caminho Padrão
+  <Next>
+  Select Start Menu Folder
+    Caminho Padrão
+  <Next>
+  Select Additional Tasks
+    (ON) Create a desktop shortcut
+    (ON) Create a Quick Launch shortcut
+  <Next>
+  Ready to Install
+  <Install>
+  Completing the Cisco Packet Tracer 8.2.x 64Bit Setup Wizard
+    (OFF) Launch Cisco Packet Tracer
+<Finish>
+
+#executando o Cisco Packet Tracer no Windows
+Clicar no Ícone no Desktop: Cisco Packet Tracer
+  Would you like to run multi-user when application starts? <Yes>
+
+Alerta de Segurança do Windows
+  (ON) Redes privadas, como minha rede doméstica ou corporativa
+  (ON) Redes públicas, como as de aeroportos e cafeterias
+<Permitir acesso>
+
 #habilitando recursos importantes no Cisco Packet Tracer
 Options
   Preferences
