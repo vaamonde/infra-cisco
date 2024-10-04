@@ -25,6 +25,7 @@ Conteúdo estudado nessa instalação:<br>
 #09_ Adicionando o VSCode nas Lista de Abrir Com no Linux Mint<br>
 #10_ Instalando e Configurando as Principais Extensões do Cisco no VSCode<br>
 #11_ Configurações básicas do VSCode para funcionar perfeitamente no Linux Mint<br>
+#12_ Trabalhando com as Extensões do Cisco no VSCode no Linux Mint<br>
 
 OBSERVAÇÃO IMPORTANTE: COMENTAR NO VÍDEO DO INSTALAÇÃO DO VSCODE SE VOCÊ CONSEGUIU FAZER A INSTALAÇÃO COM A SEGUINTE FRASE: Instalação do VSCODE Cisco realizado com sucesso!!! #BoraParaPrática
 
@@ -36,9 +37,9 @@ Link do Marketplace: https://marketplace.visualstudio.com/VSCode
 
 O QUE É E PARA QUE SERVER O VSCODE: O Visual Studio Code é um editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS. Ele inclui suporte para depuração, controle de versionamento Git incorporado, realce de sintaxe, complementação inteligente de código, snippets e refatoração de código.
 
-[![VScode Git Github](http://img.youtube.com/vi//0.jpg)]( "VScode Git Github")
+[![VScode Git Github](http://img.youtube.com/vi/f9ZqzzhSzcA/0.jpg)](https://www.youtube.com/watch?v=f9ZqzzhSzcA "VScode Git Github")
 
-Link da vídeo aula:
+Link da vídeo aula: https://www.youtube.com/watch?v=f9ZqzzhSzcA
 
 **OBSERVAÇÃO IMPORTANTE: OS VÍDEOS DE INSTALAÇÃO E CONFIGURAÇÃO DO MICROSOFT VISUAL STUDIO CODE VSCODE, GIT E GITHUB SÃO DO CURSO GRATUITO DE PYTHON 3 DO PROJETO BORA PARA PRÁTICA, HOJE O CISCO SUPORTA PROGRAMAÇÃO EM PYTHON, RECOMENDO SEGUIR OS PROCEDIMENTOS ABAIXO PARA A CORRETA INSTALAÇÃO DESSAS FERRAMENTAS QUE SERÃO UTILIZADAS NESSE CURSO**
 

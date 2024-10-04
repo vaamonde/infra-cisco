@@ -49,7 +49,7 @@ Link da vídeo aula: https://www.youtube.com/watch?v=GVG1LrHN2Cg
 
 Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/01-install/01-packettracer.md
 
-## **🛰️ Instalação das Extensões do Cisco no VSCode e Integração com Git Github e Infraestrutura de Redes Cisco 🚀**
+## **🛰️ Instalação das Extensões da Cisco no VSCode e Integração com o Git e Github da Infraestrutura de Redes Cisco 🚀**
 
 Vídeo de instalação e configuração das principais extensões do Cisco no VSCode e integração do Git e Github para facilitar a documentação e scripts de configuração dos Switchs e Roteadores da Cisco no projeto de Infraestrutura.
 
@@ -67,10 +67,11 @@ Conteúdo estudado nessa instalação:<br>
 #09_ Adicionando o VSCode nas Lista de Abrir Com no Linux Mint<br>
 #10_ Instalando e Configurando as Principais Extensões do Cisco no VSCode<br>
 #11_ Configurações básicas do VSCode para funcionar perfeitamente no Linux Mint<br>
+#12_ Trabalhando com as Extensões do Cisco no VSCode no Linux Mint<br>
 
-[![VScode Git Github](http://img.youtube.com/vi//0.jpg)]( "VScode Git Github")
+[![VScode Git Github](http://img.youtube.com/vi/f9ZqzzhSzcA/0.jpg)](https://www.youtube.com/watch?v=f9ZqzzhSzcA "VScode Git Github")
 
-Link da vídeo aula: 
+Link da vídeo aula: https://www.youtube.com/watch?v=f9ZqzzhSzcA
 
 Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/01-install/02-vscode.md
 

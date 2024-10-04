@@ -149,14 +149,14 @@ Link da vídeo aula: https://www.youtube.com/watch?v=GVG1LrHN2Cg
 
 Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/01-install/01-packettracer.md
 
-## **🛰️ Instalação das Extensões do Cisco no VSCode e Integração com Git Github e Infraestrutura de Redes Cisco 🚀**
+## **🛰️ Instalação das Extensões da Cisco no VSCode e Integração com o Git e Github da Infraestrutura de Redes Cisco 🚀**
 
 Vídeo de instalação e configuração das principais extensões do Cisco no VSCode e integração do Git e Github para facilitar a documentação e scripts de configuração dos Switchs e Roteadores da Cisco no projeto de Infraestrutura.
 
 O QUE É E PARA QUE SERVER O VSCODE: O Visual Studio Code é um editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS. Ele inclui suporte para depuração, controle de versionamento Git incorporado, realce de sintaxe, complementação inteligente de código, snippets e refatoração de código
 
 Conteúdo estudado nessa instalação:<br>
-#01_ Verificando as Informações do Sistema Operacional Linux Mint<br>
+#01_ Verificando as Informações do Sistema Operacional Linux Mint<br
 #02_ Atualização do Sistema Operacional Linux Mint<br>
 #03_ Instalando as Dependências do VSCode no Linux Mint<br>
 #04_ Baixando o Microsoft Visual Studio Code VSCode para o Linux<br>
@@ -167,10 +167,11 @@ Conteúdo estudado nessa instalação:<br>
 #09_ Adicionando o VSCode nas Lista de Abrir Com no Linux Mint<br>
 #10_ Instalando e Configurando as Principais Extensões do Cisco no VSCode<br>
 #11_ Configurações básicas do VSCode para funcionar perfeitamente no Linux Mint<br>
+#12_ Trabalhando com as Extensões do Cisco no VSCode no Linux Mint<br>
 
-[![VScode Git Github](http://img.youtube.com/vi//0.jpg)]( "VScode Git Github")
+[![VScode Git Github](http://img.youtube.com/vi/f9ZqzzhSzcA/0.jpg)](https://www.youtube.com/watch?v=f9ZqzzhSzcA "VScode Git Github")
 
-Link da vídeo aula: 
+Link da vídeo aula: https://www.youtube.com/watch?v=f9ZqzzhSzcA
 
 Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/01-install/02-vscode.md
 
