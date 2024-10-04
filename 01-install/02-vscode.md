@@ -14,7 +14,7 @@
 #Testado e homologado o Microsoft Visual Studio Code VSCode no Linux Mint 22 Wilma<br>
 
 Conteúdo estudado nessa instalação:<br>
-#01_ Verificando as Informações do Sistema Operacional Linux Mint<br
+#01_ Verificando as Informações do Sistema Operacional Linux Mint<br>
 #02_ Atualização do Sistema Operacional Linux Mint<br>
 #03_ Instalando as Dependências do VSCode no Linux Mint<br>
 #04_ Baixando o Microsoft Visual Studio Code VSCode para o Linux<br>

@@ -156,7 +156,7 @@ Vídeo de instalação e configuração das principais extensões do Cisco no VS
 O QUE É E PARA QUE SERVER O VSCODE: O Visual Studio Code é um editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS. Ele inclui suporte para depuração, controle de versionamento Git incorporado, realce de sintaxe, complementação inteligente de código, snippets e refatoração de código
 
 Conteúdo estudado nessa instalação:<br>
-#01_ Verificando as Informações do Sistema Operacional Linux Mint<br
+#01_ Verificando as Informações do Sistema Operacional Linux Mint<br>
 #02_ Atualização do Sistema Operacional Linux Mint<br>
 #03_ Instalando as Dependências do VSCode no Linux Mint<br>
 #04_ Baixando o Microsoft Visual Studio Code VSCode para o Linux<br>
