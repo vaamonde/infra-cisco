@@ -7,8 +7,8 @@
 #Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem<br>
 #YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 #Data de criação: 16/09/2024<br>
-#Data de atualização: 16/09/2024<br>
-#Versão: 0.01<br>
+#Data de atualização: 04/10/2024<br>
+#Versão: 0.02<br>
 #Testado e homologado no Linux Mint 22 Wilma x64<br>
 #Testado e homologado o Cisco Packet Tracer 8.2.x x64<br>
 #Testado e homologado o Microsoft Visual Studio Code VSCode no Linux Mint 22 Wilma<br>
@@ -22,8 +22,9 @@ Conteúdo estudado nessa instalação:<br>
 #06_ Verificando o novo repositório do VSCode no MintUpdate<br>
 #07_ Iniciando o VSCode no Linux Mint<br>
 #08_ Configurando o VSCode como Aplicativo de Preferência no Linux Mint<br>
-#09_ Instalando e Configurando as Principais Extensões do Cisco no VSCode<br>
-#10_ Configurações básicas do VSCode para funcionar perfeitamente no Linux Mint<br>
+#09_ Adicionando o VSCode nas Lista de Abrir Com no Linux Mint<br>
+#10_ Instalando e Configurando as Principais Extensões do Cisco no VSCode<br>
+#11_ Configurações básicas do VSCode para funcionar perfeitamente no Linux Mint<br>
 
 OBSERVAÇÃO IMPORTANTE: COMENTAR NO VÍDEO DO INSTALAÇÃO DO VSCODE SE VOCÊ CONSEGUIU FAZER A INSTALAÇÃO COM A SEGUINTE FRASE: Instalação do VSCODE Cisco realizado com sucesso!!! #BoraParaPrática
 
@@ -34,6 +35,24 @@ Site Oficial do Visual Studio Code Web: https://vscode.dev/<br>
 Link do Marketplace: https://marketplace.visualstudio.com/VSCode
 
 O QUE É E PARA QUE SERVER O VSCODE: O Visual Studio Code é um editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS. Ele inclui suporte para depuração, controle de versionamento Git incorporado, realce de sintaxe, complementação inteligente de código, snippets e refatoração de código.
+
+[![VScode Git Github](http://img.youtube.com/vi//0.jpg)]( "VScode Git Github")
+
+Link da vídeo aula:
+
+**OBSERVAÇÃO IMPORTANTE: OS VÍDEOS DE INSTALAÇÃO E CONFIGURAÇÃO DO MICROSOFT VISUAL STUDIO CODE VSCODE, GIT E GITHUB SÃO DO CURSO GRATUITO DE PYTHON 3 DO PROJETO BORA PARA PRÁTICA, HOJE O CISCO SUPORTA PROGRAMAÇÃO EM PYTHON, RECOMENDO SEGUIR OS PROCEDIMENTOS ABAIXO PARA A CORRETA INSTALAÇÃO DESSAS FERRAMENTAS QUE SERÃO UTILIZADAS NESSE CURSO**
+
+[![Instalação Python 3](http://img.youtube.com/vi/klIKuVGRHmM/0.jpg)](https://www.youtube.com/watch?v=klIKuVGRHmM "Instalação Python 3")
+
+Link da vídeo aula: https://www.youtube.com/watch?v=klIKuVGRHmM
+
+Link da documentação: https://github.com/vaamonde/python3/blob/main/01-introduction/01-install.md
+
+[![Instalação Git](http://img.youtube.com/vi/VBxmsmPK60s/0.jpg)](https://www.youtube.com/watch?v=VBxmsmPK60s "Instalação Git")
+
+Link da vídeo aula: https://www.youtube.com/watch?v=VBxmsmPK60s
+
+Link da documentação: https://github.com/vaamonde/python3/blob/main/01-introduction/02-git-gthub.md
 
 #01_ Verificando as Informações do Sistema Operacional Linux Mint<br>
 ```bash
@@ -87,11 +106,13 @@ Link de download: https://code.visualstudio.com/download
 
 #05_ Instalando o VSCode utilizando o Gdebi-Gtk no Linux Mint<br>
 ```bash
-#instalação em modo gráfico (indicado)
+#instalando em modo gráfico (mais fácil) o VSCode
 Arquivos
   Download
-    code_1.*_amd64
-      Instalar Pacote
+    Clique duas vezes no instalar: code_1.*_amd64.deb
+      <Instalar Pacote>
+        Digite sua senha e clique em: <Autenticar>
+        (ON) Add Microsoft apt repository for Visual Studio Code? <Next>
     <Fechar>
 ```
 
@@ -126,19 +147,36 @@ Menu
 ```bash
 #configuração básica do VSCode no Linux Mint
 Menu
-  Busca Indexada
-    Aplicativos de Preferencias
-      Texto puro: Visual Studio Code
-      Código fonte: Visual Studio Code
+  Aplicativos Preferenciais
+    Escritório
+      Código Fonte: Outro aplicativo
+        Visual Studio Code <Selecionar>
+    Sistema
+      Texto Puro: Outro aplicativo
+        Visual Studio Code <Selecionar>
+  <Fechar>
 ```
 
-#09_ Instalando e Configurando as Principais Extensões do Cisco no VSCode<br>
+#09_ Adicionando o VSCode nas Lista de Abrir Com no Linux Mint<br>
+```bash
+#adicionando o VSCode na lista de Abrir com
+Gerenciador de Arquivos
+  Pasta Pessoal
+    Selecionar: Documentos
+      Clicar com o botão direito do mouse no diretório: Documentos e selecionar: Abrir com
+        Outro aplicativo
+          Visual Studio Code
+        <Adicionar à lista>
+      <OK>
+```
+
+#10_ Instalando e Configurando as Principais Extensões do Cisco no VSCode<br>
 ```bash
 #Instalação das Extensões Básicas do VSCode
 Portuguese (Brazil) Language Pack for Visual Studio Code
-	(Sem necessidade de configuração)
+  (Sem necessidade de configuração)
 
-#Configuração da Extensão Code Spell Checker
+#instalação e configuração da extensão do Corretor Ortográfico PT-BR e US
 Brazilian Portuguese - Code Spell Checker (Corretor Ortográfico de Código)
 Manter selecionado a extensão: Brazilian Portuguese - Code Spell Checker
   Pressionar F1
@@ -148,40 +186,50 @@ Manter selecionado a extensão: Brazilian Portuguese - Code Spell Checker
           English (en_us)
           Portuguese (pt_br)
           Portuguese - Brazil (pt-br)
-        File Types and Programming Languages
-          shellscript, python, markdown, etc...
+            File Types and Programming Languages
+              shellscript, python, markdown, etc...
 
 Code Spell Checker
   (Sem necessidade de configuração)
 
 Cisco IOS Syntax
   (Sem necessidade de configuração)
-  (Salvar o arquivo com a extensão: .ios)
-
-Cisco IOS-XR Syntax
-  (Sem necessidade de configuração)
-  (Salvar o arquivo com a extensão: .xr)
 
 Cisco Config Highlight
   (Sem necessidade de configuração)
+
+Cisco IOS-XR Syntax
+  (Sem necessidade de configuração)
 ```
 
-#10_ Configurações básicas do VSCode para funcionar perfeitamente no Linux Mint<br>
+#11_ Configurações básicas do VSCode para funcionar perfeitamente no Linux Mint<br>
 ```bash
-#Configurações Básicas de Produtividade do VSCode no Linux Mint
+#configurações básicas do VSCode para funcionar no Linux Mint
 Gerenciar
   Configurações
     Code Spell Checker
       C Spell: Enabled Language Ids: 
         Adicionar Item: shellscript
-      C Spell: Language: en,pt,pt-BR
+      C Spell: Language: en,en-US,pt,pt-BR
       C Spell: Max Duplicate Problems: 500000
       C Spell: Max Number Of Problems: 500000
     Editor
-      Editor: Tab Size: 4
+      Editor: Tab Size: 2
       Editor: Detect Indentation: False (Off)
-      Editor: Insert Spaces: False (On)
+      Editor: Insert Spaces: True (On)
       Render Whitespace: All
     Files
       Files: Eol: \n (LF)
+```
+
+#12_ Trabalhando com as Extensões do Cisco no VSCode no Linux Mint<br>
+```bash
+01) Cisco IOS Syntax
+    Salvar os arquivos com a extensão: ios
+
+02) Cisco Config Highlight
+    Salvar os arquivos com as extensões: .cisco ou .config
+
+03) Cisco IOS-XR Syntax
+    Salvar os arquivos com a extensão: .xr ou .iosxr
 ```

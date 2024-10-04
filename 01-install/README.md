@@ -30,6 +30,8 @@ Github Procedimentos em TI: https://github.com/vaamonde<br>
 
 Vídeo de instalação e configuração do Cisco Packet Tracer no sistema operacional GNU/Linux Mint e no Microsoft Windows do Projeto do Bora para Prática. O objetivo desse vídeo é mostrar os procedimentos básicos para você fazer uma conta na Academia da Cisca a famosa Netacad, baixar as versões do Packet Tracer e instalar no sistema operacional GNU/Linux Mint 22 e Microsoft Windows 10 todos em 64 Bits.
 
+O QUE É E PARA QUE SERVER O CISCO PACKET TRACER: O Packet Tracer é um programa educacional gratuito que permite simular uma rede de computadores, através de equipamentos e configurações presente em situações reais. O programa apresenta uma interface gráfica simples, com suportes multimídia que auxiliam na confecção das simulações.
+
 Conteúdo estudado nessa instalação:<br>
 #01_ Verificando as Informações do Sistema Operacional Linux Mint<br>
 #02_ Atualização do Sistema Operacional Linux Mint<br>
@@ -46,3 +48,42 @@ Conteúdo estudado nessa instalação:<br>
 Link da vídeo aula: https://www.youtube.com/watch?v=GVG1LrHN2Cg
 
 Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/01-install/01-packettracer.md
+
+## **🛰️ Instalação das Extensões do Cisco no VSCode e Integração com Git Github e Infraestrutura de Redes Cisco 🚀**
+
+Vídeo de instalação e configuração das principais extensões do Cisco no VSCode e integração do Git e Github para facilitar a documentação e scripts de configuração dos Switchs e Roteadores da Cisco no projeto de Infraestrutura.
+
+O QUE É E PARA QUE SERVER O VSCODE: O Visual Studio Code é um editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS. Ele inclui suporte para depuração, controle de versionamento Git incorporado, realce de sintaxe, complementação inteligente de código, snippets e refatoração de código
+
+Conteúdo estudado nessa instalação:<br>
+#01_ Verificando as Informações do Sistema Operacional Linux Mint<br
+#02_ Atualização do Sistema Operacional Linux Mint<br>
+#03_ Instalando as Dependências do VSCode no Linux Mint<br>
+#04_ Baixando o Microsoft Visual Studio Code VSCode para o Linux<br>
+#05_ Instalando o VSCode utilizando o Gdebi-Gtk no Linux Mint<br>
+#06_ Verificando o novo repositório do VSCode no MintUpdate<br>
+#07_ Iniciando o VSCode no Linux Mint<br>
+#08_ Configurando o VSCode como Aplicativo de Preferência no Linux Mint<br>
+#09_ Adicionando o VSCode nas Lista de Abrir Com no Linux Mint<br>
+#10_ Instalando e Configurando as Principais Extensões do Cisco no VSCode<br>
+#11_ Configurações básicas do VSCode para funcionar perfeitamente no Linux Mint<br>
+
+[![VScode Git Github](http://img.youtube.com/vi//0.jpg)]( "VScode Git Github")
+
+Link da vídeo aula: 
+
+Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/01-install/02-vscode.md
+
+**OBSERVAÇÃO IMPORTANTE: OS VÍDEOS DE INSTALAÇÃO E CONFIGURAÇÃO DO MICROSOFT VISUAL STUDIO CODE VSCODE, GIT E GITHUB SÃO DO CURSO GRATUITO DE PYTHON 3 DO PROJETO BORA PARA PRÁTICA, HOJE O CISCO SUPORTA PROGRAMAÇÃO EM PYTHON, RECOMENDO SEGUIR OS PROCEDIMENTOS ABAIXO PARA A CORRETA INSTALAÇÃO DESSAS FERRAMENTAS QUE SERÃO UTILIZADAS NESSE CURSO**
+
+[![Instalação Python 3](http://img.youtube.com/vi/klIKuVGRHmM/0.jpg)](https://www.youtube.com/watch?v=klIKuVGRHmM "Instalação Python 3")
+
+Link da vídeo aula: https://www.youtube.com/watch?v=klIKuVGRHmM
+
+Link da documentação: https://github.com/vaamonde/python3/blob/main/01-introduction/01-install.md
+
+[![Instalação Git](http://img.youtube.com/vi/VBxmsmPK60s/0.jpg)](https://www.youtube.com/watch?v=VBxmsmPK60s "Instalação Git")
+
+Link da vídeo aula: https://www.youtube.com/watch?v=VBxmsmPK60s
+
+Link da documentação: https://github.com/vaamonde/python3/blob/main/01-introduction/02-git-gthub.md
