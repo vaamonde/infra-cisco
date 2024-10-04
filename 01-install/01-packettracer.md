@@ -122,7 +122,7 @@ sudo dpkg -i libssl1.1_1.1.1*.deb
 #opção da contra barra (\): criar uma quebra de linha no terminal
 sudo apt install libqt5networkauth5 libqt5script5 libqt5scripttools5 libqt5texttospeech5 libqt5positioning5 \
 libqt5qml5 libqt5webchannel5 libqt5qmlmodels5 libqt5quick5 libqt5webenginecore5 libqt5webenginewidgets5 git \
-vim python3 libqt5websockets5 libqt5multimedia5 libqt5xml5t64 libqt5sql5t64xx
+vim python3 libqt5websockets5 libqt5multimedia5 libqt5xml5t64 libqt5sql5t64
 ```
 
 #05_ Instalando o Cisco Packet Tracer no Linux Mint<br>

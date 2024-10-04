@@ -1,17 +1,31 @@
-Autor: Robson Vaamonde<br>
-Procedimentos em TI: http://procedimentosemti.com.br<br>
-Bora para Prática: http://boraparapratica.com.br<br>
-Robson Vaamonde: http://vaamonde.com.br<br>
-Facebook Procedimentos em TI: https://www.facebook.com/ProcedimentosEmTi<br>
-Facebook Bora para Prática: https://www.facebook.com/BoraParaPratica<br>
-Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem<br>
-YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
-LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
-Github Procedimentos em TI: https://github.com/vaamonde<br>
-Data de criação: 17/09/2024<br>
-Data de atualização: 17/09/2024<br>
-Versão: 0.01<br>
-Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
+#Autor: Robson Vaamonde<br>
+#Procedimentos em TI: http://procedimentosemti.com.br<br>
+#Bora para Prática: http://boraparapratica.com.br<br>
+#Robson Vaamonde: http://vaamonde.com.br<br>
+#Facebook Procedimentos em TI: https://www.facebook.com/ProcedimentosEmTi<br>
+#Facebook Bora para Prática: https://www.facebook.com/BoraParaPratica<br>
+#Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem<br>
+#YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
+#Data de criação: 16/09/2024<br>
+#Data de atualização: 04/10//2024<br>
+#Versão: 0.04<br>
+#Testado e homologado no Linux Mint 22 Wilma x64<br>
+#Testado e homologado o Cisco Packet Tracer 8.2.x x64 e Rack Cisco SW-3560 e RT-2911
+
+Conteúdo estudado nessa configuração:<br>
+#01_ PRIMEIRA ETAPA: Acessando o Modo EXEC de Comandos de Usuário no Cisco IOS<br>
+#02_ SEGUNDA ETAPA: Acessando o Modo EXEC Privilegiado no Cisco IOS.<br>
+#03_ TERCEIRA ETAPA: Configuração da Data e Hora no Cisco IOS.<br>
+#04_ QUARTA ETAPA: Acessando o Modo de Configuração Global no Cisco IOS.<br>
+#05_ QUINTA ETAPA: Configurações Básicas (Base Config) do Switch Catalyst Cisco 2960 Layer 2.<br>
+#06_ SEXTA ETAPA: Configuração da Linha Console no Cisco IOS.<br>
+#07_ SÉTIMA ETAPA: Salvando as Configurações Básica (Base) do Switch Cisco Catalyst 2960 Layer 2.<br>
+#08_ OITAVA ETAPA: Visualizando as Configurações do Switch Cisco Catalyst 2960.<br>
+#09_ NOVA ETAPA: Automatizando a Configuração do Segundo Switch Cisco Catalyst 2960 Layer 2.<br>
+
+OBSERVAÇÃO IMPORTANTE: COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: Configuração Base Switch 2960 do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática
+
+#boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #cisco #infracisco #desafiovaamonde #desafioboraparapratica #desafiocisco #desafioinfracisco
 
 ## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
 
@@ -22,6 +36,10 @@ D) **ERRATA:** correções dos scripts, correções de falas, correções de con
 E) **EXEMPLO:** exemplos de comandos ou configurações das opções de DICAS ou OBSERVAÇÃO;<br>
 F) **IMPORTANTE:** informações importantes da tecnologia ou da configuração, com foco em adicionar informações detalhadas da tecnologia ou da certificação;<br>
 G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração, com foco em adicionar informações extras da tecnologia ou da certificação.
+
+[![Config Basic 2960](http://img.youtube.com/vi/G/0.jpg)]( "Config Basic 2960")
+
+Link da vídeo aula: 
 
 ## PRIMEIRA ETAPA: Acessando o Modo EXEC de Comandos de Usuário no Cisco IOS.
 
@@ -85,7 +103,7 @@ Switch>
 
 **DICA-04:** é recomendado utilizar o Protocolo NTP (Network Time Protocol) para manter sincronizado a Data e Hora no Switch ou Router.
 ```bash
-Switch# clock set 14:00:00 17 May 2024
+Switch# clock set 14:00:00 17 October 2024
 ```
 
 ## QUARTA ETAPA: Acessando o Modo de Configuração Global no Cisco IOS.
@@ -179,7 +197,7 @@ sw-01(config)# enable secret pti@2018
 
 **OBSERVAÇÃO-06:** criação de usuários comuns para administrar o Switch, privilégio padrão recomendado: 1.
 ```bash
-sw-01(config)# username senac secret pti@2018
+sw-01(config)# username robson secret pti@2018
 sw-01(config)# username vaamonde password pti@2018
 sw-01(config)# username admin privilege 15 secret pti@2018
 ```
@@ -262,11 +280,11 @@ sw-01# copy running-config startup-config
 sw-01# show running-config
 ```
 
-## OITAVA ETAPA: Automatizando a Configuração do Segundo Switch Cisco Catalyst 2960 Layer 2.
+## NOVA ETAPA: Automatizando a Configuração do Segundo Switch Cisco Catalyst 2960 Layer 2.
 
 01. Utilizando o Visual Studio Code (VSCode) para automatizar as configurações do Cisco IOS.
 
-**OBSERVAÇÃO-12:** recomendamos sempre utilizar um *Editor de Texto Profissional* para criar os scripts e automatizar as tarefas de configuração do Cisco IOS, hoje em dia é indicado utilizar o Visual Studio Code (VSCode) junto com as Extensões: *Cisco IOS Syntax e Cisco Config Highlight* para facilitar essa configuração.
+**OBSERVAÇÃO-12:** recomendo sempre utilizar um *Editor de Texto Profissional* para criar os scripts e automatizar as tarefas de configuração do Cisco IOS, hoje em dia é indicado utilizar o Visual Studio Code (VSCode) junto com as Extensões: *Cisco IOS Syntax e Cisco Config Highlight* para facilitar essa configuração.
 
 **DICA-30:** o caractere: *! (exclamação)* é utilizado como um recurso de *Comentário*, sua utilização server para comentar o código de automação do Cisco IOS ou para desativar um comando para não ser executado, *RECOMENDO FORTEMENTE DOCUMENTAR TODOS OS COMANDOS E PROCEDIMENTOS DE CONFIGURAÇÃO PARA FACILITAR O ENTENDIMENTO.*
 
@@ -277,52 +295,52 @@ sw-01# show running-config
 enable
 
 !Configuração de Data/Hora em inglês, você pode usar abreviado ou completo
-clock set 14:00:00 17 May 2024
+clock set 14:00:00 17 October 2024
 
-	!Acessando o modo de configuração global de comandos
-	configure terminal
+  !Acessando o modo de configuração global de comandos
+  configure terminal
 
-	!Configuração do nome do switch
-	hostname sw-02
+  !Configuração do nome do switch
+  hostname sw-02
 
-	!Habilitando o serviço de criptografia de senhas do Tipo-7 Password 
-	service password-encryption
-	
-	!Habilitando o serviço de marcação de Data/Hora detalhado nos Logs
-	service timestamps log datetime msec
+  !Habilitando o serviço de criptografia de senhas do Tipo-7 Password 
+  service password-encryption
 
-	!Desativando a resolução de nomes de domínio
-	no ip domain-lookup
+  !Habilitando o serviço de marcação de Data/Hora detalhado nos Logs
+  service timestamps log datetime msec
 
-	!Configuração do banner da mensagem do dia
-	banner motd #AVISO: acesso autorizado somente a funcionarios#
+  !Desativando a resolução de nomes de domínio
+  no ip domain-lookup
 
-	!Habilitando o uso senha do Tipo-5 Secret para acessar o modo EXEC Privilegiado
-	enable secret pti@2018
+  !Configuração do banner da mensagem do dia
+  banner motd #AVISO: acesso autorizado somente a funcionarios#
 
-	!Criação dos usuários locais utilizando senhas do Tipo-5 ou Tipo-7 e privilégios diferenciados
-	username senac secret pti@2018
-	username vaamonde password pti@2018
-	username admin privilege 15 secret pti@2018
-	
-	!Acessando a linha console, porta padrão de acesso Out-of-Band (Fora da Banda)
-	line console 0
-		
-		!Forçando fazer login local utilizando usuário e senha locais do switch
-		login local
-		
-		!Habilitando senha de acesso do Tipo-7 Password
-		password pti@2018
-		
-		!Sincronizando as mensagens de logs na tela
-		logging synchronous
-		
-		!Habilitando o tempo de inatividade de uso do console
-		exec-timeout 5 30
-		
-		!Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
-		end
+  !Habilitando o uso senha do Tipo-5 Secret para acessar o modo EXEC Privilegiado
+  enable secret pti@2018
 
-!Salvando as configurações da memória RAM para a memória NVRAM
-write
+  !Criação dos usuários locais utilizando senhas do Tipo-5 ou Tipo-7 e privilégios diferenciados
+  username robson secret pti@2018
+  username vaamonde password pti@2018
+  username admin privilege 15 secret pti@2018
+
+  !Acessando a linha console, porta padrão de acesso Out-of-Band (Fora da Banda)
+  line console 0
+    
+    !Forçando fazer login local utilizando usuário e senha locais do switch
+    login local
+    
+    !Habilitando senha de acesso do Tipo-7 Password
+    password pti@2018
+    
+    !Sincronizando as mensagens de logs na tela
+    logging synchronous
+    
+    !Habilitando o tempo de inatividade de uso do console
+    exec-timeout 5 30
+    
+    !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
+    end
+
+  !Salvando as configurações da memória RAM para a memória NVRAM
+  write
 ```
