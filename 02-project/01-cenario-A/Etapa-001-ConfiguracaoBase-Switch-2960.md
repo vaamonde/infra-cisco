@@ -22,7 +22,7 @@ Conteúdo estudado nessa configuração:<br>
 #07_ SÉTIMA ETAPA: Salvando as Configurações Básica (Base) do Switch Cisco Catalyst 2960 Layer 2.<br>
 #08_ OITAVA ETAPA: Visualizando as Configurações do Switch Cisco Catalyst 2960.<br>
 #09_ NOVA ETAPA: Testando o acesso ao Switch Cisco Catalyst 2960.<br>
-#10_ NOVA ETAPA: Automatizando a Configuração do Segundo Switch Cisco Catalyst 2960 Layer 2.<br>
+#10_ DÉCIMA ETAPA: Automatizando a Configuração do Segundo Switch Cisco Catalyst 2960 Layer 2.<br>
 
 OBSERVAÇÃO IMPORTANTE: COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: Configuração Base Switch 2960 do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática
 
