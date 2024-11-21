@@ -7,8 +7,8 @@
 #Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem<br>
 #YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 #Data de criação: 16/09/2024<br>
-#Data de atualização: 04/10//2024<br>
-#Versão: 0.04<br>
+#Data de atualização: 21/11/2024<br>
+#Versão: 0.05<br>
 #Testado e homologado no Linux Mint 22 Wilma x64<br>
 #Testado e homologado o Cisco Packet Tracer 8.2.x x64 e Rack Cisco SW-3560 e RT-2911
 
@@ -21,7 +21,8 @@ Conteúdo estudado nessa configuração:<br>
 #06_ SEXTA ETAPA: Configuração da Linha Console no Cisco IOS.<br>
 #07_ SÉTIMA ETAPA: Salvando as Configurações Básica (Base) do Switch Cisco Catalyst 2960 Layer 2.<br>
 #08_ OITAVA ETAPA: Visualizando as Configurações do Switch Cisco Catalyst 2960.<br>
-#09_ NOVA ETAPA: Automatizando a Configuração do Segundo Switch Cisco Catalyst 2960 Layer 2.<br>
+#09_ NOVA ETAPA: Testando o acesso ao Switch Cisco Catalyst 2960.<br>
+#10_ NOVA ETAPA: Automatizando a Configuração do Segundo Switch Cisco Catalyst 2960 Layer 2.<br>
 
 OBSERVAÇÃO IMPORTANTE: COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: Configuração Base Switch 2960 do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática
 
@@ -47,7 +48,7 @@ Primeiro acesso ao modo EXEC de Comandos de Usuário *(> sinal de Maior - user E
 
 Em geral, os comandos EXEC de Usuário permitem que você se conecte a dispositivos remotos, altere as configurações da linha do terminal temporariamente, etc..., utilizado para executar os testes básicos e listar as informações do Cisco IOS (Internetwork Operating System).
 
-O modo EXEC do Cisco IOS é dividido em dois níveis de acesso: **Usuário (> símbolo de Maior) e Privilegiado (# símbolo de Sustenido).**
+O modo EXEC do Cisco IOS é dividido em dois níveis de acesso: **Usuário (> símbolo de Maior) e Privilegiado (# símbolo de Sustenido/Hashtag).**
 
 **OBSERVAÇÃO-01:** sempre que você acessar o modo EXEC pela primeira vez no Switch ou Router será mostrado o nome (hostname) padrão dos equipamentos: **Switch = Switch> e Router = Router>**.
 ```bash
@@ -60,7 +61,7 @@ Switch>
 
 **DICA-01:** utilizar sempre a tecla TAB para auto-completar os comandos no Cisco IOS;
 
-**DICA-02:** se você estiver com dúvida do comando, utilizar o sinal de: ? (Interrogação) junto com o comando para mostrar as opções e informações reduzidas do comando (ajuda básica), ou para mostrar oas opções ambígua (Ambiguidade) muito comum nos comandos abreviados.
+**DICA-02:** se você estiver com dúvida do comando, utilizar o sinal de: ? (Interrogação) junto com o comando para mostrar as opções e informações reduzidas do comando (ajuda básica), ou para mostrar as opções ambíguas (Ambiguidade - mais de uma forma opção) muito comum nos comandos abreviados.
 
 **EXEMPLO: Switch> show? | Switch> enable? | Switch# copy? | Switch# disable? | Switch# clock? | Switch(config)# service?**
 ```bash
@@ -103,7 +104,7 @@ Switch>
 
 **DICA-04:** é recomendado utilizar o Protocolo NTP (Network Time Protocol) para manter sincronizado a Data e Hora no Switch ou Router.
 ```bash
-Switch# clock set 14:00:00 17 October 2024
+Switch# clock set 14:00:00 21 November 2024
 ```
 
 ## QUARTA ETAPA: Acessando o Modo de Configuração Global no Cisco IOS.
@@ -182,7 +183,7 @@ sw-01(config)# banner motd #AVISO: acesso autorizado somente a funcionarios#
 
 **OBSERVAÇÃO-05:** por padrão o acesso ao modo EXEC Privilegiado é liberado sem segurança, é recomendado sempre habilitar o recurso de segurança para acessar o Modo EXEC Privilegiado e o Modo de Configuração Global.
 ```bash
-sw-01(config)# enable secret pti@2018
+sw-01(config)# enable secret SUA_SENHA_SEGURA
 ```
 
 07. Criação dos usuários locais utilizando senhas do Tipo-5 ou Tipo-7 e privilégios diferenciados.
@@ -197,9 +198,9 @@ sw-01(config)# enable secret pti@2018
 
 **OBSERVAÇÃO-06:** criação de usuários comuns para administrar o Switch, privilégio padrão recomendado: 1.
 ```bash
-sw-01(config)# username robson secret pti@2018
-sw-01(config)# username vaamonde password pti@2018
-sw-01(config)# username admin privilege 15 secret pti@2018
+sw-01(config)# username SEU_USUÁRIO_1 secret SUA_SENHA_SEGURA
+sw-01(config)# username SEU_USUÁRIO_2 password SUA_SENHA_NÃO_SEGURA
+sw-01(config)# username SEU_USUÁRIO_3 privilege 15 secret SUA_SENHA_SEGURA
 ```
 
 ## SEXTA ETAPA: Configuração da Linha Console no Cisco IOS.
@@ -228,7 +229,7 @@ b) Habilitando a senha de acesso do Tipo-7 Password (senha fraca).
 
 **OBSERVAÇÃO-08:** essa configuração só será utilizada caso não exista usuários locais criados e se a opção do comando: *login local* não for configurada, nesse caso se utiliza o comando: *login*.
 ```bash
-sw-01(config-line)# password pti@2018
+sw-01(config-line)# password SUA_SENHA_NÃO_SEGURA
 ```
 
 c) Habilitando o sincronismo das mensagens de Logs na tela da linha de console do Cisco IOS.
@@ -280,7 +281,33 @@ sw-01# copy running-config startup-config
 sw-01# show running-config
 ```
 
-## NOVA ETAPA: Automatizando a Configuração do Segundo Switch Cisco Catalyst 2960 Layer 2.
+02. Saindo do Modo Privilegiado do Switch
+```bash
+sw-01# disable
+```
+
+03. Saindo da conexão do Console do Switch
+```bash
+sw-01> exit
+```
+
+## NOVA ETAPA: Testando o acesso ao Switch Cisco Catalyst 2960.
+
+01. Acessando o modo EXEC Privilegiado e o modo de Configuração Global de Comandos.
+```bash
+AVISO: acesso autorizado somente a funcionarios
+User Access Verification
+Username: robson
+Password: pti@2018
+
+sw-01> enable
+Password: pti@2018
+
+sw-01# configure terminal
+sw-01(config)#
+```
+
+## DÉCIMA ETAPA: Automatizando a Configuração do Segundo Switch Cisco Catalyst 2960 Layer 2.
 
 01. Utilizando o Visual Studio Code (VSCode) para automatizar as configurações do Cisco IOS.
 
@@ -295,7 +322,7 @@ sw-01# show running-config
 enable
 
 !Configuração de Data/Hora em inglês, você pode usar abreviado ou completo
-clock set 14:00:00 17 October 2024
+clock set 14:00:00 21 November 2024
 
   !Acessando o modo de configuração global de comandos
   configure terminal

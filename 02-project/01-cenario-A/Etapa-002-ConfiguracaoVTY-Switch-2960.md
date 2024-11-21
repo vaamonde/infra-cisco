@@ -7,8 +7,8 @@
 #Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem<br>
 #YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 #Data de criação: 16/09/2024<br>
-#Data de atualização: 04/10//2024<br>
-#Versão: 0.04<br>
+#Data de atualização: 21/11/2024<br>
+#Versão: 0.05<br>
 #Testado e homologado no Linux Mint 22 Wilma x64<br>
 #Testado e homologado o Cisco Packet Tracer 8.2.x x64 e Rack Cisco SW-3560 e RT-2911
 
@@ -79,7 +79,7 @@ sw-01(config-line)# login local
 
 b) Habilitando a senha de acesso do Tipo-7 Password (senha fraca).
 
-**DICA-05:** igual na configuração da Line Console, essa regra só irá funcionar se não existir usuários no Switch e se você não configurou o login local.
+**DICA-05:** igual na configuração da Line Console, essa regra só irá funcionar se não existir usuários no Switch e se você não configurou a opção: login local, deixando apenas a opção: local.
 ```bash
 sw-01(config-line)# password pti@2018
 ```
@@ -150,33 +150,42 @@ sw-01# show running-config | section include line vty
 
 **DICA-14:** para facilitar a leitura do código, recomendo utilizar o recurso de **Indentação de Código** usando a Tecla TAB (Tabulador/Tabulação) para cada nível que você está configurando o Cisco IOS, isso facilitada a análise de erros (Debug) do código.
 
+01. Acessando o modo EXEC Privilegiado e o modo de Configuração Global de Comandos.
+```bash
+AVISO: acesso autorizado somente a funcionarios
+User Access Verification
+Username: robson
+Password: pti@2018
+
+sw-02> enable
+Password: pti@2018
+
+sw-02#
+```
 ```python
-!Acessando o modo EXEC Privilegiado
-enable
+!Acessando o modo de Configuração Global de comandos
+configure terminal
 
-  !Acessando o modo de Configuração Global de comandos
-  configure terminal
+  !Acessando as linhas virtuais de acesso remoto do Switch
+  line vty 0 4
 
-    !Acessando as linhas virtuais de acesso remoto do Switch
-    line vty 0 4
+    !Forçando fazer login local utilizando usuário e senha locais do switch
+    login local
 
-      !Forçando fazer login local utilizando usuário e senha locais do switch
-      login local
+    !Habilitando senha de acesso do Tipo-7 Password
+    password pti@2018
 
-      !Habilitando senha de acesso do Tipo-7 Password
-      password pti@2018
+    !Sincronizando as mensagens de logs na tela
+    logging synchronous
 
-      !Sincronizando as mensagens de logs na tela
-      logging synchronous
+    !Habilitando o tempo de inatividade de uso da linha virtual
+    exec-timeout 5 30
 
-      !Habilitando o tempo de inatividade de uso da linha virtual
-      exec-timeout 5 30
+    !Configuração do tipo de protocolo de transporte de entrada
+    transport input ssh
 
-      !Configuração do tipo de protocolo de transporte de entrada
-      transport input ssh
-
-      !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
-      end
+    !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
+    end
 
 !Salvando as configurações da memória RAM para a memória NVRAM
 write
