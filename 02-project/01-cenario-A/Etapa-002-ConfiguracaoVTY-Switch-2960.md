@@ -13,9 +13,9 @@
 #Testado e homologado o Cisco Packet Tracer 8.2.x x64 e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
-#01_ PRIMEIRA ETAPA: Acessando o Modo de Configuração Global do Switch Cisco Catalyst 2960.
-#02_ SEGUNDA ETAPA: Configuração das Linhas Virtuais (VTY) do Cisco IOS.
-#03_ TERCEIRA ETAPA: Automatizando a Configuração do Segundo Switch Cisco Catalyst 2960.
+#01_ PRIMEIRA ETAPA: Acessando o Modo de Configuração Global do Switch Cisco Catalyst 2960.<br>
+#02_ SEGUNDA ETAPA: Configuração das Linhas Virtuais (VTY) do Cisco IOS.<br>
+#03_ TERCEIRA ETAPA: Automatizando a Configuração do Segundo Switch Cisco Catalyst 2960.<br>
 
 OBSERVAÇÃO IMPORTANTE: COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: Configuração VTY Switch 2960 do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática
 
