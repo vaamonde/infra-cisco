@@ -28,7 +28,7 @@ Github Procedimentos em TI: https://github.com/vaamonde<br>
 
 ## **🛰️ Criação da Topologia Física do Cenário A do Curso de Infraestrutura de Redes Cisco 🚀**
 
-Vídeo de criação da Topologia Física do Cenário A utilizando Servidor, Switchs Catalyst Layer 2 2960, Router 1941, Access Point Wi-Fi (Wireless / Sem-Fio) 5.0Ghz, Dispositivos Finais Desktop e Conexão Cabeada de todos os dispositivos da Cisco no projeto de Infraestrutura.
+Vídeo de criação da Topologia Física do Cenário A utilizando Servidor, Switches Catalyst Layer 2 2960, Router 1941, Access Point Wi-Fi (Wireless / Sem-Fio) 5.0Ghz, Dispositivos Finais Desktop e Conexão Cabeada de todos os dispositivos da Cisco no projeto de Infraestrutura.
 
 O QUE É E PARA QUE SERVER O CISCO PACKET TRACER: O Packet Tracer é um programa educacional gratuito que permite simular uma rede de computadores, através de equipamentos e configurações presente em situações reais. O programa apresenta uma interface gráfica simples, com suportes multimídia que auxiliam na confecção das simulações.
 
@@ -61,3 +61,35 @@ Finalização e Agradecimentos<br>
 [![Diagrama Físico](http://img.youtube.com/vi/5grhv0DFZNo/0.jpg)](https://www.youtube.com/watch?v=5grhv0DFZNo "Diagrama Físico")
 
 Link da vídeo aula: https://www.youtube.com/watch?v=5grhv0DFZNo
+
+## **🛰️ Documentação da Topologia Lógica do Cenário A do Curso de Infraestrutura de Redes Cisco 🚀**
+
+Vídeo de criação da Topologia Física do Cenário A utilizando Servidor, Switches Catalyst Layer 2 2960, Router 1941, Access Point Wi-Fi (Wireless / Sem-Fio) 5.0Ghz, Dispositivos Finais Desktop e Conexão Cabeada de todos os dispositivos da Cisco no projeto de Infraestrutura.
+
+O QUE É E PARA QUE SERVER O CISCO PACKET TRACER: O Packet Tracer é um programa educacional gratuito que permite simular uma rede de computadores, através de equipamentos e configurações presente em situações reais. O programa apresenta uma interface gráfica simples, com suportes multimídia que auxiliam na confecção das simulações.
+
+O QUE É E PARA QUE SERVER A TOPOLOGIA LÓGICA: Topologia lógica refere-se à organização e ao fluxo de dados dentro de uma rede, independentemente de como os dispositivos estão fisicamente conectados. Ela descreve como as informações são transmitidas entre os dispositivos e como a comunicação ocorre.
+
+Conteúdo estudado nessa instalação:<br>
+00:00 - Apresentação da Topologia Lógica Cenário A<br>
+01:10 - Conhecendo o Projeto no Github<br>
+01:47 - Conhecendo o Repositório do Curso<br>
+02:38 - Conhecendo o Diretório de Projeto<br>
+02:45 - Diretório do Projeto do Cenário A<br>
+04:10 - Executando o Cisco Packet Tracer<br>
+06:16 - Documentando o Servidor<br>
+09:07 - Configurando o Servidor<br>
+11:25 - Documentando as Portas do Servidor<br>
+12:31 - Documentando os Switches<br>
+15:00 - Documentando os Desktops<br>
+16:20 - Configurando os Desktops<br>
+21:55 - Documentando o Roteador<br>
+23:45 - Documentando os Access Point<br>
+25:12 - Configurando os Access Point<br>
+26:54 - Documentando as Interfaces dos Switches<br>
+30:00 - Salvando o Projeto do Cenário A<br>
+31:15 - Finalização e Agradecimentos<br>
+
+[![Diagrama Lógico](http://img.youtube.com/vi/pdt0AdwQwX8/0.jpg)](https://www.youtube.com/watch?v=pdt0AdwQwX8 "Diagrama Lógico")
+
+Link da vídeo aula: https://www.youtube.com/watch?v=pdt0AdwQwX8
