@@ -236,24 +236,24 @@ O QUE É E PARA QUE SERVER O CISCO PACKET TRACER: O Packet Tracer é um programa
 O QUE É E PARA QUE SERVER A TOPOLOGIA LÓGICA: Topologia lógica refere-se à organização e ao fluxo de dados dentro de uma rede, independentemente de como os dispositivos estão fisicamente conectados. Ela descreve como as informações são transmitidas entre os dispositivos e como a comunicação ocorre.
 
 Conteúdo estudado nessa instalação:<br>
-00:00 - Apresentação da Topologia Lógica Cenário A<br>
-01:10 - Conhecendo o Projeto no Github<br>
-01:47 - Conhecendo o Repositório do Curso<br>
-02:38 - Conhecendo o Diretório de Projeto<br>
-02:45 - Diretório do Projeto do Cenário A<br>
-04:10 - Executando o Cisco Packet Tracer<br>
-06:16 - Documentando o Servidor<br>
-09:07 - Configurando o Servidor<br>
-11:25 - Documentando as Portas do Servidor<br>
-12:31 - Documentando os Switches<br>
-15:00 - Documentando os Desktops<br>
-16:20 - Configurando os Desktops<br>
-21:55 - Documentando o Roteador<br>
-23:45 - Documentando os Access Point<br>
-25:12 - Configurando os Access Point<br>
-26:54 - Documentando as Interfaces dos Switches<br>
-30:00 - Salvando o Projeto do Cenário A<br>
-31:15 - Finalização e Agradecimentos<br>
+Apresentação da Topologia Lógica Cenário A<br>
+Conhecendo o Projeto no Github<br>
+Conhecendo o Repositório do Curso<br>
+Conhecendo o Diretório de Projeto<br>
+Diretório do Projeto do Cenário A<br>
+Executando o Cisco Packet Tracer<br>
+Documentando o Servidor<br>
+Configurando o Servidor<br>
+Documentando as Portas do Servidor<br>
+Documentando os Switches<br>
+Documentando os Desktops<br>
+Configurando os Desktops<br>
+Documentando o Roteador<br>
+Documentando os Access Point<br>
+Configurando os Access Point<br>
+Documentando as Interfaces dos Switches<br>
+Salvando o Projeto do Cenário A<br>
+Finalização e Agradecimentos<br>
 
 [![Diagrama Lógico](http://img.youtube.com/vi/pdt0AdwQwX8/0.jpg)](https://www.youtube.com/watch?v=pdt0AdwQwX8 "Diagrama Lógico")
 
