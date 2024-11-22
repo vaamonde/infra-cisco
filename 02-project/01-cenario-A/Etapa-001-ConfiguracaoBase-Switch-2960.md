@@ -7,8 +7,8 @@
 #Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem<br>
 #YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 #Data de criação: 16/09/2024<br>
-#Data de atualização: 21/11/2024<br>
-#Versão: 0.05<br>
+#Data de atualização: 22/11/2024<br>
+#Versão: 0.06<br>
 #Testado e homologado no Linux Mint 22 Wilma x64<br>
 #Testado e homologado o Cisco Packet Tracer 8.2.x x64 e Rack Cisco SW-3560 e RT-2911
 
@@ -38,9 +38,9 @@ E) **EXEMPLO:** exemplos de comandos ou configurações das opções de DICAS ou
 F) **IMPORTANTE:** informações importantes da tecnologia ou da configuração, com foco em adicionar informações detalhadas da tecnologia ou da certificação;<br>
 G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração, com foco em adicionar informações extras da tecnologia ou da certificação.
 
-[![Config Basic 2960](http://img.youtube.com/vi/G/0.jpg)]( "Config Basic 2960")
+[![Basic Switch](http://img.youtube.com/vi/qIqeQDUmKVg/0.jpg)](https://www.youtube.com/watch?v=qIqeQDUmKVg "Basic Switch")
 
-Link da vídeo aula: 
+Link da vídeo aula: https://www.youtube.com/watch?v=qIqeQDUmKVg
 
 ## PRIMEIRA ETAPA: Acessando o Modo EXEC de Comandos de Usuário no Cisco IOS.
 
@@ -243,7 +243,7 @@ sw-01(config-line)# logging synchronous
 
 d) Habilitando o tempo de inatividade de uso da linha console do Cisco IOS.
 
-**DICA-24:** configuração do tempo de inatividade em minutos e segundos da linha console, utilizado principalmente quando você está conectado no console e não está interagindo nas configurações, após o tempo de inatividade a seção será finalizada (logoff), garantindo assim a segurança do acesso aos equipamentos.
+**DICA-24:** configuração do tempo de inatividade em minutos e segundos da linha console, utilizado principalmente quando você está conectado no console e não está interagindo nas configurações, após o tempo de inatividade a seção será finalizada (logoff/logout), garantindo assim a segurança do acesso aos equipamentos.
 
 **OBSERVAÇÃO-10:** não é recomendado deixar o tempo de inatividade muito curto e nem muito longo.
 ```bash
@@ -270,6 +270,10 @@ sw-01(config-line)# end
 **DICA-28:** você pode utilizar o comando: *write*, indicado para criação de scripts e considerado obsoleto pela Cisco para salvar as configurações da RAM (running-config) para a NVRAM (startup-config).
 ```bash
 sw-01# copy running-config startup-config
+  Destination filename [startup-config]? <Enter>
+  Building configuration...
+  [OK]
+sw-01#
 ```
 
 ## OITAVA ETAPA: Visualizando as Configurações do Switch Cisco Catalyst 2960.
@@ -352,22 +356,26 @@ clock set 14:00:00 21 November 2024
 
   !Acessando a linha console, porta padrão de acesso Out-of-Band (Fora da Banda)
   line console 0
-    
+
     !Forçando fazer login local utilizando usuário e senha locais do switch
     login local
-    
+
     !Habilitando senha de acesso do Tipo-7 Password
     password pti@2018
-    
+
     !Sincronizando as mensagens de logs na tela
     logging synchronous
-    
+
     !Habilitando o tempo de inatividade de uso do console
     exec-timeout 5 30
-    
+
     !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
     end
 
-  !Salvando as configurações da memória RAM para a memória NVRAM
-  write
+!Salvando as configurações da memória RAM para a memória NVRAM
+!OBSERVAÇÃO IMPORTANTE: deixar uma linha em branco no final do script para
+!salvar automaticamente o script na hora da execução, fazendo a função de
+!<Enter> no final do script.
+write
+
 ```

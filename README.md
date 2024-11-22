@@ -258,3 +258,27 @@ Conteúdo estudado nessa instalação:<br>
 [![Diagrama Lógico](http://img.youtube.com/vi/pdt0AdwQwX8/0.jpg)](https://www.youtube.com/watch?v=pdt0AdwQwX8 "Diagrama Lógico")
 
 Link da vídeo aula: https://www.youtube.com/watch?v=pdt0AdwQwX8
+
+# TERCEIRA ETAPA: CONFIGURAÇÃO DA TOPOLOGIA LÓGICA DO CENÁRIO A
+
+## **🛰️ Configuração Base Switch Cisco 2960 do Cenário A do Curso de Infraestrutura de Redes Cisco 🚀**
+
+Vídeo de configuração Base (Básica) do Switch Catalyst Layer 2 2960 do projeto de Infraestrutura de Redes Cisco, nesse vídeo você vai aprender todos os comandos básicos do Cisco IOS que possibilita deixar os nossos Switches mais seguro, criando usuários, senhas e configurações de acesso remoto e auditória de log.
+
+Conteúdo estudado nessa configuração:<br>
+#01_ PRIMEIRA ETAPA: Acessando o Modo EXEC de Comandos de Usuário no Cisco IOS<br>
+#02_ SEGUNDA ETAPA: Acessando o Modo EXEC Privilegiado no Cisco IOS.<br>
+#03_ TERCEIRA ETAPA: Configuração da Data e Hora no Cisco IOS.<br>
+#04_ QUARTA ETAPA: Acessando o Modo de Configuração Global no Cisco IOS.<br>
+#05_ QUINTA ETAPA: Configurações Básicas (Base Config) do Switch Catalyst Cisco 2960 Layer 2.<br>
+#06_ SEXTA ETAPA: Configuração da Linha Console no Cisco IOS.<br>
+#07_ SÉTIMA ETAPA: Salvando as Configurações Básica (Base) do Switch Cisco Catalyst 2960 Layer 2.<br>
+#08_ OITAVA ETAPA: Visualizando as Configurações do Switch Cisco Catalyst 2960.<br>
+#09_ NOVA ETAPA: Testando o acesso ao Switch Cisco Catalyst 2960.<br>
+#10_ DÉCIMA ETAPA: Automatizando a Configuração do Segundo Switch Cisco Catalyst 2960 Layer 2.<br>
+
+[![Basic Switch](http://img.youtube.com/vi/qIqeQDUmKVg/0.jpg)](https://www.youtube.com/watch?v=qIqeQDUmKVg "Basic Switch")
+
+Link da vídeo aula: https://www.youtube.com/watch?v=qIqeQDUmKVg
+
+Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/02-project/01-cenario-A/Etapa-001-ConfiguracaoBase-Switch-2960.md
