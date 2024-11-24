@@ -31,9 +31,9 @@ E) **EXEMPLO:** exemplos de comandos ou configurações das opções de DICAS ou
 F) **IMPORTANTE:** informações importantes da tecnologia ou da configuração, com foco em adicionar informações detalhadas da tecnologia ou da certificação;<br>
 G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração, com foco em adicionar informações extras da tecnologia ou da certificação.
 
-[![Config VTY 2960](http://img.youtube.com/vi/G/0.jpg)]( "Config VTY 2960")
+[![Config VTY 2960](http://img.youtube.com/vi/_1lEPi1fXG8/0.jpg)](https://www.youtube.com/watch?v=_1lEPi1fXG8 "Config VTY 2960")
 
-Link da vídeo aula: 
+Link da vídeo aula: https://www.youtube.com/watch?v=_1lEPi1fXG8
 
 ## PRIMEIRA ETAPA: Acessando o Modo de Configuração Global do Switch Cisco Catalyst 2960.
 
@@ -81,7 +81,7 @@ b) Habilitando a senha de acesso do Tipo-7 Password (senha fraca).
 
 **DICA-05:** igual na configuração da Line Console, essa regra só irá funcionar se não existir usuários no Switch e se você não configurou a opção: login local, deixando apenas a opção: local.
 ```bash
-sw-01(config-line)# password pti@2018
+sw-01(config-line)# password SUA_SENHA_NÃO_SEGURA
 ```
 
 c) Habilitando o sincronismo das mensagens de Logs na tela do terminal do Cisco IOS.
