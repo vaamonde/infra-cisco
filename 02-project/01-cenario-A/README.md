@@ -115,3 +115,18 @@ Conteúdo estudado nessa configuração:<br>
 Link da vídeo aula: https://www.youtube.com/watch?v=qIqeQDUmKVg
 
 Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/02-project/01-cenario-A/Etapa-001-ConfiguracaoBase-Switch-2960.md
+
+## **🛰️ Configuração do VTY no Switch Cisco 2960 do Cenário A do Curso de Infraestrutura de Redes Cisco 🚀**
+
+Vídeo de configuração do VTY (Virtual Terminal Lines) no Switch Catalyst Layer 2 2960 do projeto de Infraestrutura de Redes Cisco, nesse vídeo você vai aprender todos os comandos básicos do Cisco IOS que permite acessar remotamente os equipamentos da Cisco utilizando os terminais virtuais, nessa etapa será configurado apenas os terminais depois será feito as configurações do SVI (Switch Virtual Interface) e do protocolo SSH (Secure Shell).
+
+Conteúdo estudado nessa configuração:<br>
+#01_ PRIMEIRA ETAPA: Acessando o Modo de Configuração Global do Switch Cisco Catalyst 2960.<br>
+#02_ SEGUNDA ETAPA: Configuração das Linhas Virtuais (VTY) do Cisco IOS.<br>
+#03_ TERCEIRA ETAPA: Automatizando a Configuração do Segundo Switch Cisco Catalyst 2960.<br>
+
+[![Config VTY 2960](http://img.youtube.com/vi/_1lEPi1fXG8/0.jpg)](https://www.youtube.com/watch?v=_1lEPi1fXG8 "Config VTY 2960")
+
+Link da vídeo aula: https://www.youtube.com/watch?v=_1lEPi1fXG8
+
+Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/02-project/01-cenario-A/Etapa-002-ConfiguracaoVTY-Switch-2960.md
