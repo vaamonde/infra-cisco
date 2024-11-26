@@ -13,6 +13,11 @@ Data de atualização: 25/11/2024<br>
 Versão: 0.03<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
+Conteúdo estudado nessa configuração:<br>
+#01_ PRIMEIRA ETAPA: Conhecendo os Novos Recursos de Configuração do Router Cisco 1941<br>
+#02_ SEGUNDA ETAPA: Automatizando a Configuração do Primeiro Router Cisco 1941.<br>
+#03_ TERCEIRA ETAPA: Verificando as Configurações do Primeiro Router Cisco 1941.<br>
+
 ## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
 
 A) **ACRÉSCIMO:** informações ou comandos que não estava no script original e nem comentado no vídeo, algo importante para o cenário ou dicas de alunos;<br>
@@ -22,6 +27,10 @@ D) **ERRATA:** correções dos scripts, correções de falas, correções de con
 E) **EXEMPLO:** exemplos de comandos ou configurações das opções de DICAS ou OBSERVAÇÃO;<br>
 F) **IMPORTANTE:** informações importantes da tecnologia ou da configuração, com foco em adicionar informações detalhadas da tecnologia ou da certificação;<br>
 G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração, com foco em adicionar informações extras da tecnologia ou da certificação.
+
+[![Config Basic 1941](http://img.youtube.com/vi/G/0.jpg)]( "Config Basic 1941")
+
+Link da vídeo aula: 
 
 ## PRIMEIRA ETAPA: Conhecendo os Novos Recursos de Configuração do Router Cisco 1941
 

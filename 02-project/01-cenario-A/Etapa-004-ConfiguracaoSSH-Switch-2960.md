@@ -13,6 +13,12 @@ Data de atualização: 25/11/2024<br>
 Versão: 0.03<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
+Conteúdo estudado nessa configuração:<br>
+#01_ PRIMEIRA ETAPA: Acessando o Modo de Configuração Global do Switch Cisco Catalyst 2960<br>
+#02_ SEGUNDA ETAPA: Configuração do Serviço de Acesso Remoto SSH (Secure Shell) no Cisco IOS<br>
+#03_ TERCEIRA ETAPA: Testando e Acessando Remotamente do Switch Cisco Catalyst 2960.<br>
+#04_ QUARTA ETAPA: Automatizando a Configuração do Segundo Switch Cisco Catalyst 2960.<br>
+
 ## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
 
 A) **ACRÉSCIMO:** informações ou comandos que não estava no script original e nem comentado no vídeo, algo importante para o cenário ou dicas de alunos;<br>

@@ -13,6 +13,11 @@ Data de atualização: 25/11/2024<br>
 Versão: 0.02<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
+Conteúdo estudado nessa configuração:<br>
+#01_ PRIMEIRA ETAPA: Acessando o Modo de Configuração Global do Router Cisco 1941.<br>
+#02_ SEGUNDA ETAPA: Configuração da Interface LAN do Router no Cisco IOS.<br>
+#03_ TERCEIRA ETAPA: Testando e Acessando Remotamente do Router Cisco 1941.<br>
+
 ## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
 
 A) **ACRÉSCIMO:** informações ou comandos que não estava no script original e nem comentado no vídeo, algo importante para o cenário ou dicas de alunos;<br>
@@ -22,6 +27,10 @@ D) **ERRATA:** correções dos scripts, correções de falas, correções de con
 E) **EXEMPLO:** exemplos de comandos ou configurações das opções de DICAS ou OBSERVAÇÃO;<br>
 F) **IMPORTANTE:** informações importantes da tecnologia ou da configuração, com foco em adicionar informações detalhadas da tecnologia ou da certificação;<br>
 G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração, com foco em adicionar informações extras da tecnologia ou da certificação.
+
+[![Interface LAN 1941](http://img.youtube.com/vi/G/0.jpg)]( "Interface LAN 1941")
+
+Link da vídeo aula: 
 
 ## PRIMEIRA ETAPA: Acessando o Modo de Configuração Global do Router Cisco 1941.
 
