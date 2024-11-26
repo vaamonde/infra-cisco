@@ -81,7 +81,7 @@ c) Inicializando a Interface GigabitEthernet 0/0 da LAN.
 
 **OBSERVAÇÃO-04:** por padrão todas as Interfaces dos Roteadores estão com o status: *Administratively Down (Desligada Administrativamente)*.
 ```bash
-	rt-01(config-if)# no shutdown
+rt-01(config-if)# no shutdown
 ```
 
 d) Saindo de todos os níveis e voltando para o modo EXEC Privilegiado.
@@ -96,7 +96,7 @@ e) Salvando as configurações da memória RAM (Running-Config) para a memória 
 **DICA-05:** nunca esqueça de salvar as configurações.
 ```bash
 rt-01# copy running-config startup-config
-    Destination filename [startup-config]? <Enter>
+  Destination filename [startup-config]? <Enter>
   Building configuration...
   [OK]
 rt-01#

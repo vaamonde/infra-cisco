@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 13/06/2024<br>
-Versão: 0.04<br>
+Data de atualização: 26/11/2024<br>
+Versão: 0.05<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 ## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
@@ -29,97 +29,101 @@ Uma **Porta de Tronco (trunk)**, normalmente é usada para interligação de Swi
 
 ## SEGUNDA ETAPA: Configurando as Portas Trunk no Switch Multilayer 3650 (CENTRO - DISTRIBUIÇÃO)
 ```python
-!Acessando o modo Exec Privilegiado
-enable
+!Acessando o modo de Configuração Global de Comandos
+configure terminal
 
-	!Acessando o modo de Configuração Global de Comandos
-	configure terminal
+  !Configurando as Interface de Trunk com os Switches Layer 2 2960
+  interface range GigabitEthernet 1/0/1 - 4
+    
+    !Descrição das Interfaces de Trunk
+    description Interface de Trunk com os Switches Layer 2 2960
+    
+    !Configurando o modo de Trunk (Tronco) da Interfaces
+    switchport mode trunk
 
-		!Configurando as Interface de Trunk com os Switches Layer 2 2960
-		interface range GigabitEthernet 1/0/1 - 4
-			
-			!Descrição das Interfaces de Trunk
-			description Interface de Trunk com os Switches Layer 2 2960
-			
-			!Configurando o modo de Trunk (Tronco) da Interfaces
-			switchport mode trunk
+    !Desabilitando a Auto-negociação da Interface de Trunk
+    switchport nonegotiate
 
-			!Desabilitando a Auto-negociação da Interface de Trunk
-			switchport nonegotiate
-
-			!Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
-			end
+    !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
+    end
 
 !Salvando as configurações da memória RAM para a memória NVRAM
+!OBSERVAÇÃO IMPORTANTE: deixar uma linha em branco no final do script para
+!salvar automaticamente o script na hora da execução, fazendo a função de
+!<Enter> no final do script.
 write
+
 ```
 
 ## TERCEIRA ETAPA: Configurando as Portas Trunk no Switch Cisco Layer 2 2960 (LADO ESQUERDO - ACESSO)
 ```python
-!Acessando o modo Exec Privilegiado
-enable
+!Acessando o modo de Configuração Global de Comandos
+configure terminal
 
-	!Acessando o modo de Configuração Global de Comandos
-	configure terminal
+!Configuração das Interfaces de Trunk do Switch Layer 2
+interface range GigabitEthernet 0/1 - 2
+  description Interface de Trunk com os Switches Layer 2 e 3 
+  switchport mode trunk
+  switchport nonegotiate
+  exit
 
-	!Configuração das Interfaces de Trunk do Switch Layer 2
-	interface range GigabitEthernet 0/1 - 2
-		description Interface de Trunk com os Switches Layer 2 e 3 
-		switchport mode trunk
-		switchport nonegotiate
-		exit
+!Configuração das Interfaces de Trunk do Switch Layer 2
+interface range FastEthernet 0/23 - 24
+  description Interface de Trunk com os Switches Layer 2 e 3 
+  switchport mode trunk
+  switchport nonegotiate
 
-	!Configuração das Interfaces de Trunk do Switch Layer 2
-	interface range FastEthernet 0/23 - 24
-		description Interface de Trunk com os Switches Layer 2 e 3 
-		switchport mode trunk
-		switchport nonegotiate
-
-		!Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
-		end
+  !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
+  end
 
 !Salvando as configurações da memória RAM para a memória NVRAM
+!OBSERVAÇÃO IMPORTANTE: deixar uma linha em branco no final do script para
+!salvar automaticamente o script na hora da execução, fazendo a função de
+!<Enter> no final do script.
 write
+
 ```
 
 ## QUARTA ETAPA: Configurando as Portas Trunk no Switch Cisco Layer 2 2960 (LADO DIREITO - ACESSO)
 ```python
-!Acessando o modo Exec Privilegiado
-enable
+!Acessando o modo de Configuração Global de Comandos
+configure terminal
 
-	!Acessando o modo de Configuração Global de Comandos
-	configure terminal
+!Configuração das Interfaces de Trunk do Switch Layer 2
+interface range GigabitEthernet 0/1 - 2
+  description Interface de Trunk com os Switches Layer 2 e 3 
+  switchport mode trunk
+  switchport nonegotiate
+  exit
 
-	!Configuração das Interfaces de Trunk do Switch Layer 2
-	interface range GigabitEthernet 0/1 - 2
-		description Interface de Trunk com os Switches Layer 2 e 3 
-		switchport mode trunk
-		switchport nonegotiate
-		exit
+!Configuração das Interfaces de Trunk do Switch Layer 2
+interface range FastEthernet 0/23 - 24
+  description Interface de Trunk com os Switches Layer 2 e 3 
+  switchport mode trunk
+  switchport nonegotiate
 
-	!Configuração das Interfaces de Trunk do Switch Layer 2
-	interface range FastEthernet 0/23 - 24
-		description Interface de Trunk com os Switches Layer 2 e 3 
-		switchport mode trunk
-		switchport nonegotiate
-
-		!Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
-		end
+  !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
+  end
 
 !Salvando as configurações da memória RAM para a memória NVRAM
+!OBSERVAÇÃO IMPORTANTE: deixar uma linha em branco no final do script para
+!salvar automaticamente o script na hora da execução, fazendo a função de
+!<Enter> no final do script.
 write
+
 ```
 
 ## QUINTA ETAPA: Verificando as Configurações dos Switches.
+```python
+!Visualizando as Configurações do Running-Config (RAM)
+show running-config
 
-	!Visualizando as Configurações do Running-Config (RAM)
-	show running-config
+!Visualizando as configurações da memória RAM
+show running-config | section interface
 
-	!Visualizando as configurações da memória RAM
-	show running-config | section interface
-
-	!Verificando as informações das Interfaces de Trunk
-	show interface status
-	show interface trunk
-	show interfaces gigabitEthernet 0/1 status
-	show interfaces gigabitEthernet 0/1 switchport
+!Verificando as informações das Interfaces de Trunk
+show interface status
+show interface trunk
+show interfaces gigabitEthernet 0/1 status
+show interfaces gigabitEthernet 0/1 switchport
+```

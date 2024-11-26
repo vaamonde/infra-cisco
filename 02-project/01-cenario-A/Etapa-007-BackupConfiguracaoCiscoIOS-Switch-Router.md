@@ -53,7 +53,7 @@ sw-01(config)#
 ```bash
 sw-01# show version
   cisco WS-C2960-24TT-L (PowerPC405) processor (revision B0) with 65536K bytes of memory.
-    65536KB / 1000 = 65MB (65MB de Memória RAM)
+  65536KB / 1000 = 65MB (65MB de Memória RAM)
   64K bytes of flash-simulated non-volatile configuration memory.
   Configuration register is 0xF
 ```
@@ -119,9 +119,13 @@ sw-01# dir flash:
 **OBSERVAÇÃO-06:** o protocolo TFTP foi escolhido pela Cisco para ser o sistema padrão de Atualização e Backup dos Switch e Router.
 ```bash
 !Verificando o Status do Serviço do Servidor TFTP
+!OBSERVAÇÃO IMPORTANTE: RECOMENDO, NESSE CENÁRIO REMOVER TODOS OS ARQUIVOS NO TFTP
+!PARA FACILITAR A ANALISE DOS BACKUPS ENVIADOS.
 Server-01
   Services
     TFTP
+      Service: ON (Enable)
+        <Remove File>
 
 !Pingando o Servidor de TFTP
 sw-01# ping 192.168.1.1
@@ -139,6 +143,7 @@ sw-01# copy startup-config tftp:
 Server-01
   Services
     TFTP
+      File
 ```
 
 08. Salvando a imagem do Cisco IOS do Switch Layer 2 2960 para o Servidor TFTP.
