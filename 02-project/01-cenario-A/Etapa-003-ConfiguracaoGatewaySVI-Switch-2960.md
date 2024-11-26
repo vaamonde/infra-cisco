@@ -7,8 +7,8 @@
 #Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem<br>
 #YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 #Data de criação: 16/09/2024<br>
-#Data de atualização: 22/11/2024<br>
-#Versão: 0.05<br>
+#Data de atualização: 25/11/2024<br>
+#Versão: 0.06<br>
 #Testado e homologado no Linux Mint 22 Wilma x64<br>
 #Testado e homologado o Cisco Packet Tracer 8.2.x x64 e Rack Cisco SW-3560 e RT-2911
 
@@ -127,11 +127,15 @@ e) Salvando as configurações da memória RAM (Running-Config) para a memória 
 **DICA-12:** nunca esqueça de salvar as configurações.
 ```bash
 sw-01# copy running-config startup-config
+  Destination filename [startup-config]? <Enter>
+  Building configuration...
+  [OK]
+sw-01#
 ```
 
 09. Visualizando as configurações da memória RAM (Running-Config).
 
-**DICA-12** após a configuração da SVI verifique se tudo está configurado de forma correta utilizando os comandos: *show*.
+**DICA-13** após a configuração da SVI verifique se tudo está configurado de forma correta utilizando os comandos: *show*.
 ```bash
 !Visualizando as Configurações do Running-Config (RAM)
 sw-01# show running-config
@@ -148,9 +152,9 @@ sw-01# show vlan brief
 
 f) Testando a conectividade entre o Switch e os Desktops da Rede
 
-**DICA-13** depois da configuração da SVI no Switch Cisco Catalyst Layer 2 você consegue agora pingar os Desktops da Rede utilizado o Protocolo ICMP (Internet Control Message Protocol) como comando: *ping* para testar a interconectividade de rede.
+**DICA-14** depois da configuração da SVI no Switch Cisco Catalyst Layer 2 você consegue agora pingar os Desktops da Rede utilizado o Protocolo ICMP (Internet Control Message Protocol) com o comando: *ping* para testar a interconectividade de rede.
 
-**OBSERVAÇÃO-05** o carácter: *! (exclamação)* utilizado no comando: ping significa que os pacotes ICMP enviado para o destino foi recebido com sucesso, parão é enviar: *5 Pacotes (Sending 5)* já o carácter: *. (ponto)* significa que os pacotes ICMP foram perdidos ou o destino não recebeu os pacotes.
+**OBSERVAÇÃO-08** o carácter: *! (exclamação)* utilizado no comando: ping significa que os pacotes ICMP enviado para o destino foi recebido com sucesso, parão é enviar: *5 Pacotes (Sending 5)* já o carácter: *. (ponto)* significa que os pacotes ICMP foram perdidos ou o destino não recebeu os pacotes.
 ```bash
 !Pingando a SVI do Switch Layer 2
 sw-01# ping 192.168.1.250
@@ -167,11 +171,11 @@ sw-01# ping 192.168.1.1
 
 01. Utilizando o Visual Studio Code (VSCode) para automatizar as configurações do Cisco IOS.
 
-**OBSERVAÇÃO-05:** recomendo sempre utilizar um *Editor de Texto Profissional* para criar os scripts e automatizar as tarefas de configuração do Cisco IOS, hoje em dia é indicado utilizar o Visual Studio Code (VSCode) junto com as Extensões: *Cisco IOS Syntax e Cisco Config Highlight* para facilitar essa configuração.
+**OBSERVAÇÃO-09:** recomendo sempre utilizar um *Editor de Texto Profissional* para criar os scripts e automatizar as tarefas de configuração do Cisco IOS, hoje em dia é indicado utilizar o Visual Studio Code (VSCode) junto com as Extensões: *Cisco IOS Syntax e Cisco Config Highlight* para facilitar essa configuração.
 
-**DICA-13:** o caractere: *! (exclamação)* é utilizado como um recurso de *Comentário*, sua utilização server para comentar o código de automação do Cisco IOS ou para desativar um comando para não ser executado, *RECOMENDO FORTEMENTE DOCUMENTAR TODOS OS COMANDOS E PROCEDIMENTOS DE CONFIGURAÇÃO PARA FACILITAR O ENTENDIMENTO.*
+**DICA-15:** o caractere: *! (exclamação)* é utilizado como um recurso de *Comentário*, sua utilização server para comentar o código de automação do Cisco IOS ou para desativar um comando para não ser executado, *RECOMENDO FORTEMENTE DOCUMENTAR TODOS OS COMANDOS E PROCEDIMENTOS DE CONFIGURAÇÃO PARA FACILITAR O ENTENDIMENTO.*
 
-**DICA-14:** para facilitar a leitura do código, recomendo utilizar o recurso de **Indentação de Código** usando a Tecla TAB (Tabulador/Tabulação) para cada nível que você está configurando o Cisco IOS, isso facilitada a análise de erros (Debug) do código.
+**DICA-16:** para facilitar a leitura do código, recomendo utilizar o recurso de **Indentação de Código** usando a Tecla TAB (Tabulador/Tabulação) para cada nível que você está configurando o Cisco IOS, isso facilitada a análise de erros (Debug) do código.
 
 01. Acessando o modo EXEC Privilegiado e o modo de Configuração Global de Comandos.
 ```bash
@@ -190,23 +194,23 @@ sw-02#
 !Acessando o modo de Configuração Global de comandos
 configure terminal
 
-!Configuração do Gateway padrão IPv4 no Switch
-ip default-gateway 192.168.1.254
+  !Configuração do Gateway padrão IPv4 no Switch
+  ip default-gateway 192.168.1.254
 
-!Configuração da Interface Virtual do Switch SVI
-interface vlan 1
+  !Configuração da Interface Virtual do Switch SVI
+  interface vlan 1
 
-  !Configuração da Descrição da Interface Virtual
-  description Interface de Gerenciamento do Switch SW-02
+    !Configuração da Descrição da Interface Virtual
+    description Interface de Gerenciamento do Switch SW-02
 
-  !Configuração do Endereçamento IPv4 da Interface Virtual
-  ip address 192.168.1.251 255.255.255.0
+    !Configuração do Endereçamento IPv4 da Interface Virtual
+    ip address 192.168.1.251 255.255.255.0
 
-  !Inicializando a Interface Virtual do Switch
-  no shutdown
+    !Inicializando a Interface Virtual do Switch
+    no shutdown
 
-  !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
-  end
+    !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
+    end
 
 !Salvando as configurações da memória RAM para a memória NVRAM
 !OBSERVAÇÃO IMPORTANTE: deixar uma linha em branco no final do script para

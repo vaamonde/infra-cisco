@@ -7,8 +7,8 @@
 #Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem<br>
 #YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 #Data de criação: 16/09/2024<br>
-#Data de atualização: 22/11/2024<br>
-#Versão: 0.06<br>
+#Data de atualização: 25/11/2024<br>
+#Versão: 0.07<br>
 #Testado e homologado no Linux Mint 22 Wilma x64<br>
 #Testado e homologado o Cisco Packet Tracer 8.2.x x64 e Rack Cisco SW-3560 e RT-2911
 
@@ -206,7 +206,7 @@ sw-01(config)# username SEU_USUÁRIO_3 privilege 15 secret SUA_SENHA_SEGURA
 ## SEXTA ETAPA: Configuração da Linha Console no Cisco IOS.
 
 01. Acessando a Linha (line) Console, porta padrão de acesso *Out-of-Band (Fora da Banda)* do Switch Cisco.
-	
+
 **DICA-19:** conexão feita utilizando o *Cabo Console RS232/DB9 ou USB* e software de Acesso Remoto ao Console (PuTTY, Minicom, etc...).
 
 **DICA-20:** nos Switch Cisco Catalyst temos apenas uma porta console RS232/DB9 ou USB (novos modelos).
@@ -331,46 +331,46 @@ clock set 14:00:00 21 November 2024
   !Acessando o modo de configuração global de comandos
   configure terminal
 
-  !Configuração do nome do switch
-  hostname sw-02
+    !Configuração do nome do switch
+    hostname sw-02
 
-  !Habilitando o serviço de criptografia de senhas do Tipo-7 Password 
-  service password-encryption
+    !Habilitando o serviço de criptografia de senhas do Tipo-7 Password 
+    service password-encryption
 
-  !Habilitando o serviço de marcação de Data/Hora detalhado nos Logs
-  service timestamps log datetime msec
+    !Habilitando o serviço de marcação de Data/Hora detalhado nos Logs
+    service timestamps log datetime msec
 
-  !Desativando a resolução de nomes de domínio
-  no ip domain-lookup
+    !Desativando a resolução de nomes de domínio
+    no ip domain-lookup
 
-  !Configuração do banner da mensagem do dia
-  banner motd #AVISO: acesso autorizado somente a funcionarios#
+    !Configuração do banner da mensagem do dia
+    banner motd #AVISO: acesso autorizado somente a funcionarios#
 
-  !Habilitando o uso senha do Tipo-5 Secret para acessar o modo EXEC Privilegiado
-  enable secret pti@2018
+    !Habilitando o uso senha do Tipo-5 Secret para acessar o modo EXEC Privilegiado
+    enable secret pti@2018
 
-  !Criação dos usuários locais utilizando senhas do Tipo-5 ou Tipo-7 e privilégios diferenciados
-  username robson secret pti@2018
-  username vaamonde password pti@2018
-  username admin privilege 15 secret pti@2018
+    !Criação dos usuários locais utilizando senhas do Tipo-5 ou Tipo-7 e privilégios diferenciados
+    username robson secret pti@2018
+    username vaamonde password pti@2018
+    username admin privilege 15 secret pti@2018
 
-  !Acessando a linha console, porta padrão de acesso Out-of-Band (Fora da Banda)
-  line console 0
+    !Acessando a linha console, porta padrão de acesso Out-of-Band (Fora da Banda)
+    line console 0
 
-    !Forçando fazer login local utilizando usuário e senha locais do switch
-    login local
+      !Forçando fazer login local utilizando usuário e senha locais do switch
+      login local
 
-    !Habilitando senha de acesso do Tipo-7 Password
-    password pti@2018
+      !Habilitando senha de acesso do Tipo-7 Password
+      password pti@2018
 
-    !Sincronizando as mensagens de logs na tela
-    logging synchronous
+      !Sincronizando as mensagens de logs na tela
+      logging synchronous
 
-    !Habilitando o tempo de inatividade de uso do console
-    exec-timeout 5 30
+      !Habilitando o tempo de inatividade de uso do console
+      exec-timeout 5 30
 
-    !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
-    end
+      !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
+      end
 
 !Salvando as configurações da memória RAM para a memória NVRAM
 !OBSERVAÇÃO IMPORTANTE: deixar uma linha em branco no final do script para

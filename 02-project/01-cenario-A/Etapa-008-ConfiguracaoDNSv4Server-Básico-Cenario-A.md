@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 18/05/2024<br>
-Versão: 0.02<br>
+Data de atualização: 25/11/2024<br>
+Versão: 0.03<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 ## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
@@ -54,46 +54,48 @@ O protocolo padrão utilizado pelo DNS Server é o: *UDP (User Datagram Protocol
 **OBSERVAÇÃO-04:** no Cisco Packet Tracer as configuração de Sintaxe DNS são limitadas somente ao tipos: *A, AAA, CNAME, SOA e NS* estão disponíveis para configuração.
 
 **OBSERVAÇÃO-05:** no Cisco Packet Tracer temos apenas a configuração da Zona de Pesquisa Direta, não está disponível a opção para configurar a Zona de Pesquisa Reversa.
+```bash
+!Habilitando o Serviço do DNS Server no Servidor 01
+Server-01
+  Services
+    DNS
 
-	!Habilitando o Serviço do DNS Server no Servidor 01
-	Server-01
-		Services
-			DNS
-
-	DNS Service:       On
-	Resource Records:  Name = server-01       Type = A Record     Address = 192.168.1.1
-	Resource Records:  Name = sw-01           Type = A Record     Address = 192.168.1.250
-	Resource Records:  Name = sw-02           Type = A Record     Address = 192.168.1.251
-	Resource Records:  Name = rt-01           Type = A Record     Address = 192.168.1.254
-	Resource Records:  Name = desktop-01      Type = A Record     Address = 192.168.1.10
-	Resource Records:  Name = desktop-02      Type = A Record     Address = 192.168.1.11
-	Resource Records:  Name = desktop-03      Type = A Record     Address = 192.168.1.12
-	Resource Records:  Name = desktop-04      Type = A Record     Address = 192.168.1.13
-	Resource Records:  Name = notebook-01     Type = A Record     Address = 192.168.1.21
-	Resource Records:  Name = notebook-02     Type = A Record     Address = 192.168.1.23
-	Resource Records:  Name = celular-01      Type = A Record     Address = 192.168.1.20
-	Resource Records:  Name = celular-02      Type = A Record     Address = 192.168.1.22
+DNS Service:       On
+Resource Records:  Name = server-01       Type = A Record     Address = 192.168.1.1
+Resource Records:  Name = sw-01           Type = A Record     Address = 192.168.1.250
+Resource Records:  Name = sw-02           Type = A Record     Address = 192.168.1.251
+Resource Records:  Name = rt-01           Type = A Record     Address = 192.168.1.254
+Resource Records:  Name = desktop-01      Type = A Record     Address = 192.168.1.10
+Resource Records:  Name = desktop-02      Type = A Record     Address = 192.168.1.11
+Resource Records:  Name = desktop-03      Type = A Record     Address = 192.168.1.12
+Resource Records:  Name = desktop-04      Type = A Record     Address = 192.168.1.13
+Resource Records:  Name = notebook-01     Type = A Record     Address = 192.168.1.21
+Resource Records:  Name = notebook-02     Type = A Record     Address = 192.168.1.23
+Resource Records:  Name = celular-01      Type = A Record     Address = 192.168.1.20
+Resource Records:  Name = celular-02      Type = A Record     Address = 192.168.1.22
+```
 
 a) Abrindo o Prompt de Comando do Desktop.
 
 **DICA-03** não confunda Terminal com Command Prompt, Terminal é utilizado para se conectar no Switch ou Router utilizando o Cabo Console, já o Command Prompt (Prompt de Comando) é utilizado para testar as configurações de rede e acessar remotamente o Switch ou Router.
+```bash
+!Verificando o endereço IPv4 configurado no Desktop
+C:\> ipconfig
 
-	!Verificando o endereço IPv4 configurado no Desktop
-	C:\> ipconfig
+!Verificando o endereço detalhado IPv4 configurado no Desktop
+C:\> ipconfig /all
 
-	!Verificando o endereço detalhado IPv4 configurado no Desktop
-	C:\> ipconfig /all
+!Testando a Resolução de Nomes DNS no Desktop
+C:\> nslookup server-01
+C:\> nslookup sw-01
 
-	!Testando a Resolução de Nomes DNS no Desktop
-	C:\> nslookup server-01
-	C:\> nslookup sw-01
+!Testando a comunicação com o Server 01 utilizando o pacote ICMP (Internet Control Message Protocol)
+C:\> ping server-01
 
-	!Testando a comunicação com o Server 01 utilizando o pacote ICMP (Internet Control Message Protocol)
-	C:\> ping server-01
+!Testando a comunicação com o Switch 01 utilizando o pacote ICMP (Internet Control Message Protocol)
+C:\> ping sw-01
 
-	!Testando a comunicação com o Switch 01 utilizando o pacote ICMP (Internet Control Message Protocol)
-	C:\> ping sw-01
-
-	!Acessando remotamente o Switch utilizando o protocolo SSH (Secure Shell)
-	!OBSERVAÇÃO: -l (éli não é o número "1" (um) e sim "l" (éli) em minúsculo)
-	C:\> ssh -l senac sw-01   (Switch SW-01)
+!Acessando remotamente o Switch utilizando o protocolo SSH (Secure Shell)
+!OBSERVAÇÃO: -l (éli não é o número "1" (um) e sim "l" (éli) em minúsculo)
+C:\> ssh -l admin sw-01   (Switch SW-01)
+```
