@@ -56,18 +56,18 @@ sw-01(config)#
 
 **DICA-01:** configuração do Gateway IPv4 em Switch Cisco Catalyst Layer 2 serve somente para acesso remoto com finalidade de monitoramento/gerenciamento do Switch;
 
-**DICA-02:** em Switch Cisco Catalyst Layer 3 o recurso de Gateway é utilizado tanto para acesso remoto ou para roteamento de Redes/Sub-Redes utilizando principalmente VLAN (Virtual-LAN) ou Protocolos de Roteamento.
+**DICA-02:** em Switch Cisco Catalyst Layer 3 o recurso de Gateway é utilizado tanto para acesso remoto ou para roteamento de Redes/Sub-Redes utilizando principalmente VLAN (Virtual-LAN) ou Protocolos de Roteamento IGP (Interior Gateway Protocols) como o: RIP (Routing Information Protocol), EIGRP (Enhanced Interior Gateway Routing Protocol), OSPF (Open Shortest Path First), Rota Estática, etc...
 
 **OBSERVAÇÃO-01:** esse recurso é necessário para administração remota ou monitoramento do Switch Cisco Catalyst Layer 2 ou Layer 3.
 
-**OBSERVAÇÃO-02:** existe a possibilidade da configuração do Gateway utilizar o endereço IPv6 em Switch Cisco Catalyst Layer 2 ou Layer 3, para essa configuração é recomendo atualizar o Cisco IOS para a versão no mínimo 15.x (versão padrão no Cisco Packet Tracer 12.x).
+**OBSERVAÇÃO-02:** existe a possibilidade da configuração do Gateway utilizar o endereço IPv6 em Switch Cisco Catalyst Layer 2 ou Layer 3, para essa configuração é recomendo utilizar o Cisco IOS na versão mínima 15.x (versão padrão no Cisco Packet Tracer 8.2.2 - v15.0.-2-SE4 que já tem suporte ao IPv6).
 ```bash
 sw-01(config)# ip default-gateway 192.168.1.254
 ```
 
 ## TERCEIRA ETAPA: Configuração da Interface SVI no Cisco IOS.
 
-01. Configuração da Interface Virtual do Switch SVI (Switch Virtual Interface) no Switch.
+01. Configuração da Interface Virtual do Switch SVI (Switch Virtual Interface).
 
 **DICA-03:** interfaces virtuais são criadas utilizando o recurso de VLAN (Virtual-LAN) disponível nos Switch Cisco Catalyst Layer 2 ou Layer 3.
 
@@ -75,7 +75,7 @@ sw-01(config)# ip default-gateway 192.168.1.254
 
 **OBSERVAÇÃO-03:** em Switch Cisco Catalyst Layer 2 utilizamos o SVI somente para administração remota ou monitoramento do equipamento, ela não será utilizada para Gateway da Rede Local ou para integração com Protocolos de Roteamento.
 
-**OBSERVAÇÃO-04:** o SVI é necessário para o acesso remoto nas Linhas Virtuais (VTY) utilizando os protocolos Telnet, SSH ou outro protocolo configurado, após a configuração da SVI o Switch irá possuir um Endereço Lógico de Rede (IPv4 ou IPv6) permitindo o seu acesso remoto.
+**OBSERVAÇÃO-04:** o SVI é necessário para o acesso remoto nas Linhas Virtuais (VTY) utilizando os protocolos Telnet, SSH ou outro protocolo configurado, após a configuração da SVI o Switch irá possuir um Endereço Físico (MAC Address) associado a um Endereço Lógico de Rede (IPv4 ou IPv6) permitindo o seu acesso remoto.
 ```bash
 sw-01(config)# interface vlan 1
 ```
@@ -91,9 +91,9 @@ sw-01(config-if)# description Interface de Gerenciamento do Switch SW-01
 
 b) Configuração do Endereçamento IPv4 da Interface Virtual VLAN-1.
 
-**DICA-06:** o endereço IPv4 deve ser da mesma faixa de Rede ou Sub-Rede do Gateway Padrão utilizado no Switch na Segunda Etapa.
+**DICA-06:** o endereço IPv4 deve ser da mesma faixa de Rede ou Sub-Rede do Gateway Padrão configurado no Switch na Segunda Etapa.
 
-**DICA-07:** é recomendado que os endereços de Rede ou Sub-Redes dos Switches sejam diferentes das Redes dos Desktops, Notebook, Wi-Fi (Wireless/Sem-Fio), CFTV (Circuito Fechado de TV), etc... para garantir a segurança de acesso dos equipamentos somente para a equipe/profissionais de TI que esteja nessa mesma Rede/Sub-Rede.
+**DICA-07:** é recomendado que os endereços de Rede ou Sub-Redes dos Switches sejam diferentes das Redes dos Desktops, Notebook, Wi-Fi (Wireless/Sem-Fio), CFTV (Circuito Fechado de TV), etc... para garantir a segurança de acesso aos equipamentos somente para a equipe/profissionais de TI que esteja nessa mesma Rede/Sub-Rede.
 
 **OBSERVAÇÃO-06:** configuração do endereço IPv4 deve ser: *IPv4 + Máscara de Rede Completa (ClassFull)*, não utilizar CIDR (Classes Inter-Domain Routing) nas configurações.
 ```bash
@@ -154,7 +154,7 @@ f) Testando a conectividade entre o Switch e os Desktops da Rede
 
 **DICA-14** depois da configuração da SVI no Switch Cisco Catalyst Layer 2 você consegue agora pingar os Desktops da Rede utilizado o Protocolo ICMP (Internet Control Message Protocol) com o comando: *ping* para testar a interconectividade de rede.
 
-**OBSERVAÇÃO-08** o carácter: *! (exclamação)* utilizado no comando: ping significa que os pacotes ICMP enviado para o destino foi recebido com sucesso, parão é enviar: *5 Pacotes (Sending 5)* já o carácter: *. (ponto)* significa que os pacotes ICMP foram perdidos ou o destino não recebeu os pacotes.
+**OBSERVAÇÃO-08** o carácter: *! (exclamação)* utilizado no comando: ping significa que os pacotes ICMP enviado para o destino foi recebido com sucesso, o padrão é enviar: *5 Pacotes (Sending 5)* já o carácter: *. (ponto)* significa que os pacotes ICMP foram perdidos ou o destino não recebeu os pacotes.
 ```bash
 !Pingando a SVI do Switch Layer 2
 sw-01# ping 192.168.1.250

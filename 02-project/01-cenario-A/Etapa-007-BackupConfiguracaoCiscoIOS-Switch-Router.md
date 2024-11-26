@@ -74,7 +74,7 @@ sw-01# show boot
 
 **DICA-04:** a memória de massa (Flash Card) em Switch geralmente são Chips soldados ou módulos internos.
 
-**OBSERVAÇÃO-04:** diferente do Router, a memória Flash em Switch não pode ser acessada sem desmontar o equipamento.
+**OBSERVAÇÃO-04:** diferente do Router, a memória Flash em Switch não pode ser acessada sem desmontar (Abrir) o equipamento (Caixa).
 ```bash
 sw-01# show flash:
   64016384 bytes total (59344187 bytes free)
@@ -112,12 +112,17 @@ sw-01# dir flash:
 
 07. Salvando as configurações da memória NVRAM para o Servidor TFTP.
 
-**DICA-07:** o serviço de TFTP (Trivial File Transfer Protocol) utiliza o Protocolo: *UDP* na Porta Padrão: *69* e por padrão está ativo no Servidor no Cisco Packet Tracer, precisando apenas habilitar o endereço IPv4 ou IPv6.
+**DICA-07:** o serviço de TFTP (Trivial File Transfer Protocol) utiliza o Protocolo: *UDP* na Porta Padrão: *69* está ativo por padrão no Servidor do Cisco Packet Tracer, precisando apenas habilitar o endereço IPv4 ou IPv6.
 
 **OBSERVAÇÃO-05:** o protocolo UDP (User Datagram Protocol) não é confiável, porque ele não exige confirmação de recebimento.
 
 **OBSERVAÇÃO-06:** o protocolo TFTP foi escolhido pela Cisco para ser o sistema padrão de Atualização e Backup dos Switch e Router.
 ```bash
+!Verificando o Status do Serviço do Servidor TFTP
+Server-01
+  Services
+    TFTP
+
 !Pingando o Servidor de TFTP
 sw-01# ping 192.168.1.1
 

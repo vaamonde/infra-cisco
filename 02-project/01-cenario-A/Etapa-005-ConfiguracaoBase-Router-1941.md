@@ -27,9 +27,9 @@ G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração
 
 01. Habilitando o Log de Debug no Router.
 
-**DICA-01:** recomendado habilitar o recurso de marcação de Data/Hora detalhado no Debug (Depurar).
+**DICA-01:** recomendado habilitar o recurso de marcação de Data/Hora detalhado no Log de Debug (Depurar).
 
-**OBSERVAÇÃO-01:** esse recurso é utilizado para análise detalhada de logs de protocolos de roteamento no Router, esse recurso não está disponível em Switch Cisco Catalyst Layer 2 2960 ou Layer 3 3560.
+**OBSERVAÇÃO-01:** esse recurso é utilizado para análise detalhada de logs de protocolos de roteamento no Router, esse recurso não está disponível em Switch Cisco Catalyst Layer 2 2960 ou Layer 3 3560 que utiliza versões abaixo da 15.x (versão antiga 12.x não tem esse suporte).
 ```bash
 Router (config)# service timestamps debug datetime msec
 ```
@@ -43,7 +43,7 @@ Router (config)# service timestamps debug datetime msec
 Router (config)# security passwords min-length 8
 ```
 
-03. Aumentando o Nível de Segurança contra Brute Force no Acesso Remoto.
+03. Aumentando o Nível de Segurança contra Força Bruta (Brute Force) no Acesso Remoto.
 
 **DICA-03:** esse recurso é recomendado para aumentar o nível de segurança junto com o serviço do SSH para proteger o Router contra Ataque de Força Bruta.
 
@@ -73,7 +73,7 @@ Router (config)# login block-for 120 attempts 2 within 60
 enable
 
   !Configuração de Data/Hora Router
-  clock set 19:54:00 05 November 2024
+  clock set 19:54:00 26 November 2024
 
   !Acessando o modo de Configuração Global de comandos
   configure terminal

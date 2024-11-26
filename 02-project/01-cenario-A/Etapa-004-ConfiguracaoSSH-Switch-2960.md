@@ -68,7 +68,7 @@ sw-01(config)# ip domain-name SEU_DOMÍNIO.INTRA
 
 **OBSERVAÇÃO-04:** a porta padrão de conexão do Serviço de SSH é a: *22* utilizando o Protocolo: *TCP*;
 
-**ADENDO-01:** versões do Cisco Packet Tracer >=7.3 possui o suporte para o comando completo de geração das chaves SSH RSA nos Switches ou Router em um único comando igual as equipamentos reais, utilizando o comando: *crypto key generate rsa general-keys modulus 1024*;
+**ADENDO-01:** versões do Cisco Packet Tracer >=7.3 possui o suporte para o comando completo de geração das chaves SSH RSA nos Switches ou Router em um único comando igual aos equipamentos reais, utilizando o comando: *crypto key generate rsa general-keys modulus 1024*;
 
 **OBSERVAÇÃO IMPORTANTE:** caso queira desativar o serviço do SSH ou remover os Módulos/Chaves Públicas RSA, digite o comando: *crypto key zeroize rsa*, caso você digite novamente o comando: *crypto key generate rsa* ele vai solicitar se você quer substituir os Módulos/Chaves Públicas RSA atuais (Do you really want to replace them? [yes/no]).
 ```bash
@@ -95,9 +95,9 @@ sw-01(config)# ip ssh time-out 60
 
 05. Habilitando o número máximo de tentativas de conexões simultâneas no SSH Server.
 
-**DICA-06:** essa opção aumenta o nível de segurança contra ataques de Força Bruta (Brute-Force) utilizando dicionários de usuários e senhas e várias autenticações simultâneas com falhas (Exemplo o software Hydra).
+**DICA-06:** essa opção aumenta o nível de segurança contra ataques de Força Bruta (Brute-Force) utilizando dicionários de usuários e senhas e várias autenticações simultâneas com falhas (Exemplo do software Hydra).
 
-**OBSERVAÇÃO-07:** limites de conexões simultâneas vai de: 0 até 5, por padrão várias conexão simultâneas são liberadas.
+**OBSERVAÇÃO-07:** limites de conexões simultâneas vai de: 0 até 5, por padrão várias conexão simultâneas são permitidas.
 ```bash
 sw-01(config)# ip ssh authentication-retries 2
 ```

@@ -61,7 +61,7 @@ Switch>
 
 **DICA-01:** utilizar sempre a tecla TAB para auto-completar os comandos no Cisco IOS;
 
-**DICA-02:** se você estiver com dúvida do comando, utilizar o sinal de: ? (Interrogação) junto com o comando para mostrar as opções e informações reduzidas do comando (ajuda básica), ou para mostrar as opções ambíguas (Ambiguidade - mais de uma forma opção) muito comum nos comandos abreviados.
+**DICA-02:** se você estiver com dúvida do comando, utilizar o sinal de: ? (Interrogação) junto com o comando para mostrar as opções e informações reduzidas do comando (ajuda básica), ou para mostrar as opções ambíguas (Ambiguidade - mais de uma forma ou opção) muito comum nos comandos abreviados.
 
 **EXEMPLO: Switch> show? | Switch> enable? | Switch# copy? | Switch# disable? | Switch# clock? | Switch(config)# service?**
 ```bash
@@ -153,7 +153,7 @@ sw-01(config)# service timestamps log datetime msec
 
 **EXEMPLO: switch# time (Translating "time"...domain server (255.255.255.255))**
 
-**DICA-10:** para desbloquear o terminal, você pressiona: *Ctrl + Shift + 6* ou esperar a liberação do terminal que demora cerca de *60 segundos*.
+**DICA-10:** para desbloquear o terminal, você pressiona: *Ctrl + Shift + 6* ou espera a liberação do terminal que demora cerca de *60 segundos*.
 
 **DICA-11:** o comando: *no* é usado para desabilitar ou remover configurações feitas no Switch ou Router da Cisco.
 ```bash
@@ -179,7 +179,7 @@ sw-01(config)# banner motd #AVISO: acesso autorizado somente a funcionarios#
 
 06. Habilitando o uso de senha do Tipo-5 Secret para acessar o modo EXEC Privilegiado do Cisco IOS.
 
-**DICA-14:** senhas do Tipo-5 por padrão utilizam criptografia forte (Algorítimo MD5) e não precisa do serviço de criptografia de senha habilitado para funcionar.
+**DICA-14:** senhas do Tipo-5 por padrão utiliza criptografia forte (Algorítimo MD5) e não precisa do serviço de criptografia de senha habilitado para funcionar.
 
 **OBSERVAÇÃO-05:** por padrão o acesso ao modo EXEC Privilegiado é liberado sem segurança, é recomendado sempre habilitar o recurso de segurança para acessar o Modo EXEC Privilegiado e o Modo de Configuração Global.
 ```bash
@@ -280,7 +280,7 @@ sw-01#
 
 01. Visualizando as configurações da memória RAM (Running-Config).
 
-**DICA-29:** no Cisco IOS temos várias opções de visualização das configurações utilizando o comando: *show*, o principal comando utilizado em todos os equipamentos da Cisco para verificar as configurações que estão rodando no momento é o: *show running-config* (configuração que está rodando na RAM).
+**DICA-29:** no Cisco IOS temos várias opções de visualizações das configurações utilizando o comando: *show*, o principal comando utilizado em todos os equipamentos da Cisco para verificar as configurações que estão rodando no momento é o: *show running-config* (configuração que está rodando na RAM).
 ```bash
 sw-01# show running-config
 ```
