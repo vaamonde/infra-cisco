@@ -298,8 +298,34 @@ Link da vídeo aula: https://www.youtube.com/watch?v=_1lEPi1fXG8
 
 Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/02-project/01-cenario-A/Etapa-002-ConfiguracaoVTY-Switch-2960.md
 
+## **🛰️ Configuração do SVI no Switch Cisco 2960 do Cenário A do Curso de Infraestrutura de Redes Cisco 🚀**
+
+Vídeo de configuração do SVI (Switch Virtual Interface) no Switch Catalyst Layer 2 2960 do projeto de Infraestrutura de Redes Cisco, nesse vídeo você vai aprender todos os comandos básicos do Cisco IOS que permite fazer as configurações do SVI (Switch Virtual Interface), configurando o Gateway PAdrão, acessando a VLAN (Virtual-LAN) Padrão 1, configuração o endereço IPv4, habilitando e testando as conexões de rede para depois configurar o serviço do SSH (Secure Shell) para o acesso remoto.
+
+Conteúdo estudado nessa configuração:<br>
+#01_ PRIMEIRA ETAPA: Acessando o Modo de Configuração Global do Switch Cisco Catalyst 2960.<br>
+#02_ SEGUNDA ETAPA: Configuração do Gateway padrão IPv4 no Cisco IOS.<br>
+#03_ TERCEIRA ETAPA: Configuração da Interface SVI no Cisco IOS.<br>
+#04_ QUARTA ETAPA: Automatizando a Configuração do Segundo Switch Cisco Catalyst 2960.<br>
+
 [![Config SVI 2960](http://img.youtube.com/vi/ueh8gp37RG8/0.jpg)](https://www.youtube.com/watch?v=ueh8gp37RG8 "Config SVI 2960")
 
 Link da vídeo aula: https://www.youtube.com/watch?v=ueh8gp37RG8
 
 Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/02-project/01-cenario-A/Etapa-003-ConfiguracaoGatewaySVI-Switch-2960.md
+
+## **🛰️ Configuração do SSH no Switch Cisco 2960 do Cenário A do Curso de Infraestrutura de Redes Cisco 🚀**
+
+Vídeo de configuração do SSH (Secure Shell) no Switch Catalyst Layer 2 2960 do projeto de Infraestrutura de Redes Cisco, nesse vídeo você vai aprender todos os comandos básicos do Cisco IOS que permite fazer as configurações do SSH (Secure Shell), criando as chaves públicas e privadas do SSH, habilitando os serviço do SSH, configurando as opções básicas de segurança e testando o acesso remoto ao Switch Cisco Catalyst 2960.
+
+Conteúdo estudado nessa configuração:<br>
+#01_ PRIMEIRA ETAPA: Acessando o Modo de Configuração Global do Switch Cisco Catalyst 2960<br>
+#02_ SEGUNDA ETAPA: Configuração do Serviço de Acesso Remoto SSH (Secure Shell) no Cisco IOS<br>
+#03_ TERCEIRA ETAPA: Testando e Acessando Remotamente do Switch Cisco Catalyst 2960.<br>
+#04_ QUARTA ETAPA: Automatizando a Configuração do Segundo Switch Cisco Catalyst 2960.<br>
+
+[![Config SSH 2960](http://img.youtube.com/vi/bS1o83wWMUk/0.jpg)](https://www.youtube.com/watch?v=bS1o83wWMUk "Config SSH 2960")
+
+Link da vídeo aula: https://www.youtube.com/watch?v=bS1o83wWMUk
+
+Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/02-project/01-cenario-A/Etapa-004-ConfiguracaoSSH-Switch-2960.md

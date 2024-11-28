@@ -29,9 +29,9 @@ E) **EXEMPLO:** exemplos de comandos ou configurações das opções de DICAS ou
 F) **IMPORTANTE:** informações importantes da tecnologia ou da configuração, com foco em adicionar informações detalhadas da tecnologia ou da certificação;<br>
 G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração, com foco em adicionar informações extras da tecnologia ou da certificação.
 
-[![Config SSH 2960](http://img.youtube.com/vi/G/0.jpg)]( "Config SSH 2960")
+[![Config SSH 2960](http://img.youtube.com/vi/bS1o83wWMUk/0.jpg)](https://www.youtube.com/watch?v=bS1o83wWMUk "Config SSH 2960")
 
-Link da vídeo aula: 
+Link da vídeo aula: https://www.youtube.com/watch?v=bS1o83wWMUk
 
 ## PRIMEIRA ETAPA: Acessando o Modo de Configuração Global do Switch Cisco Catalyst 2960.
 
@@ -140,6 +140,9 @@ sw-01# show running-config | section include line vty
 !Fazendo um Filtro na Visualização do Running-Config somente do SSH
 !OBSERVAÇÃO: ÚNICA LINHA QUE NÃO APARECE NAS CONFIGURAÇÃO É A: crypto key generate rsa
 sw-01# show running-config | section include ssh
+
+!Fazendo um Filtro na Visualização do Running-Config somente da Interface Vlan1
+sw-01# show running-config | section include interface Vlan1
 
 !Visualizando as configurações do SSH Server e Versão
 sw-01# show ip ssh
