@@ -297,3 +297,9 @@ Conteúdo estudado nessa configuração:<br>
 Link da vídeo aula: https://www.youtube.com/watch?v=_1lEPi1fXG8
 
 Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/02-project/01-cenario-A/Etapa-002-ConfiguracaoVTY-Switch-2960.md
+
+[![Config SVI 2960](http://img.youtube.com/vi/ueh8gp37RG8/0.jpg)](https://www.youtube.com/watch?v=ueh8gp37RG8 "Config SVI 2960")
+
+Link da vídeo aula: https://www.youtube.com/watch?v=ueh8gp37RG8
+
+Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/02-project/01-cenario-A/Etapa-003-ConfiguracaoGatewaySVI-Switch-2960.md

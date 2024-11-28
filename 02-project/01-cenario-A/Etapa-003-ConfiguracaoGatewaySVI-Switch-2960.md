@@ -30,9 +30,9 @@ E) **EXEMPLO:** exemplos de comandos ou configurações das opções de DICAS ou
 F) **IMPORTANTE:** informações importantes da tecnologia ou da configuração, com foco em adicionar informações detalhadas da tecnologia ou da certificação;<br>
 G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração, com foco em adicionar informações extras da tecnologia ou da certificação.
 
-[![Config SVI 2960](http://img.youtube.com/vi/G/0.jpg)]( "Config SVI 2960")
+[![Config SVI 2960](http://img.youtube.com/vi/ueh8gp37RG8/0.jpg)](https://www.youtube.com/watch?v=ueh8gp37RG8 "Config SVI 2960")
 
-Link da vídeo aula: 
+Link da vídeo aula: https://www.youtube.com/watch?v=ueh8gp37RG8
 
 ## PRIMEIRA ETAPA: Acessando o Modo de Configuração Global do Switch Cisco Catalyst 2960.
 
