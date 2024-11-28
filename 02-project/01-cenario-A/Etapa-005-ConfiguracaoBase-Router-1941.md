@@ -28,9 +28,9 @@ E) **EXEMPLO:** exemplos de comandos ou configurações das opções de DICAS ou
 F) **IMPORTANTE:** informações importantes da tecnologia ou da configuração, com foco em adicionar informações detalhadas da tecnologia ou da certificação;<br>
 G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração, com foco em adicionar informações extras da tecnologia ou da certificação.
 
-[![Config Basic 1941](http://img.youtube.com/vi/G/0.jpg)]( "Config Basic 1941")
+[![Config Router 1941](http://img.youtube.com/vi/I3sAYWz20KM/0.jpg)](https://www.youtube.com/watch?v=I3sAYWz20KM "Config Router 1941")
 
-Link da vídeo aula: 
+Link da vídeo aula: https://www.youtube.com/watch?v=I3sAYWz20KM
 
 ## PRIMEIRA ETAPA: Conhecendo os Novos Recursos de Configuração do Router Cisco 1941
 

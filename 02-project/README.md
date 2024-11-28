@@ -162,3 +162,18 @@ Conteúdo estudado nessa configuração:<br>
 Link da vídeo aula: https://www.youtube.com/watch?v=bS1o83wWMUk
 
 Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/02-project/01-cenario-A/Etapa-004-ConfiguracaoSSH-Switch-2960.md
+
+## **🛰️ Configuração Base do Router Cisco 1941 do Cenário A do Curso de Infraestrutura de Redes Cisco 🚀**
+
+Vídeo de configuração base do Router Cisco 1941 do projeto de Infraestrutura de Redes Cisco, nesse vídeo você vai aprender todos os comandos básicos do Cisco IOS que permite fazer as configurações do nosso Roteador 1941 de forma automatizada adicionando apenas novas opções existentes no Cisco IOS do Router para aumentar o nível de segurança.
+
+Conteúdo estudado nessa configuração:<br>
+#01_ PRIMEIRA ETAPA: Conhecendo os Novos Recursos de Configuração do Router Cisco 1941<br>
+#02_ SEGUNDA ETAPA: Automatizando a Configuração do Primeiro Router Cisco 1941.<br>
+#03_ TERCEIRA ETAPA: Verificando as Configurações do Primeiro Router Cisco 1941.<br>
+
+[![Config Router 1941](http://img.youtube.com/vi/I3sAYWz20KM/0.jpg)](https://www.youtube.com/watch?v=I3sAYWz20KM "Config Router 1941")
+
+Link da vídeo aula: https://www.youtube.com/watch?v=I3sAYWz20KM
+
+Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/02-project/01-cenario-A/Etapa-005-ConfiguracaoBase-Router-1941.md
