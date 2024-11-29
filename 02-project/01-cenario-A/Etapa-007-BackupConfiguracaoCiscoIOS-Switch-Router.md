@@ -9,14 +9,14 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 25/11/2024<br>
-Versão: 0.03<br>
+Data de atualização: 29/11/2024<br>
+Versão: 0.04<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
 #01_ PRIMEIRA ETAPA: Acessando o Modo de Configuração Global do Switch Cisco Catalyst 2960.<br>
 #02_ SEGUNDA ETAPA: Backup das Configurações do Cisco IOS do Primeiro Switch Cisco Catalyst Layer 2 2960<br>
-#03_ ## TERCEIRA ETAPA: Backup das Configurações do Cisco IOS do Primeiro Router Cisco 1941.<br>
+#03_ TERCEIRA ETAPA: Backup das Configurações do Cisco IOS do Primeiro Router Cisco 1941.<br>
 
 ## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
 
@@ -146,7 +146,10 @@ sw-01# dir nvram:
 !Copiando o arquivo de configuração da NVRAM para o Servidor TFTP
 sw-01# copy startup-config tftp:
   Address or name of remote host []? 192.168.1.1
-  Destination filename [sw-01-confg]? vaamonde-sw-01-config
+  Destination filename [sw-01-confg]?
+  Building configuration...
+  [OK]
+sw-01#
 
 !Verificando o Backup no Servidor TFTP
 Server-01
@@ -173,6 +176,9 @@ sw-01# copy flash: tftp:
   Source filename []? c2960-lanbasek9-mz.150-2.SE4.bin
   Address or name of remote host []? 192.168.1.1
   Destination filename [2960-lanbasek9-mz.150-2.SE4.bin]?
+  Building configuration...
+  [OK]
+sw-01#
 
 !Verificando o Backup no Servidor TFTP
 Server-01
@@ -206,6 +212,8 @@ end
 !Saindo do modo EXEC Privilegiado
 sw-01# disable
 ```
+
+**OBSERVAÇÃO IMPORTANTE:** no comando: show running-config algumas opções não aparece no arquivo de configuração como a linha: crypto key generate rsa general-keys modulus 1024, no caso das senhas do Tipo-5 (secret) ou Tipo-7 (password) elas estão criptografadas, na hora de fazer uma restauração (restore) será necessário alterar as senhas, outra detalhe está relacionado as Interfaces de Rede que o comando: no shutdown não está no arquivo sendo necessário, adicionar no backup, configuração de data e hora, etc... sempre é necessário fazer ajustes no processo de restauração de backups nos Switches ou Routers da Cisco.
 
 ## TERCEIRA ETAPA: Backup das Configurações do Cisco IOS do Primeiro Router Cisco 1941.
 
@@ -246,10 +254,16 @@ rt-01# dir flash0:
 !Salvando as configurações da memória RAM para memória NVRAM
 rt-01# copy running-config startup-config
   Destination filename [startup-config]? 
+  Building configuration...
+  [OK]
+rt-01#
 
 !Salvando as configurações da memória NVRAM para a memória FLASH
 rt-01# copy startup-config flash: 
   Destination filename [startup-config]? 
+  Building configuration...
+  [OK]
+rt-01#
 
 !Salvando as configurações da memória NVRAM para o Servidor TFTP
 
@@ -263,13 +277,19 @@ rt-01# dir nvram:
 !Copiando o arquivo de configuração da NVRAM para o Servidor TFTP
 rt-01# copy startup-config tftp:
   Address or name of remote host []? 192.168.1.1
-  Destination filename [rt-01-confg]? vaamonde-rt-01-config
+  Destination filename [rt-01-confg]?
+  Building configuration...
+  [OK]
+rt-01#
 
 !Salvando a imagem do Cisco IOS do Router 1941 para o Servidor TFTP
 rt-01# copy flash: tftp:
   Source filename []? c1900-universalk9-mz.SPA.151-4.M4.bin
   Address or name of remote host []? 192.168.1.1
   Destination filename [c1900-universalk9-mz.SPA.151-4.M4.bin]? 
+  Building configuration...
+  [OK]
+rt-01#
 
 !Saindo do modo EXEC Privilegiado
 disable

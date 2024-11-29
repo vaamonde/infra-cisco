@@ -16,7 +16,8 @@ Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 Conteúdo estudado nessa configuração:<br>
 #01_ PRIMEIRA ETAPA: Conhecendo o Serviço do DNS Server no Cisco Packet Tracer.<br>
 #02_ SEGUNDA ETAPA: Testando o Serviço do DNS Server no Cisco Packet Tracer.<br>
-#03_ 
+#03_ TERCEIRA ETAPA: Configurando o Serviço do DNS no Switch e Router no Cisco Packet Tracer.<br>
+#04_ QUARTA ETAPA: Testando o Serviço de DNS Server nos Switches e Routers.<br>
 
 ## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
 
@@ -28,7 +29,7 @@ E) **EXEMPLO:** exemplos de comandos ou configurações das opções de DICAS ou
 F) **IMPORTANTE:** informações importantes da tecnologia ou da configuração, com foco em adicionar informações detalhadas da tecnologia ou da certificação;<br>
 G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração, com foco em adicionar informações extras da tecnologia ou da certificação.
 
-[![Basic DNS](http://img.youtube.com/vi//0.jpg)]( "[Basic DNSr")
+[![Basic DNS](http://img.youtube.com/vi//0.jpg)]( "[Basic DNS")
 
 Link da vídeo aula:
 
@@ -193,3 +194,5 @@ rt-01#
 !Visualizando as Configurações do Running-Config (RAM)
 sw-01# show running-config
 ```
+
+## QUARTA ETAPA: Testando o Serviço de DNS Server nos Switches e Routers.
