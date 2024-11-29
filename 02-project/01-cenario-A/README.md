@@ -177,3 +177,18 @@ Conteúdo estudado nessa configuração:<br>
 Link da vídeo aula: https://www.youtube.com/watch?v=I3sAYWz20KM
 
 Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/02-project/01-cenario-A/Etapa-005-ConfiguracaoBase-Router-1941.md
+
+## **🛰️ Configuração da Interface IPv4 LAN Router Cisco 1941 do Cenário A do Curso de Infraestrutura de Redes Cisco 🚀**
+
+Vídeo de configuração da Interface IPv4 da LAN do Router Cisco 1941 do projeto de Infraestrutura de Redes Cisco, nesse vídeo você vai aprender todos os comandos básicos do Cisco IOS que permite fazer as configurações do Endereço IPv4 na Interface LAN, permitindo que essa interface se torne o Gateway da Rede, proporcionando a conectividade de todos os Hosts e Devices acessarem outras redes.
+
+Conteúdo estudado nessa configuração:<br>
+#01_ PRIMEIRA ETAPA: Acessando o Modo de Configuração Global do Router Cisco 1941.<br>
+#02_ SEGUNDA ETAPA: Configuração da Interface LAN do Router no Cisco IOS.<br>
+#03_ TERCEIRA ETAPA: Testando e Acessando Remotamente do Router Cisco 1941.<br>
+
+[![Config IPv4 LAN](http://img.youtube.com/vi/0l1erzh1-8Q/0.jpg)](https://www.youtube.com/watch?v=0l1erzh1-8Q "Config IPv4 LAN")
+
+Link da vídeo aula: https://www.youtube.com/watch?v=0l1erzh1-8Q
+
+Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/02-project/01-cenario-A/Etapa-006-ConfiguracaoInterfaceLAN-Router-1941.md

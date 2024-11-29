@@ -28,9 +28,9 @@ E) **EXEMPLO:** exemplos de comandos ou configurações das opções de DICAS ou
 F) **IMPORTANTE:** informações importantes da tecnologia ou da configuração, com foco em adicionar informações detalhadas da tecnologia ou da certificação;<br>
 G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração, com foco em adicionar informações extras da tecnologia ou da certificação.
 
-[![Interface LAN 1941](http://img.youtube.com/vi/G/0.jpg)]( "Interface LAN 1941")
+[![Config IPv4 LAN](http://img.youtube.com/vi/0l1erzh1-8Q/0.jpg)](https://www.youtube.com/watch?v=0l1erzh1-8Q "Config IPv4 LAN")
 
-Link da vídeo aula: 
+Link da vídeo aula: https://www.youtube.com/watch?v=0l1erzh1-8Q
 
 ## PRIMEIRA ETAPA: Acessando o Modo de Configuração Global do Router Cisco 1941.
 
