@@ -13,6 +13,11 @@ Data de atualização: 25/11/2024<br>
 Versão: 0.03<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
+Conteúdo estudado nessa configuração:<br>
+#01_ PRIMEIRA ETAPA: Conhecendo o Serviço do DNS Server no Cisco Packet Tracer.<br>
+#02_ SEGUNDA ETAPA: Testando o Serviço do DNS Server no Cisco Packet Tracer.<br>
+#03_ 
+
 ## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
 
 A) **ACRÉSCIMO:** informações ou comandos que não estava no script original e nem comentado no vídeo, algo importante para o cenário ou dicas de alunos;<br>
@@ -22,6 +27,10 @@ D) **ERRATA:** correções dos scripts, correções de falas, correções de con
 E) **EXEMPLO:** exemplos de comandos ou configurações das opções de DICAS ou OBSERVAÇÃO;<br>
 F) **IMPORTANTE:** informações importantes da tecnologia ou da configuração, com foco em adicionar informações detalhadas da tecnologia ou da certificação;<br>
 G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração, com foco em adicionar informações extras da tecnologia ou da certificação.
+
+[![Basic DNS](http://img.youtube.com/vi//0.jpg)]( "[Basic DNSr")
+
+Link da vídeo aula:
 
 ## PRIMEIRA ETAPA: Conhecendo o Serviço do DNS Server no Cisco Packet Tracer.
 
@@ -75,6 +84,8 @@ Resource Records:  Name = celular-01      Type = A Record     Address = 192.168.
 Resource Records:  Name = celular-02      Type = A Record     Address = 192.168.1.22
 ```
 
+## SEGUNDA ETAPA: Testando o Serviço do DNS Server no Cisco Packet Tracer.
+
 a) Abrindo o Prompt de Comando do Desktop.
 
 **DICA-03** não confunda Terminal com Command Prompt, Terminal é utilizado para se conectar no Switch ou Router utilizando o Cabo Console, já o Command Prompt (Prompt de Comando) é utilizado para testar as configurações de rede e acessar remotamente o Switch ou Router.
@@ -98,4 +109,87 @@ C:\> ping sw-01
 !Acessando remotamente o Switch utilizando o protocolo SSH (Secure Shell)
 !OBSERVAÇÃO: -l (éli não é o número "1" (um) e sim "l" (éli) em minúsculo)
 C:\> ssh -l admin sw-01   (Switch SW-01)
+```
+
+## TERCEIRA ETAPA: Configurando o Serviço do DNS no Switch e Router no Cisco Packet Tracer.
+
+01. Acessando o modo EXEC Privilegiado e o modo de Configuração Global de Comandos.
+```bash
+AVISO: acesso autorizado somente a funcionarios
+User Access Verification
+Username: robson
+Password: pti@2018
+
+sw-01> enable
+Password: pti@2018
+
+sw-01# configure terminal
+sw-01(config)#
+```
+
+a) Habilitando o recurso de Resolução de Nomes de Domínio no Switch ou no Router
+
+**OBSERVAÇÃO-06:** esse recurso vem habilitado por padrão no Switch ou no Router, no começo no curso esse recurso foi desabilitado para corrigir a falha de digitar comandos errados no Cisco IOS e travar o terminal, só habilitar novamente esse recurso se você for utilizar o serviço de DNS no Switch ou no Router.
+
+**OBSERVAÇÃO-07:** por padrão o endereço IPv4 de resolução de nomes de DNS no Switch ou no Router é: 255.255.255.255 (Broadcast IPv4).
+
+**DICA-04** habilitar esse recurso somente quando o Servidor DNS estiver configurado, caso contrário, desabilitar para não causar falhas na digitação de comandos no Cisco IOS.
+
+```bash
+sw-01(config)# ip domain-lookup
+```
+
+b) Configurando o Nome de Domínio no Switch ou no Router
+
+**OBSERVAÇÃO-08:** esse recurso já foi configurado no Switch e no Router, ele é necessário para o serviço do SSH Server e para o correto funcionando do serviço do DNS Server.
+
+**DICA-05** a configuração do Nome de Domínio é recomendada mesmo que não seja utilizada no Switch ou no Router ou recursos de resolução de nomes do DNS.
+
+```bash
+sw-01(config)# ip domain-name pti.intra
+```
+
+c) Configurando o Endereço IPv4 do Servidor de DNS no Switch ou no Router
+
+**DICA-06** após a configuração do endereço IPv4 do Servidor de DNS no Switch ou no Router ele não usará mais o endereço de Broadcast IPv4 255.255.255.255 para a resolução de nomes de DNS, agora ele irá consultar o servidor de DNS para resolver os nomes de host.
+
+**OBSERVAÇÃO-09:** você só pode configurar apenas um Servidor de Resolução de Nomes de DNS no Switch ou no Router no Cisco IOS
+
+```bash
+sw-01(config)# ip name-server 192.168.1.1
+```
+
+d) Adicionando manualmente a Resolução de Nomes e Endereços Estáticos no Switch ou no Router
+
+**DICA-07** por padrão o Switch ou Router consulta primeiro a Base Dados Local de Nomes e depois o serviço do DNS Server configurado na opção: *ip nam-server*
+
+**OBSERVAÇÃO-10:** a criação de nomes locais facilita o acesso a equipamentos sem a necessidade de um servidor de DNS configurado no rede
+
+**OBSERVAÇÃO-11:** a desvantagem desse método está relacionada a configuração de forma manual em cada equipamento na rede, sua atualização não é dinâmica, qualquer mudança na topologia de nomes ou endereços IP deverá ser feito a atualização manualmente em cada dispositivos na rede.
+```bash
+sw-01(config)# ip host google 8.8.8.8
+```
+
+e) Saindo de todos os níveis e voltando para o modo EXEC Privilegiado.
+
+**DICA-08:** somente no modo EXEC Privilegiado você tem o comando: *copy* para salvar as configurações.
+```bash
+sw-01(config-if)# end
+```
+
+f) Salvando as configurações da memória RAM (Running-Config) para a memória NVRAM (Startup-Config)
+
+**DICA-09:** nunca esqueça de salvar as configurações.
+```bash
+rt-01# copy running-config startup-config
+  Destination filename [startup-config]? <Enter>
+  Building configuration...
+  [OK]
+rt-01#
+```
+
+02. Visualizando as configurações da memória RAM (Running-Config).
+```bash
+!Visualizando as Configurações do Running-Config (RAM)
+sw-01# show running-config
 ```
