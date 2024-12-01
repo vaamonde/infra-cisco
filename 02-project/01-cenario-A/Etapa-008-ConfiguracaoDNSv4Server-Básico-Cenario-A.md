@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 25/11/2024<br>
-Versão: 0.03<br>
+Data de atualização: 01/12/2024<br>
+Versão: 0.04<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -69,8 +69,9 @@ O protocolo padrão utilizado pelo DNS Server é o: *UDP (User Datagram Protocol
 Server-01
   Services
     DNS
+      DNS Service:       On
 
-DNS Service:       On
+!Criando os Ponteiros do Tipo A no DNS Server
 Resource Records:  Name = server-01       Type = A Record     Address = 192.168.1.1
 Resource Records:  Name = sw-01           Type = A Record     Address = 192.168.1.250
 Resource Records:  Name = sw-02           Type = A Record     Address = 192.168.1.251
@@ -193,6 +194,42 @@ rt-01#
 ```bash
 !Visualizando as Configurações do Running-Config (RAM)
 sw-01# show running-config
+
+!Fazendo um Filtro na Visualização do Running-Config somente da Sessão IP
+sw-01# show running-config | section include ip
 ```
 
 ## QUARTA ETAPA: Testando o Serviço de DNS Server nos Switches e Routers.
+
+01. Testando a resolução de nomes no Switch e Router
+
+```bash
+!Digitando um comando erro no Modo EXEC Privilegiado
+sw-01#time
+  Translating "time"...domain server (192.168.1.1)
+  % Unknown command or computer name, or unable to find computer address
+sw-01#
+
+!Pingando o Nome de host do Google
+sw-01#ping google
+  Type escape sequence to abort.
+  Sending 5, 100-byte ICMP Echos to 8.8.8.8, timeout is 2 seconds:
+  U.U.U
+  Success rate is 0 percent (0/5)
+sw-01#
+
+!Pingando o Router pelo nome
+sw-01#ping rt-01
+  Type escape sequence to abort.
+  Sending 5, 100-byte ICMP Echos to 192.168.1.254, timeout is 2 seconds:
+  !!!!!
+  Success rate is 100 percent (5/5), round-trip min/avg/max = 0/0/0 ms
+sw-01#
+
+!Acessando o Router via SSH pelo nome
+sw-01#ssh -l admin rt-01
+  Trying 192.168.1.254 ...
+  Password: 
+  AVISO: acesso autorizado somente a funcionarios
+rt-01#
+```
