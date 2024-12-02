@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 01/12/2024<br>
-Versão: 0.04<br>
+Data de atualização: 02/12/2024<br>
+Versão: 0.05<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -18,6 +18,7 @@ Conteúdo estudado nessa configuração:<br>
 #02_ SEGUNDA ETAPA: Testando o Serviço do DNS Server no Cisco Packet Tracer.<br>
 #03_ TERCEIRA ETAPA: Configurando o Serviço do DNS no Switch e Router no Cisco Packet Tracer.<br>
 #04_ QUARTA ETAPA: Testando o Serviço de DNS Server nos Switches e Routers.<br>
+#05_ QUINTA ETAPA: Automatizando a Configuração do Segundo Switch 2960 e Router 1941<br>
 
 ## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
 
@@ -163,7 +164,7 @@ sw-01(config)# ip name-server 192.168.1.1
 
 d) Adicionando manualmente a Resolução de Nomes e Endereços Estáticos no Switch ou no Router
 
-**DICA-07** por padrão o Switch ou Router consulta primeiro a Base Dados Local de Nomes e depois o serviço do DNS Server configurado na opção: *ip nam-server*
+**DICA-07** por padrão o Switch ou Router consulta primeiro a Base Dados Local de Nomes e depois o serviço do DNS Server configurado na opção: *ip name-server*
 
 **OBSERVAÇÃO-10:** a criação de nomes locais facilita o acesso a equipamentos sem a necessidade de um servidor de DNS configurado no rede
 
@@ -205,13 +206,13 @@ sw-01# show running-config | section include ip
 
 ```bash
 !Digitando um comando erro no Modo EXEC Privilegiado
-sw-01#time
+sw-01# time
   Translating "time"...domain server (192.168.1.1)
   % Unknown command or computer name, or unable to find computer address
 sw-01#
 
 !Pingando o Nome de host do Google
-sw-01#ping google
+sw-01# ping google
   Type escape sequence to abort.
   Sending 5, 100-byte ICMP Echos to 8.8.8.8, timeout is 2 seconds:
   U.U.U
@@ -219,7 +220,7 @@ sw-01#ping google
 sw-01#
 
 !Pingando o Router pelo nome
-sw-01#ping rt-01
+sw-01# ping rt-01
   Type escape sequence to abort.
   Sending 5, 100-byte ICMP Echos to 192.168.1.254, timeout is 2 seconds:
   !!!!!
@@ -232,4 +233,38 @@ sw-01#ssh -l admin rt-01
   Password: 
   AVISO: acesso autorizado somente a funcionarios
 rt-01#
+```
+
+## QUINTA ETAPA: Automatizando a Configuração do Segundo Switch 2960 e Router 1941.
+
+01. Utilizando o Visual Studio Code (VSCode) para automatizar as configurações do Cisco IOS.
+
+**OBSERVAÇÃO-12:** recomendo sempre utilizar um *Editor de Texto Profissional* para criar os scripts e automatizar as tarefas de configuração do Cisco IOS, hoje em dia é indicado utilizar o Visual Studio Code (VSCode) junto com as Extensões: *Cisco IOS Syntax e Cisco Config Highlight* para facilitar essa configuração.
+
+**DICA-10:** o caractere: *! (exclamação)* é utilizado como um recurso de *Comentário*, sua utilização server para comentar o código de automação do Cisco IOS ou para desativar um comando para não ser executado, *RECOMENDO FORTEMENTE DOCUMENTAR TODOS OS COMANDOS E PROCEDIMENTOS DE CONFIGURAÇÃO PARA FACILITAR O ENTENDIMENTO.*
+
+**DICA-11:** para facilitar a leitura do código, recomendo utilizar o recurso de **Indentação de Código** usando a Tecla TAB (Tabulador/Tabulação) para cada nível que você está configurando o Cisco IOS, isso facilitada a análise de erros (Debug) do código.
+
+```python
+!Acessando o modo de Configuração Global de comandos
+configure terminal
+
+  !Habilitando o serviço de resolução de nomes de DNS
+  ip domain-lookup
+
+  !Configurando o serviço de resolução de nomes de DNS
+  ip name-server 192.168.1.1
+
+  !Adicionando manualmente um host e endereço IP
+  ip host google 8.8.8.8
+  
+  !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
+  end
+
+!Salvando as configurações da memória RAM para a memória NVRAM
+!OBSERVAÇÃO IMPORTANTE: deixar uma linha em branco no final do script para
+!salvar automaticamente o script na hora da execução, fazendo a função de
+!<Enter> no final do script.
+write
+
 ```
