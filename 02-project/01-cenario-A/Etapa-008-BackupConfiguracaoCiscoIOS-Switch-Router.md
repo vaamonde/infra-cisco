@@ -148,7 +148,10 @@ sw-01# ping 192.168.1.1
 
 !Verificando o Arquivo Startup-Config da NVRAM
 sw-01# dir nvram:
-  238  -rw-        1649          <no date>  startup-config
+  238  -rw-        1679          <no date>  startup-config
+  1679 bytes total (237588 bytes free)
+    1679 Bytes Total / 1000 = 1,7 KB
+  237588 Bytes Free  / 1000 = 238 KB
 
 !Copiando o arquivo de configuração da NVRAM para o Servidor TFTP
 sw-01# copy startup-config tftp:
