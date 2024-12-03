@@ -359,3 +359,35 @@ Conteúdo estudado nessa configuração:<br>
 Link da vídeo aula: https://www.youtube.com/watch?v=0l1erzh1-8Q
 
 Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/02-project/01-cenario-A/Etapa-006-ConfiguracaoInterfaceLAN-Router-1941.md
+
+## **🛰️ Configuração do DNS Server do Cenário A do Curso de Infraestrutura de Redes Cisco 🚀**
+
+Vídeo de configuração do DNS (Domain Name System) Server do projeto de Infraestrutura de Redes Cisco, nesse vídeo você vai aprender as configurações básicas do Servidor de Resolução de Nomes de Internet DNS no Servidor do Cenário A, nessa primeira etapa será configurado os ponteiros básicos para acessar os Switches, Router, Desktop, Notebook e Celular via nome, facilitando o acesso e gerenciamento dos dispositivos na rede.
+
+Conteúdo estudado nessa configuração:<br>
+#01_ PRIMEIRA ETAPA: Conhecendo o Serviço do DNS Server no Cisco Packet Tracer.<br>
+#02_ SEGUNDA ETAPA: Testando o Serviço do DNS Server no Cisco Packet Tracer.<br>
+#03_ TERCEIRA ETAPA: Configurando o Serviço do DNS no Switch e Router no Cisco Packet Tracer.<br>
+#04_ QUARTA ETAPA: Testando o Serviço de DNS Server nos Switches e Routers.<br>
+#05_ QUINTA ETAPA: Automatizando a Configuração do Segundo Switch 2960 e Router 1941<br>
+
+[![Config Basic DNS](http://img.youtube.com/vi//0.jpg)]( "Config Basic DNS")
+
+Link da vídeo aula: 
+
+Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/02-project/01-cenario-A/Etapa-007-ConfiguracaoDNSv4Server-Basico-Cenario-A.md
+
+## **🛰️ Backup e Restore do Cisco IOS do Cenário A do Curso de Infraestrutura de Redes Cisco 🚀**
+
+Vídeo de Backup e Restore das Configurações do Cisco IOS e das Imagens dos Switches e Router do projeto de Infraestrutura de Redes Cisco, nesse vídeo você vai aprender todos os comandos básicos para verificar as informações detalhadas dos Switches e Routers da Cisco, fazer os backups das configurações locais e remota utilizando o Protocolo TFTP (Trivial File Transfer Protocol) para manter uma copia segura das imagens e configurações, facilitando a restauração em caso de falha.
+
+Conteúdo estudado nessa configuração:<br>
+#01_ PRIMEIRA ETAPA: Acessando o Modo de Configuração Global do Switch Cisco Catalyst 2960.<br>
+#02_ SEGUNDA ETAPA: Backup das Configurações do Cisco IOS do Primeiro Switch Cisco Catalyst Layer 2 2960<br>
+#03_ TERCEIRA ETAPA: Backup das Configurações do Cisco IOS do Primeiro Router Cisco 1941.<b
+
+[![Backup Restore](http://img.youtube.com/vi//0.jpg)]( "Backup Restore")
+
+Link da vídeo aula: 
+
+Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/02-project/01-cenario-A/Etapa-008-BackupConfiguracaoCiscoIOS-Switch-Router.md

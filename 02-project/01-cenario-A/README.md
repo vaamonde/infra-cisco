@@ -208,7 +208,7 @@ Conteúdo estudado nessa configuração:<br>
 
 Link da vídeo aula: 
 
-Link da documentação: 
+Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/02-project/01-cenario-A/Etapa-007-ConfiguracaoDNSv4Server-Basico-Cenario-A.md
 
 ## **🛰️ Backup e Restore do Cisco IOS do Cenário A do Curso de Infraestrutura de Redes Cisco 🚀**
 
@@ -223,4 +223,4 @@ Conteúdo estudado nessa configuração:<br>
 
 Link da vídeo aula: 
 
-Link da documentação: 
+Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/02-project/01-cenario-A/Etapa-008-BackupConfiguracaoCiscoIOS-Switch-Router.md
