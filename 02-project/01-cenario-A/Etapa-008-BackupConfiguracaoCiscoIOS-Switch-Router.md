@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 01/12/2024<br>
-Versão: 0.05<br>
+Data de atualização: 03/12/2024<br>
+Versão: 0.06<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -35,6 +35,7 @@ Link da vídeo aula:
 ## PRIMEIRA ETAPA: Acessando o Modo de Configuração Global do Switch Cisco Catalyst 2960.
 
 01. Acessando o modo EXEC Privilegiado e o modo de Configuração Global de Comandos.
+
 ```bash
 AVISO: acesso autorizado somente a funcionarios
 User Access Verification
@@ -58,6 +59,7 @@ sw-01#
 **OBSERVAÇÃO-01:** as informações de Memória RAM em equipamentos da Cisco estão em: *Kbytes* ou em: *Bytes*, sendo necessário fazer a conversão para: *MBytes* para facilitar a leitura.
 
 **OBSERVAÇÃO-02:** esse comando também mostrar as informações referente a *Configuração do Registro de Inicialização* do equipamento para efeito de manutenção ou Reset.
+
 ```bash
 sw-01# show version
   ...
@@ -80,6 +82,7 @@ sw-01# show version
 **DICA-03:** o comando: *show boot* é utilizado para verificar os arquivos de configuração de inicialização e qual binário do Cisco IOS está habilitado no Switch.
 
 **OBSERVAÇÃO-03:** essas informações são importante para o processo de quebra de senha do Switch se necessário.
+
 ```bash
 sw-01# show boot
   BOOT path-list      : 2960-lanbasek9-mz.150-2.SE4.bin    (Binário do Cisco IOS)
@@ -92,6 +95,7 @@ sw-01# show boot
 **DICA-04:** a memória de massa (Flash Card) em Switch geralmente são Chips soldados ou módulos internos.
 
 **OBSERVAÇÃO-04:** diferente do Router, a memória Flash em Switch não pode ser acessada sem desmontar (Abrir) o equipamento (Caixa).
+
 ```bash
 sw-01# show flash:
   64016384 bytes total (59344171 bytes free)
@@ -105,6 +109,7 @@ sw-01# dir flash:
 05. Salvando as configurações da memória RAM para a memória NVRAM.
 
 **DICA-05:** nunca esqueça de salvar as configurações.
+
 ```bash
 sw-01# copy running-config startup-config
   Destination filename [startup-config]? <Enter>
@@ -114,8 +119,9 @@ sw-01#
 ```
 
 06. Salvando as configurações da memória NVRAM para a memória FLASH.
-	
+
 **DICA-06:** deixar sempre um backup das configuração na Memória FLASH.
+
 ```bash
 sw-01# copy startup-config flash: 
   Destination filename [startup-config]?
@@ -133,6 +139,7 @@ sw-01# dir flash:
 **OBSERVAÇÃO-05:** o protocolo UDP (User Datagram Protocol) não é confiável, porque ele não exige confirmação de recebimento.
 
 **OBSERVAÇÃO-06:** o protocolo TFTP foi escolhido pela Cisco para ser o sistema padrão de Atualização e Backup dos Switch e Router.
+
 ```bash
 !Verificando o Status do Serviço do Servidor TFTP
 !OBSERVAÇÃO IMPORTANTE: RECOMENDO, NESSE CENÁRIO REMOVER TODOS OS ARQUIVOS NO TFTP
@@ -178,6 +185,7 @@ Server-01
 **EXEMPLO: 2960-lanbasek9-mz.150-2.SE4.bin (Primeira parte: 2960 plataforma/família do equipamento, Segunda parte: lanbasek9 indicação do package/funcionalidade do IOS, Terceira parte: compactação da Imagem m=RAM | z=zip, Quarta parte: 150-2.SE4 versão do IOS, Quinta parte: .bin extensão do arquivo binário do Cisco IOS).**
 
 **CUIDADO:** como o Cisco IOS é uma sub-derivação do *Unix/BSD* (Berkeley Software Distribution), ele também é Case Sensitive (faz diferença de Maiúscula/Minúscula).
+
 ```bash
 !Verificando o Binário do Cisco IOS do Switch
 sw-01# dir flash:
@@ -205,7 +213,8 @@ Server-01
 
 **OBSERVAÇÃO-08:** recomendo sempre utilizar um *Editor de Texto Profissional* para não modificar a estrutura do arquivo de configuração no momento de copiar e colar, não utilizar, por exemplo: MS Word, Wordpad, etc..., esses editores de Texto modificam as codificações dos arquivos prejudicando no processo de automação dos scripts.
 
-**DICA-10:** copiar as informações do Running Config (RAM) ou Startup Config (NVRAM) a partir da primeira: *! (exclamação)* até a última linha com o comando: *end*
+**DICA-10:** copiar as informações do Running Config (RAM) ou Startup Config (NVRAM) a partir da primeira: *! (exclamação)* até a última linha com o comando: *end*.
+
 ```bash
 !Visualizando as Configuração da RAM
 sw-01# show running-config
@@ -240,6 +249,7 @@ sw-01> exit
 **OBSERVAÇÃO-09:** igual no Switch, esse comando fornece informações de inicialização do IOS do Router, utilizado principalmente para manutenção ou Quebra de Senha do equipamento.
 
 **OBSERVAÇÃO-10:** em roteadores não temos o comando: *show boot*, essa opção só existe no Switch Cisco Catalyst Layer 2 ou 3.
+
 ```bash
 rt-01# show version
   ROM: System Bootstrap, Version 15.1(4)M4, RELEASE SOFTWARE (fc1)
@@ -264,6 +274,7 @@ rt-01# show version
 **DICA-12:** em roteadores temos vários módulos de memória Flash Card, utilizado principalmente como Redundância caso algum Flash Card tenha problema.
 
 **OBSERVAÇÃO-11:** o acesso a memória Flash em roteadores é feita utilizando módulos externos, geralmente não são soldados nos modelos antigos, modelos atuais está vindo chipado (soldado).
+
 ```bash
 rt-01# show flash:
   [33849219 bytes used, 221896413 available, 255744000 total]
@@ -279,6 +290,7 @@ rt-01# dir flash0:
 03. Fazendo o Backup das Configurações e do Cisco IOS para o TFTP.
 
 **DICA-13:** procedimento é igual do Switch Cisco Catalyst Layer 2 2960.
+
 ```bash
 !Salvando as configurações da memória RAM para memória NVRAM
 rt-01# copy running-config startup-config

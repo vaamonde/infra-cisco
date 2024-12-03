@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 02/12/2024<br>
-Versão: 0.05<br>
+Data de atualização: 03/12/2024<br>
+Versão: 0.06<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -205,7 +205,21 @@ sw-01# show running-config | section include ip
 01. Testando a resolução de nomes no Switch e Router
 
 ```bash
-!Digitando um comando erro no Modo EXEC Privilegiado
+!OBSERVAÇÃO IMPORTANTE: CARACTERES UTILIZADOS NA SAÍDA DO COMANDO PING NO CISCO
+!a) "!"  = Receipt of a reply (Echo reply recebido (ping Ok))
+!b) "."  = The Network service timed out while waiting for a reply (Echo reply não chegou no tempo limite)
+!c) "?"  = Unknown packet type (Tipo de pacote desconhecido)
+!d) "|"  = Ping Interrupted (Interrompido, cancelado)
+!e) "&"  = Package lifetime exceeded (Tempo de vida do pacote excedido)
+!f) "!H" = Host unreachable (Negado administrativamente (access-list))
+!g) "C"  = Congested network (Rede congestionada)
+!h) "M"  = Could not fragment (Problema na fragmentação)
+!i) "N"  = Network (Rede inalcançável)
+!j) "P"  = Protocol (Protocolo inalcançável (problema no protocolo))
+!k) "Q"  = Source quench (Destino ocupado)
+!l) "U"  = Destination Unreachable (Destino inalcançável (falta de rota, access-list…))
+
+!Digitando um comando errado no Modo EXEC Privilegiado
 sw-01# time
   Translating "time"...domain server (192.168.1.1)
   % Unknown command or computer name, or unable to find computer address
