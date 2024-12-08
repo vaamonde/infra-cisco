@@ -204,9 +204,9 @@ Conteúdo estudado nessa configuração:<br>
 #04_ QUARTA ETAPA: Testando o Serviço de DNS Server nos Switches e Routers.<br>
 #05_ QUINTA ETAPA: Automatizando a Configuração do Segundo Switch 2960 e Router 1941<br>
 
-[![Config Basic DNS](http://img.youtube.com/vi//0.jpg)]( "Config Basic DNS")
+[![Config Basic DNS](http://img.youtube.com/vi/KultMQMMCiQ/0.jpg)](https://www.youtube.com/watch?v=KultMQMMCiQ "Config Basic DNS")
 
-Link da vídeo aula: 
+Link da vídeo aula: https://www.youtube.com/watch?v=KultMQMMCiQ
 
 Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/02-project/01-cenario-A/Etapa-007-ConfiguracaoDNSv4Server-Basico-Cenario-A.md
 
@@ -219,8 +219,8 @@ Conteúdo estudado nessa configuração:<br>
 #02_ SEGUNDA ETAPA: Backup das Configurações do Cisco IOS do Primeiro Switch Cisco Catalyst Layer 2 2960<br>
 #03_ TERCEIRA ETAPA: Backup das Configurações do Cisco IOS do Primeiro Router Cisco 1941.<b
 
-[![Backup Restore](http://img.youtube.com/vi//0.jpg)]( "Backup Restore")
+[![Backup Restore](http://img.youtube.com/vi/0aw2uGtnBJw/0.jpg)](https://www.youtube.com/watch?v=0aw2uGtnBJw "Backup Restore")
 
-Link da vídeo aula: 
+Link da vídeo aula: https://www.youtube.com/watch?v=0aw2uGtnBJw
 
 Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/02-project/01-cenario-A/Etapa-008-BackupConfiguracaoCiscoIOS-Switch-Router.md

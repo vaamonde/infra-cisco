@@ -18,6 +18,10 @@ Conteúdo estudado nessa configuração:<br>
 #02_ SEGUNDA ETAPA: Backup das Configurações do Cisco IOS do Primeiro Switch Cisco Catalyst Layer 2 2960<br>
 #03_ TERCEIRA ETAPA: Backup das Configurações do Cisco IOS do Primeiro Router Cisco 1941.<br>
 
+OBSERVAÇÃO IMPORTANTE: COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: Configuração do Backup Restore  do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática
+
+#boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #cisco #infracisco #desafiovaamonde #desafioboraparapratica #desafiocisco #desafioinfracisco
+
 ## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
 
 A) **ACRÉSCIMO:** informações ou comandos que não estava no script original e nem comentado no vídeo, algo importante para o cenário ou dicas de alunos;<br>
@@ -28,9 +32,9 @@ E) **EXEMPLO:** exemplos de comandos ou configurações das opções de DICAS ou
 F) **IMPORTANTE:** informações importantes da tecnologia ou da configuração, com foco em adicionar informações detalhadas da tecnologia ou da certificação;<br>
 G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração, com foco em adicionar informações extras da tecnologia ou da certificação.
 
-[![Backup Switch Router](http://img.youtube.com/vi//0.jpg)]( "[Backup Switch Router")
+[![Backup Restore](http://img.youtube.com/vi/0aw2uGtnBJw/0.jpg)](https://www.youtube.com/watch?v=0aw2uGtnBJw "Backup Restore")
 
-Link da vídeo aula:
+Link da vídeo aula: https://www.youtube.com/watch?v=0aw2uGtnBJw
 
 ## PRIMEIRA ETAPA: Acessando o Modo de Configuração Global do Switch Cisco Catalyst 2960.
 
@@ -182,7 +186,12 @@ Server-01
 
 **OBSERVAÇÃO-07:** não é aconselhável alterar o nome da imagem, ela segue um padrão de nomenclatura que é recomendado pela Cisco.
 
-**EXEMPLO: 2960-lanbasek9-mz.150-2.SE4.bin (Primeira parte: 2960 plataforma/família do equipamento, Segunda parte: lanbasek9 indicação do package/funcionalidade do IOS, Terceira parte: compactação da Imagem m=RAM | z=zip, Quarta parte: 150-2.SE4 versão do IOS, Quinta parte: .bin extensão do arquivo binário do Cisco IOS).**
+**EXEMPLO: 2960-lanbasek9-mz.150-2.SE4.bin** <br>
+A) Primeira parte: 2960 plataforma/família do equipamento;<br>
+B) Segunda parte: lanbasek9 indicação do package/funcionalidade do IOS;<br>
+C) Terceira parte: compactação da Imagem m=RAM | z=zip;<br>
+D) Quarta parte: 150-2.SE4 versão do IOS;<br>
+E) Quinta parte: .bin extensão do arquivo binário do Cisco IOS).<br>
 
 **CUIDADO:** como o Cisco IOS é uma sub-derivação do *Unix/BSD* (Berkeley Software Distribution), ele também é Case Sensitive (faz diferença de Maiúscula/Minúscula).
 
@@ -238,7 +247,12 @@ sw-01# disable
 sw-01> exit
 ```
 
-**OBSERVAÇÃO IMPORTANTE:** no comando: show running-config algumas opções não aparece no arquivo de configuração como a linha: crypto key generate rsa general-keys modulus 1024, no caso das senhas do Tipo-5 (secret) ou Tipo-7 (password) elas estão criptografadas, na hora de fazer uma restauração (restore) será necessário alterar as senhas, outra detalhe está relacionado as Interfaces de Rede que o comando: no shutdown não está no arquivo sendo necessário, adicionar no backup, configuração de data e hora, etc... sempre é necessário fazer ajustes no processo de restauração de backups nos Switches ou Routers da Cisco.
+**OBSERVAÇÃO IMPORTANTE:** no comando: show running-config algumas opções não aparece no arquivo de configuração como as linhas:<br> 
+A) crypto key generate rsa general-keys modulus 1024;<br>
+B) no caso das senhas do Tipo-5 (secret) ou Tipo-7 (password) elas estão criptografadas, na hora de fazer uma restauração (restore) será necessário alterar as senhas;<br>
+C) outra detalhe está relacionado as Interfaces de Rede que o comando: no shutdown não está no arquivo sendo necessário;<br>
+D) adicionar no backup a configuração de data e hora, etc...<br>
+E) sempre é necessário fazer ajustes no processo de restauração de backups nos Switches ou Routers da Cisco.
 
 ## TERCEIRA ETAPA: Backup das Configurações do Cisco IOS do Primeiro Router Cisco 1941.
 

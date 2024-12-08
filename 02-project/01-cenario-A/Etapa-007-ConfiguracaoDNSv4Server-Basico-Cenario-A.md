@@ -20,6 +20,10 @@ Conteúdo estudado nessa configuração:<br>
 #04_ QUARTA ETAPA: Testando o Serviço de DNS Server nos Switches e Routers.<br>
 #05_ QUINTA ETAPA: Automatizando a Configuração do Segundo Switch 2960 e Router 1941<br>
 
+OBSERVAÇÃO IMPORTANTE: COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: Configuração DNS Server do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática
+
+#boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #cisco #infracisco #desafiovaamonde #desafioboraparapratica #desafiocisco #desafioinfracisco
+
 ## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
 
 A) **ACRÉSCIMO:** informações ou comandos que não estava no script original e nem comentado no vídeo, algo importante para o cenário ou dicas de alunos;<br>
@@ -30,9 +34,9 @@ E) **EXEMPLO:** exemplos de comandos ou configurações das opções de DICAS ou
 F) **IMPORTANTE:** informações importantes da tecnologia ou da configuração, com foco em adicionar informações detalhadas da tecnologia ou da certificação;<br>
 G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração, com foco em adicionar informações extras da tecnologia ou da certificação.
 
-[![Basic DNS](http://img.youtube.com/vi//0.jpg)]( "[Basic DNS")
+[![Config Basic DNS](http://img.youtube.com/vi/KultMQMMCiQ/0.jpg)](https://www.youtube.com/watch?v=KultMQMMCiQ "Config Basic DNS")
 
-Link da vídeo aula:
+Link da vídeo aula: https://www.youtube.com/watch?v=KultMQMMCiQ
 
 ## PRIMEIRA ETAPA: Conhecendo o Serviço do DNS Server no Cisco Packet Tracer.
 
@@ -242,7 +246,7 @@ sw-01# ping rt-01
 sw-01#
 
 !Acessando o Router via SSH pelo nome
-sw-01#ssh -l admin rt-01
+sw-01# ssh -l admin rt-01
   Trying 192.168.1.254 ...
   Password: 
   AVISO: acesso autorizado somente a funcionarios
