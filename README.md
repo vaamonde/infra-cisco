@@ -391,3 +391,39 @@ Conteúdo estudado nessa configuração:<br>
 Link da vídeo aula: https://www.youtube.com/watch?v=0aw2uGtnBJw
 
 Link da documentação: https://github.com/vaamonde/infra-cisco/blob/main/02-project/01-cenario-A/Etapa-008-BackupConfiguracaoCiscoIOS-Switch-Router.md
+
+# QUARTA ETAPA: CRIAÇÃO DA TOPOLOGIA FÍSICA E LÓGICA DO CENÁRIO B
+
+## **🛰️ Expandindo a Topologia Física do Cenário B do Curso de Infraestrutura de Redes Cisco 🚀**
+
+Vídeo de criação da Topologia Física do Cenário B utilizando Servidores, Switches Catalyst Layer 3 3650, Switches Catalyst Layer 2 2960, Router 4321, Access Point Wi-Fi (Wireless / Sem-Fio) 5.0Ghz, Dispositivos Finais Desktop e Conexão Cabeada de todos os dispositivos da Cisco no projeto de Infraestrutura.
+
+O QUE É E PARA QUE SERVER O CISCO PACKET TRACER: O Packet Tracer é um programa educacional gratuito que permite simular uma rede de computadores, através de equipamentos e configurações presente em situações reais. O programa apresenta uma interface gráfica simples, com suportes multimídia que auxiliam na confecção das simulações.
+
+O QUE É E PARA QUE SERVER A TOPOLOGIA FÍSICA: A topologia física refere-se ao layout real dos dispositivos e cabos em uma rede. Ela descreve como os componentes, como computadores, switches, roteadores e outros dispositivos, estão fisicamente conectados.
+
+Conteúdo estudado nessa instalação:<br>
+Apresentação da Topologia Física Cenário B<br>
+Conhecendo o Projeto no Github<br>
+Conhecendo o Repositório do Curso<br>
+Conhecendo o Diretório de Projeto<br>
+Diretório do Projeto do Cenário A<br>
+Fazendo o Backup do Projeto Anterior<br>
+Executando o Cisco Packet Tracer<br>
+Adicionando o Router 4321<br>
+Adicionando o Switch Catalyst Layer 3 3650<br>
+Conectando o Router 4321 com o Switch 3650<br>
+Adicionando os Switches Catalyst Layer 2 2960<br>
+Conectando os Switches com Redundância<br>
+Adicionando o Access Point 5.0Ghz<br>
+Adicionando os Servidores no Cenário B<br>
+Adicionando os Desktops no Cenário B<br>
+Adicionando os Módulos de Fibra Óptica nos Routes<br>
+Conectando Via Fibra Óptica os Roteadores<br>
+Resumo da Topologia Final do Cenário B<br>
+Salvando o Projeto do Cenário B<br>
+Finalização e Agradecimentos<br>
+
+[![Diagrama Físico](http://img.youtube.com/vi/nlIo9ALtdl8/0.jpg)](https://www.youtube.com/watch?v=nlIo9ALtdl8 "Diagrama Físico")
+
+Link da vídeo aula: https://www.youtube.com/watch?v=nlIo9ALtdl8
