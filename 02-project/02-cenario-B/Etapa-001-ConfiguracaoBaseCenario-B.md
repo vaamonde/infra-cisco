@@ -317,7 +317,7 @@ enable
 
 ```
 
-## QUARTA ETAPA: Configuração Base do Router Cisco 1941 (CENTRO - NÚCLEO)
+## QUARTA ETAPA: Configuração Base do Router Cisco 4321 (CENTRO - NÚCLEO)
 ```python
 !Acessando o modo EXEC Privilegiado
 enable
@@ -420,7 +420,7 @@ enable
 
 ```
 
-## QUINTA ETAPA: Verificando as Configurações dos Switches e Roteadores.
+## QUINTA ETAPA: Verificando as Configurações dos Switches e Roteador.
 ```python
 !Visualizando as Configurações do Running-Config (RAM)
 !OBSERVAÇÃO: ÚNICA LINHA QUE NÃO APARECE NAS CONFIGURAÇÃO É A: crypto key generate rsa
