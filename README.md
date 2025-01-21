@@ -74,10 +74,10 @@ Curso Grátis Infraestrutura de Redes: https://www.youtube.com/playlist?list=PLo
 Curso Grátis Hardware de Servidores: https://www.youtube.com/playlist?list=PLozhsZB1lLUPBmrvMXzsFxG34LwO9K8Pu
 
 ## **Material de Apoio em PDF Detalhado dos Comandos Básicos:**
-Material de Apoio-01: https://drive.google.com/file/d/1BxUXh8Vf82_Ze7p3ZDYZsjHxHzpvezUi/view<br>
-Material de Apoio-02: https://drive.google.com/file/d/1hujPpL7Jd_C1hNMb_GM9RmQxbQstnBrV/view<br>
-Material de Apoio-03: https://drive.google.com/file/d/1IKKm_U9anbwuUCwq1mFU9WG-MFFXXQht/view<br>
-Material de Apoio-04: https://drive.google.com/file/d/1LBQWS7IS1CMWRpGT074uahFSA32qa9PC/view<br>
+Material de Apoio-01: https://github.com/vaamonde/infra-cisco/blob/main/05-pdf/InfraestruturaDeRedes-01.pdf<br>
+Material de Apoio-02: https://github.com/vaamonde/infra-cisco/blob/main/05-pdf/InfraestruturaDeRedes-02.pdf<br>
+Material de Apoio-03: https://github.com/vaamonde/infra-cisco/blob/main/05-pdf/InfraestruturaDeRedes-03.pdf<br>
+Material de Apoio-04: https://github.com/vaamonde/infra-cisco/blob/main/05-pdf/InfraestruturaDeRedes-04.pdf<br>
 Tabela ASCII: https://drive.google.com/file/d/1NS5qDgem0lJhq6O6aIE1sX5e5IedKjeT/view
 
 ## **Material de Apoio do Protocolo IPv4 e IPv6**
