@@ -7,11 +7,11 @@
 #Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem<br>
 #YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 #Data de criação: 16/09/2024<br>
-#Data de atualização: 04/10/2024<br>
-#Versão: 0.02<br>
-#Testado e homologado no Linux Mint 22 Wilma x64<br>
+#Data de atualização: 23/01/2025<br>
+#Versão: 0.03<br>
+#Testado e homologado no Linux Mint 22 Wilma e 22.1 Xia x64<br>
 #Testado e homologado o Cisco Packet Tracer 8.2.x x64<br>
-#Testado e homologado o Microsoft Visual Studio Code VSCode no Linux Mint 22 Wilma<br>
+#Testado e homologado o Microsoft Visual Studio Code VSCode no Linux Mint 22 Wilma e 22.1 Xia<br>
 
 Conteúdo estudado nessa instalação:<br>
 #01_ Verificando as Informações do Sistema Operacional Linux Mint<br>
@@ -189,6 +189,9 @@ Manter selecionado a extensão: Brazilian Portuguese - Code Spell Checker
           Portuguese - Brazil (pt-br)
             File Types and Programming Languages
               shellscript, python, markdown, etc...
+
+Translator for VsCode
+  (Sem necessidade de configuração)
 
 Code Spell Checker
   (Sem necessidade de configuração)
