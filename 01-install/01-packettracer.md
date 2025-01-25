@@ -7,9 +7,9 @@
 #Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem<br>
 #YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 #Data de criação: 16/09/2024<br>
-#Data de atualização: 23/09/2024<br>
-#Versão: 0.03<br>
-#Testado e homologado no Linux Mint 22 Wilma x64<br>
+#Data de atualização: 25/01/2025<br>
+#Versão: 0.04<br>
+#Testado e homologado no Linux Mint 22 Wilma e 22.1 Xia x64<br>
 #Testado e homologado o Cisco Packet Tracer 8.2.x x64<br>
 
 Conteúdo estudado nessa instalação:<br>
@@ -98,8 +98,8 @@ PARA CRIAR UMA CONTA NO NETACAD ACESSE O LINK: https://id.cisco.com/signin/regis
 
 #OBSERVAÇÃO: Antes de baixar a Biblioteca acesse o mirror para verificar qual versão está
 #disponível para download: http://mirrors.edge.kernel.org/ubuntu/pool/universe/m/mesa/
-#download da Biblioteca Libgl1-Mesa-GLX no Linux Mint 22.x (Link atualizado em: 17/09/2024)
-wget http://mirrors.edge.kernel.org/ubuntu/pool/universe/m/mesa/libgl1-mesa-glx_23.0.4-0ubuntu1~23.04.1_amd64.deb
+#download da Biblioteca Libgl1-Mesa-GLX no Linux Mint 22.x (Link atualizado em: 25/01/2025)
+wget http://mirrors.edge.kernel.org/ubuntu/pool/universe/m/mesa/libgl1-mesa-glx_23.0.4-0ubuntu1~22.04.1_amd64.deb
 
 #instalando a Biblioteca Libgl1-Mesa-GLX
 #opção do comando dpkg: -i (install), * (all/tudo)
