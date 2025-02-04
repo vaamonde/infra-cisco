@@ -7,8 +7,8 @@
 #Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem<br>
 #YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 #Data de criação: 16/09/2024<br>
-#Data de atualização: 23/01/2025<br>
-#Versão: 0.03<br>
+#Data de atualização: 31/01/2025<br>
+#Versão: 0.04<br>
 #Testado e homologado no Linux Mint 22 Wilma e 22.1 Xia x64<br>
 #Testado e homologado o Cisco Packet Tracer 8.2.x x64<br>
 #Testado e homologado o Microsoft Visual Studio Code VSCode no Linux Mint 22 Wilma e 22.1 Xia<br>
@@ -181,7 +181,7 @@ Portuguese (Brazil) Language Pack for Visual Studio Code
 Brazilian Portuguese - Code Spell Checker (Corretor Ortográfico de Código)
 Manter selecionado a extensão: Brazilian Portuguese - Code Spell Checker
   Pressionar F1
-    Show Spell Checker Configuration Info
+    Show Spell Checker Configuration Info (OPÇÃO FOI DESATIVADO NA NOVA VERSÃO)
       User
         Language
           English (en_us)
@@ -212,8 +212,8 @@ Cisco IOS-XR Syntax
 Gerenciar
   Configurações
     Code Spell Checker
-      C Spell: Enabled Language Ids: 
-        Adicionar Item: shellscript
+      C Spell: Enabled Language Ids: (OPÇÃO FOI DESATIVADO NA NOVA VERSÃO)
+        Adicionar Item: shellscript (OPÇÃO FOI DESATIVADO NA NOVA VERSÃO)
       C Spell: Language: en,en-US,pt,pt-BR
       C Spell: Max Duplicate Problems: 500000
       C Spell: Max Number Of Problems: 500000
