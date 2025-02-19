@@ -1,0 +1,56 @@
+Autor: Robson Vaamonde<br>
+Procedimentos em TI: http://procedimentosemti.com.br<br>
+Bora para Prática: http://boraparapratica.com.br<br>
+Robson Vaamonde: http://vaamonde.com.br<br>
+Facebook Procedimentos em TI: https://www.facebook.com/ProcedimentosEmTi<br>
+Facebook Bora para Prática: https://www.facebook.com/BoraParaPratica<br>
+Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem<br>
+YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
+LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
+Github Procedimentos em TI: https://github.com/vaamonde<br>
+Data de criação: 16/05/2024<br>
+Data de atualização: 26/11/2024<br>
+Versão: 0.05<br>
+Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
+
+## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
+
+A) **ACRÉSCIMO:** informações ou comandos que não estava no script original e nem comentado no vídeo, algo importante para o cenário ou dicas de alunos;<br>
+B) **DESAFIO:** desafio proposto para o aluno, com o objetivo de estimular o raciocínio lógico para a resolução de problemas de rede ou mudanças nas configurações;<br>
+C) **DICA:** informações importantes da tecnologia ou da prova de certificação, dica para configurar ou lembrar os recursos para sua configuração no exame;<br>
+D) **ERRATA:** correções dos scripts, correções de falas, correções de configurações, etc...;<br>
+E) **EXEMPLO:** exemplos de comandos ou configurações das opções de DICAS ou OBSERVAÇÃO;<br>
+F) **IMPORTANTE:** informações importantes da tecnologia ou da configuração, com foco em adicionar informações detalhadas da tecnologia ou da certificação;<br>
+G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração, com foco em adicionar informações extras da tecnologia ou da certificação.
+
+## PRIMEIRA ETAPA: Determinação da Rede Classful do Cenário B
+```python
+Bloco de Rede Classful B fornecido: 172.16.0.0/16
+Cenário B irá utilizar: 8 (oito) Sub-redes.
+```
+
+## SEGUNDA ETAPA: Cálculo de Sub-Redes do Cenário B:
+```python
+OBSERVAÇÃO IMPORTANTE: NESSE CENÁRIO NÃO ESTÁ SENDO CONSIDERADO A QUANTIDADE DE HOSTS POR REDE,
+SOMENTE A QUANTIDADE DE REDES PARA A CONFIGURAÇÃO DAS VLANS E ROTAS INTERNAS E EXTERNAS.
+
+A) Trabalhar no 4 (quarto octeto) mudando o CIDR padrão de: /16 para: /24;
+
+B) Necessidade de 8 (oito) Sub-Redes, utilizar 3 (três) Bits emprestado de hosts para esse cenário;
+   Cálculo: 2 ^ 3 = 8 (Sub-Redes)
+
+C) Quantidade Bits restantes de hosts: 5 total de Hosts por Sub-Rede: 2 ^ 5 = 32 - 2 = 30 (Hosts Válidos)
+
+D) Variação das Sub-Redes: 32 - Novo CIDR: /27 - Nova Máscara de Rede: 255.255.255.224
+
+E) Validação da Variação de Rede: 2 ^ 8 = 256, 256 - 224 = 32
+
+F) Separação das Sub-Redes para os serviços do Cenário B:
+   Rede-01) ID: 172.16.0.0    PIV: 172.16.0.1    UIP: 172.16.0.30   BROADCAST: 172.16.0.31
+   Rede-02) ID: 172.16.0.32   PIV: 172.16.0.33   UIP: 172.16.0.62   BROADCAST: 172.16.0.63
+   Rede-03) ID: 172.16.0.64   PIV: 172.16.0.65   UIP: 172.16.0.94   BROADCAST: 172.16.0.95
+   Rede-04) ID: 172.16.0.96   PIV: 172.16.0.97   UIP: 172.16.0.126  BROADCAST: 172.16.0.127
+   Rede-05) ID: 172.16.0.128  PIV: 172.16.0.129  UIP: 172.16.0.158  BROADCAST: 172.16.0.159
+   Rede-06) ID: 172.16.0.160  PIV: 172.16.0.161  UIP: 172.16.0.190  BROADCAST: 172.16.0.191
+   Rede-07) ID: 172.16.0.192  PIV: 172.16.0.193  UIP: 172.16.0.222  BROADCAST: 172.16.0.223
+   Rede-08) ID: 172.16.0.224  PIV: 172.16.0.225  UIP: 172.16.0.254  BROADCAST: 172.16.0.255

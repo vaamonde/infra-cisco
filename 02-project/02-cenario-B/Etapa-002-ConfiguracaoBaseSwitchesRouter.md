@@ -35,7 +35,7 @@ enable
   configure terminal
 
     !Configuração do nome do switch
-    hostname sw-03
+    hostname sw-04
 
     !Habilitando o serviço de criptografia de senhas do Tipo-7 Password 
     service password-encryption
@@ -131,7 +131,7 @@ enable
   configure terminal
 
     !Configuração do nome do switch
-    hostname sw-04
+    hostname sw-05
 
     !Habilitando o serviço de criptografia de senhas do Tipo-7 Password 
     service password-encryption
@@ -227,7 +227,7 @@ enable
   configure terminal
 
     !Configuração do nome do switch
-    hostname sw-05
+    hostname sw-03
 
     !Habilitando o serviço de criptografia de senhas do Tipo-7 Password 
     service password-encryption
