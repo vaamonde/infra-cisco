@@ -71,38 +71,40 @@ configure terminal
     !DICA: a configuração do nome da VLAN facilita na administração e auditoria com o comando: 
     !show vlan brief
     !OBSERVAÇÃO: para criar uma nova VLAN não é necessário sair do modo de configuração de VLAN 
-    !com o comando exit, pode digitar no mesmo nível da VLAN que você está criando.
-    name switch
+    !com o comando exit, pode digitar no mesmo nível a nova VLAN que você está criando.
+    name FIN
 
   vlan 20
-    name server 
+    name EST
   vlan 30
-    name wireless 
+    name FAT 
   vlan 40
-    name estoque
+    name GER
   vlan 50
-    name financeiro
+    name Server
   vlan 60
-    name gerencia
+    name Wireless
+  vlan 99
+    name SVI-Switches
     exit
 
   !Configurando a Interface de Gerenciamento SVI do Switch Multilayer 3650
-  !OBSERVAÇÃO: as SVIs dos Switches Layer 2 e 3 serão configuradas utilizando a VLAN 10
-  interface vlan 10
+  !OBSERVAÇÃO: as SVIs dos Switches Layer 2 e 3 serão configuradas utilizando a VLAN 99
+  interface vlan 99
     description Interface de SVI de Gerenciamento Switch Multilayer 3650
-    ip address 192.168.10.254 255.255.255.0
+    ip address 172.16.0.97 255.255.255.224
     no shutdown
     exit
 
-  !Configurando a Interface de Acesso a VLAN 20 dos Servidores
+  !Configurando a Interface de Acesso a VLAN 50 dos Servidores
   !DICA: a opção range do comando interface possibilita fazer a mesma configuração em várias interfaces
   !OBSERVAÇÃO: existe a possibilidade de utilizar a opção de range para portas não consecutivas, 
   !utilizando o separador , (vírgula) e adicionando o nome das portas na configuração.
   !EXEMPLO: interface range fastEthernet 0/1 - 5 , fastEthernet 0/10, fastEthernet 0/15
-  interface range GigabitEthernet 1/0/10 - 12
+  interface range GigabitEthernet 1/0/10 - 19
     
     !Descrição das Interfaces dos Servidores
-    description Interface de Acesso da VLAN 20 dos Servidores
+    description Interface de Acesso da VLAN 50 dos Servidores
 
     !Configurando a Interface (Porta de Rede) para o Modo de Acesso (Access)
     !DICA: uma Interface de Acesso pertence e trafega dados de uma única VLAN
@@ -117,31 +119,33 @@ configure terminal
     !DICA: por padrão todas as Interfaces dos Switches está com o recurso do DTP (Dynamic Trunk 
     !Protocol) habilitado
     !OBSERVAÇÃO: é recomendado desabilitar o recurso de DTP nas Interfaces que são do tipo Acesso 
-    !(Access) para que servidores ou clientes configure as opção de Trunk nessas portas.
+    !(Access) para que servidores ou clientes não configure as opções de Trunk nessas portas.
     switchport nonegotiate
 
-    !Configurando o acesso a VLAN 20 das Interfaces dos Servidores
+    !Configurando o acesso a VLAN 50 das Interfaces dos Servidores
     !DICA: por padrão só podemos configurar uma VLAN na porta de rede do Switch
     !OBSERVAÇÃO: a partir do momento que configuramos a VLAN na porta do Switch, todos os quadros 
     !(frames) recebem a Tag (etiqueta) dot1q (IEEE 802.1Q) no seu frame (quadro) Ethernet quando 
     !transmite pacotes pela porta de rede do switch
-    switchport access vlan 20
+    switchport access vlan 50
 
     !Saindo das configurações da Interface
     exit
 
-  !Configurando a Interface de Acesso a VLAN 30 do Access Point 802.11-AC
-  interface GigabitEthernet 1/0/23
-    description Interface de Acesso da VLAN 30 do Access Point AC
+  !Configurando a Interface de Acesso a VLAN 60 do Access Point 802.11-AC
+  interface GigabitEthernet 1/0/20 - 23
+    description Interface de Acesso da VLAN 60 do Access Point AC
     switchport mode access
     switchport nonegotiate
-    switchport access vlan 30
+    switchport access vlan 60
     exit
 
   !Acessando todas as Interfaces (Porta de Rede) que não estão sendo utilizadas
-  interface range GigabitEthernet 1/0/5 - 9, GigabitEthernet 1/0/13 - 22,  GigabitEthernet 1/1/1 - 4
+  !OBSERVAÇÃO IMPORTANTE: Esse recurso previne conectar dispositivos nas portas que estão Ligadas (No Shutdown)
+  !por padrão e te acesso a rede.
+  interface range GigabitEthernet 1/0/5 - 9, GigabitEthernet 1/0/14 - 19, GigabitEthernet 1/0/21 - 23, GigabitEthernet 1/1/1 - 4
 
-    !Desligando as Interfaces
+    !Desligando todas as Portas de Redes do Switch Layer 3
     shutdown
 
     !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
@@ -152,7 +156,6 @@ configure terminal
 !salvar automaticamente o script na hora da execução, fazendo a função de
 !<Enter> no final do script.
 write
-
 ```
 
 ## SEXTA ETAPA: Configurando as VLANs no Switch Cisco Layer 2 2960 (LADO ESQUERDO - ACESSO)

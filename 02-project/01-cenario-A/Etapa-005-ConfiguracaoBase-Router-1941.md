@@ -86,7 +86,7 @@ Router (config)# login block-for 120 attempts 2 within 60
 enable
 
   !Configuração de Data/Hora Router
-  clock set 19:54:00 26 November 2024
+  clock set 19:54:00 11 February 2025
 
   !Acessando o modo de Configuração Global de comandos
   configure terminal

@@ -58,10 +58,54 @@ F) Separação das Sub-Redes para os serviços do Cenário B:
 
 ## TERCEIRA ETAPA: Determinação das Sub-Redes para cada Serviço do Cenário B:
 ```python
+  Rede-01) RT-02 para SW-03: 172.16.0.0/27
+    Router rt-01: 172.16.0.30/27
+    Switch sw-03: 172.16.0.29/27
 
+  Rede-02) Servidores: 172.16.0.32/27
+    Server server-02...: 172.16.0.33/27
+    Server server-03...: 172.16.0.34/27
+    Server server-04...: 172.16.0.35/27
+    Server server-05...: 172.16.0.36/27
+    Gateway SVI sw-03..: 172.16.0.62
+    DN Server server-02: 172.16.0.33
+
+  Rede-03) Wireless (Wi-Fi - Sem-Fio): 172.16.0.64/27
+    Gateway SVI sw-03..: 172.16.0.94
+    DN Server server-02: 172.16.0.33
+
+  Rede-04) SVI Switches: 172.16.0.96/27
+    SVI VLAN-99 sw-03: 172.16.0.97/27
+    SVI VLAN-99 sw-04: 172.16.0.98/27
+    SVI VLAN-99 sw-05: 172.16.0.99/27
+    Gateway SVI Switches Layer2: 172.16.0.97
+    DN Server server-02: 172.16.0.33
+
+  Rede-05) VLAN-10 Financeiro (FIN): 172.16.0.128/27
+    Gateway SVI VLAN-10 sw-03: 172.16.0.158
+    DN Server server-02: 172.16.0.33
+
+  Rede-06) VLAN-20 Estoque (EST): 172.16.0.160/27
+    Gateway SVI VLAN-10 sw-03: 172.16.0.190
+    DN Server server-02: 172.16.0.33
+
+  Rede-07) VLAN-30 Faturamento (FAT): 172.16.0.192/27
+    Gateway SVI VLAN-10 sw-03: 172.16.0.222
+    DN Server server-02: 172.16.0.33
+
+  Rede-08) VLAN-40 Gerencia (GER): 172.16.0.224/27
+    Gateway SVI VLAN-10 sw-03: 172.16.0.254
+    DN Server server-02: 172.16.0.33
 ```
 
 ## QUARTA ETAPA: Determinação das VLAN's para cada Serviço do Cenário B:
 ```python
-
+A) VLAN's Switches Layer 3 e Layer 2
+  VLAN-10: Financeiro
+  VLAN-20: Estoque
+  VLAN-30: Faturamento
+  VLAN-40: Gerencia
+  VLAN-50: Servidores
+  VLAN-60: Wireless
+  VLAN-99: SVI Switches
 ```
