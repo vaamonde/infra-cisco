@@ -49,7 +49,7 @@ a) Configurações do Serviço de DHCP Server no Cisco Packet Tracer:
 !Habilitando o Serviço do DHCP Server no Servidor 02
 Server-02
   Services
-    DNS
+    DHCP
 
 !Configurando o Escopo padrão da Rede 192.68.3.0/24
 Interface:                 FastEthernet0

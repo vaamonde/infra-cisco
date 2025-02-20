@@ -54,3 +54,14 @@ F) Separação das Sub-Redes para os serviços do Cenário B:
    Rede-06) ID: 172.16.0.160  PIV: 172.16.0.161  UIP: 172.16.0.190  BROADCAST: 172.16.0.191
    Rede-07) ID: 172.16.0.192  PIV: 172.16.0.193  UIP: 172.16.0.222  BROADCAST: 172.16.0.223
    Rede-08) ID: 172.16.0.224  PIV: 172.16.0.225  UIP: 172.16.0.254  BROADCAST: 172.16.0.255
+```
+
+## TERCEIRA ETAPA: Determinação das Sub-Redes para cada Serviço do Cenário B:
+```python
+
+```
+
+## QUARTA ETAPA: Determinação das VLAN's para cada Serviço do Cenário B:
+```python
+
+```
