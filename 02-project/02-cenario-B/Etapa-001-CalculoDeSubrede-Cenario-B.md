@@ -101,11 +101,11 @@ F) Separação das Sub-Redes para os serviços do Cenário B:
 ## QUARTA ETAPA: Determinação das VLAN's para cada Serviço do Cenário B:
 ```python
 A) VLAN's Switches Layer 3 e Layer 2
-  VLAN-10: Financeiro
-  VLAN-20: Estoque
-  VLAN-30: Faturamento
-  VLAN-40: Gerencia
-  VLAN-50: Servidores
-  VLAN-60: Wireless
-  VLAN-99: SVI Switches
+  VLAN-10: Financeiro     Name: FIN
+  VLAN-20: Estoque        Name: EST
+  VLAN-30: Faturamento    Name: FAT
+  VLAN-40: Gerencia       Name: GER
+  VLAN-50: Servidores     Name: Servers
+  VLAN-60: Wireless       Name: Wireless
+  VLAN-99: SVI Switches   Name: SVI-Switches
 ```

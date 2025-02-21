@@ -160,53 +160,62 @@ write
 
 ## SEXTA ETAPA: Configurando as VLANs no Switch Cisco Layer 2 2960 (LADO ESQUERDO - ACESSO)
 ```python
-!Acessando o modo de Configuração Global de Comandos
-configure terminal
-
-  !Criando as VLANs Standard (Padrão) no Switch 2960
-  vlan 10
-    name switch
-  vlan 20
-    name server
-  vlan 30
-    name wireless
-  vlan 40
-    name estoque
-  vlan 50
-    name financeiro
-  vlan 60
-    name gerencia
-    exit
+enable
+  configure terminal
+    !Criando as VLANs Standard (Padrão) no Switch Layer 2 2960
+    vlan 10
+      name FIN
+    vlan 20
+      name EST
+    vlan 30
+      name FAT 
+    vlan 40
+      name GER
+    vlan 50
+      name Server
+    vlan 60
+      name Wireless
+    vlan 99
+      name SVI-Switches
+      exit
 
   !Configurando a Interfaces de SVI do Switch 2960
-  interface vlan 10
+  interface vlan 99
     description Interface de SVI de Gerenciamento Switch Layer 2 2960
-    ip address 192.168.10.250 255.255.255.0
+    ip address 172.16.0.98 255.255.255.224
     no shutdown
     exit
 
-  !Configurando a Interface da VLAN 40 Estoque
-  interface fastEthernet 0/1
-    description Interface de Acesso da VLAN 40 Estoque
+  !Configurando a Interface da VLAN 10 Financeiro
+  interface range fastEthernet 0/1 - 4
+    description Interface de Acesso da VLAN 10 Financeiro
+    switchport mode access
+    switchport nonegotiate
+    switchport access vlan 10
+    exit
+
+  !Configurando a Interface da VLAN 20 Estoque
+  interface range fastEthernet 0/5 - 9
+    description Interface de Acesso da VLAN 20 Estoque
+    switchport mode access
+    switchport nonegotiate
+    switchport access vlan 20
+    exit
+
+  !Configurando a Interface da VLAN 30 Faturamento
+  interface range fastEthernet 0/10 - 14
+    description Interface de Acesso da VLAN 30 Faturamento
+    switchport mode access
+    switchport nonegotiate
+    switchport access vlan 30
+    exit
+
+  !Configurando a Interface da VLAN 40 Gerencia
+  interface range fastEthernet 0/15 - 20
+    description Interface de Acesso da VLAN 30 Faturamento
     switchport mode access
     switchport nonegotiate
     switchport access vlan 40
-    exit
-
-  !Configurando a Interface da VLAN 50 Financeiro
-  interface fastEthernet 0/2
-    description Interface de Acesso da VLAN 50 Financeiro
-    switchport mode access
-    switchport nonegotiate
-    switchport access vlan 50
-    exit
-
-  !Configurando a Interface da VLAN 60 Gerencia
-  interface fastEthernet 0/3
-    description Interface de Acesso da VLAN 60 Gerencia
-    switchport mode access
-    switchport nonegotiate
-    switchport access vlan 60
     exit
 
   !Desligando as Interfaces que não estão sendo utilizadas
@@ -223,58 +232,66 @@ configure terminal
 !salvar automaticamente o script na hora da execução, fazendo a função de
 !<Enter> no final do script.
 write
-
 ```
 
 ## SÉTIMA ETAPA: Configurando as VLANs no Switch Cisco Layer 2 2960 (LADO DIREITO - ACESSO)
 ```python
-!Acessando o modo de Configuração Global de Comandos
-configure terminal
-
-  !Criando as VLANs Standard (Padrão) no Switch 2960
-  vlan 10
-    name switch
-  vlan 20
-    name server
-  vlan 30
-    name wireless
-  vlan 40
-    name estoque
-  vlan 50
-    name financeiro
-  vlan 60
-    name gerencia
-    exit
+enable
+  configure terminal
+    !Criando as VLANs Standard (Padrão) no Switch Layer 2 2960
+    vlan 10
+      name FIN
+    vlan 20
+      name EST
+    vlan 30
+      name FAT 
+    vlan 40
+      name GER
+    vlan 50
+      name Server
+    vlan 60
+      name Wireless
+    vlan 99
+      name SVI-Switches
+      exit
 
   !Configurando a Interfaces de SVI do Switch 2960
-  interface vlan 10
+  interface vlan 99
     description Interface de SVI de Gerenciamento Switch Layer 2 2960
-    ip address 192.168.10.251 255.255.255.0
+    ip address 172.16.0.99 255.255.255.224
     no shutdown
     exit
 
-  !Configurando a Interface da VLAN 40 Estoque
-  interface fastEthernet 0/1
-    description Interface de Acesso da VLAN 40 Estoque
+  !Configurando a Interface da VLAN 10 Financeiro
+  interface range fastEthernet 0/1 - 4
+    description Interface de Acesso da VLAN 10 Financeiro
+    switchport mode access
+    switchport nonegotiate
+    switchport access vlan 10
+    exit
+
+  !Configurando a Interface da VLAN 20 Estoque
+  interface range fastEthernet 0/5 - 9
+    description Interface de Acesso da VLAN 20 Estoque
+    switchport mode access
+    switchport nonegotiate
+    switchport access vlan 20
+    exit
+
+  !Configurando a Interface da VLAN 30 Faturamento
+  interface range fastEthernet 0/10 - 14
+    description Interface de Acesso da VLAN 30 Faturamento
+    switchport mode access
+    switchport nonegotiate
+    switchport access vlan 30
+    exit
+
+  !Configurando a Interface da VLAN 40 Gerencia
+  interface range fastEthernet 0/15 - 20
+    description Interface de Acesso da VLAN 30 Faturamento
     switchport mode access
     switchport nonegotiate
     switchport access vlan 40
-    exit
-
-  !Configurando a Interface da VLAN 50 Financeiro
-  interface fastEthernet 0/1
-    description Interface de Acesso da VLAN 50 Financeiro
-    switchport mode access
-    switchport nonegotiate
-    switchport access vlan 50
-    exit
-
-  !Configurando a Interface da VLAN 60 Gerencia
-  interface fastEthernet 0/1
-    description Interface de Acesso da VLAN 60 Gerencia
-    switchport mode access
-    switchport nonegotiate
-    switchport access vlan 60
     exit
 
   !Desligando as Interfaces que não estão sendo utilizadas
@@ -291,7 +308,6 @@ configure terminal
 !salvar automaticamente o script na hora da execução, fazendo a função de
 !<Enter> no final do script.
 write
-
 ```
 
 ## OITAVA ETAPA: Verificando as Configurações dos Switches e Roteadores.
@@ -305,5 +321,5 @@ show running-config | section interface
 !Verificando as informações das VLAN (Tabela, Id e Name)
 show vlan brief
 show vlan id 10
-show vlan name svi
+show vlan name FIN
 ```
