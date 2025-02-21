@@ -224,7 +224,7 @@ enable
     exit
 
   !Configurando o Gateway Padrão do Gerenciamento do Switch Layer 2 2960
-  ip default-gateway 192.168.10.254
+  ip default-gateway 172.16.0.97
   end
 
 !Salvando as configurações da memória RAM para a memória NVRAM
@@ -295,12 +295,12 @@ enable
     exit
 
   !Desligando as Interfaces que não estão sendo utilizadas
-  interface range fastEthernet 0/4 - 22
+  interface range fastEthernet 0/2 - 4, fastEthernet 0/6 - 9, fastEthernet 0/11 - 14, fastEthernet 0/16 - 20, fastEthernet 0/21 - 22
     shutdown
     exit
 
   !Configurando o Gateway Padrão do Gerenciamento do Switch Layer 2 2960
-  ip default-gateway 192.168.10.254
+  ip default-gateway 172.16.0.97
   end
 
 !Salvando as configurações da memória RAM para a memória NVRAM
