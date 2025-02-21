@@ -219,7 +219,7 @@ enable
     exit
 
   !Desligando as Interfaces que não estão sendo utilizadas
-  interface range fastEthernet 0/4 - 22
+  interface range fastEthernet 0/2 - 4, fastEthernet 0/6 - 9, fastEthernet 0/11 - 14, fastEthernet 0/16 - 20, fastEthernet 0/21 - 22
     shutdown
     exit
 
