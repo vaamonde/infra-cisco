@@ -52,16 +52,29 @@ Server-02
     DHCP
 
 !Configurando o Escopo padrão da Rede: 172.16.0.64/27 (Wireless)
-Interface:                 FastEthernet0
+Interface:                 GigabitEthernet0
 Service:                   On
 Pool Name:                 wireless
-Default Gateway:           172.16.0.94
+Default Gateway:           172.16.0.94     (Interface de SVI de Gateway da VLAN-60 do Switch Layer 3)
 DNS Server:                172.16.0.33     (DNS Preferencial ou Alternativo - no Cisco Packet Tracer e limitado)
 Start IP Address:          172.16.0.65     (Início da Faixa de Oferta de Endereços IPv4)
 Subnet Mask:               255.255.255.224
-Maximum Number of Users:   29              (Fim da Faixa de Oferta de Endereços IPv4 - 65 até 93)
+Maximum Number of Users:   28              (Fim da Faixa de Oferta de Endereços IPv4 - 65 até 93)
 TFTP Server:               172.16.0.33
-WLC Address:               NÃO UTILIZADO NESSE VÍDEO (Endereço IP do WLC - Wireless LAN Controller)
+WLC Address:               NÃO UTILIZADO NESSE CENÁRIO (Endereço IP do WLC - Wireless LAN Controller)
+<Save>
+
+!Configurando o Escopo padrão da Rede: 172.16.0.128/27 (Financeiro)
+Interface:                 GigabitEthernet0
+Service:                   On
+Pool Name:                 financeiro
+Default Gateway:           172.16.0.158    (Interface de SVI de Gateway da VLAN-10 do Switch Layer 3)
+DNS Server:                172.16.0.33     (DNS Preferencial ou Alternativo - no Cisco Packet Tracer e limitado)
+Start IP Address:          172.16.0.129    (Início da Faixa de Oferta de Endereços IPv4)
+Subnet Mask:               255.255.255.224
+Maximum Number of Users:   28              (Fim da Faixa de Oferta de Endereços IPv4 - 65 até 93)
+TFTP Server:               172.16.0.33
+WLC Address:               NÃO UTILIZADO NESSE CENÁRIO (Endereço IP do WLC - Wireless LAN Controller)
 <Save>
 ```
 
@@ -69,23 +82,34 @@ WLC Address:               NÃO UTILIZADO NESSE VÍDEO (Endereço IP do WLC - Wi
 
 O IP Helper (Ajuda de Endereço IP) são endereços IPs configurados em uma Interface Roteada como uma Interface de VLAN ou uma Interface Ethernet (FastEthernet, GigabitEthernet, etc) de Roteadores ou Switch Layer 3, permitindo que esse dispositivo específico atue como um intermediário (middle man) para encaminhar a solicitação DHCP do BOOTP (Broadcast) que recebe em uma interface para o Servidor DHCP especificado pelo endereço IP Helper via Unicast.
 
-As mensagens do DHCPv4 não é o único serviço no qual o roteador pode ser configurado para retransmitir as solicitações, por padrão o comando ip helper-address encaminha os seguintes pacotes de serviços UDP: Porta 37: tempo, Porta 49: TACACS, Porta 53: DNS Porta 67: cliente de DHCP/BOOTP, Porta 68: servidor de DHCP/BOOTP, Porta 69: TFTP, Porta 137: serviço de nomes NetBIOS e Porta 138: serviço de conjunto de dados NetBIOS.
+As mensagens do DHCPv4 não é o único serviço no qual o roteador pode ser configurado para retransmitir as solicitações, por padrão o comando: *ip helper-address* encaminha os seguintes pacotes de serviços UDP: 
 
-OBSERVAÇÃO: vale lembrar que o Roteador por padrão não encaminha Mensagens de Broadcast para outras Redes conectadas.
+A) Porta 37: tempo;
+B) Porta 49: TACACS;
+C) Porta 53: DNS;
+D) Porta 67: cliente de DHCP/BOOTP;
+E) Porta 68: servidor de DHCP/BOOTP;
+F) Porta 69: TFTP;
+G) Porta 137: serviço de nomes NetBIOS;
+H) Porta 138: serviço de conjunto de dados NetBIOS.
+
+**OBSERVAÇÃO-04:** vale lembrar que o Roteador por padrão não encaminha Mensagens de Broadcast para outras Redes conectadas.
 
 ```python
 !Acessando o modo de Configuração Global de Comandos
 configure terminal
 
-  !Configurando o Recurso de Ajuda de Endereço DHCPv4 na Interface SVI do Switch Multilayer
-  !DICA-01: configurando o endereço IPv4 do Servidor de DHCPv4 que possui o Escopo da Rede configurado
-  !OBSERVAÇÃO-01: esse recurso funciona no Router ou Switch Layer 3, principalmente quando trabalhamos
-  !com VLAN e Sub-Redes que os Escopos do DHCP estão configurado em um servidor dedicado.
-  ip helper-address 172.16.0.33
-  no shutdown
+  !Configurando o suporte da Ajuda de Endereço DHCPv4 nas Interfaces de SVI
+  interface range vlan 10, 20, 30, 40, 60
 
-  !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
-  end
+    !Configurando o Recurso de Ajuda de Endereço DHCPv4 na Interface SVI do Switch Multilayer
+    !DICA-01: configurando o endereço IPv4 do Servidor de DHCPv4 que possui o Escopo da Rede configurado
+    !OBSERVAÇÃO-01: esse recurso funciona no Router ou Switch Layer 3, principalmente quando trabalhamos
+    !com VLAN e Sub-Redes que os Escopos do DHCP estão configurado em um servidor dedicado.
+    ip helper-address 172.16.0.33
+
+    !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
+    end
 
 !Salvando as configurações da memória RAM para a memória NVRAM
 !OBSERVAÇÃO IMPORTANTE: deixar uma linha em branco no final do script para
