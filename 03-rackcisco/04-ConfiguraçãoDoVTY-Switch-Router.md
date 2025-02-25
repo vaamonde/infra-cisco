@@ -19,35 +19,35 @@ Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 !Acessando o modo Exec Privilegiado
 enable
 
-	!Acessar modo de configuração global
-	configure terminal
+  !Acessar modo de configuração global
+  configure terminal
 
-	!Acessando as linhas virtuais
-	line vty 0 4
-		
-		!Habilitando senha do tipo Password Tipo-7
-		password pti@2018
-		
-		!Forçando fazer login com usuário e senha local
-		login local 
-		
-		!Sincronizando os logs na tela
-		logging synchronous
-		
-		!Habilitando o tempo de inatividade do terminal
-		exec-timeout 5 30
-		
-		!Configuração do tipo de protocolo de transporte de entrada
-		transport input ssh
-		
-		!Saindo de todos os níveis
-		end
+    !Acessando as linhas virtuais
+    line vty 0 4
+      
+      !Habilitando senha do tipo Password Tipo-7
+      password pti@2018
+      
+      !Forçando fazer login com usuário e senha local
+      login local 
+      
+      !Sincronizando os logs na tela
+      logging synchronous
+      
+      !Habilitando o tempo de inatividade do terminal
+      exec-timeout 5 30
+      
+      !Configuração do tipo de protocolo de transporte de entrada
+      transport input ssh
+      
+      !Saindo de todos os níveis
+      end
 
-!Salvando as configurações
-copy running-config startup-config
-	
-!Visualizando as configurações
-show running-config
+  !Salvando as configurações
+  copy running-config startup-config
+    
+  !Visualizando as configurações
+  show running-config
 ```
 
 ## SEGUNDA ETAPA: Configuração das Linhas Virtuais do Router Cisco 2911
@@ -56,33 +56,33 @@ show running-config
 !Acessando o modo Exec Privilegiado
 enable
 
-	!Acessar modo de configuração global
-	configure terminal
-  
-	!Acessando as linhas virtuais
-	line vty 0 4
-		
-		!Habilitando senha do tipo Password Tipo-7
-		password pti@2018
-		
-		!Forçando fazer login com usuário e senha local
-		login local 
-		
-		!Sincronizando os logs na tela
-		logging synchronous
-		
-		!Habilitando o tempo de inatividade do terminal
-		exec-timeout 5 30
-		
-		!Configuração do tipo de protocolo de transporte de entrada
-		transport input ssh
-		
-		!Saindo de todos os níveis
-		end
+  !Acessar modo de configuração global
+  configure terminal
 
-!Salvando as configurações
-copy running-config startup-config
-	
-!Visualizando as configurações
-show running-config
+    !Acessando as linhas virtuais
+    line vty 0 4
+      
+      !Habilitando senha do tipo Password Tipo-7
+      password pti@2018
+      
+      !Forçando fazer login com usuário e senha local
+      login local 
+      
+      !Sincronizando os logs na tela
+      logging synchronous
+      
+      !Habilitando o tempo de inatividade do terminal
+      exec-timeout 5 30
+      
+      !Configuração do tipo de protocolo de transporte de entrada
+      transport input ssh
+      
+      !Saindo de todos os níveis
+      end
+
+  !Salvando as configurações
+  copy running-config startup-config
+    
+  !Visualizando as configurações
+  show running-config
 ```

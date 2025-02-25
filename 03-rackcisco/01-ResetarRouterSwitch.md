@@ -37,34 +37,36 @@ Switch>
 
 ```python
 Switch>
-	
-	!Acessar o modo privilegiado de comandos 
-	Switch> enable
 
-	!Verificando o conteúdo da Flash
-	Switch# dir flash:
+!Acessar o modo privilegiado de comandos 
+Switch> enable
 
-	!Remover o banco de dados de VLAN da Flash: 
-	Switch# delete flash:vlan.dat
+  !Verificando o conteúdo da Flash
+  Switch# dir flash:
 
-	!Remover os backups anteriores das turmas: 
-	Switch# delete flash:startup-config
+  !Remover o banco de dados de VLAN da Flash: 
+  Switch# delete flash:vlan.dat
 
-	!Reiniciar o Switch para testar as configurações
-	Switch# reload
+  !Remover os backups anteriores das turmas: 
+  Switch# delete flash:startup-config
+
+  !Reiniciar o Switch para testar as configurações
+  Switch# reload
 ```
 
 ## OBSERVAÇÃO IMPORTANTE: Caso o Switch não volte para o estado de fábrica, será necessário utilizar os procedimentos abaixo: (SÓ USAR ESSA OPÇÃO SE FOR REALMENTE NECESSÁRIO, NÃO EXECUTAR ESSES PROCEDIMENTOS NOS EQUIPAMENTOS ANTES DE INFORMAR AO DOCENTE)
 
-	a) Pressionar o botão MODE até o switch reinicializar;
-	b) Na tela de inicialização, na mensagem de hardware, pressionar o botão MODE para abortar o carregamento do IOS;
-	c) Digitar o comando: flash_init;
-	d) Listar o conteúdo da Flash: dir flash:
-	e) Renomear o arquivo: rename flash:config.text flash:config.old
-	f) Inicializar o sistema: boot
-	g) Limpar o Startup-config: erase startup-config
-	h) Limpar as VLAN: delete flash:vlan.dat
-	i) Reinicializar o Switch: reload
+```bash
+A) Pressionar o botão MODE até o switch reinicializar;
+B) Na tela de inicialização, na mensagem de hardware, pressionar o botão MODE para abortar o carregamento do IOS;
+C) Digitar o comando: flash_init;
+D) Listar o conteúdo da Flash: dir flash:
+E) Renomear o arquivo: rename flash:config.text flash:config.old
+F) Inicializar o sistema: boot
+G) Limpar o Startup-config: erase startup-config
+H) Limpar as VLAN: delete flash:vlan.dat
+I) Reinicializar o Switch: reload
+```
 
 ## SEGUNDA ETAPA: Reset do Roteador (Router) 2911
 
@@ -92,49 +94,51 @@ rommon 2> reset
 
 ```python
 Router>
-	
-	!Acessar o modo privilegiado de comandos 
-	Router> enable
 
-	!Limpando as configuração da NVRAM
-	Router# erase startup-config
+!Acessar o modo privilegiado de comandos 
+Router> enable
 
-	!Verificando o conteúdo da Flash
-	Router# dir flash:
+  !Limpando as configuração da NVRAM
+  Router# erase startup-config
 
-	!Remover os backups anteriores das turmas: 
-	Router# delete flash:startup-config
+  !Verificando o conteúdo da Flash
+  Router# dir flash:
 
-	!Entrar no modo de configuração global
-	Router# configure terminal
+  !Remover os backups anteriores das turmas: 
+  Router# delete flash:startup-config
 
-		!Alterar o registro de inicialização do Router
-		Router (config)# config-register 0x2102 
+  !Entrar no modo de configuração global
+  Router# configure terminal
 
-		!Saindo de dos os modos de configuração
-		Router (config)# end
+    !Alterar o registro de inicialização do Router
+    Router (config)# config-register 0x2102 
 
-	!Salvando as configurações da RAM para a NVRAM
-	Router# copy running-config startup-config 
+    !Saindo de dos os modos de configuração
+    Router (config)# end
 
-	!Reiniciar o Router para testar as configurações
-	Router# reload
+  !Salvando as configurações da RAM para a NVRAM
+  Router# copy running-config startup-config 
 
-	!Após reiniciar o Router Cisco 2911 verifique a chave de registro
-	!Valor está na última linha referente ao cofreg 0x2102
-	Router> enable
-	Router# show version
-		Configuration register is 0x2102
+  !Reiniciar o Router para testar as configurações
+  Router# reload
+
+  !Após reiniciar o Router Cisco 2911 verifique a chave de registro
+  !Valor está na última linha referente ao confreg 0x2102
+  Router> enable
+  Router# show version
+    Configuration register is 0x2102
 ```
 
-**Obs1: caso você digite chaves diferentes no ROMmon o sistema pode inicializar com caracteres estranhos, isso está associado a velocidade da porta console (Padrão 9600bps), será necessário fazer os testes mudando as velocidades de conexão da porta console no PuTTY para: 1200, 2400, 4800, 9600, 19200, 38400, 57600 e 115200.** 
+**OBSERVAÇÃO-01: caso você digite chaves diferentes no ROMmon o sistema pode inicializar com caracteres estranhos, isso está associado a velocidade da porta console (Padrão 9600bps), será necessário fazer os testes mudando as velocidades de conexão da porta console no PuTTY para: 1200, 2400, 4800, 9600, 19200, 38400, 57600 e 115200.** 
 
-**Obs2: para corrigir essa falha será necessário alterar novamente a chave de registro para:**
+**OBSERVAÇÃO-02: para corrigir essa falha será necessário alterar novamente a chave de registro para:**
 
-	a) Acessar o modo Exec Privilegiado: enable <Enter>
-	b) Mudar o registro de inicialização: config-register 0x2102 <Enter>
-	c) Acessar a Linha Console: line console 0 <Enter>, 
-	d) Alterar a velocidade da Porta Console: speed 9600 <Enter>
-	e) Salvar as configurações: copy running-config startup-config <Enter>
-	f) Reinicializar o router: reload <Enter>
-	g) Verificar a chave de registro: enable <Enter>, show version <Enter>
+```bash
+A) Acessar o modo Exec Privilegiado: enable <Enter>
+B) Mudar o registro de inicialização: config-register 0x2102 <Enter>
+D) Acessar a Linha Console: line console 0 <Enter>, 
+D) Alterar a velocidade da Porta Console: speed 9600 <Enter>
+E) Salvar as configurações: copy running-config startup-config <Enter>
+F) Reinicializar o router: reload <Enter>
+G) Verificar a chave de registro: enable <Enter>, show version <Enter>
+```

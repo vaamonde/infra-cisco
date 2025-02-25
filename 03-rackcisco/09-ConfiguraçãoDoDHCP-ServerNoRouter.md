@@ -19,67 +19,67 @@ Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 !Acessando o modo Exec Privilegiado
 enable
 
-	!Acessar modo de configuração global
-	configure terminal
+  !Acessar modo de configuração global
+  configure terminal
 
-		!Configurando o Pool do DHCP Server da VLAN do Primeiro Usuário
-		!OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 186 
-		!(SEXTA ETAPA: Determinação das Sub-Interfaces de Gateway de cada VLAN dos Grupos)
-		ip dhcp excluded-address 172.16.???.1 172.16.???.100
-		ip dhcp excluded-address 172.16.???.200 172.16.???.254
-		ip dhcp pool vlan-???
-			network 172.16.???.0 255.255.255.0
-			default-router 172.16.???.254
-			dns-server 8.8.8.8 8.8.4.4
-			domain-name senac.br
-			exit
+    !Configurando o Pool do DHCP Server da VLAN do Primeiro Usuário
+    !OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 186 
+    !(SEXTA ETAPA: Determinação das Sub-Interfaces de Gateway de cada VLAN dos Grupos)
+    ip dhcp excluded-address 172.16.???.1 172.16.???.100
+    ip dhcp excluded-address 172.16.???.200 172.16.???.254
+    ip dhcp pool vlan-???
+      network 172.16.???.0 255.255.255.0
+      default-router 172.16.???.254
+      dns-server 8.8.8.8 8.8.4.4
+      domain-name senac.br
+      exit
 
-		!Configurando o Pool do DHCP Server da VLAN do Segundo Usuário	
-		ip dhcp excluded-address 172.16.???.1 172.16.???.100
-		ip dhcp excluded-address 172.16.???.200 172.16.???.254
-		ip dhcp pool vlan-???
-			network 172.16.???.0 255.255.255.0
-			default-router 172.16.???.254
-			dns-server 8.8.8.8 8.8.4.4
-			domain-name senac.br
-			exit
+    !Configurando o Pool do DHCP Server da VLAN do Segundo Usuário	
+    ip dhcp excluded-address 172.16.???.1 172.16.???.100
+    ip dhcp excluded-address 172.16.???.200 172.16.???.254
+    ip dhcp pool vlan-???
+      network 172.16.???.0 255.255.255.0
+      default-router 172.16.???.254
+      dns-server 8.8.8.8 8.8.4.4
+      domain-name senac.br
+      exit
 
-		!Configurando o Pool do DHCP Server da VLAN do Terceiro Usuário	
-		ip dhcp excluded-address 172.16.???.1 172.16.???.100
-		ip dhcp excluded-address 172.16.???.200 172.16.???.254
-		ip dhcp pool vlan-???
-			network 172.16.???.0 255.255.255.0
-			default-router 172.16.???.254
-			dns-server 8.8.8.8 8.8.4.4
-			domain-name senac.br
-			exit
+    !Configurando o Pool do DHCP Server da VLAN do Terceiro Usuário	
+    ip dhcp excluded-address 172.16.???.1 172.16.???.100
+    ip dhcp excluded-address 172.16.???.200 172.16.???.254
+    ip dhcp pool vlan-???
+      network 172.16.???.0 255.255.255.0
+      default-router 172.16.???.254
+      dns-server 8.8.8.8 8.8.4.4
+      domain-name senac.br
+      exit
 
-		!Configurando o Pool do DHCP Server da VLAN do Quarto Usuário	
-		ip dhcp excluded-address 172.16.???.1 172.16.???.100
-		ip dhcp excluded-address 172.16.???.200 172.16.???.254
-		ip dhcp pool vlan-???
-			network 172.16.???.0 255.255.255.0
-			default-router 172.16.???.254
-			dns-server 8.8.8.8 8.8.4.4
-			domain-name senac.br
-			exit
+    !Configurando o Pool do DHCP Server da VLAN do Quarto Usuário	
+    ip dhcp excluded-address 172.16.???.1 172.16.???.100
+    ip dhcp excluded-address 172.16.???.200 172.16.???.254
+    ip dhcp pool vlan-???
+      network 172.16.???.0 255.255.255.0
+      default-router 172.16.???.254
+      dns-server 8.8.8.8 8.8.4.4
+      domain-name senac.br
+      exit
 
-		!Configurando o Pool do DHCP Server da VLAN Wireless
-		ip dhcp excluded-address 172.16.???.1 172.16.???.100
-		ip dhcp excluded-address 172.16.???.200 172.16.???.254
-		ip dhcp pool vlan-???
-			network 172.16.???.0 255.255.255.0
-			default-router 172.16.???.254
-			dns-server 8.8.8.8 8.8.4.4
-			domain-name senac.br
-			end
+    !Configurando o Pool do DHCP Server da VLAN Wireless
+    ip dhcp excluded-address 172.16.???.1 172.16.???.100
+    ip dhcp excluded-address 172.16.???.200 172.16.???.254
+    ip dhcp pool vlan-???
+      network 172.16.???.0 255.255.255.0
+      default-router 172.16.???.254
+      dns-server 8.8.8.8 8.8.4.4
+      domain-name senac.br
+      end
 
-!Salvando as configurações
-copy running-config startup-config
+  !Salvando as configurações
+  copy running-config startup-config
 
-!Verificando as informações do Pool DHCP Server
-show ip dhcp pool
+  !Verificando as informações do Pool DHCP Server
+  show ip dhcp pool
 
-!Visualizando os Leasing dos IP ofertados na REde
-show ip dhcp binding (essas informações só estará disponível depois que configurar os clientes)
+  !Visualizando os Leasing dos IP ofertados na REde
+  show ip dhcp binding (essas informações só estará disponível depois que configurar os clientes)
 ```
