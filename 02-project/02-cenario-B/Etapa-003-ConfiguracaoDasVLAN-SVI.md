@@ -25,7 +25,7 @@ G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração
 
 ## PRIMEIRA ETAPA: Conhecendo as VLANs (Virtual LANs – Redes Locais Virtuais) no Cisco Packet Tracer.
 
-As VLANs (Virtual LANs – Redes Locais Virtuais) é uma rede logicamente independente, várias VLANs podem coexistir em um mesmo Switch, de forma a dividir uma rede local em mais de uma rede, criando domínios de Broadcast separados.
+As **VLANs (Virtual LANs – Redes Locais Virtuais)** é uma rede logicamente independente, várias VLANs podem coexistir em um mesmo Switch, de forma a dividir uma rede local em mais de uma rede, criando domínios de Broadcast separados.
 
 As VLANs permitem a segmentação das redes físicas, sendo que a comunicação entre máquinas de VLANs diferentes terá de passar obrigatoriamente por um **Roteador** ou outro equipamento capaz de realizar o **Roteamento**, esse equipamento será o responsável por encaminhar o tráfego entre as VLANs distintas (iguais).
 

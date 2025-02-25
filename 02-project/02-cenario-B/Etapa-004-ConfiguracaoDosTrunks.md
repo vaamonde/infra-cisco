@@ -33,7 +33,7 @@ Uma **Porta de Tronco (trunk)**, normalmente é usada para interligação de Swi
 configure terminal
 
   !Configurando as Interface de Trunk com os Switches Layer 2 2960
-  interface range GigabitEthernet 1/0/1 - 4
+  interface range GigabitEthernet 1/0/1 - 9
     
     !Descrição das Interfaces de Trunk
     description Interface de Trunk com os Switches Layer 2 2960

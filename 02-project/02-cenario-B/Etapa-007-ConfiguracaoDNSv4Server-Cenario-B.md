@@ -47,7 +47,7 @@ O protocolo padrão utilizado pelo DNS Server é o: *UDP (User Datagram Protocol
 **Registro Tipo SOA..:** Significa Início de Autoridade. Obviamente é um dos registros de DNS mais importantes;<br>
 **Registro Tipo NS...:** Significa Name Server ele indica qual nome de servidor é autoritativo para o domínio.
 
-01. Configurações do Serviço de DNS Server no Cisco Packet Tracer.
+## SEGUNDA ETAPA: Configurando o Serviço do DNS Server no Cisco Packet Tracer.
 
 **OBSERVAÇÃO-03:** por padrão o Serviço de DNS Server no Cisco Packet Tracer está: *desligado*.
 
@@ -55,44 +55,42 @@ O protocolo padrão utilizado pelo DNS Server é o: *UDP (User Datagram Protocol
 
 **OBSERVAÇÃO-05:** no Cisco Packet Tracer temos apenas a configuração da Zona de Pesquisa Direta, não está disponível a opção para configurar a Zona de Pesquisa Reversa.
 
-	!Habilitando o Serviço do DNS Server no Servidor 02
-	Server-02
-		Services
-			DNS
+!Habilitando o Serviço do DNS Server no Servidor 02
+Server-02
+  Services
+    DNS
 
-	DNS Service:       On
-	Resource Records:  Name = server-02        Type = A Record     Address = 192.168.3.1
-	Resource Records:  Name = ns1.senac.br     Type = NS           Server Name = server-02
-	Resource Records:  Name = senac.br         Type = SOA          Primary Server Name = ns1.senac.br
-	                                                               Mail Box = vaamonde@senac.br
-	                                                               Minimum TTL = 3600 (1h ou 60 minutos)
-	                                                               Refresh Time = 3600 (1h ou 60 minutos)
-	                                                               Retry Time = 600 (10 minutos)
-	                                                               Expiry Time = 86400 (24h ou 1440 minutos)
-	Resource Records:  Name = senac.br         Type = CNAME        Host Name = server-02
-	Resource Records:  Name = www.senac.br     Type = CNAME        Host Name = server-02
-	Resource Records:  Name = pop3.senac.br    Type = CNAME        Host Name = server-02
-	Resource Records:  Name = smtp.senac.br    Type = CNAME        Host Name = server-02
-	Resource Records:  Name = ftp.senac.br     Type = CNAME        Host Name = server-02
-	Resource Records:  Name = sw-03            Type = A Record     Address = 192.168.3.250
-	Resource Records:  Name = sw-04            Type = A Record     Address = 192.168.3.251
-	Resource Records:  Name = sw-05            Type = A Record     Address = 192.168.3.252
-	Resource Records:  Name = rt-02            Type = A Record     Address = 192.168.2.254
+DNS Service:       On
+Resource Records:  Name = server-02        Type = A Record     Address = 172.16.0.33
+Resource Records:  Name = ns1.senac.br     Type = NS           Server Name = server-02
+Resource Records:  Name = senac.br         Type = SOA          Primary Server Name = ns1.senac.br
+                                                               Mail Box = vaamonde@senac.br
+                                                               Minimum TTL = 3600 (1h ou 60 minutos)
+                                                               Refresh Time = 3600 (1h ou 60 minutos)
+                                                               Retry Time = 600 (10 minutos)
+                                                               Expiry Time = 86400 (24h ou 1440 minutos)
+Resource Records:  Name = senac.br         Type = CNAME        Host Name = server-03
+Resource Records:  Name = www.senac.br     Type = CNAME        Host Name = server-03
+Resource Records:  Name = pop3.senac.br    Type = CNAME        Host Name = server-03
+Resource Records:  Name = smtp.senac.br    Type = CNAME        Host Name = server-03
+Resource Records:  Name = ftp.senac.br     Type = CNAME        Host Name = server-03
+Resource Records:  Name = server-03        Type = A Record     Address = 172.16.0.34
+Resource Records:  Name = server-04        Type = A Record     Address = 172.16.0.35
+Resource Records:  Name = server-05        Type = A Record     Address = 172.16.0.36
 
 a) Abrindo o Prompt de Comando do Desktop;
 
 **DICA-03** não confunda Terminal com Command Prompt, Terminal é utilizado para se conectar no Switch ou Router utilizando o Cabo Console, já o Command Prompt (Prompt de Comando) é utilizado para testar as configurações de rede e acessar remotamente o Switch ou Router.
+```bash
+!Verificando o endereço IPv4 configurado no Desktop
+C:\> ipconfig
 
-	!Verificando o endereço IPv4 configurado no Desktop
-	C:\> ipconfig
+!Verificando o endereço detalhado IPv4 configurado no Desktop
+C:\> ipconfig /all
 
-	!Verificando o endereço detalhado IPv4 configurado no Desktop
-	C:\> ipconfig /all
+!Testando a Resolução de Nomes DNS no Desktop
+C:\> nslookup server-02
 
-	!Testando a Resolução de Nomes DNS no Desktop
-	C:\> nslookup server-02
-	C:\> nslookup senac.br
-
-	!Testando a comunicação com o Server utilizando o pacote ICMP (Internet Control Message Protocol)
-	C:\> ping server-02
-	C:\> ping senac.br
+!Testando a comunicação com o Server 01 utilizando o pacote ICMP (Internet Control Message Protocol)
+C:\> ping server-02
+```

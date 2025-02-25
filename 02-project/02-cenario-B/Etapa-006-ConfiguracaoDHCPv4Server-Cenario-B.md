@@ -31,7 +31,7 @@ O protocolo padrão utilizado pelo DHCP Server é o: *UDP (User Datagram Protoco
 
 **Escopo DHCP:** Trata-se do intervalo completo dos possíveis endereços IP de uma rede. Os escopos definem a sub-rede física da rede que vai oferecer os serviços do DHCP.
 
-a) Configurações do Serviço de DHCP Server no Cisco Packet Tracer:
+## SEGUNDA ETAPA: Configurando o Serviço do DHCP Server no Cisco Packet Tracer.
 
 **OBSERVAÇÃO-01:** por padrão o Serviço de DHCP Server no Cisco Packet Tracer está: *desligado*
 
@@ -78,20 +78,20 @@ WLC Address:               NÃO UTILIZADO NESSE CENÁRIO (Endereço IP do WLC - 
 <Save>
 ```
 
-## PRIMEIRA ETAPA: Configurando o Recurso de Ajuda do DHCP no Switch Multilayer 3650 no Cisco Packet Tracer.
+## TERCEIRA ETAPA: Configurando o Recurso de Ajuda do DHCP no Switch Multilayer 3650 no Cisco Packet Tracer.
 
-O IP Helper (Ajuda de Endereço IP) são endereços IPs configurados em uma Interface Roteada como uma Interface de VLAN ou uma Interface Ethernet (FastEthernet, GigabitEthernet, etc) de Roteadores ou Switch Layer 3, permitindo que esse dispositivo específico atue como um intermediário (middle man) para encaminhar a solicitação DHCP do BOOTP (Broadcast) que recebe em uma interface para o Servidor DHCP especificado pelo endereço IP Helper via Unicast.
+O **IP Helper (Ajuda de Endereço IP)** são endereços IPs configurados em uma Interface Roteada como uma Interface de VLAN ou uma Interface Ethernet (FastEthernet, GigabitEthernet, etc) de Roteadores ou Switch Layer 3, permitindo que esse dispositivo específico atue como um intermediário (middle man) para encaminhar a solicitação DHCP do BOOTP (Broadcast) que recebe em uma interface para o Servidor DHCP especificado pelo endereço *IP Helper* via **Unicast**.
 
 As mensagens do DHCPv4 não é o único serviço no qual o roteador pode ser configurado para retransmitir as solicitações, por padrão o comando: *ip helper-address* encaminha os seguintes pacotes de serviços UDP: 
-
-A) Porta 37: tempo;
-B) Porta 49: TACACS;
-C) Porta 53: DNS;
-D) Porta 67: cliente de DHCP/BOOTP;
-E) Porta 68: servidor de DHCP/BOOTP;
-F) Porta 69: TFTP;
-G) Porta 137: serviço de nomes NetBIOS;
-H) Porta 138: serviço de conjunto de dados NetBIOS.
+ 
+A) Porta 37: tempo;<br>
+B) Porta 49: TACACS;<br>
+C) Porta 53: Consulta DNS;<br>
+D) Porta 67: cliente de DHCP/BOOTP;<br>
+E) Porta 68: servidor de DHCP/BOOTP;<br>
+F) Porta 69: TFTP;<br>
+G) Porta 137: serviço de nomes NetBIOS;<br>
+H) Porta 138: serviço de conjunto de dados NetBIOS.<br>
 
 **OBSERVAÇÃO-04:** vale lembrar que o Roteador por padrão não encaminha Mensagens de Broadcast para outras Redes conectadas.
 
