@@ -63,14 +63,14 @@ Uma Porta de **Acesso (access)**, permite associar uma porta do Switch a uma VLA
 configure terminal
 
   !Criando as VLANs Standard (Padrão) no Switch Multilayer 3650
-  !DICA: por padrão é recomendado trabalhar nos Switches Catalyst ou Multilayer a faixa de VLANs 
+  !DICA-01: por padrão é recomendado trabalhar nos Switches Catalyst ou Multilayer a faixa de VLANs 
   !Standard (padrão de 2 até 1001)
   vlan 10
 
     !Configurando o nome da VLAN Standard
-    !DICA: a configuração do nome da VLAN facilita na administração e auditoria com o comando: 
+    !DICA-02: a configuração do nome da VLAN facilita na administração e auditoria com o comando: 
     !show vlan brief
-    !OBSERVAÇÃO: para criar uma nova VLAN não é necessário sair do modo de configuração de VLAN 
+    !OBSERVAÇÃO-01: para criar uma nova VLAN não é necessário sair do modo de configuração de VLAN 
     !com o comando exit, pode digitar no mesmo nível a nova VLAN que você está criando.
     name FIN
 
@@ -89,7 +89,7 @@ configure terminal
     exit
 
   !Configurando a Interface de Gerenciamento SVI do Switch Multilayer 3650
-  !OBSERVAÇÃO: as SVIs dos Switches Layer 2 e 3 serão configuradas utilizando a VLAN 99
+  !OBSERVAÇÃO-02: as SVIs dos Switches Layer 2 e 3 serão configuradas utilizando a VLAN 99
   interface vlan 99
     description Interface de SVI de Gerenciamento Switch Multilayer 3650
     ip address 172.16.0.97 255.255.255.224
@@ -97,36 +97,36 @@ configure terminal
     exit
 
   !Configurando a Interface de Acesso a VLAN 50 dos Servidores
-  !DICA: a opção range do comando interface possibilita fazer a mesma configuração em várias interfaces
-  !OBSERVAÇÃO: existe a possibilidade de utilizar a opção de range para portas não consecutivas, 
+  !DICA-03: a opção range do comando interface possibilita fazer a mesma configuração em várias interfaces
+  !OBSERVAÇÃO-03: existe a possibilidade de utilizar a opção de range para portas não consecutivas, 
   !utilizando o separador , (vírgula) e adicionando o nome das portas na configuração.
-  !EXEMPLO: interface range fastEthernet 0/1 - 5 , fastEthernet 0/10, fastEthernet 0/15
+  !EXEMPLO-01: interface range fastEthernet 0/1 - 5, fastEthernet 0/10, fastEthernet 0/15
   interface range GigabitEthernet 1/0/10 - 19
     
     !Descrição das Interfaces dos Servidores
     description Interface de Acesso da VLAN 50 dos Servidores
 
     !Configurando a Interface (Porta de Rede) para o Modo de Acesso (Access)
-    !DICA: uma Interface de Acesso pertence e trafega dados de uma única VLAN
-    !OBSERVAÇÃO: por padrão todos os Switches tem a VLAN 1 que não pode ser removida e está associada 
+    !DICA-04: uma Interface de Acesso pertence e trafega dados de uma única VLAN
+    !OBSERVAÇÃO-04: por padrão todos os Switches tem a VLAN 1 que não pode ser removida e está associada 
     !a todas as Interfaces, é recomendado sempre configurar as Interfaces dos dispositivos finais para 
     !o Modo Acesso (Access).
-    !OBSERVAÇÃO: tipos de configuração: access (porta de acesso), trunk (porta de tronco) e dynamic 
-    !(porta dinâmica) 
+    !OBSERVAÇÃO-05: tipos de configurações das Interfaces: access (porta de acesso), trunk (porta de tronco)
+    !e dynamic (porta dinâmica)
     switchport mode access
 
     !Desabilitando o recurso de auto-negociação da Interface (Porta de Rede)
-    !DICA: por padrão todas as Interfaces dos Switches está com o recurso do DTP (Dynamic Trunk 
-    !Protocol) habilitado
-    !OBSERVAÇÃO: é recomendado desabilitar o recurso de DTP nas Interfaces que são do tipo Acesso 
+    !DICA-05: por padrão todas as Interfaces dos Switches está com o recurso do DTP (Dynamic Trunk 
+    !Protocol) habilitado nas Interfaces
+    !OBSERVAÇÃO-06: é recomendado desabilitar o recurso de DTP nas Interfaces que são do tipo Acesso 
     !(Access) para que servidores ou clientes não configure as opções de Trunk nessas portas.
     switchport nonegotiate
 
     !Configurando o acesso a VLAN 50 das Interfaces dos Servidores
-    !DICA: por padrão só podemos configurar uma VLAN na porta de rede do Switch
-    !OBSERVAÇÃO: a partir do momento que configuramos a VLAN na porta do Switch, todos os quadros 
-    !(frames) recebem a Tag (etiqueta) dot1q (IEEE 802.1Q) no seu frame (quadro) Ethernet quando 
-    !transmite pacotes pela porta de rede do switch
+    !DICA-06: por padrão só podemos configurar uma VLAN na porta de rede do Switch
+    !OBSERVAÇÃO-07: a partir do momento que configuramos a VLAN na porta do Switch, todos os quadros 
+    !(frames) recebem a Tag (etiqueta) dot1q (IEEE 802.1Q) no seu Frame (quadro) Ethernet quando 
+    !transmite pacotes pela porta de rede do Switch
     switchport access vlan 50
 
     !Saindo das configurações da Interface
@@ -141,8 +141,8 @@ configure terminal
     exit
 
   !Acessando todas as Interfaces (Porta de Rede) que não estão sendo utilizadas
-  !OBSERVAÇÃO IMPORTANTE: Esse recurso previne conectar dispositivos nas portas que estão Ligadas (No Shutdown)
-  !por padrão e te acesso a rede.
+  !OBSERVAÇÃO IMPORTANTE: Esse recurso previne conectar dispositivos nas portas que estão Ligadas 
+  !(No Shutdown) por padrão e te acesso a rede sem restrição.
   interface range GigabitEthernet 1/0/5 - 9, GigabitEthernet 1/0/14 - 19, GigabitEthernet 1/0/21 - 23, GigabitEthernet 1/1/1 - 4
 
     !Desligando todas as Portas de Redes do Switch Layer 3
@@ -156,28 +156,29 @@ configure terminal
 !salvar automaticamente o script na hora da execução, fazendo a função de
 !<Enter> no final do script.
 write
+
 ```
 
 ## SEXTA ETAPA: Configurando as VLANs no Switch Cisco Layer 2 2960 (LADO ESQUERDO - ACESSO)
 ```python
-enable
-  configure terminal
-    !Criando as VLANs Standard (Padrão) no Switch Layer 2 2960
-    vlan 10
-      name FIN
-    vlan 20
-      name EST
-    vlan 30
-      name FAT 
-    vlan 40
-      name GER
-    vlan 50
-      name Server
-    vlan 60
-      name Wireless
-    vlan 99
-      name SVI-Switches
-      exit
+configure terminal
+
+  !Criando as VLANs Standard (Padrão) no Switch Layer 2 2960
+  vlan 10
+    name FIN
+  vlan 20
+    name EST
+  vlan 30
+    name FAT 
+  vlan 40
+    name GER
+  vlan 50
+    name Server
+  vlan 60
+    name Wireless
+  vlan 99
+    name SVI-Switches
+    exit
 
   !Configurando a Interfaces de SVI do Switch 2960
   interface vlan 99
@@ -223,8 +224,7 @@ enable
     shutdown
     exit
 
-  !Configurando o Gateway Padrão do Gerenciamento do Switch Layer 2 2960
-  ip default-gateway 172.16.0.97
+  !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
   end
 
 !Salvando as configurações da memória RAM para a memória NVRAM
@@ -232,28 +232,29 @@ enable
 !salvar automaticamente o script na hora da execução, fazendo a função de
 !<Enter> no final do script.
 write
+
 ```
 
 ## SÉTIMA ETAPA: Configurando as VLANs no Switch Cisco Layer 2 2960 (LADO DIREITO - ACESSO)
 ```python
-enable
-  configure terminal
-    !Criando as VLANs Standard (Padrão) no Switch Layer 2 2960
-    vlan 10
-      name FIN
-    vlan 20
-      name EST
-    vlan 30
-      name FAT 
-    vlan 40
-      name GER
-    vlan 50
-      name Server
-    vlan 60
-      name Wireless
-    vlan 99
-      name SVI-Switches
-      exit
+configure terminal
+
+  !Criando as VLANs Standard (Padrão) no Switch Layer 2 2960
+  vlan 10
+    name FIN
+  vlan 20
+    name EST
+  vlan 30
+    name FAT 
+  vlan 40
+    name GER
+  vlan 50
+    name Server
+  vlan 60
+    name Wireless
+  vlan 99
+    name SVI-Switches
+    exit
 
   !Configurando a Interfaces de SVI do Switch 2960
   interface vlan 99
@@ -299,8 +300,7 @@ enable
     shutdown
     exit
 
-  !Configurando o Gateway Padrão do Gerenciamento do Switch Layer 2 2960
-  ip default-gateway 172.16.0.97
+  !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
   end
 
 !Salvando as configurações da memória RAM para a memória NVRAM
@@ -308,6 +308,7 @@ enable
 !salvar automaticamente o script na hora da execução, fazendo a função de
 !<Enter> no final do script.
 write
+
 ```
 
 ## OITAVA ETAPA: Verificando as Configurações dos Switches e Roteadores.

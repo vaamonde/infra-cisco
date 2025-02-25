@@ -24,13 +24,13 @@ F) **IMPORTANTE:** informações importantes da tecnologia ou da configuração,
 G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração, com foco em adicionar informações extras da tecnologia ou da certificação.
 
 ## PRIMEIRA ETAPA: Determinação da Rede Classful do Cenário B
-```python
+```bash
 Bloco de Rede Classful B fornecido: 172.16.0.0/16
 Cenário B irá utilizar: 8 (oito) Sub-redes.
 ```
 
 ## SEGUNDA ETAPA: Cálculo de Sub-Redes do Cenário B:
-```python
+```bash
 OBSERVAÇÃO IMPORTANTE: NESSE CENÁRIO NÃO ESTÁ SENDO CONSIDERADO A QUANTIDADE DE HOSTS POR REDE,
 SOMENTE A QUANTIDADE DE REDES PARA A CONFIGURAÇÃO DAS VLANS E ROTAS INTERNAS E EXTERNAS.
 
@@ -57,7 +57,7 @@ F) Separação das Sub-Redes para os serviços do Cenário B:
 ```
 
 ## TERCEIRA ETAPA: Determinação das Sub-Redes para cada Serviço do Cenário B:
-```python
+```bash
   Rede-01) RT-02 para SW-03: 172.16.0.0/27
     Router rt-01: 172.16.0.30/27
     Switch sw-03: 172.16.0.29/27
@@ -68,38 +68,38 @@ F) Separação das Sub-Redes para os serviços do Cenário B:
     Server server-04...: 172.16.0.35/27
     Server server-05...: 172.16.0.36/27
     Gateway SVI sw-03..: 172.16.0.62
-    DN Server server-02: 172.16.0.33
+    DNS Server server-02: 172.16.0.33
 
   Rede-03) Wireless (Wi-Fi - Sem-Fio): 172.16.0.64/27
     Gateway SVI sw-03..: 172.16.0.94
-    DN Server server-02: 172.16.0.33
+    DNS Server server-02: 172.16.0.33
 
   Rede-04) SVI Switches: 172.16.0.96/27
     SVI VLAN-99 sw-03: 172.16.0.97/27
     SVI VLAN-99 sw-04: 172.16.0.98/27
     SVI VLAN-99 sw-05: 172.16.0.99/27
     Gateway SVI Switches Layer2: 172.16.0.97
-    DN Server server-02: 172.16.0.33
+    DNS Server server-02: 172.16.0.33
 
   Rede-05) VLAN-10 Financeiro (FIN): 172.16.0.128/27
     Gateway SVI VLAN-10 sw-03: 172.16.0.158
-    DN Server server-02: 172.16.0.33
+    DNS Server server-02: 172.16.0.33
 
   Rede-06) VLAN-20 Estoque (EST): 172.16.0.160/27
     Gateway SVI VLAN-10 sw-03: 172.16.0.190
-    DN Server server-02: 172.16.0.33
+    DNS Server server-02: 172.16.0.33
 
   Rede-07) VLAN-30 Faturamento (FAT): 172.16.0.192/27
     Gateway SVI VLAN-10 sw-03: 172.16.0.222
-    DN Server server-02: 172.16.0.33
+    DNS Server server-02: 172.16.0.33
 
   Rede-08) VLAN-40 Gerencia (GER): 172.16.0.224/27
     Gateway SVI VLAN-10 sw-03: 172.16.0.254
-    DN Server server-02: 172.16.0.33
+    DNS Server server-02: 172.16.0.33
 ```
 
 ## QUARTA ETAPA: Determinação das VLAN's para cada Serviço do Cenário B:
-```python
+```bash
 A) VLAN's Switches Layer 3 e Layer 2
   VLAN-10: Financeiro     Name: FIN
   VLAN-20: Estoque        Name: EST

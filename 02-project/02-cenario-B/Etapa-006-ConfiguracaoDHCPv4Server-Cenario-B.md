@@ -51,23 +51,56 @@ Server-02
   Services
     DHCP
 
-!Configurando o Escopo padrão da Rede 192.68.3.0/24
+!Configurando o Escopo padrão da Rede: 172.16.0.64/27 (Wireless)
 Interface:                 FastEthernet0
 Service:                   On
-Pool Name:                 serverPool
-Default Gateway:           192.168.3.254
-DNS Server:                192.168.3.1    (DNS Preferencial ou Alternativo - no Cisco Packet Tracer e limitado)
-Start IP Address:          192.168.3.100  (Início da Faixa de Oferta de Endereços IPv4)
-Subnet Mask:               255.255.255.0
-Maximum Number of Users:   50             (Fim da Faixa de Oferta de Endereços IPv4 - 100 até 150)
-TFTP Server:               192.168.3.1
+Pool Name:                 wireless
+Default Gateway:           172.16.0.94
+DNS Server:                172.16.0.33     (DNS Preferencial ou Alternativo - no Cisco Packet Tracer e limitado)
+Start IP Address:          172.16.0.65     (Início da Faixa de Oferta de Endereços IPv4)
+Subnet Mask:               255.255.255.224
+Maximum Number of Users:   29              (Fim da Faixa de Oferta de Endereços IPv4 - 65 até 93)
+TFTP Server:               172.16.0.33
 WLC Address:               NÃO UTILIZADO NESSE VÍDEO (Endereço IP do WLC - Wireless LAN Controller)
 <Save>
 ```
 
-b) Abrindo o Prompt de Comando do Desktop;
+## PRIMEIRA ETAPA: Configurando o Recurso de Ajuda do DHCP no Switch Multilayer 3650 no Cisco Packet Tracer.
+
+O IP Helper (Ajuda de Endereço IP) são endereços IPs configurados em uma Interface Roteada como uma Interface de VLAN ou uma Interface Ethernet (FastEthernet, GigabitEthernet, etc) de Roteadores ou Switch Layer 3, permitindo que esse dispositivo específico atue como um intermediário (middle man) para encaminhar a solicitação DHCP do BOOTP (Broadcast) que recebe em uma interface para o Servidor DHCP especificado pelo endereço IP Helper via Unicast.
+
+As mensagens do DHCPv4 não é o único serviço no qual o roteador pode ser configurado para retransmitir as solicitações, por padrão o comando ip helper-address encaminha os seguintes pacotes de serviços UDP: Porta 37: tempo, Porta 49: TACACS, Porta 53: DNS Porta 67: cliente de DHCP/BOOTP, Porta 68: servidor de DHCP/BOOTP, Porta 69: TFTP, Porta 137: serviço de nomes NetBIOS e Porta 138: serviço de conjunto de dados NetBIOS.
+
+OBSERVAÇÃO: vale lembrar que o Roteador por padrão não encaminha Mensagens de Broadcast para outras Redes conectadas.
+
+```python
+!Acessando o modo de Configuração Global de Comandos
+configure terminal
+
+  !Configurando o Recurso de Ajuda de Endereço DHCPv4 na Interface SVI do Switch Multilayer
+  !DICA-01: configurando o endereço IPv4 do Servidor de DHCPv4 que possui o Escopo da Rede configurado
+  !OBSERVAÇÃO-01: esse recurso funciona no Router ou Switch Layer 3, principalmente quando trabalhamos
+  !com VLAN e Sub-Redes que os Escopos do DHCP estão configurado em um servidor dedicado.
+  ip helper-address 172.16.0.33
+  no shutdown
+
+  !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
+  end
+
+!Salvando as configurações da memória RAM para a memória NVRAM
+!OBSERVAÇÃO IMPORTANTE: deixar uma linha em branco no final do script para
+!salvar automaticamente o script na hora da execução, fazendo a função de
+!<Enter> no final do script.
+write
+
+```
+
+## TERCEIRA ETAPA: Testando o Serviço do DHCP Server no Cisco Packet Tracer.
+
+a) Abrindo o Prompt de Comando do Desktop;
 
 **DICA-03** não confunda Terminal com Command Prompt, Terminal é utilizado para se conectar no Switch ou Router utilizando o Cabo Console, já o Command Prompt (Prompt de Comando) é utilizado para testar as configurações de rede e acessar remotamente o Switch ou Router.
+
 ```bash
 !Verificando o endereço IPv4 configurado no Desktop
 C:\> ipconfig
@@ -84,6 +117,6 @@ C:\> ipconfig /renew
 !Verificando o endereço detalhado IPv4 configurado no Desktop
 C:\> ipconfig /all
 
-!Testando a comunicação com o Server 01 utilizando o pacote ICMP (Internet Control Message Protocol)
-C:\> ping 192.168.3.1
+!Testando a comunicação com o Server 02 utilizando o pacote ICMP (Internet Control Message Protocol)
+C:\> ping 172.16.0.33
 ```
