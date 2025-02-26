@@ -28,6 +28,17 @@ G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração
 !Acessando o modo de Configuração Global de Comandos
 configure terminal
 
+  !Habilitando o Recurso de Roteamento no Switch Multilayer 3650
+  !DICA-01: habilitar o recurso de roteamento no Switch Layer 3 permite utilizar protocolos de 
+  !roteamento Estático ou Dinâmico no Switch
+  !OBSERVAÇÃO-01: habilitar o recurso de roteamento do Switch Layer 3 somente se for necessário
+  !OBSERVAÇÃO-02: por padrão o recurso de roteamento do Switch Layer 3 está desligado/desabilitado
+  !OBSERVAÇÃO-03: os recursos de roteamento permite utilizar protocolos dinâmicos como o: RIP, RIPv2, 
+  !EIGRP e OSPF.
+  !IMPORTANTE-01: o Switch Layer 3 não foi projetado para trabalhar com Roteamento de WAN (Internet), 
+  !ele é indicado somente para a Rede Local LAN
+  ip routing
+
   !Configurando a Interface de Gateway da VLAN 10 Financeiro
   interface vlan 10
     description Interface de Gateway da VLAN 10
@@ -68,21 +79,9 @@ configure terminal
     description Interface de Gateway da VLAN 60
     ip address 172.16.0.94 255.255.255.224
     no shutdown
-    exit
 
-  !Habilitando o Recurso de Roteamento no Switch Multilayer 3650
-  !DICA-01: habilitar o recurso de roteamento no Switch Layer 3 permite utilizar protocolos de 
-  !roteamento Estático ou Dinâmico no Switch
-  !OBSERVAÇÃO-01: habilitar o recurso de roteamento do Switch Layer 3 somente se for necessário
-  !OBSERVAÇÃO-02: por padrão o recurso de roteamento do Switch Layer 3 está desligado/desabilitado
-  !OBSERVAÇÃO-03: os recursos de roteamento permite utilizar protocolos dinâmicos como o: RIP, RIPv2, 
-  !EIGRP e OSPF.
-  !IMPORTANTE-01: o Switch Layer 3 não foi projetado para trabalhar com Roteamento de WAN (Internet), 
-  !ele é indicado somente para a Rede Local LAN
-  ip routing
-
-  !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
-  end
+    !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
+    end
 
 !Salvando as configurações da memória RAM para a memória NVRAM
 !OBSERVAÇÃO IMPORTANTE: deixar uma linha em branco no final do script para

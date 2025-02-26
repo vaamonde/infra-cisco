@@ -51,7 +51,7 @@ Server-02
   Services
     DHCP
 
-!Configurando o Escopo padrão da Rede: 172.16.0.64/27 (Wireless)
+!Configurando o Escopo padrão da Rede: 172.16.0.64/27 (Wireless - VLAN-60)
 Interface:                 GigabitEthernet0
 Service:                   On
 Pool Name:                 wireless
@@ -64,7 +64,7 @@ TFTP Server:               172.16.0.33
 WLC Address:               NÃO UTILIZADO NESSE CENÁRIO (Endereço IP do WLC - Wireless LAN Controller)
 <Save>
 
-!Configurando o Escopo padrão da Rede: 172.16.0.128/27 (Financeiro)
+!Configurando o Escopo padrão da Rede: 172.16.0.128/27 (Financeiro - VLAN-10)
 Interface:                 GigabitEthernet0
 Service:                   On
 Pool Name:                 financeiro
@@ -100,12 +100,39 @@ H) Porta 138: serviço de conjunto de dados NetBIOS.<br>
 configure terminal
 
   !Configurando o suporte da Ajuda de Endereço DHCPv4 nas Interfaces de SVI
-  interface range vlan 10, 20, 30, 40, 60
+  interface vlan 10
 
     !Configurando o Recurso de Ajuda de Endereço DHCPv4 na Interface SVI do Switch Multilayer
     !DICA-01: configurando o endereço IPv4 do Servidor de DHCPv4 que possui o Escopo da Rede configurado
     !OBSERVAÇÃO-01: esse recurso funciona no Router ou Switch Layer 3, principalmente quando trabalhamos
     !com VLAN e Sub-Redes que os Escopos do DHCP estão configurado em um servidor dedicado.
+    ip helper-address 172.16.0.33
+
+    !Saindo da configuração da Interface de VLAN
+    exit
+
+  !Configurando o suporte da Ajuda de Endereço DHCPv4 nas Interfaces de SVI
+  interface vlan 20
+    ip helper-address 172.16.0.33
+    exit
+
+  !Configurando o suporte da Ajuda de Endereço DHCPv4 nas Interfaces de SVI
+  interface vlan 30
+    ip helper-address 172.16.0.33
+    exit
+
+  !Configurando o suporte da Ajuda de Endereço DHCPv4 nas Interfaces de SVI
+  interface vlan 40
+    ip helper-address 172.16.0.33
+    exit
+
+  !Configurando o suporte da Ajuda de Endereço DHCPv4 nas Interfaces de SVI
+  interface vlan 50
+    ip helper-address 172.16.0.33
+    exit
+
+  !Configurando o suporte da Ajuda de Endereço DHCPv4 nas Interfaces de SVI
+  interface vlan 60
     ip helper-address 172.16.0.33
 
     !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
