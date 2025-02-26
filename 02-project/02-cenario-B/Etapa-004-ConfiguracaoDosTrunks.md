@@ -60,7 +60,7 @@ write
 !Acessando o modo de Configuração Global de Comandos
 configure terminal
 
-  !Configuração das Interfaces de Trunk do Switch Layer 2
+  !Configuração das Interfaces de Trunk do Switch Layer 2 2960
   interface range GigabitEthernet 0/1 - 2, FastEthernet 0/23 - 24
     description Interface de Trunk com os Switches Layer 3 e 2 
     switchport mode trunk
@@ -80,7 +80,7 @@ write
 !Acessando o modo de Configuração Global de Comandos
 configure terminal
 
-  !Configuração das Interfaces de Trunk do Switch Layer 2
+  !Configuração das Interfaces de Trunk do Switch Layer 2 2960
   interface range GigabitEthernet 0/1 - 2, FastEthernet 0/23 - 24
     description Interface de Trunk com os Switches Layer 3 e 2 
     switchport mode trunk
@@ -95,7 +95,7 @@ write
 
 ```
 
-## QUINTA ETAPA: Verificando as Configurações dos Switches.
+## QUINTA ETAPA: Verificando as Configurações dos Trunks nos Switches 3650 e 2960.
 ```python
 !Visualizando as Configurações do Running-Config (RAM)
 show running-config

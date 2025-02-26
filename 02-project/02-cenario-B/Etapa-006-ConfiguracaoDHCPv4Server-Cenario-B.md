@@ -46,7 +46,7 @@ O protocolo padrão utilizado pelo DHCP Server é o: *UDP (User Datagram Protoco
 **OBSERVAÇÃO-03:** o Switch Cisco Catalyst Layer 3 3560 ou Router possui os recursos para a configuração do DHCP Server, para redes pequenas e de médio porte é recomendado o seu uso, para redes grandes ou complexas o seu uso é limitado em alguns recursos, principalmente de monitoramento, relatórios e integrações de serviços.
 
 ```python
-!Habilitando o Serviço do DHCP Server no Servidor 02
+!Habilitando o Serviço do DHCP Server no Servidor 02 (172.16.0.33)
 Server-02
   Services
     DHCP
@@ -62,7 +62,7 @@ Subnet Mask:               255.255.255.224
 Maximum Number of Users:   28              (Fim da Faixa de Oferta de Endereços IPv4 - 65 até 93)
 TFTP Server:               172.16.0.33
 WLC Address:               NÃO UTILIZADO NESSE CENÁRIO (Endereço IP do WLC - Wireless LAN Controller)
-<Save>
+<Add>
 
 !Configurando o Escopo padrão da Rede: 172.16.0.128/27 (Financeiro - VLAN-10)
 Interface:                 GigabitEthernet0
@@ -75,7 +75,47 @@ Subnet Mask:               255.255.255.224
 Maximum Number of Users:   28              (Fim da Faixa de Oferta de Endereços IPv4 - 65 até 93)
 TFTP Server:               172.16.0.33
 WLC Address:               NÃO UTILIZADO NESSE CENÁRIO (Endereço IP do WLC - Wireless LAN Controller)
-<Save>
+<Add>
+
+!Configurando o Escopo padrão da Rede: 172.16.0.160/27 (Estoque - VLAN-20)
+Interface:                 GigabitEthernet0
+Service:                   On
+Pool Name:                 financeiro
+Default Gateway:           172.16.0.190    (Interface de SVI de Gateway da VLAN-20 do Switch Layer 3)
+DNS Server:                172.16.0.33     (DNS Preferencial ou Alternativo - no Cisco Packet Tracer e limitado)
+Start IP Address:          172.16.0.161    (Início da Faixa de Oferta de Endereços IPv4)
+Subnet Mask:               255.255.255.224
+Maximum Number of Users:   28              (Fim da Faixa de Oferta de Endereços IPv4 - 65 até 93)
+TFTP Server:               172.16.0.33
+WLC Address:               NÃO UTILIZADO NESSE CENÁRIO (Endereço IP do WLC - Wireless LAN Controller)
+<Add>
+
+!Configurando o Escopo padrão da Rede: 172.16.0.192/27 (Faturamento - VLAN-30)
+Interface:                 GigabitEthernet0
+Service:                   On
+Pool Name:                 financeiro
+Default Gateway:           172.16.0.222    (Interface de SVI de Gateway da VLAN-30 do Switch Layer 3)
+DNS Server:                172.16.0.33     (DNS Preferencial ou Alternativo - no Cisco Packet Tracer e limitado)
+Start IP Address:          172.16.0.193    (Início da Faixa de Oferta de Endereços IPv4)
+Subnet Mask:               255.255.255.224
+Maximum Number of Users:   28              (Fim da Faixa de Oferta de Endereços IPv4 - 65 até 93)
+TFTP Server:               172.16.0.33
+WLC Address:               NÃO UTILIZADO NESSE CENÁRIO (Endereço IP do WLC - Wireless LAN Controller)
+<Add>
+
+
+!Configurando o Escopo padrão da Rede: 172.16.0.224/27 (Gerencia - VLAN-40)
+Interface:                 GigabitEthernet0
+Service:                   On
+Pool Name:                 financeiro
+Default Gateway:           172.16.0.254    (Interface de SVI de Gateway da VLAN-40 do Switch Layer 3)
+DNS Server:                172.16.0.33     (DNS Preferencial ou Alternativo - no Cisco Packet Tracer e limitado)
+Start IP Address:          172.16.0.225    (Início da Faixa de Oferta de Endereços IPv4)
+Subnet Mask:               255.255.255.224
+Maximum Number of Users:   28              (Fim da Faixa de Oferta de Endereços IPv4 - 65 até 93)
+TFTP Server:               172.16.0.33
+WLC Address:               NÃO UTILIZADO NESSE CENÁRIO (Endereço IP do WLC - Wireless LAN Controller)
+<Add>
 ```
 
 ## TERCEIRA ETAPA: Configurando o Recurso de Ajuda do DHCP no Switch Multilayer 3650 no Cisco Packet Tracer.
@@ -105,7 +145,7 @@ configure terminal
     !Configurando o Recurso de Ajuda de Endereço DHCPv4 na Interface SVI do Switch Multilayer
     !DICA-01: configurando o endereço IPv4 do Servidor de DHCPv4 que possui o Escopo da Rede configurado
     !OBSERVAÇÃO-01: esse recurso funciona no Router ou Switch Layer 3, principalmente quando trabalhamos
-    !com VLAN e Sub-Redes que os Escopos do DHCP estão configurado em um servidor dedicado.
+    !com VLANs e Sub-Redes que os Escopos do DHCP estão configurado em um servidor dedicado.
     ip helper-address 172.16.0.33
 
     !Saindo da configuração da Interface de VLAN
@@ -123,11 +163,6 @@ configure terminal
 
   !Configurando o suporte da Ajuda de Endereço DHCPv4 nas Interfaces de SVI
   interface vlan 40
-    ip helper-address 172.16.0.33
-    exit
-
-  !Configurando o suporte da Ajuda de Endereço DHCPv4 nas Interfaces de SVI
-  interface vlan 50
     ip helper-address 172.16.0.33
     exit
 
