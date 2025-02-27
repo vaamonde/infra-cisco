@@ -78,40 +78,50 @@ write
 
 ```
 
+## SEGUNDA ETAPA: Configurando a Rota Padrão no Switch Multilayer 3650 no Cisco Packet Tracer.
 
-!SEGUNDA ETAPA: Configuração do Switch Layer 3 3560
+```python
 !Acessando o modo EXEC Privilegiado
 enable
-	configure terminal
-	
-		!Configurando a Rota Padrão para o Gateway do Router 1941-2
-		!DICA: a rota padrão (Default Route), também conhecida como “Gateway de Último Recurso”, é utilizada quando não há rotas conhecidas
-		!OBSERVAÇÃO: todos os pacotes para destinos desconhecidos da Tabela do Roteador são enviados para o endereço de rota padrão
-		!OBSERVAÇÃO: o endereço de rota padrão no IPv4 (Na notação CIDR) é o: 0.0.0.0/0, também conhecido como “Rota dos Quatro Zeros”.
-		!OBSERVAÇÃO: a rota padrão é utilizada para indicar uma rede além dos seus roteadores, como Links com ISP, WAN, VPN, Internet etc 
-		!OBSERVAÇÃO: a rota padrão estática recebe a letra S com Asterisco: S* que significa que é um Gateway of last resort
-		ip route 0.0.0.0 0.0.0.0 192.168.2.254
-		end
-write
+  configure terminal
 
-!TERCEIRA ETAPA: Configuração do Router 1941-1
+    !Configurando a Rota Padrão para o Gateway do Router 1941-2
+    !DICA-04: a rota padrão (Default Route), também conhecida como “Gateway de Último Recurso”, é utilizada quando não há rotas conhecidas
+    !OBSERVAÇÃO-11: todos os pacotes para destinos desconhecidos da Tabela do Roteador são enviados para o endereço de rota padrão
+    !OBSERVAÇÃO-12: o endereço de rota padrão no IPv4 (Na notação CIDR) é o: 0.0.0.0/0, também conhecido como “Rota dos Quatro Zeros”.
+    !OBSERVAÇÃO-13: a rota padrão é utilizada para indicar uma rede além dos seus roteadores, como Links com ISP, WAN, VPN, Internet etc 
+    !OBSERVAÇÃO-14: a rota padrão estática recebe a letra S com Asterisco: S* que significa que é um Gateway of last resort
+    ip route 0.0.0.0 0.0.0.0 192.168.2.254
+    end
+  write
+
+```
+
+## TERCEIRA ETAPA: Configurando a Rota Padrão no Router 1941 no Cisco Packet Tracer.
+
+```python
 !Acessando o modo EXEC Privilegiado
 enable
-	configure terminal
-		!Configurando a Interface de Interligação com o Router 1941-2
-		interface GigabitEthernet 0/1
-			description Interface de WAN com o Router 1941-2
-			ip address 10.0.0.1 255.255.255.252
-			no shutdown
-			exit
-			
-		!Configurando a Rota Estática para atingir as Redes 192.168.2.0/30 e 192.168.3.0/30
-		!OBSERVAÇÃO: nesse cenário vou utilizar a Interface de Saída para as Redes
-		ip route 192.168.2.0 255.255.255.0 GigabitEthernet 0/1
-		ip route 192.168.3.0 255.255.255.0 GigabitEthernet 0/1
-		end
-write
+  configure terminal
+    !Configurando a Interface de Interligação com o Router 1941-2
+    interface GigabitEthernet 0/1
+      description Interface de WAN com o Router 1941-2
+      ip address 10.0.0.1 255.255.255.252
+      no shutdown
+      exit
+      
+    !Configurando a Rota Estática para atingir as Redes 192.168.2.0/30 e 192.168.3.0/30
+    !OBSERVAÇÃO-15: nesse cenário vou utilizar a Interface de Saída para as Redes
+    ip route 192.168.2.0 255.255.255.0 GigabitEthernet 0/1
+    ip route 192.168.3.0 255.255.255.0 GigabitEthernet 0/1
+    end
+  write
 
+```
+
+## TERCEIRA ETAPA: Verificando as Configurações de Rotas no Router e Switch no Cisco Packet Tracer.
+
+```python
 !Visualizando as configurações da memória RAM
 show running-config | section interface
 show running-config | section ip route
@@ -125,3 +135,4 @@ ping 192.168.1.1
 ping 192.168.3.1
 tracert 192.168.1.1
 tracert 192.168.3.1
+```
