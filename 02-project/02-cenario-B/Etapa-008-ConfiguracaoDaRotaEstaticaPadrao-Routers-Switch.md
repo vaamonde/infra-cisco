@@ -133,22 +133,6 @@ enable
   write
 ```
 
-## QUARTA ETAPA: Configurando a Rota Padrão no Switch Multilayer 3650 no Cisco Packet Tracer.
-
-```python
-!Acessando o modo EXEC Privilegiado
-enable
-
-  !Acessando o modo de Configuração Global de Comandos
-  configure terminal
-
-    !Configurando a Rota Estática Padrão de Saída para o Router 4321
-    ip route 0.0.0.0 0.0.0.0 172.16.0.30
-    end
-
-  !Salvando as configurações da memória RAM para a memória NVRAM
-  write
-```
 
 ## QUINTA ETAPA: Configurando a Rota Padrão no Router 4321 no Cisco Packet Tracer.
 
