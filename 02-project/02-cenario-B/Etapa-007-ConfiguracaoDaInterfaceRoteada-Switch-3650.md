@@ -36,23 +36,28 @@ enable
     interface GigabitEthernet 1/0/24
 
       !Desabilitando o recurso de Switch da Porta conectada com o Router 4321
-      !DICA-01: desabilitar o recurso de Switch da porta permite transforma a mesma em um Interface de Rede, permitindo
-      !adicionar um endereço IPv4 ou IPv6 e utilizar como uma Interface Roteada ou como uma Porta de Gateway.
+      !DICA-01: desabilitar o recurso de Switch da porta permite transforma a mesma em um Interface
+      !de Rede, permitindo adicionar um endereço IPv4 ou IPv6 e utilizar como uma Interface Roteada
+      !ou como uma Porta de Gateway.
       no switchport
 
       !Configurando a Descrição da Interface de Rede do Switch Multilayer
       description Interface de conexão com o Router 4321
       
       !Configurando o endereço de IPv4 de conexão com a Rede do Router 4321
-      ip address 172.16.0.30 255.255.255.224
+      ip address 172.16.0.29 255.255.255.224
       exit
 
     !Configurando o Gateway Padrão do Switch Multilayer 3650
-    !DICA-02: a configuração do Gateway no Switch Layer 3 com suporte a roteamento será utilizada somente para o acesso
-    !remoto ou gerenciamento do Switch, utilizando protocolos como SNMP, Syslog, etc
-    !OBSERVAÇÃO-03: para a porta roteada acessar outras redes é necessário a configuração do roteamento estático, dinâmico
+    !DICA-02: a configuração do Gateway no Switch Layer 3 com suporte a roteamento será utilizada 
+    !somente para o acesso remoto ou gerenciamento do Switch, utilizando protocolos como SNMP, 
+    !Syslog, etc
+    !OBSERVAÇÃO-03: para a porta roteada acessar outras redes é necessário a configuração do roteamento
+    !estático, dinâmico
     !ou rota padrão.
-    ip default-gateway 172.16.0.1
+    ip default-gateway 172.16.0.30
+
+    !Saindo de todos os níveis
     end
 
   !Salvando as configurações da memória RAM para a memória NVRAM
