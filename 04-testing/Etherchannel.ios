@@ -1,0 +1,92 @@
+!Switch Multilayer 3650
+enable
+    configure terminal
+        interface range GigabitEthernet 1/0/1 - 2
+            channel-group 1 mode active
+            no shutdown
+            exit
+        interface Port-Channel1
+            switchport
+            switchport mode trunk
+            spanning-tree portfast trunk
+            no shutdown
+            end
+write
+
+!Switch Layer 2 2960 - Lado Esquerdo
+enable
+    configure terminal
+        interface range GigabitEthernet 0/1 - 2
+            channel-group 1 mode passive
+            no shutdown
+            exit
+        interface Port-Channel1
+            switchport
+            switchport mode trunk
+            spanning-tree portfast trunk
+            no shutdown
+            end
+write
+-------------------------------------------------------
+
+!Switch Multilayer 3650
+enable
+    configure terminal
+        interface range GigabitEthernet 1/0/3 - 4
+            channel-group 2 mode active
+            no shutdown
+            exit
+        interface Port-Channel2
+            switchport
+            switchport mode trunk
+            spanning-tree portfast trunk
+            no shutdown
+            end
+write
+
+!Switch Layer 2 2960 - Lado Direito
+enable
+    configure terminal
+        interface range GigabitEthernet 0/1 - 2
+            channel-group 2 mode passive
+            no shutdown
+            exit
+        interface Port-Channel2
+            switchport
+            switchport mode trunk
+            spanning-tree portfast trunk
+            no shutdown
+            end
+write
+-------------------------------------------------------
+
+!Switch Layer 2 2960 - Lado Esquerdo
+enable
+    configure terminal
+        interface range FastEthernet 0/23 - 24
+            channel-group 3 mode active
+            no shutdown
+            exit
+        interface Port-Channel3
+            switchport
+            switchport mode trunk
+            spanning-tree portfast trunk
+            no shutdown
+            end
+write
+
+!Switch Layer 2 2960 - Lado Direito
+enable
+    configure terminal
+        interface range FastEthernet 0/23 - 24
+            channel-group 3 mode passive
+            no shutdown
+            exit
+        interface Port-Channel3
+            switchport
+            switchport mode trunk
+            spanning-tree portfast trunk
+            no shutdown
+            end
+write
+-------------------------------------------------------
