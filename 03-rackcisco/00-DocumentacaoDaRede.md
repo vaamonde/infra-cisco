@@ -56,9 +56,7 @@ K) PS ACR-N (Power Sum ACR-N): Similar ao ACR-N, mas considera a soma da interfe
 
 M) Perda de Retorno (Return Loss): Mede a quantidade de sinal que é refletida de volta devido a irregularidades no cabo, conexões ruins ou problemas na terminação. Valores altos de perda de retorno podem indicar má qualidade no cabeamento.
 
-N) NVP (Nominal Velocity of Propagation): O NVP (Velocidade Nominal de Propagação) é um percentual que indica a velocidade com que o sinal viaja através do cabo em relação à velocidade da luz no vácuo. No seu caso, NVP 69,0 significa que o sinal viaja a 69% da velocidade da luz.
-  1) Furukawa SOHO Plus Cat5e: 68%;
-  2) Furukawa SOHO Plus Cat6.: 68%.
+N) NVP (Nominal Velocity of Propagation): O NVP (Velocidade Nominal de Propagação) é um percentual que indica a velocidade com que o sinal viaja através do cabo em relação à velocidade da luz no vácuo. No seu caso, NVP 69,0 significa que o sinal viaja a 69% da velocidade da luz. Cabos Furukawa SOHO Plus Cat5e: 68% e Cabos Furukawa SOHO Plus Cat6.: 68%.
 
 05. Os Kits do Rack Cisco serão divididos em: **6 (seis) Grupos:**
 ```bash
