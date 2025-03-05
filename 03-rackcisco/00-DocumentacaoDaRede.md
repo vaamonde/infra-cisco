@@ -27,7 +27,7 @@ B) Segundo Patch Panel.: Pontos de Rede de: 25 até 30.
 04. No Rack Cisco existe: **2 (dois) Patch Panel** que serão utilizados para o *Espelhamento das Portas dos Switches Cisco Catalyst Layer-3 3560.*
 
 **OBSERVAÇÃO IMPORTANTE: UTILIZAR O FLUKE DTX-1800 PARA CERTIFICAR TODOS OS PONTOS DE REDE DO MV8 (KEYSTONE) LOCALIZADOS DEBAIXO DAS MESAS OU NAS CANALETAS APARENTES NAS JANELAS ATÉ O PATCH PANEL NO RACK CISCO.**
-```bash
+
 O Fluke DTX-1800 é um certificador de cabos de rede utilizado para testar a infraestrutura de cabeamento estruturado. Ele fornece diversos parâmetros que ajudam a avaliar a qualidade e conformidade dos cabos com os padrões de transmissão de dados. 
 
 A) Malha Elétrica (Wiremap): Refere-se à continuidade do fio de aterramento no cabo. Esse teste verifica se há uma conexão adequada entre os condutores de aterramento e detecta possíveis problemas, como fios quebrados ou conexões soltas.
@@ -59,7 +59,6 @@ M) Perda de Retorno (Return Loss): Mede a quantidade de sinal que é refletida d
 N) NVP (Nominal Velocity of Propagation): O NVP (Velocidade Nominal de Propagação) é um percentual que indica a velocidade com que o sinal viaja através do cabo em relação à velocidade da luz no vácuo. No seu caso, NVP 69,0 significa que o sinal viaja a 69% da velocidade da luz.
   1) Furukawa SOHO Plus Cat5e: 68%;
   2) Furukawa SOHO Plus Cat6.: 68%.
-```
 
 05. Os Kits do Rack Cisco serão divididos em: **6 (seis) Grupos:**
 ```bash
