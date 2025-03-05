@@ -27,6 +27,39 @@ B) Segundo Patch Panel.: Pontos de Rede de: 25 até 30.
 04. No Rack Cisco existe: **2 (dois) Patch Panel** que serão utilizados para o *Espelhamento das Portas dos Switches Cisco Catalyst Layer-3 3560.*
 
 **OBSERVAÇÃO IMPORTANTE: UTILIZAR O FLUKE DTX-1800 PARA CERTIFICAR TODOS OS PONTOS DE REDE DO MV8 (KEYSTONE) LOCALIZADOS DEBAIXO DAS MESAS OU NAS CANALETAS APARENTES NAS JANELAS ATÉ O PATCH PANEL NO RACK CISCO.**
+```bash
+O Fluke DTX-1800 é um certificador de cabos de rede utilizado para testar a infraestrutura de cabeamento estruturado. Ele fornece diversos parâmetros que ajudam a avaliar a qualidade e conformidade dos cabos com os padrões de transmissão de dados. 
+
+A) Malha Elétrica (Wiremap): Refere-se à continuidade do fio de aterramento no cabo. Esse teste verifica se há uma conexão adequada entre os condutores de aterramento e detecta possíveis problemas, como fios quebrados ou conexões soltas.
+
+B) Resistência: Mede a resistência elétrica dos condutores do cabo, geralmente expressa em ohms (Ω). Uma resistência elevada pode indicar fios muito finos, conexões ruins ou cabos de baixa qualidade.
+
+C) Comprimento: Indica o comprimento total do cabo testado, geralmente medido em metros (m). Esse valor é obtido por meio da medição do tempo de propagação do sinal elétrico pelo cabo.
+
+D) Retardo de Propagação (Propagation Delay): Representa o tempo que um sinal leva para percorrer um determinado comprimento do cabo, medido em nanossegundos (ns). Esse parâmetro é importante para sincronizar os sinais transmitidos.
+
+E) Desvio de Retardo (Delay Skew): Mede a diferença entre o tempo de propagação do par mais rápido e o do par mais lento dentro de um cabo de par trançado, expresso em nanossegundos (ns). Um alto desvio de retardo pode causar distorções na transmissão de dados, afetando o desempenho da rede.
+
+F) Perda de Inserção (Insertion Loss ou Attenuation): Refere-se à quantidade de sinal que se perde ao longo do comprimento do cabo, expressa em decibéis (dB). Uma atenuação excessiva pode prejudicar a comunicação, especialmente em cabos longos.
+
+G) NEXT (Near-End Crosstalk): Indica o nível de interferência de um par de fios sobre outro dentro do cabo, medido na extremidade mais próxima. O crosstalk (diafonia) ocorre devido ao acoplamento eletromagnético entre os pares trançados.
+
+H) PS NEXT (Power Sum Near-End Crosstalk): É uma variação do NEXT, mas considerando o impacto combinado de todos os outros pares de fios sobre um par específico. Isso é crucial em redes de alta velocidade, como Gigabit Ethernet.
+
+I) ACR-F (Attenuation to Crosstalk Ratio - Far-End): Compara a atenuação com o crosstalk no extremo mais distante do cabo (far-end). Um valor alto indica uma boa separação entre os sinais, reduzindo interferências.
+
+J) PS ACR-F (Power Sum ACR-F): Assim como o PS NEXT, essa medida considera o efeito cumulativo da interferência de todos os pares de fios sobre um único par, mas no extremo mais distante do cabo.
+
+L) ACR-N (Attenuation to Crosstalk Ratio - Near-End): É a relação entre a atenuação e o NEXT. Um valor positivo indica que o sinal útil é mais forte do que a interferência, garantindo melhor qualidade de transmissão.
+
+K) PS ACR-N (Power Sum ACR-N): Similar ao ACR-N, mas considera a soma da interferência de todos os pares sobre um par específico na extremidade mais próxima do cabo.
+
+M) Perda de Retorno (Return Loss): Mede a quantidade de sinal que é refletida de volta devido a irregularidades no cabo, conexões ruins ou problemas na terminação. Valores altos de perda de retorno podem indicar má qualidade no cabeamento.
+
+N) NVP (Nominal Velocity of Propagation): O NVP (Velocidade Nominal de Propagação) é um percentual que indica a velocidade com que o sinal viaja através do cabo em relação à velocidade da luz no vácuo. No seu caso, NVP 69,0 significa que o sinal viaja a 69% da velocidade da luz.
+  1) Furukawa SOHO Plus Cat5e: 68%;
+  2) Furukawa SOHO Plus Cat6.: 68%.
+```
 
 05. Os Kits do Rack Cisco serão divididos em: **6 (seis) Grupos:**
 ```bash
