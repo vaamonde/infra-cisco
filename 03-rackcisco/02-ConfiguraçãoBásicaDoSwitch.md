@@ -53,22 +53,22 @@ enable
     banner motd #AVISO: acesso autorizado somente a funcionarios#
 
     !Habilitar a senha do Tipo-5 secret para o modo enable privilegiado
-    enable secret pti@2018
+    enable secret ????
 
     !Criação dos usuários, senhas do Tipo-5 e privilégios diferenciados
     !Consultar Planilha de Nomes de Usuários
     !OBSERVAÇÃO: Caso o grupo tenha menos integrantes, desconsiderar a
     !criação de 04 (quatro) usuários
-    username ???nome_do_primeiro_integrante??? privilege 15 secret pti@2018
-    username ???nome_do_segundo_integrante??? privilege 15 secret pti@2018
-    username ???nome_do_terceiro_integrante??? privilege 15 secret pti@2018
-    username ???nome_do_quarto_integrante??? privilege 15 secret pti@2018
+    username ???nome_do_primeiro_integrante??? privilege 15 secret ????
+    username ???nome_do_segundo_integrante??? privilege 15 secret ????
+    username ???nome_do_terceiro_integrante??? privilege 15 secret ????
+    username ???nome_do_quarto_integrante??? privilege 15 secret ????
 
     !Acessando a linha console
     line console 0
       
       !Habilitando senha do Tipo-7 Password 
-      password pti@2018
+      password ????
       
       !Forçando fazer login com usuário e senha
       login local

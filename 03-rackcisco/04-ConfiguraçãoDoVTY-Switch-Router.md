@@ -26,7 +26,7 @@ enable
     line vty 0 4
       
       !Habilitando senha do tipo Password Tipo-7
-      password pti@2018
+      password ????
       
       !Forçando fazer login com usuário e senha local
       login local 
@@ -63,7 +63,7 @@ enable
     line vty 0 4
       
       !Habilitando senha do tipo Password Tipo-7
-      password pti@2018
+      password ????
       
       !Forçando fazer login com usuário e senha local
       login local 

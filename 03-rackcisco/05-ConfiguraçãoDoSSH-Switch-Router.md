@@ -23,7 +23,7 @@ enable
   configure terminal
     
     !Configuração do nome de domínio, obrigatório para a configuração do SSH
-    ip domain-name senac.br
+    ip domain-name ????
 
     !Criação da chave de criptografia e habilitação do serviço de SSH
     !Utilizar módulo de criptografia de 1024 bits
@@ -70,7 +70,7 @@ enable
   configure terminal
     
     !Configuração do nome de domínio, obrigatório para a configuração do SSH
-    ip domain-name senac.br
+    ip domain-name ????
 
     !Criação da chave de criptografia e habilitação do serviço de SSH
     !Utilizar módulo de criptografia de 1024 bits
