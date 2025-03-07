@@ -71,7 +71,7 @@ F) Grupo-06: 1 (um) Switch Cisco Catalyst Layer-3 3560 e 1 (um) Router Cisco 291
 
 7. Cada Integrante do Grupo terá as seguintes funções:
 ```bash
-A) 1 (um) Integrante Responsável pelo Cabeamento Estruturado (CABLNG);
+A) 1 (um) Integrante Responsável pelo Cabeamento Estruturado (CABLING);
 B) 1 (um) Integrante Responsável pelo Switch Cisco Catalyst 3560 (SWITCHING);
 C) 1 (um) Integrante Responsável pelo Router Cisco 2911 (ROUTING);
 D) 1 (um) Integrante Responsável pelo Link WAN, Internet e Documentação (DOCS);
