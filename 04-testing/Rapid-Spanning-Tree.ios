@@ -1,0 +1,14 @@
+!Configuração do Rapid-Spanning-Tree Switch 3650
+enable
+    configure terminal
+        spanning-tree vlan 1 root primary
+        spanning-tree mode rapid-pvst
+        end
+write
+
+!Configuração do Rapid-Spanning-Tree Switch 2960
+enable
+    configure terminal
+        spanning-tree mode rapid-pvst
+        end
+write
