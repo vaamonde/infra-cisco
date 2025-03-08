@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 16/05/2024<br>
-Versão: 0.01<br>
+Data de atualização: 08/03/2025<br>
+Versão: 0.02<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 ## PRIMEIRA ETAPA: Configuração Base do Router Cisco 2911
@@ -40,6 +40,9 @@ enable
     !Habilitar o serviço de marcação de Data/Hora detalhado nos Logs
     service timestamps log datetime msec
 
+    !Habilitando o serviço de marcação de Data/Hora detalhado nos Logs do Debug
+    service timestamps debug datetime msec
+
     !Comprimento mínimo da criação das senhas do Tipo-5 ou Tipo-7
     security passwords min-length 8
 
@@ -66,6 +69,10 @@ enable
     username ???nome_do_segundo_integrante??? privilege 15 secret ????
     username ???nome_do_terceiro_integrante??? privilege 15 secret ????
     username ???nome_do_quarto_integrante??? privilege 15 secret ????
+
+    !Desativando os Serviços de Descobertas de equipamentos na rede
+    no cdp run
+    no lldp run
 
     !Acessando a linha console
     line console 0

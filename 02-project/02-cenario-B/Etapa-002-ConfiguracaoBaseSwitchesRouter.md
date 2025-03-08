@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 26/11/2024<br>
-Versão: 0.05<br>
+Data de atualização: 08/03/2025<br>
+Versão: 0.06<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 ## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
@@ -43,6 +43,9 @@ enable
     !Habilitando o serviço de marcação de Data/Hora detalhado nos Logs
     service timestamps log datetime msec
 
+    !Habilitando o tamanho do Buffer dos Logs na Memória RAM
+    logging buffered 4096 
+
     !Desativando a resolução de nomes de domínio
     no ip domain-lookup
 
@@ -71,6 +74,10 @@ enable
 
     !Habilitando o número máximo de tentativas de conexões simultâneas no SSH Server
     ip ssh authentication-retries 2
+
+    !Desativando os Serviços de Descobertas de equipamentos na rede
+    no cdp run
+    no lldp run
 
     !Acessando a linha console, porta padrão de acesso Out-of-Band (Fora da Banda)
     line console 0
@@ -139,6 +146,9 @@ enable
     !Habilitando o serviço de marcação de Data/Hora detalhado nos Logs
     service timestamps log datetime msec
 
+    !Habilitando o tamanho do Buffer dos Logs na Memória RAM
+    logging buffered 4096 
+
     !Desativando a resolução de nomes de domínio
     no ip domain-lookup
 
@@ -167,6 +177,10 @@ enable
 
     !Habilitando o número máximo de tentativas de conexões simultâneas no SSH Server
     ip ssh authentication-retries 2
+
+    !Desativando os Serviços de Descobertas de equipamentos na rede
+    no cdp run
+    no lldp run
 
     !Acessando a linha console, porta padrão de acesso Out-of-Band (Fora da Banda)
     line console 0
@@ -238,6 +252,9 @@ enable
     !Habilitando o serviço de marcação de Data/Hora detalhado nos Logs do Debug
     service timestamps debug datetime msec
 
+    !Habilitando o tamanho do Buffer dos Logs na Memória RAM
+    logging buffered 4096
+
     !Desativando a resolução de nomes de domínio
     no ip domain-lookup
 
@@ -269,6 +286,10 @@ enable
 
     !Habilitando o número máximo de tentativas de conexões simultâneas no SSH Server
     ip ssh authentication-retries 2
+
+    !Desativando os Serviços de Descobertas de equipamentos na rede
+    no cdp run
+    no lldp run
 
     !Acessando a linha console, porta padrão de acesso Out-of-Band (Fora da Banda)
     line console 0
@@ -338,6 +359,9 @@ enable
     service timestamps log datetime msec
     service timestamps debug datetime msec
 
+    !Habilitando o tamanho do Buffer dos Logs na Memória RAM
+    logging buffered 4096 
+
     !Desativando a resolução de nomes de domínio
     no ip domain-lookup
 
@@ -372,6 +396,10 @@ enable
     
     !Bloqueando tentativas de conexões simultâneas com falha de autenticação no Router
     login block-for 120 attempts 2 within 60
+
+    !Desativando os Serviços de Descobertas de equipamentos na rede
+    no cdp run
+    no lldp run
 
     !Acessando a linha console, porta padrão de acesso Out-of-Band (Fora da Banda)
     line console 0
