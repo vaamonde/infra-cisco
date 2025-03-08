@@ -46,66 +46,67 @@ D) Variação das Sub-Redes: 32 - Novo CIDR: /27 - Nova Máscara de Rede: 255.25
 E) Validação da Variação de Rede: 2 ^ 8 = 256, 256 - 224 = 32
 
 F) Separação das Sub-Redes para os serviços do Cenário B:
-   Rede-01) ID: 172.16.0.0    PIV: 172.16.0.1    UIP: 172.16.0.30   BROADCAST: 172.16.0.31    USO: RT-02 para SW-03
-   Rede-02) ID: 172.16.0.32   PIV: 172.16.0.33   UIP: 172.16.0.62   BROADCAST: 172.16.0.63    USO: VLAN-50 Servidores
-   Rede-03) ID: 172.16.0.64   PIV: 172.16.0.65   UIP: 172.16.0.94   BROADCAST: 172.16.0.95    USO: VLAN-60 Wireless
-   Rede-04) ID: 172.16.0.96   PIV: 172.16.0.97   UIP: 172.16.0.126  BROADCAST: 172.16.0.127   USO: VLAN-99 SVI Switches
-   Rede-05) ID: 172.16.0.128  PIV: 172.16.0.129  UIP: 172.16.0.158  BROADCAST: 172.16.0.159   USO: VLAN-10 Financeiro
-   Rede-06) ID: 172.16.0.160  PIV: 172.16.0.161  UIP: 172.16.0.190  BROADCAST: 172.16.0.191   USO: VLAN-20 Estoque
-   Rede-07) ID: 172.16.0.192  PIV: 172.16.0.193  UIP: 172.16.0.222  BROADCAST: 172.16.0.223   USO: VLAN-30 Faturamento
-   Rede-08) ID: 172.16.0.224  PIV: 172.16.0.225  UIP: 172.16.0.254  BROADCAST: 172.16.0.255   USO: VLAN-40 Gerencia
+   Rede-01) ID: 172.16.0.0    PIV: 172.16.0.1    UIP: 172.16.0.30   BROADCAST: 172.16.0.31   USO: RT-02 para SW-03
+   Rede-02) ID: 172.16.0.32   PIV: 172.16.0.33   UIP: 172.16.0.62   BROADCAST: 172.16.0.63   USO: VLAN-50 Servidores
+   Rede-03) ID: 172.16.0.64   PIV: 172.16.0.65   UIP: 172.16.0.94   BROADCAST: 172.16.0.95   USO: VLAN-60 Wireless
+   Rede-04) ID: 172.16.0.96   PIV: 172.16.0.97   UIP: 172.16.0.126  BROADCAST: 172.16.0.127  USO: VLAN-99 SVI Switches
+   Rede-05) ID: 172.16.0.128  PIV: 172.16.0.129  UIP: 172.16.0.158  BROADCAST: 172.16.0.159  USO: VLAN-10 Financeiro
+   Rede-06) ID: 172.16.0.160  PIV: 172.16.0.161  UIP: 172.16.0.190  BROADCAST: 172.16.0.191  USO: VLAN-20 Estoque
+   Rede-07) ID: 172.16.0.192  PIV: 172.16.0.193  UIP: 172.16.0.222  BROADCAST: 172.16.0.223  USO: VLAN-30 Faturamento
+   Rede-08) ID: 172.16.0.224  PIV: 172.16.0.225  UIP: 172.16.0.254  BROADCAST: 172.16.0.255  USO: VLAN-40 Gerencia
 ```
 
-## TERCEIRA ETAPA: Determinação das Sub-Redes para cada Serviço do Cenário B:
+
+## TERCEIRA ETAPA: Determinação das VLAN's para cada Serviço do Cenário B:
+```bash
+A) VLANs Switches Layer 3 e Layer 2
+   VLAN-10: Financeiro     Name: FIN
+   VLAN-20: Estoque        Name: EST
+   VLAN-30: Faturamento    Name: FAT
+   VLAN-40: Gerencia       Name: GER
+   VLAN-50: Servidores     Name: Servers
+   VLAN-60: Wireless       Name: Wireless
+   VLAN-99: SVI Switches   Name: SVI-Switches
+```
+
+## QUARTA ETAPA: Determinação das Sub-Redes para cada Serviço do Cenário B:
 ```bash
   Rede-01) RT-02 para SW-03: 172.16.0.0/27
     Router rt-01: 172.16.0.30/27
     Switch sw-03: 172.16.0.29/27
 
   Rede-02) Servidores: 172.16.0.32/27
-    Server server-02...: 172.16.0.33/27
-    Server server-03...: 172.16.0.34/27
-    Server server-04...: 172.16.0.35/27
-    Server server-05...: 172.16.0.36/27
-    Gateway SVI sw-03..: 172.16.0.62
+    Server server-02....: 172.16.0.33/27
+    Server server-03....: 172.16.0.34/27
+    Server server-04....: 172.16.0.35/27
+    Server server-05....: 172.16.0.36/27
+    Gateway SVI sw-03...: 172.16.0.62
     DNS Server server-02: 172.16.0.33
 
   Rede-03) Wireless (Wi-Fi - Sem-Fio): 172.16.0.64/27
-    Gateway SVI sw-03..: 172.16.0.94
+    Gateway SVI sw-03...: 172.16.0.94
     DNS Server server-02: 172.16.0.33
 
   Rede-04) SVI Switches: 172.16.0.96/27
-    SVI VLAN-99 sw-03: 172.16.0.97/27
-    SVI VLAN-99 sw-04: 172.16.0.98/27
-    SVI VLAN-99 sw-05: 172.16.0.99/27
+    SVI VLAN-99 sw-03.: 172.16.0.97/27
+    SVI VLAN-99 sw-04.: 172.16.0.98/27
+    SVI VLAN-99 sw-05.: 172.16.0.99/27
     Gateway SVI Switches Layer2: 172.16.0.97
-    DNS Server server-02: 172.16.0.33
+    DNS Server server-02.......: 172.16.0.33
 
   Rede-05) VLAN-10 Financeiro (FIN): 172.16.0.128/27
     Gateway SVI VLAN-10 sw-03: 172.16.0.158
-    DNS Server server-02: 172.16.0.33
+    DNS Server server-02.....: 172.16.0.33
 
   Rede-06) VLAN-20 Estoque (EST): 172.16.0.160/27
     Gateway SVI VLAN-10 sw-03: 172.16.0.190
-    DNS Server server-02: 172.16.0.33
+    DNS Server server-02.....: 172.16.0.33
 
   Rede-07) VLAN-30 Faturamento (FAT): 172.16.0.192/27
     Gateway SVI VLAN-10 sw-03: 172.16.0.222
-    DNS Server server-02: 172.16.0.33
+    DNS Server server-02.....: 172.16.0.33
 
   Rede-08) VLAN-40 Gerencia (GER): 172.16.0.224/27
     Gateway SVI VLAN-10 sw-03: 172.16.0.254
-    DNS Server server-02: 172.16.0.33
-```
-
-## QUARTA ETAPA: Determinação das VLAN's para cada Serviço do Cenário B:
-```bash
-A) VLAN's Switches Layer 3 e Layer 2
-  VLAN-10: Financeiro     Name: FIN
-  VLAN-20: Estoque        Name: EST
-  VLAN-30: Faturamento    Name: FAT
-  VLAN-40: Gerencia       Name: GER
-  VLAN-50: Servidores     Name: Servers
-  VLAN-60: Wireless       Name: Wireless
-  VLAN-99: SVI Switches   Name: SVI-Switches
+    DNS Server server-02.....: 172.16.0.33
 ```

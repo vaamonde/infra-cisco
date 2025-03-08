@@ -21,18 +21,18 @@ Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 !Acessando o modo exec privilegiado
 enable
 
-	!Salvando as configurações da RAM para a NVRAM
-	copy running-config startup-config
-	
-	!Salvando uma cópia das configurações da NVRAM para FLASH
-	copy startup-config flash:
-	
-	!Visualizando o conteúdo da Flash
-	dir flash:
-	
-	!Salvando as configurações para NOTEPAD++ ou VSCode
-	!OBSERVAÇÃO IMPORTANTE: será mostrado em sala de aula os procedimentos
-	show running-config
+  !Salvando as configurações da RAM para a NVRAM
+  copy running-config startup-config
+
+  !Salvando uma cópia das configurações da NVRAM para FLASH
+  copy startup-config flash:
+
+  !Visualizando o conteúdo da Flash
+  dir flash:
+
+  !Salvando as configurações para NOTEPAD++ ou VSCode
+  !OBSERVAÇÃO IMPORTANTE: será mostrado em sala de aula os procedimentos
+  show running-config
 ```
 
 01. Backup das configurações do Switch Cisco Catalyst 3560
@@ -41,16 +41,16 @@ enable
 !Acessando o modo exec privilegiado
 enable
 
-	!Salvando as configurações da RAM para a NVRAM
-	copy running-config startup-config
-	
-	!Salvando uma cópia das configurações da NVRAM para FLASH
-	copy startup-config flash:
-	
-	!Visualizando o conteúdo da Flash
-	dir flash:
-	
-	!Salvando as configurações para NOTEPAD++ ou VSCode
-	!OBSERVAÇÃO IMPORTANTE: será mostrado em sala de aula os procedimentos
-	show running-config
+  !Salvando as configurações da RAM para a NVRAM
+  copy running-config startup-config
+
+  !Salvando uma cópia das configurações da NVRAM para FLASH
+  copy startup-config flash:
+
+  !Visualizando o conteúdo da Flash
+  dir flash:
+
+  !Salvando as configurações para NOTEPAD++ ou VSCode
+  !OBSERVAÇÃO IMPORTANTE: será mostrado em sala de aula os procedimentos
+  show running-config
 ```
