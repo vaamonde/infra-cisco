@@ -32,18 +32,18 @@ enable
     !OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 77
     !(TERCEIRA ETAPA: Determinação das Redes (Sub-Redes) e VLAN (Virtual-LAN) de Cada Grupo)
     interface vlan ???
-      
+
       !Configuração da descrição
       description Interface SVI de Gerenciamento do Grupo-0???
-      
+
       !Configuração do endereçamento IPv4 do SVI
       !OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 129
       !(QUARTA ETAPA: Determinação dos Endereços de SVI (Switch Virtual Interface) e Gateway de cada Grupo)
       ip address 172.16.???.253 255.255.255.0
-      
+
       !Inicializando a interface
       no shutdown
-      
+
       !Saindo de todos os níveis
       end
 

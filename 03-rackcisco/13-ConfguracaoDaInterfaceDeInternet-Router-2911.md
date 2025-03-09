@@ -21,19 +21,19 @@ enable
 
   !Acessar modo de configuração global
   configure terminal
-    
+
     !Configuração da interface GigabitEthernet 0/1 para acesso a Internet
     interface gigabitEthernet 0/1
 
       !Descrição da Interface
       description Interface de acesso a Internet do Grupo-???
-      
+
       !Configuração do endereçamento IP Dinâmico via DHCP Client
       ip address dhcp
-      
+
       !Inicializando a Interface
       no shutdown
-      
+
       !Saindo das configurações da interface
       end
 

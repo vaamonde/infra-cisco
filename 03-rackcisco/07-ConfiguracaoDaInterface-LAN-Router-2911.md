@@ -24,10 +24,10 @@ enable
 
     !Acessando a Interface Física GigabitEthernet 0/0
     interface gigabitEthernet 0/0
-      
+
       !Inicializando a Interface Física gigabitEthernet 0/0
       no shutdown
-      
+
       !Saindo da Interface Física gigabitEthernet 0/0
       exit
 

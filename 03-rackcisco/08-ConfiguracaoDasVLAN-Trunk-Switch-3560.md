@@ -43,22 +43,22 @@ enable
       exit
 
     !OBSERVAÇÃO IMPORTANTE: a Interface fastEthernet 0/1 não será usada.
-    
+
     !Configurando a Interface de Acesso a VLAN do Primeiro Usuário
     interface fastEthernet 0/2
-      
+
       !Configurando a Interface de Acesso a VLAN
       description Interface de Acesso da VLAN ??? do ???Nome_E_Sobrenome_Primeiro_Usuário???
-      
+
       !Configurando o Modo de Acesso da Interface
       switchport mode access
-      
+
       !Configurando o Acesso a VLAN
       switchport access vlan ???
-      
+
       !Saindo da configuração da Interface
       exit
-    
+
     !Configurando a Interface de Acesso a VLAN do Segundo Usuário
     interface fastEthernet 0/3
       description Interface de Acesso da VLAN ??? do ???Nome_E_Sobrenome_Segundo_Usuário???
@@ -86,7 +86,7 @@ enable
       switchport mode access
       switchport access vlan ???
       exit
-    
+
     !Desativando as Interfaces que não serão utilizadas no Switch Layer 3 3560
     interface range fastEthernet 0/7 - 23
       shutdown

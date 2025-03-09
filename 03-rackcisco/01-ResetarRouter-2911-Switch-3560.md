@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 16/05/2024<br>
-Versão: 0.01<br>
+Data de atualização: 09/03/2025<br>
+Versão: 0.02<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 ## PRIMEIRA ETAPA: Reset do Switch 2960 ou 3560 (Configurações de Fábrica)
@@ -70,13 +70,15 @@ I) Reinicializar o Switch: reload
 
 ## SEGUNDA ETAPA: Reset do Roteador (Router) 2911
 
-**OBSERVAÇÃO IMPORTANTE: Utilizar o PuTTY para acessar o Switch utilizando o Cabo Console.**
+**OBSERVAÇÃO IMPORTANTE: Utilizar o PuTTY para acessar o Router utilizando o Cabo Console.**
 
 01. Parar a inicialização do IOS do Router Cisco 2911 utilizando as teclas de atalho: **Ctrl + Break** (No PuTTY utilizar o Botão direito do Mouse na Barra de Título e selecionar as opções: **Send Command: Break**)
 
-**CUIDADO!!!!!! com a Chave de Registro que você vai digitar no ROMmon (veja os tópicos das Obs: 1 e 2)**
+**CUIDADO!!!!!! com a Chave de Registro que você vai digitar no ROMmon (veja os tópicos das Observações: 3 e 4)**
 
 02. Nas configurações do Cisco ROMmon digite a chave em hexadecimal: confreg 0x2142 <Enter>
+
+**OBSERVAÇÃO-1:** Quando configurado com esse valor (0x2142), o roteador ignora a NVRAM durante a inicialização, ou seja, não carrega a configuração armazenada (startup-config).  
 
 ```python
 rommon 1> confreg 0x2142 
@@ -91,6 +93,8 @@ rommon 2> reset
 04. O Router Cisco 2911 vai inicializar sem ler o arquivo de configuração: **startup-config** da NVRAM.
 
 05. Limpando as configurações do Router Cisco 2911 e voltando a ler o arquivo de configuração: *startup-config* da NVRAM.
+
+**OBSERVAÇÃO-2:** Quando o Configuration Register está definido como 0x2102, o roteador segue este comportamento ao iniciar: Carrega a configuração salva na NVRAM (startup-config), Procura o sistema operacional (IOS) na memória flash e o executa e Permite entrar no modo ROMMON (Ctrl + Break) caso necessário.
 
 ```python
 Router>
@@ -122,16 +126,18 @@ Router> enable
   !Reiniciar o Router para testar as configurações
   Router# reload
 
-  !Após reiniciar o Router Cisco 2911 verifique a chave de registro
-  !Valor está na última linha referente ao confreg 0x2102
-  Router> enable
+!Após reiniciar o Router Cisco 2911 verifique a chave de registro
+!Valor está na última linha referente ao confreg 0x2102
+Router> enable
+
+  !Visualizando a configuração de registro do Cisco IOS
   Router# show version
     Configuration register is 0x2102
 ```
 
-**OBSERVAÇÃO-01: caso você digite chaves diferentes no ROMmon o sistema pode inicializar com caracteres estranhos, isso está associado a velocidade da porta console (Padrão 9600bps), será necessário fazer os testes mudando as velocidades de conexão da porta console no PuTTY para: 1200, 2400, 4800, 9600, 19200, 38400, 57600 e 115200.** 
+**OBSERVAÇÃO-03: caso você digite chaves diferentes no ROMmon o sistema pode inicializar com caracteres estranhos, isso está associado a velocidade da porta console (Padrão 9600bps), será necessário fazer os testes mudando as velocidades de conexão da porta console no PuTTY para: 1200, 2400, 4800, 9600, 19200, 38400, 57600 e 115200.** 
 
-**OBSERVAÇÃO-02: para corrigir essa falha será necessário alterar novamente a chave de registro para:**
+**OBSERVAÇÃO-04: para corrigir essa falha será necessário alterar novamente a chave de registro para:**
 
 ```bash
 A) Acessar o modo Exec Privilegiado: enable <Enter>

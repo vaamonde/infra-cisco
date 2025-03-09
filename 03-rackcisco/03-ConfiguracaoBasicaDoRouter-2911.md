@@ -79,22 +79,22 @@ enable
 
       !Habilitando senha do tipo Password Tipo-7
       password ????
-      
+
       !Forçando fazer login com usuário e senha local
       login local
-      
+
       !Sincronizando os logs na tela
       logging synchronous
-      
+
       !Habilitando o tempo de inatividade do console
       exec-timeout 5 30
-      
+
       !Saindo de todos os níveis
       end
 
   !Salvando as configurações
   copy running-config startup-config
-    
+
   !Visualizando as configurações
   show running-config
 

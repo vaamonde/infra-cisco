@@ -73,25 +73,25 @@ enable
 
     !Acessando a linha console
     line console 0
-      
+
       !Habilitando senha do Tipo-7 Password 
       password ????
-      
+
       !Forçando fazer login com usuário e senha
       login local
-      
+
       !Sincronizando os logs na tela
       logging synchronous
-      
+
       !Habilitando o tempo de inatividade do console
       exec-timeout 5 30
-      
+
       !Saindo de todos os níveis
       end
 
   !Salvando as configurações
   copy running-config startup-config
-    
+
   !Visualizando as configurações
   show running-config
 

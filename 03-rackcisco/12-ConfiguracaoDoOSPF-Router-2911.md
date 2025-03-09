@@ -15,33 +15,39 @@ Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 ## Protocolos de Roteamento utilizados no Cisco (APROFUNDAMENTO DE ESTUDO)
 
-**==== TCP e IP ====**
-
-	a) TCP (Transmission Control Protocol - Protocolo de Controle de Transmissão - Confiabilidade)
-	b) UDP (User Datagram Protocol - Protocolo de Datagrama do Usuário - Sem Confiabilidade)
-	c) IPv4 (Internet Protocol - Protocolo de Internet versão 4 - Decimal)
-	d) IPv6 (Internet Protocol - Protocolo de Internet versão 6 - Hexadecimal)
+**==== Protocolos TCP e IP ====**
+```bash
+A) PDU (Protocol Data Unit - Protocolo de Unidade de Dados - Camada de Dados) 
+B) TCP (Transmission Control Protocol - Protocolo de Controle de Transmissão - Confiabilidade)
+C) UDP (User Datagram Protocol - Protocolo de Datagrama do Usuário - Sem Confiabilidade)
+D) IPv4 (Internet Protocol - Protocolo de Internet versão 4 - Decimal - 32 Bits)
+E) IPv6 (Internet Protocol - Protocolo de Internet versão 6 - Hexadecimal - 128 Bits)
+```
 
 **==== Protocolos IGP, EGP e BGP ====**
-
-	a) IGP (Interior Gateway Protocol - Protocolo de Gateway Interior)
-	b) EGP (Exterior Gateway Protocol - Protocolo de Gateway Externo)
-	c) BGP (Border Gateway Protocol - Protocolo de Gateway de Borda)
+```bash
+A) AS (Autonomous System - Sistema Autônomo)
+A) IGP (Interior Gateway Protocol - Protocolo de Gateway Interior: RIP, EIGP, OSPF e IS-IS)
+B) EGP (Exterior Gateway Protocol - Protocolo de Gateway Externo: Antigo e Obsoleto)
+C) BGP (Border Gateway Protocol - Protocolo de Gateway de Borda: eBGP, iBGP e MP-BGP)
+```
 
 **==== Distância Administrativa (Escolha do Melhor Caminho e Confiabilidade do Link) ====**
-
-	a) AD   0 --> Interface Diretamente Conectada
-	b) AD   1 --> Rota Estática, Rota Flutuante ou Gateway Padrão
-	c) AD  90 --> EIGRP (Enhanced Interior Gateway Routing Protocol - Protocolo de Roteamento de Gateway Interno Aprimorado)
-	d) AD 110 --> OSPF (Open Shortest Path First - Caminho Mais Curto Primeiro)
-	e) AD 120 --> RIP (Routing Information Protocol - Protocolo de Informações de Roteamento)
+```bash
+A) AD   0 --> Interface Diretamente Conectada (FastEthernet, GigabitEthernet)
+B) AD   1 --> Rota Estática, Rota Flutuante ou Gateway Padrão
+C) AD  90 --> EIGRP (Enhanced Interior Gateway Routing Protocol - Protocolo de Roteamento de Gateway Interno Aprimorado)
+D) AD 110 --> OSPF (Open Shortest Path First - Caminho Mais Curto Primeiro)
+E) AD 120 --> RIP (Routing Information Protocol - Protocolo de Informações de Roteamento)
+```
 
 **==== Métrica (Custo do Link) ====**
-
-	a) Rota Estática --> Custo 0
-	b) EIGRP         --> Largura de Banda, Atraso, Confiabilidade, Utilização, MTU (Maximum Transmission Unit) e Contagem de Saltos
-	c) OSPF          --> Largura de Banda Acumulativa, Menor Custo e Menor Distância
-	d) RIP           --> Contagem de Saltos no Máximo de 15 (routes)
+```bash
+A) Rota Estática --> Custo 0
+B) EIGRP         --> Largura de Banda, Atraso, Confiabilidade, Utilização, MTU (Maximum Transmission Unit) e Contagem de Saltos
+C) OSPF          --> Largura de Banda Acumulativa, Menor Custo e Menor Distância
+D) RIP           --> Contagem de Saltos no Máximo de 15 (routes)
+```
 
 ## PRIMEIRA ETAPA: Configuração do Protocolo OSPF Router Cisco 2911
 
@@ -82,7 +88,7 @@ enable
       !Verificar o endereço IPv4 de Loopback do seu grupo
       !OSPF utiliza o endereço de Loopback para gerenciar o processo local
       router-id ???.???.???.???
-        
+
       !Desativando os anúncios do Protocolo OSPF na Interface da LAN
       !Essa interface não vai anunciar suas rotas pela interface, mais pode receber anúncios
       passive-interface gigabitEthernet 0/0

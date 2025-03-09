@@ -21,20 +21,20 @@ enable
 
   !Acessar modo de configuração global
   configure terminal
-    
+
     !Configuração do nome de domínio, obrigatório para a configuração do SSH
     ip domain-name ????
 
     !Criação da chave de criptografia e habilitação do serviço de SSH
     !Utilizar módulo de criptografia de 1024 bits
     crypto key generate rsa general-keys modulus 1024
-    
+
     !Habilitando a versão 2 do serviço do SSH
     ip ssh version 2
-    
+
     !Habilitar o tempo de inatividade para novas conexões do SSH
     ip ssh time-out 60
-    
+
     !Habilitar o número máximo de tentativas de conexão do SSH
     ip ssh authentication-retries 2
 
@@ -68,20 +68,20 @@ enable
 
   !Acessar modo de configuração global
   configure terminal
-    
+
     !Configuração do nome de domínio, obrigatório para a configuração do SSH
     ip domain-name ????
 
     !Criação da chave de criptografia e habilitação do serviço de SSH
     !Utilizar módulo de criptografia de 1024 bits
     crypto key generate rsa general-keys modulus 1024
-    
+
     !Habilitando a versão 2 do serviço do SSH
     ip ssh version 2
-    
+
     !Habilitar o tempo de inatividade para novas conexões do SSH
     ip ssh time-out 60
-    
+
     !Habilitar o número máximo de tentativas de conexão do SSH
     ip ssh authentication-retries 2
 

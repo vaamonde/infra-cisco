@@ -92,25 +92,23 @@ Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 **OBSERVAÇÃO: DESATIVAR O SERVIÇO DE DHCP SERVER DO ROUTER ACCESS POINT D-LINK, TP-LINK OU LINKSYS, CONECTAR O CABO DE REDE NA PORTA 6 DO SEU SWITCH DIRETAMENTE NA PORTA DO SWITCH DO ROUTER ACCESS POINT D-LINK, TP-LINK OU LINKSYS, O ENDEREÇO IPv4 SERÁ FORNECIDO PELO ROUTER CISCO 2911.**
 
 02. Endereço IPv4 de cada Access Point para o Gerenciamento dos Grupos
-
 ```bash
-Grupo-01	IPv4: 172.16.15.250 - Máscara: 255.255.255.0
-Grupo-02	IPv4: 172.16.25.250 - Máscara: 255.255.255.0
-Grupo-03	IPv4: 172.16.35.250 - Máscara: 255.255.255.0
-Grupo-04	IPv4: 172.16.45.250 - Máscara: 255.255.255.0
-Grupo-05	IPv4: 172.16.55.250 - Máscara: 255.255.255.0
-Grupo-06	IPv4: 172.16.65.250 - Máscara: 255.255.255.0
+A) Grupo-01   IPv4: 172.16.15.250 - Máscara: 255.255.255.0
+B) Grupo-02   IPv4: 172.16.25.250 - Máscara: 255.255.255.0
+C) Grupo-03   IPv4: 172.16.35.250 - Máscara: 255.255.255.0
+D) Grupo-04   IPv4: 172.16.45.250 - Máscara: 255.255.255.0
+E) Grupo-05   IPv4: 172.16.55.250 - Máscara: 255.255.255.0
+F) Grupo-06   IPv4: 172.16.65.250 - Máscara: 255.255.255.0
 ```
 
 03. Configuração da Rede Sem-Fio (cuidado com roteadores Dual Band 2.4 e 5.0Ghz)
-
 ```bash
-Grupo-01    SSID: G-01 (G-01-2.4 E G-01-5.0) - Senha: pti@2018
-Grupo-02    SSID: G-02 (G-02-2.4 E G-02-5.0) - Senha: pti@2018
-Grupo-03    SSID: G-03 (G-03-2.4 E G-03-5.0) - Senha: pti@2018
-Grupo-04    SSID: G-04 (G-04-2.4 E G-04-5.0) - Senha: pti@2018
-Grupo-05    SSID: G-05 (G-05-2.4 E G-05-5.0) - Senha: pti@2018
-Grupo-06    SSID: G-06 (G-06-2.4 E G-06-5.0) - Senha: pti@2018
+A) Grupo-01   SSID: G-01 (G-01-2.4 E G-01-5.0) - Senha: ????
+B) Grupo-02   SSID: G-02 (G-02-2.4 E G-02-5.0) - Senha: ????
+C) Grupo-03   SSID: G-03 (G-03-2.4 E G-03-5.0) - Senha: ????
+D) Grupo-04   SSID: G-04 (G-04-2.4 E G-04-5.0) - Senha: ????
+E) Grupo-05   SSID: G-05 (G-05-2.4 E G-05-5.0) - Senha: ????
+F) Grupo-06   SSID: G-06 (G-06-2.4 E G-06-5.0) - Senha: ????
 ```
 
 04. Baixar os Softwares de Análise de Rede Sem-Fio no seu Smartphone
