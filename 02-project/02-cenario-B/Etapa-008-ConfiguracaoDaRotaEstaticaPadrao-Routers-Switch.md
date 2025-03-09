@@ -23,7 +23,7 @@ E) **EXEMPLO:** exemplos de comandos ou configurações das opções de DICAS ou
 F) **IMPORTANTE:** informações importantes da tecnologia ou da configuração, com foco em adicionar informações detalhadas da tecnologia ou da certificação;<br>
 G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração, com foco em adicionar informações extras da tecnologia ou da certificação.
 
-## PRIMEIRA ETAPA: Configurando a Interface do Roteador 4321 no Cisco Packet Tracer.
+## PRIMEIRA ETAPA: Configurando a Interface do Roteador 4321 do Cenário B no Cisco Packet Tracer.
 
 ```python
 !Acessando o modo EXEC Privilegiado
@@ -67,7 +67,7 @@ enable
   write
 ```
 
-## SEGUNDA ETAPA: Configurando a Interface do Roteador 1941 no Cisco Packet Tracer.
+## SEGUNDA ETAPA: Configurando a Interface do Roteador 1941 do Cenário A no Cisco Packet Tracer.
 
 ```python
 !Acessando o modo EXEC Privilegiado
@@ -91,7 +91,7 @@ enable
   write
 ```
 
-## TERCEIRA ETAPA: Configurando a Rota Padrão no Router 1941 no Cisco Packet Tracer.
+## TERCEIRA ETAPA: Configurando a Rota Padrão no Router 1941 do Cenário A no Cisco Packet Tracer.
 
 ```python
 !Acessando o modo EXEC Privilegiado
@@ -116,7 +116,7 @@ enable
   write
 ```
 
-## QUARTA ETAPA: Configurando a Rota Padrão no Switch Multilayer 3650 no Cisco Packet Tracer.
+## QUARTA ETAPA: Configurando a Rota Padrão no Switch Multilayer 3650 do Cenário B no Cisco Packet Tracer.
 
 ```python
 !Acessando o modo EXEC Privilegiado
@@ -134,7 +134,7 @@ enable
 ```
 
 
-## QUINTA ETAPA: Configurando a Rota Padrão no Router 4321 no Cisco Packet Tracer.
+## QUINTA ETAPA: Configurando a Rota Padrão no Router 4321 do Cenário B no Cisco Packet Tracer.
 
 ```python
 !Acessando o modo EXEC Privilegiado

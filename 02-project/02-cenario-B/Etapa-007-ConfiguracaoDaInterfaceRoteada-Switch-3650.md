@@ -50,11 +50,10 @@ enable
 
     !Configurando o Gateway Padrão do Switch Multilayer 3650
     !DICA-02: a configuração do Gateway no Switch Layer 3 com suporte a roteamento será utilizada 
-    !somente para o acesso remoto ou gerenciamento do Switch, utilizando protocolos como SNMP, 
+    !somente para o acesso remoto ou gerenciamento do Switch, utilizando protocolos como SNMP, Netflow,
     !Syslog, etc
     !OBSERVAÇÃO-03: para a porta roteada acessar outras redes é necessário a configuração do roteamento
-    !estático, dinâmico
-    !ou rota padrão.
+    !estático, dinâmico ou rota padrão.
     ip default-gateway 172.16.0.30
 
     !Saindo de todos os níveis

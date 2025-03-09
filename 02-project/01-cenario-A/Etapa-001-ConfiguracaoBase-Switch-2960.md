@@ -210,9 +210,9 @@ sw-01(config)# username SEU_USUÁRIO_3 privilege 15 secret SUA_SENHA_SEGURA
 
 08. Desativando os Serviços de Descobertas de equipamentos Cisco na Rede.
 
-**DICA-20:** Os comandos no cdp run e no lldp run desativam os protocolos CDP (Cisco Discovery Protocol) e LLDP (Link Layer Discovery Protocol), respectivamente. Ambos são protocolos de descoberta de vizinhança usados para obter informações sobre dispositivos conectados diretamente ao switch ou roteador.
+**DICA-20:** Os comandos: *no cdp run* e: *no lldp run* desativam os protocolos CDP (Cisco Discovery Protocol) e LLDP (Link Layer Discovery Protocol), respectivamente. Ambos são protocolos de descoberta de vizinhança usados para obter informações sobre dispositivos conectados diretamente ao switch ou roteador.
 
-**OBSERVAÇÃO-07:** O CDP é o protocolo proprietário da Cisco que permite que roteadores e switches compartilhem informações sobre si mesmos Por padrão, está ativado em todos os equipamentos Cisco. Ele coleta informações como: modelo do dispositivo, IP, VLANs, interfaces ativas, versão do IOS, etc..
+**OBSERVAÇÃO-07:** O CDP é o protocolo proprietário da Cisco que permite que roteadores e switches compartilhem informações sobre si mesmos, por padrão, está ativado em todos os equipamentos da Cisco. Ele coleta informações como: modelo do dispositivo, IP, VLANs, interfaces ativas, versão do IOS, etc..
 
 **OBSERVAÇÃO-08:** O LLDP é o protocolo padrão aberto (IEEE 802.1AB), utilizado por equipamentos de diferentes fabricantes (Cisco, HP, Juniper, Dell, etc.). Semelhante ao CDP, permite que os dispositivos descubram vizinhos e compartilhem informações.
 ```bash
@@ -244,7 +244,7 @@ b) Habilitando a senha de acesso do Tipo-7 Password (senha fraca).
 
 **OBSERVAÇÃO-09:** a porta console é considerada uma porta/interface física não remota ou virtual, por esse motivo ela não tem suporte a senhas do Tipo-5 Secret, pois o acesso é feito fisicamente no Switch ou Router (se você tem a possibilidade de acessar fisicamente um equipamento, o nível de segurança da criptografia não importa mais, pois é uma invasão física e não lógica).
 
-**OBSERVAÇÃO-10:** essa configuração só será utilizada caso não exista usuários locais criados e se a opção do comando: *login local* não for configurada, nesse caso se utiliza o comando: *login*.
+**OBSERVAÇÃO-10:** essa configuração só será utilizada caso não exista usuários locais criados e se a opção do comando: *login local* não for configurada, nesse caso se utiliza somente a opção do comando: *login*.
 ```bash
 sw-01(config-line)# password SUA_SENHA_NÃO_SEGURA
 ```
@@ -278,7 +278,7 @@ e) Saindo de todos os níveis e voltando para o modo EXEC Privilegiado.
 sw-01(config-line)# end
 ```
 
-## SÉTIMA ETAPA: Salvando as Configurações Básica (Base) do Switch Cisco Catalyst 2960 Layer 2.
+## SÉTIMA ETAPA: Salvando as Configurações Básicas (Base) do Switch Cisco Catalyst 2960 Layer 2.
 
 01. Salvando as configurações da memória RAM (Running-Config) para a memória NVRAM (Startup-Config).
 

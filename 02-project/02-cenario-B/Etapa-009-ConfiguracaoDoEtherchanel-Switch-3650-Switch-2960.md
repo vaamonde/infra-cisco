@@ -1,0 +1,171 @@
+Autor: Robson Vaamonde<br>
+Procedimentos em TI: http://procedimentosemti.com.br<br>
+Bora para Prática: http://boraparapratica.com.br<br>
+Robson Vaamonde: http://vaamonde.com.br<br>
+Facebook Procedimentos em TI: https://www.facebook.com/ProcedimentosEmTi<br>
+Facebook Bora para Prática: https://www.facebook.com/BoraParaPratica<br>
+Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem<br>
+YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
+LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
+Github Procedimentos em TI: https://github.com/vaamonde<br>
+Data de criação: 16/05/2024<br>
+Data de atualização: 26/11/2024<br>
+Versão: 0.03<br>
+Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
+
+## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
+
+A) **ACRÉSCIMO:** informações ou comandos que não estava no script original e nem comentado no vídeo, algo importante para o cenário ou dicas de alunos;<br>
+B) **DESAFIO:** desafio proposto para o aluno, com o objetivo de estimular o raciocínio lógico para a resolução de problemas de rede ou mudanças nas configurações;<br>
+C) **DICA:** informações importantes da tecnologia ou da prova de certificação, dica para configurar ou lembrar os recursos para sua configuração no exame;<br>
+D) **ERRATA:** correções dos scripts, correções de falas, correções de configurações, etc...;<br>
+E) **EXEMPLO:** exemplos de comandos ou configurações das opções de DICAS ou OBSERVAÇÃO;<br>
+F) **IMPORTANTE:** informações importantes da tecnologia ou da configuração, com foco em adicionar informações detalhadas da tecnologia ou da certificação;<br>
+G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração, com foco em adicionar informações extras da tecnologia ou da certificação.
+
+O **STP Portfast (Porta Rápida)** faz com que uma *Porta do Switch* altere imediatamente para o estado de **Encaminhamento (Forwarding)**, ignorando os estados de **Ouvindo (Listening)** e **Aprendendo (Learning)**, esse recurso é configurado somente em Portas de Acesso (Access).
+
+O **STP Portfast Trunk (Porta Rápida de Tronco)** tem a mesma finalidade do *STP Portfast*, mais é somente configurado em *Portas de Tronco (Trunk)* com dispositivos que **NÃO SÃO Switches**, como por exemplo: *Router (Roteadores), Server (Servidores), Bridge (Pontes), Access Point (Ponto de Acesso), Etherchannel e etc.*
+
+O **EtherChannel** é uma tecnologia de agregação de link que agrupa vários links Ethernet físicos em um único link lógico. É usado para fornecer tolerância a falhas, compartilhamento de carga, maior largura de banda e redundância entre switches, roteadores e servidores. A tecnologia EtherChannel torna possível combinar o número de links físicos entre os switches para aumentar a velocidade geral da comunicação switch a switch.
+
+EtherChannel Estático (Manual)
+
+EtherChannel PAgP (Port Aggregation Protocol - Protocolo de Agregação de Portas)
+
+EtherChannel LACP (Link Aggregation Control Protocol )
+
+
+## PRIMEIRA ETAPA: Configurando o Etherchannel no Switch Multilayer 3650 no Cisco Packet Tracer.
+
+```python
+!Acessando o modo EXEC Privilegiado
+enable
+
+  !Acessando o modo de Configuração Global de Comandos
+  configure terminal
+
+    !Acessando o Range de Interface GigabitEthernet de Ligação com o Switch Layer 2960
+    interface range GigabitEthernet 1/0/1 - 2
+
+      !Configurando o Grupo do Etherchannel em modo Ativo
+      channel-group 1 mode active
+
+      !Saindo das Interfaces GigabitEthernet
+      exit
+
+    !Criando a Interface Virtual do Grupo 1 do Etherchannel
+    interface Port-Channel1
+
+      !Configurando o Modo de Switching da Interface Etherchannel
+      switchport
+
+      !Configurando o Modo Trunk da Interface Etherchannel
+      switchport mode trunk
+
+      !Configurando o Suporte ao Spanning-Tree Portfast na Interface Etherchannel
+      !DICA: em Portas Trunk (Tronco) conectadas em Roteadores ou Servidores é recomendado acelerar a velocidade de 
+      !encaminhamento de quadros (Frames) nessas Interfaces, agilizando o processo de convergência da topologia
+      !OBSERVAÇÃO: essa configuração não deve ser utilizada em Interfaces de Trunk entre Switches na Topologia
+      spanning-tree portfast trunk
+
+      !Iniciando a Interface Etherchannel
+      no shutdown
+
+      !Saindo da Interface Etherchannel
+      exit
+
+    !Acessando o Range de Interface GigabitEthernet de Ligação com o Switch Layer 2960
+    interface range GigabitEthernet 1/0/3 - 4
+      channel-group 2 mode active
+      exit
+
+    !Criando a Interface Virtual do Grupo 2 do Etherchannel
+    interface Port-Channel2
+      switchport
+      switchport mode trunk
+      spanning-tree portfast trunk
+      no shutdown
+      end
+
+  !Salvando as configurações da RAM para a NVRAM
+  write
+```
+
+## SEGUNDA ETAPA: Configurando o Etherchannel no Switch Layer 2 2960 Lado Esquerdo no Cisco Packet Tracer.
+
+```python
+!Acessando o modo EXEC Privilegiado
+enable
+
+  !Acessando o modo de Configuração Global de Comandos
+  configure terminal
+
+    !Acessando o Range de Interface GigabitEthernet de Ligação com o Switch Multilayer 3650
+    interface range GigabitEthernet 0/1 - 2
+      channel-group 1 mode passive
+      no shutdown
+      exit
+
+    interface Port-Channel1
+      switchport
+      switchport mode trunk
+      spanning-tree portfast trunk
+      no shutdown
+      exit
+
+    !Acessando o Range de Interface FastEthernet de Ligação com o Switch Layer 2960
+    interface range FastEthernet 0/23 - 24
+      channel-group 3 mode active
+      no shutdown
+      exit
+
+    interface Port-Channel3
+        switchport
+        switchport mode trunk
+        spanning-tree portfast trunk
+        no shutdown
+        end
+
+  !Salvando as configurações da RAM para a NVRAM
+  write
+```
+
+## SEGUNDA ETAPA: Configurando o Etherchannel no Switch Layer 2 2960 Lado Direito no Cisco Packet Tracer.
+
+```python
+!Acessando o modo EXEC Privilegiado
+enable
+
+  !Acessando o modo de Configuração Global de Comandos
+  configure terminal
+
+    !Acessando o Range de Interface GigabitEthernet de Ligação com o Switch Multilayer 3650
+    interface range GigabitEthernet 0/1 - 2
+      channel-group 2 mode passive
+      no shutdown
+      exit
+
+    interface Port-Channel2
+      switchport
+      switchport mode trunk
+      spanning-tree portfast trunk
+      no shutdown
+      exit
+
+    !Acessando o Range de Interface FastEthernet de Ligação com o Switch Layer 2960
+    interface range FastEthernet 0/23 - 24
+      channel-group 3 mode passive
+      no shutdown
+      exit
+
+    interface Port-Channel3
+      switchport
+      switchport mode trunk
+      spanning-tree portfast trunk
+      no shutdown
+      end
+
+  !Salvando as configurações da RAM para a NVRAM
+  write
+```
