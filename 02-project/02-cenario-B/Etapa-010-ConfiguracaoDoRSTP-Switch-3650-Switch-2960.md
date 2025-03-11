@@ -25,9 +25,9 @@ G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração
 
 O **STP (Spanning Tree Protocol)** é um Protocolo da Camada 2 que é executado nas interligações dos Switches Layer 2 e 3, a especificação para o STP é *IEEE 802.1D* (a mais recente especificação é IEEE 802.1Q), o propósito principal do STP é assegurar que você não crie ou exista caminhos redundantes (loops) de camada 2 na rede.
 
-O STP cria uma árvore de Switches presentes na rede e elege o Switch de Referência, a partir do qual será criada a árvore, esse Switch é denominado de Ponte Raiz (Root Bridge). A eleição do Root Bridge é feita com base na Prioridade (Priority) e também com base no menor endereço MAC (MAC-Address), em uma rede por padrão, pode existir apenas um Switch Root Bridge na Topologia.
+O STP cria uma árvore de Switches presentes na rede e elege o *Switch de Referência*, a partir do qual será criada a árvore, esse Switch é denominado de **Ponte Raiz (Root Bridge)**. A eleição do Root Bridge é feita com base na *Prioridade (Priority)* e também com base no menor endereço *MAC (MAC-Address)*, em uma rede por padrão, pode existir apenas um **Switch Root Bridge na Topologia**.
 
-A prioridade padrão do STP nos Switches da Cisco é: **32768** acrescentado mais: *1 (um)* que faz referência a identificação do sistema (ID sys-id-ext) com base no valor da VLAN Padrão ou VLAN configurada, EXEMPLO: *Bridge ID Priority: 32769 (priority 32768 sys-id-ext 1)*
+A prioridade padrão do STP nos Switches da Cisco é: **32768** acrescentado mais: *1 (um)* que faz referência a *Identificação do Sistema (ID sys-id-ext)* com base no valor da **VLAN Padrão ou VLAN configurada**, EXEMPLO: *Bridge ID Priority: 32769 (priority 32768 sys-id-ext 1)*
 
 A construção da árvore da topologia do STP e feita através do envio dos quadros de: **BPDU (Bridge Protocol Data Unit)**. Os BPDUs são frames enviados para a troca de informações tais como o: *Bridge ID* e o *Custo de Caminho de um Nó* para o Switch Root Bridge.
 

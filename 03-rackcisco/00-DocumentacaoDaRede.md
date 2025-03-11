@@ -80,7 +80,7 @@ E) TODOS OS INTEGRANTES SERÃO RESPONSÁVEIS PELOS DESKTOPS LINUX MINT 22.1 E WI
 **OBSERVAÇÃO IMPORTANTE: Os equipamentos abaixo serão utilizados pelo Docente em aula.**
 ```bash
 PROFESSOR: 1 (um) Router Cisco 4321, 1 (um) Router Cisco 2811 e 1 (um) Switch 2960-XR
-ESSES EQUIPAMENTOs VÃO FAZER A FUNÇÃO DE SIMULAÇÃO DO ISP (INTERNET SERVICE PROVIDER).
+ESSES EQUIPAMENTOS VÃO FAZER A FUNÇÃO DE SIMULAÇÃO DO ISP (INTERNET SERVICE PROVIDER).
 ```
 
 ## SEGUNDA ETAPA: Usuário e Senha padrão dos Switches e Routers Cisco de cada Grupo.
@@ -145,7 +145,7 @@ C) Grupo-03: Subredes:   172.16.30.0/24   VLAN:  30  -  utilizada no SVI do Swit
              Subredes:   172.16.32.0/24   VLAN:  32  -  utilizada pelo segundo usuário da rede
              Subredes:   172.16.33.0/24   VLAN:  33  -  utilizada pelo terceiro usuário da rede
              Subredes:   172.16.34.0/24   VLAN:  34  -  utilizada pelo quarto usuário da rede
-              Subredes:   172.16.35.0/24   VLAN:  35  -  utilizada pela rede sem-fio
+             Subredes:   172.16.35.0/24   VLAN:  35  -  utilizada pela rede sem-fio
 
 D) Grupo-04: Subredes:   172.16.40.0/24   VLAN:  40  -  utilizada no SVI do Switch Layer 3
              Subredes:   172.16.41.0/24   VLAN:  41  -  utilizada pelo primeiro usuário da rede
@@ -343,12 +343,12 @@ F) Grupo-06   ID do Processo: 6
 
 03. Configuração do Router-ID do Processo do OSPF (Loopback) dos Grupos
 ```bash
-A) Grupo-01   Router ID: 1.1.1.1	(mesmo endereço IPv4 da Loopback)
-B) Grupo-02   Router ID: 2.2.2.2	(mesmo endereço IPv4 da Loopback)
-C) Grupo-03   Router ID: 3.3.3.3	(mesmo endereço IPv4 da Loopback)
-D) Grupo-04   Router ID: 4.4.4.4	(mesmo endereço IPv4 da Loopback)
-E) Grupo-05   Router ID: 5.5.5.5	(mesmo endereço IPv4 da Loopback)
-F) Grupo-06   Router ID: 6.6.6.6	(mesmo endereço IPv4 da Loopback)
+A) Grupo-01   Router ID: 1.1.1.1   (mesmo endereço IPv4 da Loopback)
+B) Grupo-02   Router ID: 2.2.2.2   (mesmo endereço IPv4 da Loopback)
+C) Grupo-03   Router ID: 3.3.3.3   (mesmo endereço IPv4 da Loopback)
+D) Grupo-04   Router ID: 4.4.4.4   (mesmo endereço IPv4 da Loopback)
+E) Grupo-05   Router ID: 5.5.5.5   (mesmo endereço IPv4 da Loopback)
+F) Grupo-06   Router ID: 6.6.6.6   (mesmo endereço IPv4 da Loopback)
 ```
 
 04. Declaração das Redes OSPF entre os Grupos
@@ -428,10 +428,10 @@ F) Grupo-06   IPv4: 172.16.65.250 - Máscara: 255.255.255.0
 
 02. Configuração da Rede Sem-Fio (cuidado com roteador Dual Band 2.4 e 5.0Ghz)
 ```bash
-A) Grupo-01    SSID: G-01 (G-01-2.4 e G-01-5.0) - Senha: ????
-B) Grupo-02    SSID: G-02 (G-02-2.4 e G-02-5.0) - Senha: ????
-C) Grupo-03    SSID: G-03 (G-03-2.4 e G-03-5.0) - Senha: ????
-D) Grupo-04    SSID: G-04 (G-04-2.4 e G-04-5.0) - Senha: ????
-E) Grupo-05    SSID: G-05 (G-05-2.4 e G-05-5.0) - Senha: ????
-F) Grupo-06    SSID: G-06 (G-06-2.4 e G-06-5.0) - Senha: ????
+A) Grupo-01   SSID: G-01 (G-01-2.4 e G-01-5.0) - Senha: ????
+B) Grupo-02   SSID: G-02 (G-02-2.4 e G-02-5.0) - Senha: ????
+C) Grupo-03   SSID: G-03 (G-03-2.4 e G-03-5.0) - Senha: ????
+D) Grupo-04   SSID: G-04 (G-04-2.4 e G-04-5.0) - Senha: ????
+E) Grupo-05   SSID: G-05 (G-05-2.4 e G-05-5.0) - Senha: ????
+F) Grupo-06   SSID: G-06 (G-06-2.4 e G-06-5.0) - Senha: ????
 ```

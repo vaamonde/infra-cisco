@@ -44,10 +44,10 @@ Switch> enable
   !Verificando o conteúdo da Flash
   Switch# dir flash:
 
-  !Remover o banco de dados de VLAN da Flash: 
+  !Remover o banco de dados de VLAN da Flash (SE EXISTIR): 
   Switch# delete flash:vlan.dat
 
-  !Remover os backups anteriores das turmas: 
+  !Remover os backups anteriores das turmas (SE EXISTIR): 
   Switch# delete flash:startup-config
 
   !Reiniciar o Switch para testar as configurações
@@ -108,7 +108,7 @@ Router> enable
   !Verificando o conteúdo da Flash
   Router# dir flash:
 
-  !Remover os backups anteriores das turmas: 
+  !Remover os backups anteriores das turmas (SE EXISTIR): 
   Router# delete flash:startup-config
 
   !Entrar no modo de configuração global

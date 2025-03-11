@@ -29,12 +29,11 @@ O **STP Portfast Trunk (Porta Rápida de Tronco)** tem a mesma finalidade do *ST
 
 O **EtherChannel** é uma tecnologia de agregação de link que agrupa vários links Ethernet físicos em um único link lógico. É usado para fornecer tolerância a falhas, compartilhamento de carga, maior largura de banda e redundância entre switches, roteadores e servidores. A tecnologia EtherChannel torna possível combinar o número de links físicos entre os switches para aumentar a velocidade geral da comunicação switch a switch.
 
-EtherChannel Estático (Manual)
+O **EtherChannel PAgP (Port Aggregation Protocol - Protocolo de Agregação de Portas)** é um protocolo proprietário da Cisco que combina links Ethernet físicos em um único link lógico. Isso permite balanceamento de carga, tolerância a falhas e links de alta velocidade entre switches, roteadores e servidores
 
-EtherChannel PAgP (Port Aggregation Protocol - Protocolo de Agregação de Portas)
+O **EtherChannel LACP (Link Aggregation Control Protocol)** é um protocolo que permitem agrupar vários links físicos em um único canal lógico. Isso aumenta a largura de banda e a redundância, e reduz as falhas na comunicação de dados.
 
-EtherChannel LACP (Link Aggregation Control Protocol )
-
+O **EtherChannel Estático (Manual)** 
 
 ## PRIMEIRA ETAPA: Configurando o Etherchannel no Switch Multilayer 3650 no Cisco Packet Tracer.
 
