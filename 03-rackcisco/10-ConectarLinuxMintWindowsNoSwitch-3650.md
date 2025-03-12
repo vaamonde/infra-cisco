@@ -53,16 +53,16 @@ A) Linux Mint
   Terminal: Ctrl + Alt + T 
     ifconfig (verificar a linha: inet 172.16.???.??? da sua Sub-Rede)
     route -n (verificar a linha: 0.0.0.0 172.16.???.254 da sua Sub-Rede)
-    resolvectl (verificar a linha: DNS Servers 8.8.8.8)
+    resolvectl (verificar a linha: Current DNS Server 8.8.8.8)
 
 B) Windows 10
   Powershell
-    ipconfig /all (verificar a linha: da sua Sub-Rede)
-    ipconfig /all (verificar a linha: da sua Sub-Rede)
-    ipconfig /all (verificar a linha: da sua Sub-Rede)
+    ipconfig /all (verificar a linha: Endereço IPV4 172.16.???.??? da sua Sub-Rede)
+    ipconfig /all (verificar a linha: Gateway Padrão 172.16.???.254 da sua Sub-Rede)
+    ipconfig /all (verificar a linha: Servidores DNS 8.8.8.8)
 ```
 
-04. Testar o ping no Router e Switch
+04. Testar o ping no Router 2911 e no Switch 3560
 
 ```bash
 Linux Mint ou Windows 10 
@@ -73,23 +73,34 @@ Linux Mint ou Windows 10
 05. Acessar remotamente o Switch Cisco Catalyst 3560 e Router Cisco 2911 utilizando o SSH
 
 ```bash
+OBSERVAÇÃO IMPORTANTE: NOS SISTEMAS OPERACIONAIS GNU/LINUX MINT E NO WINDOWS 10, UTILIZANDO O 
+TERMINAL OU POWERSHELL A CONEXÃO COM O SWITCH E ROUTER VIA COMANDO SSH PRECISA SER MODIFICADA 
+DEVIDO AO ALGORÍTIMO DE CRIPTOGRAFIA DE SENHA DOS EQUIPAMENTOS DA CISCO UTILIZAR UM PADRÃO
+DIFERENTE, ESSE ERRO NÃO ACONTECE QUANDO VOCÊ UTILIZAR O SOFTWARE PUTTY.
+
 A) Linux Mint
-  Terminal: Ctrl + Alt + T 
-    #Linha do SSH para acessar o Switch
+  Terminal: Ctrl + Alt + T
+    #Linha do SSH para acessar o Switch 3560
     #OBSERVAÇÃO IMPORTANTE: existe somente a Primeira Sub-Rede para acessar o Switch
+    #opções do comando ssh: -oKexAlgorithms (Define os algoritmos de troca de chaves  Key Exchange Algorithms - Kex),
+    #+diffie-hellman-group1-sha1 (é um algoritmo antigo e inseguro, + indica que esse algoritmo está sendo adicionado
+    #aos padrões suportados), -oHostKeyAlgorithms (Define quais algoritmos podem ser usados para validar a chave do 
+    #servidor), +ssh-rsa ( é um algoritmo baseado em SHA-1, + adiciona esse algoritmo à lista de suportados), -c (Define
+    #o algoritmo de criptografia do canal de comunicação), aes256-cbc (AES (Advanced Encryption Standard) com uma 
+    #chave de 256 bits - Modo de operação CBC (Cipher Block Chaining))
     ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -oHostKeyAlgorithms=+ssh-rsa -c aes256-cbc seu_usuario@172.16.???.253
 
-    #Linha do SSH para acessar o Router
+    #Linha do SSH para acessar o Router 2911
     #OBSERVAÇÃO IMPORTANTE: alterar a Sub-Rede para cada usuário a Rede
     ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -oHostKeyAlgorithms=+ssh-rsa -c aes256-cbc seu_usuario@172.16.???.254
 
 B) Windows 10
   Powershell
-    #Linha do SSH para acessar o Switch
+    #Linha do SSH para acessar o Switch 3560
     #OBSERVAÇÃO IMPORTANTE: existe somente a Primeira Sub-Rede para acessar o Switch
     ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -oHostKeyAlgorithms=+ssh-rsa -c aes256-cbc seu_usuario@172.16.???.253
 
-    #Linha do SSH para acessar o Router
+    #Linha do SSH para acessar o Router 2911
     #OBSERVAÇÃO IMPORTANTE: alterar a Sub-Rede para cada usuário a Rede
     ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 -oHostKeyAlgorithms=+ssh-rsa -c aes256-cbc seu_usuario@172.16.???.254
 ```

@@ -17,16 +17,16 @@ Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 **==== Protocolos TCP e IP ====**
 ```bash
-A) PDU (Protocol Data Unit - Protocolo de Unidade de Dados - Camada de Dados) 
-B) TCP (Transmission Control Protocol - Protocolo de Controle de Transmissão - Confiabilidade)
-C) UDP (User Datagram Protocol - Protocolo de Datagrama do Usuário - Sem Confiabilidade)
+A) PDU  (Protocol Data Unit - Protocolo de Unidade de Dados - Camada de Dados) 
+B) TCP  (Transmission Control Protocol - Protocolo de Controle de Transmissão - Confiabilidade)
+C) UDP  (User Datagram Protocol - Protocolo de Datagrama do Usuário - Sem Confiabilidade)
 D) IPv4 (Internet Protocol - Protocolo de Internet versão 4 - Decimal - 32 Bits)
 E) IPv6 (Internet Protocol - Protocolo de Internet versão 6 - Hexadecimal - 128 Bits)
 ```
 
 **==== Protocolos IGP, EGP e BGP ====**
 ```bash
-A) AS (Autonomous System - Sistema Autônomo)
+A) AS  (Autonomous System - Sistema Autônomo)
 A) IGP (Interior Gateway Protocol - Protocolo de Gateway Interior: RIP, EIGP, OSPF e IS-IS)
 B) EGP (Exterior Gateway Protocol - Protocolo de Gateway Externo: Antigo e Obsoleto)
 C) BGP (Border Gateway Protocol - Protocolo de Gateway de Borda: eBGP, iBGP e MP-BGP)
@@ -38,6 +38,7 @@ A) AD   0 --> Interface Diretamente Conectada (FastEthernet, GigabitEthernet)
 B) AD   1 --> Rota Estática, Rota Flutuante ou Gateway Padrão
 C) AD  90 --> EIGRP (Enhanced Interior Gateway Routing Protocol - Protocolo de Roteamento de Gateway Interno Aprimorado)
 D) AD 110 --> OSPF (Open Shortest Path First - Caminho Mais Curto Primeiro)
+E) AD 115 --> IS-IS (Intermediary System / Intermediary System - Caminho Mais Curto para as Rotas)
 E) AD 120 --> RIP (Routing Information Protocol - Protocolo de Informações de Roteamento)
 ```
 
@@ -46,7 +47,7 @@ E) AD 120 --> RIP (Routing Information Protocol - Protocolo de Informações de 
 A) Rota Estática --> Custo 0
 B) EIGRP         --> Largura de Banda, Atraso, Confiabilidade, Utilização, MTU (Maximum Transmission Unit) e Contagem de Saltos
 C) OSPF          --> Largura de Banda Acumulativa, Menor Custo e Menor Distância
-D) RIP           --> Contagem de Saltos no Máximo de 15 (routes)
+D) RIP           --> Contagem de Saltos no Máximo de 15 (Routes)
 ```
 
 ## PRIMEIRA ETAPA: Configuração do Protocolo OSPF Router Cisco 2911
@@ -62,13 +63,13 @@ enable
     interface loopback 0
 
       !Descrição da Interface
-      description Interface de Loopback para ID do OSPF
+      description Interface de Loopback para ID do OSPF do Grupo-???
 
       !Endereço IPv4 para o ID do OSPF
       !Verificar o endereçamento IPv4 de Loopback do seu grupo
       !Endereço IPv4 utilizado para o gerenciamento e métrica do OSPF
       !OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 270 
-      !(NOVA ETAPA: Determinação das Configurações do Protocolo de Roteamento Dinâmico OSPF)
+      !(NONA ETAPA: Determinação das Configurações do Protocolo de Roteamento Dinâmico OSPF)
       ip address ???.???.???.??? 255.255.255.255
 
       !Inicializando a interface
@@ -81,7 +82,7 @@ enable
     !Verificar a tabela de Endereçamento para ver o seu número de Processo Local
     !Pode existir vários processo locais do OSPF, cada um com uma finalidade diferente
     !OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 270 
-    !(NOVA ETAPA: Determinação das Configurações do Protocolo de Roteamento Dinâmico OSPF)
+    !(NONA ETAPA: Determinação das Configurações do Protocolo de Roteamento Dinâmico OSPF)
     router ospf ???
 
       !Identificação do Roteador
@@ -105,16 +106,16 @@ enable
       auto-cost reference-bandwidth 10000
 
       !Registrar todas as alterações de adjacência e o estado dos links
-      !Esses registros vão ficar armazenados no log do sistema
+      !Esses registros serão armazenados no log do sistema operacional do IOS
       log-adjacency-changes detail
 
       !Declarando as redes fisicamente conectadas
       !Utilizando o recurso de Wildcard Mask (máscara coringa - máscara invertida)
-      !Configuração da Área 0 (Single Area - Backbone, obrigatória existir)
+      !Configuração da Área 0 (Single Area - Backbone, obrigatória existir na topologia)
       !Calculando a máscara coringa: 255.255.255.255 - sua_mascara
       !Exemplo: 255.255.255.255 - 255.255.255.252 = 0.0.0.3
       !OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 270 
-      !(NOVA ETAPA: Determinação das Configurações do Protocolo de Roteamento Dinâmico OSPF)
+      !(NONA ETAPA: Determinação das Configurações do Protocolo de Roteamento Dinâmico OSPF)
       network 172.16.???.0 0.0.0.255 area 0
       network 172.16.???.0 0.0.0.255 area 0
       network 172.16.???.0 0.0.0.255 area 0

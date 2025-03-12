@@ -35,11 +35,11 @@ enable
       !Sempre vai ser o Endereço IPv4 IMPAR na Interface Serial 0/0/0
       ip address 192.168.1.??? 255.255.255.252
 
-      !Configurando o Clock Rate, Velocidade do Link
-      clock rate 64000
+      !Configurando o Clock Rate (Velocidade do Link) para 2000000bps (2.0Mbps)
+      clock rate 2000000
 
-      !Configurando a Largura de Banda
-      bandwidth 64
+      !Configurando a Largura de Banda (Dividir o Clock Rate por 1000 para achar o valor em Mbps)
+      bandwidth 2000
 
       !Habilitando a interface
       no shutdown
@@ -60,8 +60,8 @@ enable
       !Sempre vai ser o Endereço IPv4 PAR na Interface Serial 0/0/1
       ip address 192.168.1.??? 255.255.255.252
 
-      !Configurando a Largura de Banda
-      bandwidth 64
+      !Configurando a Largura de Banda (Dividir o Clock Rate por 1000 para achar o valor em Mbps)
+      bandwidth 2000
 
       !Habilitando a interface
       no shutdown
@@ -83,15 +83,15 @@ enable
 
   ROUTER VIZINHO-DCE <---> DTE-0/0/1_SEU ROUTER_DCE-0/0/0 <---> DTE-ROUTER VIZINHO
 
-  !Pingar a SUA Interface Serial 0/0/0 (SEMPRE SERÁ O IPv4 PAR)
+  !Pingar a SUA Interface Serial 0/0/0 (SEMPRE SERÁ O ENDEREÇO IPv4 PAR)
   ping 192.168.1.??? (serial 0/0/0)
 
-  !Pingar a SUA Interface Serial 0/0/1 (SEMPRE SERÁ O IPv4 IMPAR)
+  !Pingar a SUA Interface Serial 0/0/1 (SEMPRE SERÁ O ENDEREÇO IPv4 IMPAR)
   ping 192.168.1.??? (serial 0/0/1)
 
-  !Pingar a Interface Serial 0/0/0 do SEU VIZINHO (SEMPRE SERÁ O IPv4 IMPAR)
+  !Pingar a Interface Serial 0/0/0 do SEU VIZINHO (SEMPRE SERÁ O ENDEREÇO IPv4 IMPAR)
   ping 192.168.1.??? (serial 0/0/0)
 
-  !Pingar a Interface Serial 0/0/1 do SEU VIZINHO (SEMPRE SERÁ O IPv4 PAR)
+  !Pingar a Interface Serial 0/0/1 do SEU VIZINHO (SEMPRE SERÁ O ENDEREÇO IPv4 PAR)
   ping 192.168.1.??? (serial 0/0/0)
 ```

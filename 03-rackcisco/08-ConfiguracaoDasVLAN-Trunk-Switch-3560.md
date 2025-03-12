@@ -42,7 +42,7 @@ enable
       name wifi
       exit
 
-    !OBSERVAÇÃO IMPORTANTE: a Interface fastEthernet 0/1 não será usada.
+    !OBSERVAÇÃO IMPORTANTE: a Interface fastEthernet 0/1 não será usada nesse projeto.
 
     !Configurando a Interface de Acesso a VLAN do Primeiro Usuário
     interface fastEthernet 0/2
@@ -127,15 +127,15 @@ enable
   show interfaces fastEthernet 0/24 status
   show interfaces fastEthernet 0/24 switchport
 
-  !Comandos para testar a conexão com o Router
+  !Comandos para testar a conexão do Switch 3560 com o Router 2911
 
-  !Pingando o endereço de SVI do Switch
+  !Pingando o endereço de SVI do Switch 3560
   ping 172.16.???.253
 
-  !Pingando o endereço de Gateway do Router
+  !Pingando o endereço de Gateway da Subinterface do Router 2911 
   ping 172.16.???.254
 
-  !Acessando via SSH o Router do Switch
+  !Acessando via SSH o Router 2911 a partir do Switch 3560
   !OBSERVAÇÃO: -l (éli não é o número "1" (um) e sim "l" (éli) em minúsculo)
   ssh -l ???seu_usuário??? 172.16.???.254
 ```

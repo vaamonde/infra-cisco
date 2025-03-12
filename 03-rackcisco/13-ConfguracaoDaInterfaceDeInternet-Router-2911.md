@@ -50,11 +50,18 @@ enable
   show ip route
 
   !Pingar os servidores do SENAC Tatuapé no Router
-  ping 10.26.40.191
   ping 10.26.40.190
+  ping 10.26.40.191
 
   !Pingar o Endereço IPv4 do Google no Router
   ping 8.8.8.8
+
+  !Traçar as Rotas para os Servidores do SENAC Tatuapé no Router
+  traceroute 10.26.40.190
+  traceroute 10.26.40.191
+
+  !Traçar as Rotas para os Servidores do Google no Router
+  traceroute 8.8.8.8
 
   !Desktops Linux Mint ou Windows 10 deverá pingar via DNS
   ping 8.8.8.8
