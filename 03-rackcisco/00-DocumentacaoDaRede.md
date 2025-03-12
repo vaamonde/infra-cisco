@@ -56,7 +56,11 @@ K) **PS ACR-N (Power Sum ACR-N)**: Similar ao ACR-N, mas considera a soma da int
 
 M) **Perda de Retorno (Return Loss)**: Mede a quantidade de sinal que é refletida de volta devido a irregularidades no cabo, conexões ruins ou problemas na terminação. Valores altos de perda de retorno podem indicar má qualidade no cabeamento.
 
-N) **NVP (Nominal Velocity of Propagation)**: O NVP (Velocidade Nominal de Propagação) é um percentual que indica a velocidade com que o sinal viaja através do cabo em relação à velocidade da luz no vácuo. No seu caso, NVP 69,0 significa que o sinal viaja a 69% da velocidade da luz. Cabos Furukawa SOHO Plus Cat5e: 68% e Cabos Furukawa SOHO Plus Cat6.: 68%.
+N) **Analisador HDTDX (High-Definition Time Domain Crosstalk)**: Este teste mede a interferência entre pares de cabos, conhecida como diafonia (crosstalk). O HDTDX identifica exatamente onde ao longo do cabo ocorre a interferência de sinal.
+
+O) **Analisador HDTDR (High-Definition Time Domain Reflectometry)**: Este teste mede a reflexão do sinal, identificando descontinuidades ou variações de impedância ao longo do cabo. O HDTDR ajuda a detectar problemas como cabo rompido, excesso de curvatura, conectores mal inseridos ou diferenças de impedância devido a emendas.
+
+P) **NVP (Nominal Velocity of Propagation)**: O NVP (Velocidade Nominal de Propagação) é um percentual que indica a velocidade com que o sinal viaja através do cabo em relação à velocidade da luz no vácuo. No seu caso, NVP 69,0 significa que o sinal viaja a 69% da velocidade da luz. Cabos Furukawa SOHO Plus Cat5e: 68% e Cabos Furukawa SOHO (Small Office/Home Office)) Plus Cat6.: 68%.
 
 05. Os Kits do Rack Cisco serão divididos em: **6 (seis) Grupos:**
 ```bash
@@ -88,7 +92,7 @@ ESSES EQUIPAMENTOS VÃO FAZER A FUNÇÃO DE SIMULAÇÃO DO ISP (INTERNET SERVICE
 01. Nos scripts de configuração Base do Switch e Router existe as linhas de configuração dos usuários e senhas conforme abaixo:
 ```bash
 A) Senha padrão: 123@senac
-B) Usuário: seguir o padrão da documentação dos scripts alterando o seu valor dentro de ???___???.
+B) Usuário: seguir o padrão da documentação dos scripts alterando o seu valor dentro de ???__ __???.
    Exemplo: username ???nome_do_primeiro_integrante??? privilege 15 secret ????
             username vaamonde privilege 15 secret 123@senac
 C) Domínio padrão: senac.br
