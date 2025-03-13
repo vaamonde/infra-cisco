@@ -33,7 +33,26 @@ O **EtherChannel PAgP (Port Aggregation Protocol - Protocolo de Agregação de P
 
 O **EtherChannel LACP (Link Aggregation Control Protocol)** é um protocolo que permitem agrupar vários links físicos em um único canal lógico. Isso aumenta a largura de banda e a redundância, e reduz as falhas na comunicação de dados.
 
-O **EtherChannel Estático (Manual)** 
+O **EtherChannel Estático (Manual)** é uma configuração que combina vários links físicos em um canal lógico, sem negociação (Modo "on", sem o uso do LACP ou PAgP). Ele permite o compartilhamento de carga de tráfego e redundância em caso de falha de um ou mais links. 
+
+**Resumo**
+
+|Tipo      |Protocolo     |Modos                |Disponíveis   |Compatibilidade	Características  |
+|----------|--------------|---------------------|--------------|---------------------------------|
+|Estático  |Nenhum        |"on"                 |Universal     |Simples, sem detecção de falha   |
+|PAgP      |Cisco	        |"auto","desirable"   |Apenas Cisco  |Automático, proprietário         |
+|LACP      |IEEE 802.3ad  |"passive", "active"  |Multivendor   |Mais flexível e seguro           |
+
+**Comparação Geral**
+
+|Característica         |EtherChannel Estático  |PAgP (Cisco)     |LACP (IEEE 802.3ad)|
+|-----------------------|-----------------------|-----------------|-------------------|
+|Protocolo              |Nenhum                 |Cisco            |IEEE 802.3ad       |
+|Compatibilidade        |Universal              |Apenas Cisco     |Multivendor        |
+|Detecção de falhas     |❌ Não detecta         |✅ Sim           |✅ Sim             |
+|Balanceamento de carga |✅ Sim                 |✅ Sim           |✅ Sim             |
+|Negociação automática  |❌ Não                 |✅ Sim           |✅ Sim             |
+|Melhor uso             |Links fixos e estáveis |Redes 100% Cisco |Ambientes mistos
 
 ## PRIMEIRA ETAPA: Configurando o Etherchannel no Switch Multilayer 3650 no Cisco Packet Tracer.
 
@@ -63,9 +82,9 @@ enable
       switchport mode trunk
 
       !Configurando o Suporte ao Spanning-Tree Portfast na Interface Etherchannel
-      !DICA: em Portas Trunk (Tronco) conectadas em Roteadores ou Servidores é recomendado acelerar a velocidade de 
+      !DICA-01: em Portas Trunk (Tronco) conectadas em Roteadores ou Servidores é recomendado acelerar a velocidade de 
       !encaminhamento de quadros (Frames) nessas Interfaces, agilizando o processo de convergência da topologia
-      !OBSERVAÇÃO: essa configuração não deve ser utilizada em Interfaces de Trunk entre Switches na Topologia
+      !OBSERVAÇÃO-01: essa configuração não deve ser utilizada em Interfaces de Trunk entre Switches na Topologia
       spanning-tree portfast trunk
 
       !Iniciando a Interface Etherchannel
