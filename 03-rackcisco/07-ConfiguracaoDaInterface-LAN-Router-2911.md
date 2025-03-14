@@ -31,6 +31,10 @@ enable
       !Saindo da Interface Física gigabitEthernet 0/0
       exit
 
+    !OBSERVAÇÃO: Uma subinterface no Cisco é uma interface virtual que é associada a um ID de 
+    !VLAN em uma interface física. Subinterfaces podem ser criadas em interfaces físicas de 
+    !Switch Camada 3 ou Interfaces de Roteadores.
+
     !OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 77 
     !(TERCEIRA ETAPA: Determinação das Redes (Sub-Redes) e VLAN (Virtual-LAN) de Cada Grupo)
     interface gigabitEthernet 0/0.???

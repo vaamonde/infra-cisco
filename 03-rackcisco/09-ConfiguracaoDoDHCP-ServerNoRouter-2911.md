@@ -31,7 +31,7 @@ enable
       network 172.16.???.0 255.255.255.0
       default-router 172.16.???.254
       dns-server 8.8.8.8 8.8.4.4
-      domain-name senac.br
+      domain-name ????
       exit
 
     !Configurando o Pool do DHCP Server da VLAN do Segundo Usuário	
@@ -41,7 +41,7 @@ enable
       network 172.16.???.0 255.255.255.0
       default-router 172.16.???.254
       dns-server 8.8.8.8 8.8.4.4
-      domain-name senac.br
+      domain-name ????
       exit
 
     !Configurando o Pool do DHCP Server da VLAN do Terceiro Usuário	
@@ -51,7 +51,7 @@ enable
       network 172.16.???.0 255.255.255.0
       default-router 172.16.???.254
       dns-server 8.8.8.8 8.8.4.4
-      domain-name senac.br
+      domain-name ????
       exit
 
     !Configurando o Pool do DHCP Server da VLAN do Quarto Usuário	
@@ -61,7 +61,7 @@ enable
       network 172.16.???.0 255.255.255.0
       default-router 172.16.???.254
       dns-server 8.8.8.8 8.8.4.4
-      domain-name senac.br
+      domain-name ????
       exit
 
     !Configurando o Pool do DHCP Server da VLAN Wireless
@@ -71,7 +71,7 @@ enable
       network 172.16.???.0 255.255.255.0
       default-router 172.16.???.254
       dns-server 8.8.8.8 8.8.4.4
-      domain-name senac.br
+      domain-name ????
       end
 
   !Salvando as configurações
@@ -80,6 +80,6 @@ enable
   !Verificando as informações do Pool DHCP Server
   show ip dhcp pool
 
-  !Visualizando os Leasing dos IP ofertados na REde
+  !Visualizando os Leasing dos IP ofertados na Rede
   show ip dhcp binding (essas informações só estará disponível depois que configurar os clientes)
 ```

@@ -30,6 +30,8 @@ enable
     vlan ???
       !Nome da VLAN padrão
       name svig0???
+
+    !Criação das VLANs dos Usuários do Grupo
     vlan ???
       name ???Primeiro_Nome_do_Primeiro_Aluno??? 
     vlan ???
@@ -38,11 +40,13 @@ enable
       name ???Primeiro_Nome_do_Terceiro_Aluno???
     vlan ???
       name ???Primeiro_Nome_do_Quarto_Aluno???
+
+    !Criação da VLAN da Rede Sem-Fio
     vlan ???
       name wifi
       exit
 
-    !OBSERVAÇÃO IMPORTANTE: a Interface fastEthernet 0/1 não será usada nesse projeto.
+    !OBSERVAÇÃO IMPORTANTE: a Interface fastEthernet 0/1 não será usada nesse projeto (Interface Reservada).
 
     !Configurando a Interface de Acesso a VLAN do Primeiro Usuário
     interface fastEthernet 0/2
@@ -81,6 +85,8 @@ enable
       exit
 
     !Configurando a Interface de Acesso a VLAN da Rede Sem-Fio (Wi-Fi/Wireless)
+    !OBSERVAÇÃO IMPORTANTE: A interface fastEthernet 0/6 sempre será utilizada para a VLAN
+    !da Rede Sem-Fio (Wi-Fi/Wireless) não alterar a porta.
     interface fastEthernet 0/6
       description Interface de Acesso da VLAN ???Wireless do Grupo-0???
       switchport mode access
@@ -92,7 +98,7 @@ enable
       shutdown
       exit
 
-    !Configurando a Interface de Trunk com o Router 2911
+    !Configurando a Interface de Trunk do Switch 3560 com o Router 2911
     interface fastEthernet 0/24
       description Interface de Trunk com o Router 2911 do Grupo-0???
       switchport trunk encapsulation dot1q

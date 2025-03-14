@@ -15,7 +15,9 @@ Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 ## PRIMEIRA ETAPA: Instalação e Configuração do GNU/Linux Mint e Windows 10
 
-**OBSERVAÇÃO IMPORTANTE: Utilizar as máquinas virtuais do Linux Mint e Windows 10 no VirtualBOX, nesse cenário as máquinas virtuais estarão conectadas na Rede do Switch Cisco Catalyst 3560 e vai obter os endereços IPv4 fornecidos pelo Router Cisco 2911**
+**OBSERVAÇÃO: TODOS OS INTEGRANTES DOS GRUPOS DEVERÃO INSTALAR O LINUX MINT E O WINDOWS 10 UTILIZANDO O VIRTUALBOX NA UNIDADE DE DISCO CORRESPONDENTE PARA O ARMAZENAMENTO CORRETO DOS HDs VIRTUAIS, PROCEDIMENTO SERÁ PASSADO EM SALA DE AULA**
+
+**OBSERVAÇÃO IMPORTANTE: Utilizar as máquinas virtuais do Linux Mint e Windows 10 no VirtualBOX, nesse cenário as máquinas virtuais estarão conectadas na Rede do Switch Cisco Catalyst 3560 e vai obter os endereços IPv4 fornecidos pelo Router Cisco 2911 via DHCP**
 
 01. Alterar a Porta de Rede das Máquinas no VirtualBOX
 
@@ -42,11 +44,11 @@ B) Windows10
 ```bash
 A) Conectar o cabo de rede na placa de rede off-board;
 B) Conectar o cabo de rede no ponto de rede do Rack Cisco do seu usuário;
-C) Verificar se os LED's da Placa de Rede e Switch estão ligados;
+C) Verificar se os LEDs da Placa de Rede e do Switch estão ligados;
 D) Desativar e Ativar novamente a Placa de Rede no Linux Mint.
 ```
 
-03. Ligar as Máquinas Virtuais e verificar se obteve os endereços IPv4
+03. Ligar as Máquinas Virtuais e verificar se obteve os endereços IPv4 via DHCP
 
 ```bash
 A) Linux Mint

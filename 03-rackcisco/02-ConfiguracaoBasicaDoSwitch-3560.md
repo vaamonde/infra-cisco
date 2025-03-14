@@ -21,7 +21,7 @@ enable
 
   !Configuração de data/hora em inglês, abreviado ou completo
   !Exemplo: October ou Oct
-  !Primeiro Hora no formato: 00:00:00 (hora:minutos:segundos) depois Data no formato: Dia Mês Ano
+  !Primeiro Hora no formato: 00:00:00 (hora:minutos:segundos) depois Data no formato: Dia Mês (Completo ou Abreviado) Ano Completo
   clock set ??:??:?? ?? ???????? ????
 
   !Acessar modo de Configuração Global
@@ -68,6 +68,9 @@ enable
     username ???nome_do_quarto_integrante??? privilege 15 secret ????
 
     !Desativando os Serviços de Descobertas de equipamentos na rede
+    !OBSERVAÇÃO: por padrão os serviços de descobertas de equipamentos estão habilitados
+    !globalmente no Switch e Router Cisco, desabilitar o CDP ou LLDP garante a segurança
+    !de informações de equipamentos na rede.
     no cdp run
     no lldp run
 

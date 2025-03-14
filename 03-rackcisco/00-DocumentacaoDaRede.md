@@ -439,3 +439,22 @@ D) Grupo-04   SSID: G-04 (G-04-2.4 e G-04-5.0) - Senha: ????
 E) Grupo-05   SSID: G-05 (G-05-2.4 e G-05-5.0) - Senha: ????
 F) Grupo-06   SSID: G-06 (G-06-2.4 e G-06-5.0) - Senha: ????
 ```
+
+## DÉCIMA PRIMEIRA ETAPA: Configuração dos Desktops GNU/Linux e Windows 10
+
+01. Configuração do Hostname e Workgroup dos Desktop GNU/Linux e Windows 10
+```bash
+A) Grupo-01   Linux Hostname: VLAN-???-NomePrimeiroUsuário-Gnu   Windows Hostname: VLAN-???-NomePrimeiroUsuário-Win
+B) Grupo-02   Linux Hostname: VLAN-???-NomePrimeiroUsuário-Gnu   Windows Hostname: VLAN-???-NomePrimeiroUsuário-Win
+C) Grupo-03   Linux Hostname: VLAN-???-NomePrimeiroUsuário-Gnu   Windows Hostname: VLAN-???-NomePrimeiroUsuário-Win
+D) Grupo-04   Linux Hostname: VLAN-???-NomePrimeiroUsuário-Gnu   Windows Hostname: VLAN-???-NomePrimeiroUsuário-Win
+E) Grupo-05   Linux Hostname: VLAN-???-NomePrimeiroUsuário-Gnu   Windows Hostname: VLAN-???-NomePrimeiroUsuário-Win
+F) Grupo-06   Linux Hostname: VLAN-???-NomePrimeiroUsuário-Gnu   Windows Hostname: VLAN-???-NomePrimeiroUsuário-Win
+
+A) Grupo-01   Linux Workgroup: Grupo-0??-VLAN-???   Windows Hostname: Grupo-0??-VLAN-???
+B) Grupo-02   Linux Workgroup: Grupo-0??-VLAN-???   Windows Hostname: Grupo-0??-VLAN-???
+C) Grupo-03   Linux Workgroup: Grupo-0??-VLAN-???   Windows Hostname: Grupo-0??-VLAN-???
+D) Grupo-04   Linux Workgroup: Grupo-0??-VLAN-???   Windows Hostname: Grupo-0??-VLAN-???
+E) Grupo-05   Linux Workgroup: Grupo-0??-VLAN-???   Windows Hostname: Grupo-0??-VLAN-???
+F) Grupo-06   Linux Workgroup: Grupo-0??-VLAN-???   Windows Hostname: Grupo-0??-VLAN-???
+```
