@@ -22,10 +22,10 @@ enable
   !Acessar modo de configuração global
   configure terminal
 
-    !Configuração da interface Serial0/0/0
+    !Configuração da interface Serial0/0/0 DCE (Data Circuit-Terminating Equipment)
     interface serial 0/0/0
 
-      !Descrição da Interface Serial
+      !Descrição da Interface Serial DCE
       !OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 232
       !(SÉTIMA ETAPA: Determinação da Interface Serial de WAN dos Grupos e seu Endereçamento IPv4)
       description Interface Serial do Grupo-??? para Grupo-???
@@ -47,7 +47,7 @@ enable
       !Saindo das configurações da interface
       exit
 
-    !Configuração da interface Serial0/0/1
+    !Configuração da interface Serial0/0/1 DTE (Data Terminal Equipment)
     interface serial 0/0/1
 
       !Descrição da Interface
