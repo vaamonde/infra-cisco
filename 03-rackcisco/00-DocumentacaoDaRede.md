@@ -177,25 +177,25 @@ F) Grupo-06: Subredes:   172.16.60.0/24   VLAN:  60  -  utilizada no SVI do Swit
 
 01. Determinação do endereço IPv4 da VLAN de SVI e Gateway do Switch Layer 3
 ```bash
-A) Grupo-01:  SVI:  172.16.10.253/24  -  Gateway: 172.16.10.254
-B) Grupo-02:  SVI:  172.16.20.253/24  -  Gateway: 172.16.20.254
-C) Grupo-03:  SVI:  172.16.30.253/24  -  Gateway: 172.16.30.254
-D) Grupo-04:  SVI:  172.16.40.253/24  -  Gateway: 172.16.40.254
-E) Grupo-05:  SVI:  172.16.50.253/24  -  Gateway: 172.16.50.254
-F) Grupo-06:  SVI:  172.16.60.253/24  -  Gateway: 172.16.60.254
+A) Grupo-01:  SVI Switch 3560:  172.16.10.253/24  -  Gateway: 172.16.10.254 (Interface Virtual Router 2911)
+B) Grupo-02:  SVI Switch 3560:  172.16.20.253/24  -  Gateway: 172.16.20.254 (Interface Virtual Router 2911)
+C) Grupo-03:  SVI Switch 3560:  172.16.30.253/24  -  Gateway: 172.16.30.254 (Interface Virtual Router 2911)
+D) Grupo-04:  SVI Switch 3560:  172.16.40.253/24  -  Gateway: 172.16.40.254 (Interface Virtual Router 2911)
+E) Grupo-05:  SVI Switch 3560:  172.16.50.253/24  -  Gateway: 172.16.50.254 (Interface Virtual Router 2911)
+F) Grupo-06:  SVI Switch 3560:  172.16.60.253/24  -  Gateway: 172.16.60.254 (Interface Virtual Router 2911)
 ```
 
 ## QUINTA ETAPA: Determinação das Portas de Rede de cada VLAN dos Usuários dos Grupos
 
-**OBSERVAÇÃO IMPORTANTE: a Porta de Rede: FastEthernet 0/1 não será utilizada nas configurações.**
+**OBSERVAÇÃO IMPORTANTE:** a Porta de Rede: FastEthernet 0/1 não será utilizada nas configurações.
 
-**OBSERVAÇÃO IMPORTANTE: a Porta de Rede: FastEthernet 0/24 será o Trunk entre o Switch 3560 e o Router 2911.**
+**OBSERVAÇÃO IMPORTANTE:** a Porta de Rede: FastEthernet 0/24 será o Trunk entre o Switch 3560 e o Router 2911.
 
-**OBSERVAÇÃO IMPORTANTE: O nome da VLAN deverá ser o Primeiro Nome dos Alunos do Grupo, exemplo: Robson Vaamonde - nome da VLAN 11: robson (sempre em minúsculo), Leandro Ramos - nome da VLAN 12: leandro, etc...**
+**OBSERVAÇÃO IMPORTANTE:** O nome da VLAN deverá ser o **Primeiro Nome dos Alunos do Grupo**, exemplo: *Robson Vaamonde - nome da VLAN 11: robson (sempre em minúsculo), Leandro Ramos - nome da VLAN 12: leandro, etc...*
 
-**OBSERVAÇÃO: CASO O GRUPO NÃO TENHA 04 (QUATRO) ALUNOS, DESCONSIDERAR A CRIAÇÃO DAS VLAN'S CORRESPONDENTE, EXEMPLO: GRUPO COM 3 (TRÊS) ALUNOS DESCONSIDERAR A QUARTA VLAN DO GRUPO MAIS MANTER A VLAN DA REDE SEM-FIO COM O SEU NÚMERO E NOME**
+**OBSERVAÇÃO:** CASO O GRUPO NÃO TENHA: *04 (QUATRO) ALUNOS*, DESCONSIDERAR A CRIAÇÃO DAS VLAN'S CORRESPONDENTE, EXEMPLO: *GRUPO COM 3 (TRÊS) ALUNOS DESCONSIDERAR A QUARTA VLAN DO GRUPO MAIS MANTER A VLAN DA REDE SEM-FIO COM O SEU NÚMERO E NOME*.
 
-01. Determinação das Portas de Rede das VLAN do Switch 3560
+01. Determinação das Portas de Rede das VLANs do Switch 3560
 ```bash
 A) Grupo-01: Porta: 2    VLAN: 11    Nome: ??Primeiro_Nome_do_Primeiro_Aluno??
              Porta: 3    VLAN: 12    Nome: ??Primeiro_Nome_do_Segundo_Aluno??
@@ -283,13 +283,13 @@ F) Grupo-06: Subinterface: 60    IPv4: 172.16.60.254/24
 
 ## SÉTIMA ETAPA: Determinação da Interface Serial de WAN dos Grupos e seu Endereçamento IPv4
 
-**OBSERVAÇÃO IMPORTANTE: a rede Classfull Classe C: 192.168.1.0/24 será segmentada em: 64 Sub-Redes.**
+**OBSERVAÇÃO IMPORTANTE:** a rede Classfull *Classe C: 192.168.1.0/24* será segmentada em: *64 Sub-Redes*.
 
 **Bits de Rede: 2^6=64 - Bits de Host: 2^2=4-2(ID e Broadcast)=2 - Máscara: 255.255.255.252**
 
 **PRESTE MUITA ATENÇÃO DA TABELA DE ALOCAÇÃO DE ENDEREÇAMENTO IPV4 PARA CADA GRUPO, EXEMPLO: O GRUPO 01 VAI SE CONECTAR COM OS GRUPOS 02 E 06, VOCÊ DEVERÁ MAPEAR OS ENDEREÇOS UTILIZADOS NAS INTERFACES SERIAIS 0/0/0 E 0/0/1 ANALISANDO SEMPRE A CONEXÃO COM O SEUS VIZINHOS E QUAL REDE ELA PERTENCE.**
 
-**EXEMPLO: ROUTER VIZINHO-DCE <-------> DTE-0/0/1_SEU ROUTER_DCE-0/0/0 <-------> DTE-ROUTER VIZINHO**
+**EXEMPLO:** ROUTER VIZINHO-DCE <-------> DTE-0/0/1_SEU ROUTER_DCE-0/0/0 <-------> DTE-ROUTER VIZINHO
 
 **DICA: NESSA ETAPA VOCÊS PRECISAM CONVERSAR COM OS OUTROS GRUPOS, NÃO ADIANTA VOCÊ FAZER A SUA PARTE SE O OUTRO GRUPO NÃO FAZER A DELE E SE OS DOIS ERRAREM TUDO ESTARÁ ERRADO, TODOS OS GRUPOS DEPENDEM DESSA CONFIGURAÇÃO PARA FUNCIONAR.**
 

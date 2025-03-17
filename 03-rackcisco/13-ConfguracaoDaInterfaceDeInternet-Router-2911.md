@@ -63,7 +63,7 @@ enable
   !Traçar as Rotas para os Servidores do Google no Router
   traceroute 8.8.8.8
 
-  !Desktops Linux Mint ou Windows 10 deverá pingar via DNS
+  !Nos Desktops Linux Mint ou Windows 10 deverá pingar via DNS
   ping 8.8.8.8
   ping google.com
 ```

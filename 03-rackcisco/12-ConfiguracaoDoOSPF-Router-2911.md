@@ -13,9 +13,9 @@ Data de atualização: 16/05/2024<br>
 Versão: 0.01<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
-## Protocolos de Roteamento utilizados no Cisco (APROFUNDAMENTO DE ESTUDO)
+## Protocolos de Roteamento utilizados no Cisco (APROFUNDAMENTO DE ESTUDO PARA CERTIFICAÇÃO)
 
-**==== Protocolos TCP e IP ====**
+**==== Protocolos: PDU, TCP, UDP e IP ====**
 ```bash
 A) PDU  (Protocol Data Unit - Protocolo de Unidade de Dados - Camada de Dados) 
 B) TCP  (Transmission Control Protocol - Protocolo de Controle de Transmissão - Confiabilidade)
@@ -24,7 +24,7 @@ D) IPv4 (Internet Protocol - Protocolo de Internet versão 4 - Decimal - 32 Bits
 E) IPv6 (Internet Protocol - Protocolo de Internet versão 6 - Hexadecimal - 128 Bits)
 ```
 
-**==== Protocolos IGP, EGP e BGP ====**
+**==== Protocolos: AS, IGP, EGP e BGP ====**
 ```bash
 A) AS  (Autonomous System - Sistema Autônomo)
 A) IGP (Interior Gateway Protocol - Protocolo de Gateway Interior: RIP, EIGP, OSPF e IS-IS)
@@ -42,12 +42,27 @@ E) AD 115 --> IS-IS (Intermediary System / Intermediary System - Caminho Mais Cu
 E) AD 120 --> RIP (Routing Information Protocol - Protocolo de Informações de Roteamento)
 ```
 
-**==== Métrica (Custo do Link) ====**
+**==== Métrica (Custo do Link) dos Protocolos ====**
 ```bash
 A) Rota Estática --> Custo 0
 B) EIGRP         --> Largura de Banda, Atraso, Confiabilidade, Utilização, MTU (Maximum Transmission Unit) e Contagem de Saltos
 C) OSPF          --> Largura de Banda Acumulativa, Menor Custo e Menor Distância
-D) RIP           --> Contagem de Saltos no Máximo de 15 (Routes)
+D) IS-IS         --> Caminho mais curto com base na soma das métricas ao longo de um caminho
+E) RIP           --> Contagem de Saltos no Máximo de 15 (Routes)
+```
+
+**==== Tecnologias de Link de WAN utilizados no Brasil ====**
+```bash
+A) Links Dedicados e Circuitos Privados: Fibra Óptica Dedicada (Ponto a Ponto ou Internet Dedicada);
+B) MPLS (Multiprotocol Label Switching): Rede privada gerenciada pelo provedor;
+C) Metro Ethernet: Rede de alta capacidade baseada em Ethernet sobre fibra óptica;
+D) Fibra Óptica Compartilhada (Broadband / FTTH - Fiber to the Home/Business);
+E) Internet via Rádio (Wireless ISP): Alternativa para regiões sem infraestrutura de fibra;
+F) 4G/5G Empresarial (LTE e Redes Móveis): Opção de backup WAN ou para locais sem outra conectividade;
+G) Link E1 (RDSI - Rede Digital de Serviços Integrados): Usado para telefonia e dados em conexões ponto a ponto;
+H) X.25 e Frame Relay: Antigas tecnologias de WAN, ainda usadas em bancos e automação industrial;
+I) SD-WAN (Software-Defined WAN): Permite usar múltiplos links (MPLS, Fibra, 4G/5G) de forma inteligente;
+J) VPN IPsec ou VPN SSL: Utilizada para interligar redes privadas sobre a Internet pública.
 ```
 
 ## PRIMEIRA ETAPA: Configuração do Protocolo OSPF Router Cisco 2911
@@ -98,8 +113,8 @@ enable
       !Essa interface não vai anunciar suas rotas pela interface, mais pode receber anúncios
       passive-interface gigabitEthernet 0/1
 
-      !Configuração da referência de largura de banda (Métrica)
-      !Utilizado para o cálculo de custo dos links, padrão 10^8 = 100000000 bps
+      !Configuração da referência de largura de banda (Métrica) do OSPF
+      !Utilizado para o cálculo de custo dos links, padrão 10^8 = 100000000 bps (100 Mbps)
       !Link da tabela padrão de métrica do custo dos links do OSPF: 
       !http://nomundodasredes.blogspot.com.br/2012/03/metrica-do-ospf.html
       !https://ciscoredes.com.br/wp-content/uploads/2012/06/Cost_Interface.png
