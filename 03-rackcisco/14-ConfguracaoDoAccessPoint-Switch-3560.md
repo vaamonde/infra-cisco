@@ -101,17 +101,34 @@ E) Grupo-05   IPv4: 172.16.55.250 - Máscara: 255.255.255.0
 F) Grupo-06   IPv4: 172.16.65.250 - Máscara: 255.255.255.0
 ```
 
-03. Configuração da Rede Sem-Fio (cuidado com roteadores Dual Band 2.4 e 5.0Ghz)
+03. Configuração das Redes Sem-Fio (cuidado com roteadores Dual Band 2.4Ghz e 5.0Ghz)
 ```bash
-A) Grupo-01   SSID: G-01 (G-01-2.4 E G-01-5.0) - Senha: ????
-B) Grupo-02   SSID: G-02 (G-02-2.4 E G-02-5.0) - Senha: ????
-C) Grupo-03   SSID: G-03 (G-03-2.4 E G-03-5.0) - Senha: ????
-D) Grupo-04   SSID: G-04 (G-04-2.4 E G-04-5.0) - Senha: ????
-E) Grupo-05   SSID: G-05 (G-05-2.4 E G-05-5.0) - Senha: ????
-F) Grupo-06   SSID: G-06 (G-06-2.4 E G-06-5.0) - Senha: ????
+A) Grupo-01   SSID: G-01 (G-01-2.4 e G-01-5.0) - Senha: ????
+B) Grupo-02   SSID: G-02 (G-02-2.4 e G-02-5.0) - Senha: ????
+C) Grupo-03   SSID: G-03 (G-03-2.4 e G-03-5.0) - Senha: ????
+D) Grupo-04   SSID: G-04 (G-04-2.4 e G-04-5.0) - Senha: ????
+E) Grupo-05   SSID: G-05 (G-05-2.4 e G-05-5.0) - Senha: ????
+F) Grupo-06   SSID: G-06 (G-06-2.4 e G-06-5.0) - Senha: ????
 ```
 
-04. Baixar os Softwares de Análise de Rede Sem-Fio no seu Smartphone
+04. Configurações especificas da Rede Sem-Fio de 2.4Ghz (WiFi 4) e 5.0Ghz (WiFi 6)
+```bash
+A) Grupo-01: WiFi 4 (802.11n) 2.4Ghz Channel Width (MHz): 20MHz - Channel: 01 - Transmit Power: Medium - Security Protocol: WPA2
+B) Grupo-02: WiFi 4 (802.11n) 2.4Ghz Channel Width (MHz): 20MHz - Channel: 06 - Transmit Power: Medium - Security Protocol: WPA2
+C) Grupo-03: WiFi 4 (802.11n) 2.4Ghz Channel Width (MHz): 20MHz - Channel: 11 - Transmit Power: Medium - Security Protocol: WPA2
+D) Grupo-04: WiFi 4 (802.11n) 2.4Ghz Channel Width (MHz): 20MHz - Channel: 01 - Transmit Power: Medium - Security Protocol: WPA2
+E) Grupo-05: WiFi 4 (802.11n) 2.4Ghz Channel Width (MHz): 20MHz - Channel: 06 - Transmit Power: Medium - Security Protocol: WPA2
+F) Grupo-06: WiFi 4 (802.11n) 2.4Ghz Channel Width (MHz): 20MHz - Channel: 11 - Transmit Power: Medium - Security Protocol: WPA2
+
+A) Grupo-01: WiFi 6 (802.11ax) 5.0Ghz Channel Width (MHz): 40MHz - Channel: 038 - Transmit Power: High - Security Protocol: WPA2
+B) Grupo-02: WiFi 6 (802.11ax) 5.0Ghz Channel Width (MHz): 40MHz - Channel: 046 - Transmit Power: High - Security Protocol: WPA2
+C) Grupo-03: WiFi 6 (802.11ax) 5.0Ghz Channel Width (MHz): 40MHz - Channel: 151 - Transmit Power: High - Security Protocol: WPA2
+D) Grupo-04: WiFi 6 (802.11ax) 5.0Ghz Channel Width (MHz): 40MHz - Channel: 159 - Transmit Power: High - Security Protocol: WPA2
+E) Grupo-05: WiFi 6 (802.11ax) 5.0Ghz Channel Width (MHz): 40MHz - Channel: 038 - Transmit Power: High - Security Protocol: WPA2
+F) Grupo-06: WiFi 6 (802.11ax) 5.0Ghz Channel Width (MHz): 40MHz - Channel: 046 - Transmit Power: High - Security Protocol: WPA2
+```
+
+05. Baixar os Softwares de Análise de Rede Sem-Fio no seu Smartphone
 
   a) WiFiMan: https://play.google.com/store/apps/details?id=com.ubnt.usurvey&hl=pt_BR&gl=US<br>
   b) SIMET Mobile: https://play.google.com/store/apps/details?id=br.ceptro.simet.client.android&hl=pt_BR&gl=US

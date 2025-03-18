@@ -15,13 +15,14 @@ Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 ## Protocolos de Roteamento utilizados no Cisco (APROFUNDAMENTO DE ESTUDO PARA CERTIFICAÇÃO)
 
-**==== Protocolos: PDU, TCP, UDP e IP ====**
+**==== Protocolos: PDU, TCP, UDP, IPv4/IPv6 e MAC ====**
 ```bash
 A) PDU  (Protocol Data Unit - Protocolo de Unidade de Dados - Camada de Dados) 
 B) TCP  (Transmission Control Protocol - Protocolo de Controle de Transmissão - Confiabilidade)
 C) UDP  (User Datagram Protocol - Protocolo de Datagrama do Usuário - Sem Confiabilidade)
-D) IPv4 (Internet Protocol - Protocolo de Internet versão 4 - Decimal - 32 Bits)
-E) IPv6 (Internet Protocol - Protocolo de Internet versão 6 - Hexadecimal - 128 Bits)
+D) IPv4 (Internet Protocol - Protocolo de Internet versão 4 - Decimal (Base 10) - 32 Bits - 4 Octetos)
+E) IPv6 (Internet Protocol - Protocolo de Internet versão 6 - Hexadecimal (Base 16) - 128 Bits - 8 Hextetos)
+F) MAC  (Media Access Control - Controle de Acesso a Média - Hexadecimal (Base 16) - 48 Bits)
 ```
 
 **==== Protocolos: AS, IGP, EGP e BGP ====**
@@ -95,7 +96,7 @@ enable
 
     !Configurando o Roteamento de OSPF (??? = número de processo local)
     !Verificar a tabela de Endereçamento para ver o seu número de Processo Local
-    !Pode existir vários processo locais do OSPF, cada um com uma finalidade diferente
+    !Pode existir vários processos locais do OSPF, cada um com uma finalidade diferente
     !OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 270 
     !(NONA ETAPA: Determinação das Configurações do Protocolo de Roteamento Dinâmico OSPF)
     router ospf ???
@@ -121,13 +122,13 @@ enable
       auto-cost reference-bandwidth 10000
 
       !Registrar todas as alterações de adjacência e o estado dos links
-      !Esses registros serão armazenados no log do sistema operacional do IOS
+      !Esses registros serão armazenados nos logs do sistema operacional do IOS
       log-adjacency-changes detail
 
       !Declarando as redes fisicamente conectadas
       !Utilizando o recurso de Wildcard Mask (máscara coringa - máscara invertida)
       !Configuração da Área 0 (Single Area - Backbone, obrigatória existir na topologia)
-      !Calculando a máscara coringa: 255.255.255.255 - sua_mascara
+      !Calculando a máscara coringa: 255.255.255.255 - sua_mascara = máscara coringa
       !Exemplo: 255.255.255.255 - 255.255.255.252 = 0.0.0.3
       !OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 270 
       !(NONA ETAPA: Determinação das Configurações do Protocolo de Roteamento Dinâmico OSPF)

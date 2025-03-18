@@ -53,8 +53,8 @@ D) Desativar e Ativar novamente a Placa de Rede no Linux Mint.
 ```bash
 A) Linux Mint
   Terminal: Ctrl + Alt + T 
-    ifconfig (verificar a linha: inet 172.16.???.??? da sua Sub-Rede)
-    route -n (verificar a linha: 0.0.0.0 172.16.???.254 da sua Sub-Rede)
+    ifconfig   (verificar a linha: inet 172.16.???.??? da sua Sub-Rede)
+    route -n   (verificar a linha: 0.0.0.0 172.16.???.254 da sua Sub-Rede)
     resolvectl (verificar a linha: Current DNS Server 8.8.8.8)
 
 B) Windows 10

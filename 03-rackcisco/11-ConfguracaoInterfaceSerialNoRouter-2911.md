@@ -47,13 +47,13 @@ enable
       !Sempre vai ser o Endereço IPv4 IMPAR na Interface Serial 0/0/0
       ip address 192.168.1.??? 255.255.255.252
 
-      !Configurando o Clock Rate (Velocidade do Link) para 2000000bps (2.0Mbps)
+      !Configurando o Clock Rate (Velocidade do Link) para 2000000bps (2.0 Mbps)
       clock rate 2000000
 
-      !Configurando a Largura de Banda (Dividir o Clock Rate por  ou Data Communications Equipment1000 para achar o valor em Mbps)
+      !Configurando a Largura de Banda (Dividir o Clock Rate por 1000 para achar o valor em Mbps)
       bandwidth 2000
 
-      !Habilitando a interface
+      !Habilitando a interface Serial DCE
       no shutdown
 
       !Saindo das configurações da interface
@@ -62,7 +62,7 @@ enable
     !Configuração da interface Serial0/0/1 DTE (Data Terminal Equipment)
     interface serial 0/0/1
 
-      !Descrição da Interface
+      !Descrição da Interface Serial DTE
       !OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 232
       !(SÉTIMA ETAPA: Determinação da Interface Serial de WAN dos Grupos e seu Endereçamento IPv4)
       description Interface Serial do Grupo-??? para Grupo-???
@@ -75,7 +75,7 @@ enable
       !Configurando a Largura de Banda (Dividir o Clock Rate por 1000 para achar o valor em Mbps)
       bandwidth 2000
 
-      !Habilitando a interface
+      !Habilitando a interface Serial DTE
       no shutdown
 
       !Saindo das configurações da interface
