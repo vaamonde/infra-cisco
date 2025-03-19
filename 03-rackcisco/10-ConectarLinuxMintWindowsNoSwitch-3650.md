@@ -15,9 +15,11 @@ Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 ## PRIMEIRA ETAPA: Instalação e Configuração do GNU/Linux Mint e Windows 10
 
-**OBSERVAÇÃO: TODOS OS INTEGRANTES DOS GRUPOS DEVERÃO INSTALAR O LINUX MINT E O WINDOWS 10 UTILIZANDO O VIRTUALBOX NA UNIDADE DE DISCO CORRESPONDENTE PARA O ARMAZENAMENTO CORRETO DOS HDs VIRTUAIS, PROCEDIMENTO SERÁ PASSADO EM SALA DE AULA**
+**OBSERVAÇÃO: TODOS OS INTEGRANTES DOS GRUPOS DEVERÃO INSTALAR O LINUX MINT E O WINDOWS 10 UTILIZANDO O VIRTUALBOX NA UNIDADE DE DISCO CORRESPONDENTE PARA O ARMAZENAMENTO CORRETO DOS VHDs VIRTUAIS, PROCEDIMENTO SERÁ PASSADO EM SALA DE AULA**
 
-**OBSERVAÇÃO IMPORTANTE: Utilizar as máquinas virtuais do Linux Mint e Windows 10 no VirtualBOX, nesse cenário as máquinas virtuais estarão conectadas na Rede do Switch Cisco Catalyst 3560 e vai obter os endereços IPv4 fornecidos pelo Router Cisco 2911 via DHCP**
+**OBSERVAÇÃO IMPORTANTE:** Utilizar as máquinas virtuais do Linux Mint e Windows 10 no VirtualBOX, nesse cenário as máquinas virtuais estarão conectadas na Rede do Switch Cisco Catalyst 3560 e vai obter os endereços IPv4 fornecidos pelo Router Cisco 2911 via DHCP.
+
+**OBSERVAÇÃO** Caso a Placa de Rede Off-Board não esteja funcionando, informar o docente para documentar e utilizar a Placa de Rede On-Board.
 
 01. Alterar a Porta de Rede das Máquinas no VirtualBOX
 
@@ -64,7 +66,7 @@ B) Windows 10
     ipconfig /all (verificar a linha: Servidores DNS 8.8.8.8)
 ```
 
-04. Testar o ping no Router 2911 e no Switch 3560
+04. Testar o ping no Router 2911 e do Switch 3560 no Linux e no Windows
 
 ```bash
 Linux Mint ou Windows 10 
@@ -78,7 +80,7 @@ Linux Mint ou Windows 10
 OBSERVAÇÃO IMPORTANTE: NOS SISTEMAS OPERACIONAIS GNU/LINUX MINT E NO WINDOWS 10, UTILIZANDO O 
 TERMINAL OU POWERSHELL A CONEXÃO COM O SWITCH E ROUTER VIA COMANDO SSH PRECISA SER MODIFICADA 
 DEVIDO AO ALGORÍTIMO DE CRIPTOGRAFIA DE SENHA DOS EQUIPAMENTOS DA CISCO UTILIZAR UM PADRÃO
-DIFERENTE, ESSE ERRO NÃO ACONTECE QUANDO VOCÊ UTILIZAR O SOFTWARE PUTTY.
+DIFERENTE, ESSE ERRO NÃO ACONTECE QUANDO VOCÊ UTILIZAR O SOFTWARE PUTTY (RECOMENDADO).
 
 A) Linux Mint
   Terminal: Ctrl + Alt + T

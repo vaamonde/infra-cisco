@@ -25,10 +25,10 @@ enable
     !Configuração da interface GigabitEthernet 0/1 para acesso a Internet
     interface gigabitEthernet 0/1
 
-      !Descrição da Interface
+      !Descrição da Interface GigabitEthernet 0/1
       description Interface de acesso a Internet do Grupo-0???
 
-      !Configuração do endereçamento IP Dinâmico via DHCP Client
+      !Configuração do endereçamento IPv4 Dinâmico via DHCP Client
       ip address dhcp
 
       !Inicializando a Interface
@@ -46,7 +46,7 @@ enable
   !Visualizando as configurações de endereçamento IPv4
   show ip interface brief
 
-  !Visualizando as informações de Roteamento
+  !Visualizando as informações de Roteamento (Rota Padrão: 0.0.0.0 0.0.0.0 e Gateway Padrão)
   show ip route
 
   !Pingar os servidores do SENAC Tatuapé no Router
@@ -63,7 +63,7 @@ enable
   !Traçar as Rotas para os Servidores do Google no Router
   traceroute 8.8.8.8
 
-  !Nos Desktops Linux Mint ou Windows 10 deverá pingar via DNS
+  !Nos Desktops Linux Mint ou Windows 10 deverá pingar e traçar as rotas via DNS
   ping 8.8.8.8
   ping google.com
 ```

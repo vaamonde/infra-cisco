@@ -42,8 +42,8 @@ enable
       !(SÉTIMA ETAPA: Determinação da Interface Serial de WAN dos Grupos e seu Endereçamento IPv4)
       description Interface Serial do Grupo-??? para Grupo-???
 
-      !Configuração do endereçamento IPv4
-      !Verificar a tabela de endereçamento IP dos Grupos
+      !Configuração do endereçamento IPv4 da Interface Serial DCE
+      !Verificar a tabela de endereçamento IPv4 dos Grupos
       !Sempre vai ser o Endereço IPv4 IMPAR na Interface Serial 0/0/0
       ip address 192.168.1.??? 255.255.255.252
 
@@ -67,8 +67,8 @@ enable
       !(SÉTIMA ETAPA: Determinação da Interface Serial de WAN dos Grupos e seu Endereçamento IPv4)
       description Interface Serial do Grupo-??? para Grupo-???
 
-      !Configuração do endereçamento IP
-      !Verificar a tabela de endereçamento IP dos Grupos
+      !Configuração do endereçamento IP Interface Serial DTE
+      !Verificar a tabela de endereçamento IPv4 dos Grupos
       !Sempre vai ser o Endereço IPv4 PAR na Interface Serial 0/0/1
       ip address 192.168.1.??? 255.255.255.252
 
@@ -93,7 +93,8 @@ enable
   !Visualizando as informações de Roteamento
   show ip route
 
-  !ROUTER VIZINHO-DCE <---> DTE-0/0/1_SEU_ROUTER_DCE-0/0/0 <---> DTE-ROUTER VIZINHO
+  !TESTANDO A COMUNICAÇÃO ENTRE O VIZINHOS DAS INTERFACES SERIAIS
+  !ROUTER VIZINHO-DCE-0/0/0 <---> DTE-0/0/1_SEU_ROUTER_DCE-0/0/0 <---> 0/0/1-DTE-ROUTER VIZINHO
 
   !Pingar a SUA Interface Serial 0/0/0 DCE (SEMPRE SERÁ O ENDEREÇO IPv4 PAR)
   ping 192.168.1.??? (serial 0/0/0)
