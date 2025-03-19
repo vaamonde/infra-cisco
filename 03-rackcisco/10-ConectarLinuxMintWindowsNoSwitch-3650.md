@@ -74,7 +74,17 @@ Linux Mint ou Windows 10
   ping 172.16.???.254
 ```
 
-05. Acessar remotamente o Switch Cisco Catalyst 3560 e Router Cisco 2911 utilizando o SSH
+05. Testar o ping dos Desktops em sua VLAN's no Linux e no Windows
+
+**OBSERVAÇÃO:** NO WINDOWS 10, POR PADRÃO O FIREWALL ESTÁ HABILITADO, RECOMENDO DESABILITAR O FIREWALL PARA TESTAR OS PINGS EM TODOS OS EQUIPAMENTOS PARA NÃO TER FALHAS DE CONEXÃO.
+
+```bash
+Linux Mint ou Windows 10 
+  ping 172.16.???.???  (Pingar os Desktops Windows e Linux da sua VLANs)
+  ping 172.16.???.???  (Pingar os Desktops Windows e Linux de outras VLANs)
+```
+
+06. Acessar remotamente o Switch Cisco Catalyst 3560 e Router Cisco 2911 utilizando o SSH
 
 ```bash
 OBSERVAÇÃO IMPORTANTE: NOS SISTEMAS OPERACIONAIS GNU/LINUX MINT E NO WINDOWS 10, UTILIZANDO O 
