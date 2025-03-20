@@ -96,15 +96,15 @@ enable
   !TESTANDO A COMUNICAÇÃO ENTRE O VIZINHOS DAS INTERFACES SERIAIS
   !ROUTER VIZINHO-DCE-0/0/0 <---> DTE-0/0/1_SEU_ROUTER_DCE-0/0/0 <---> 0/0/1-DTE-ROUTER VIZINHO
 
-  !Pingar a SUA Interface Serial 0/0/0 DCE (SEMPRE SERÁ O ENDEREÇO IPv4 PAR)
+  !Pingar a SUA Interface Serial 0/0/0 DCE (SEMPRE SERÁ O ENDEREÇO IPv4 IMPAR)
   ping 192.168.1.??? (serial 0/0/0)
 
-  !Pingar a SUA Interface Serial 0/0/1 DTE (SEMPRE SERÁ O ENDEREÇO IPv4 IMPAR)
+  !Pingar a SUA Interface Serial 0/0/1 DTE (SEMPRE SERÁ O ENDEREÇO IPv4 PAR)
   ping 192.168.1.??? (serial 0/0/1)
 
-  !Pingar a Interface Serial 0/0/1 do SEU VIZINHO DTE (SEMPRE SERÁ O ENDEREÇO IPv4 IMPAR)
+  !Pingar a Interface Serial 0/0/1 do SEU VIZINHO DTE (SEMPRE SERÁ O ENDEREÇO IPv4 PAR)
   ping 192.168.1.??? (serial 0/0/1)
 
-  !Pingar a Interface Serial 0/0/0 do SEU VIZINHO DCE (SEMPRE SERÁ O ENDEREÇO IPv4 PAR)
+  !Pingar a Interface Serial 0/0/0 do SEU VIZINHO DCE (SEMPRE SERÁ O ENDEREÇO IPv4 IMPAR)
   ping 192.168.1.??? (serial 0/0/0)
 ```
