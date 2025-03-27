@@ -9,9 +9,19 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 26/11/2024<br>
-Versão: 0.03<br>
+Data de atualização: 27/03/2025<br>
+Versão: 0.04<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
+
+Conteúdo estudado nessa configuração:<br>
+#01_ Configurando o RSTP no Switch Multilayer 3650 no Cisco Packet Tracer;<br>
+#02_ Configurando o RSTP no Switch Layer 2 2960 Lado Esquerdo no Cisco Packet Tracer;<br>
+#03_ Configurando o RSTP no Switch Layer 2 2960 Lado Direito no Cisco Packet Tracer;<br>
+#04_ Verificando o RSTP nos Switches Multilayer e Layer 2 no Cisco Packet Tracer.<br>
+
+**OBSERVAÇÃO IMPORTANTE:** COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: *Configuração do Spanning Tree Protocol do Cenário B do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática*
+
+#boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #cisco #infracisco #desafiovaamonde #desafioboraparapratica #desafiocisco #desafioinfracisco
 
 ## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
 
@@ -58,7 +68,7 @@ A vantagem do *RSTP em conjunto com o PVST (Per VLAN Spanning-Tree) ou PVST+ (Pe
 
 ## PRIMEIRA ETAPA: Configurando o RSTP no Switch Multilayer 3650 no Cisco Packet Tracer.
 
-```python
+```bash
 !Acessando o modo EXEC Privilegiado
 enable
 
@@ -71,16 +81,16 @@ enable
     !OBSERVAÇÃO-02: na configuração do Switch Root Bridge do STP, temos as opções de: primary (Primário) ou secondary (Secundário)
     !OBSERVAÇÃO-03: podemos adicionar mais VLANs para a árvore do STP, utilizando as mesmas opções do comando: ip arp inspection ou
     !dhcp snooping - EXEMPLO: spanning-tree vlan 10 20 30 | spanning-tree vlan 10-30 | spanning-tree vlan 1,5,8,10-30
-    !IMPORTANTE-01: com essa configuração, automaticamente o Bridge ID da Switch será decrementado, sendo eleito o Root Bridge com a
-    !menor Priority entre os demais Switches Layer 2 da Rede
+    !IMPORTANTE-01: com essa configuração, automaticamente o Bridge ID da Switch será decrementado, sendo eleito o Root Bridge com
+    !a menor Priority entre os demais Switches Layer 2 da Rede
     spanning-tree vlan 1 root primary
 
     !Configurando o Modo de Rapid-Spanning no Switch Multilayer 3650
     !DICA-02: configurar o Rapid-PVST acelera o processo de convergência da rede
     !OBSERVAÇÃO-04: a configuração padrão do Modo do STP dos Switches da Cisco e: PVST
     !OBSERVAÇÃO-05: no Cisco Packet Tracer temos o suporte aos Modos do STP: pvst ou rapid-pvst 
-    !IMPORTANTE-02: caso você altere o modo do STP em um Switch na rede é recomendado manter a padronização em todos os Switches para
-    !o mesmo Modo do STP, para não ter conflitos de eleições ou configurações erradas da árvore do STP
+    !IMPORTANTE-02: caso você altere o modo do STP em um Switch na rede é recomendado manter a padronização em todos os Switches 
+    !para o mesmo Modo do STP, para não ter conflitos de eleições ou configurações erradas da árvore do STP
     spanning-tree mode rapid-pvst
 
     !Saindo de todos os níveis
@@ -92,7 +102,7 @@ enable
 
 ## SEGUNDA ETAPA: Configurando o RSTP no Switch Layer 2 2960 Lado Esquerdo no Cisco Packet Tracer.
 
-```python
+```bash
 !Acessando o modo EXEC Privilegiado
 enable
 
@@ -111,7 +121,7 @@ enable
 
 ## TERCEIRA ETAPA: Configurando o RSTP no Switch Layer 2 2960 Lado Direito no Cisco Packet Tracer.
 
-```python
+```bash
 !Acessando o modo EXEC Privilegiado
 enable
 
@@ -130,7 +140,7 @@ enable
 
 ## QUARTA ETAPA: Verificando o RSTP nos Switches Multilayer e Layer 2 no Cisco Packet Tracer.
 
-```python
+```bash
 !Visualizando as configurações da memória RAM
 show running-config | section spanning-tree
 

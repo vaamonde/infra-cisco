@@ -9,9 +9,19 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 26/11/2024<br>
-Versão: 0.05<br>
+Data de atualização: 27/03/2025<br>
+Versão: 0.06<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
+
+Conteúdo estudado nessa configuração:<br>
+#01_ Configuração dos Gateways das VLAN's utilizando os SVI's no Switch Multilayer 3650;<br>
+#02_ Configuração do Gateway da SVI no Switch Layer 2 2960 (Lado Esquerdo);<br>
+#03_ Configuração do Gateway da SVI no Switch Layer 2 2960 (Lado Direito);<br>
+#04_ Verificando as Configurações dos Switches.<br>
+
+**OBSERVAÇÃO IMPORTANTE:** COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: *Configuração dos Gateways do Cenário B do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática*
+
+#boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #cisco #infracisco #desafiovaamonde #desafioboraparapratica #desafiocisco #desafioinfracisco
 
 ## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
 
@@ -24,7 +34,7 @@ F) **IMPORTANTE:** informações importantes da tecnologia ou da configuração,
 G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração, com foco em adicionar informações extras da tecnologia ou da certificação.
 
 ## PRIMEIRA ETAPA: Configuração dos Gateways das VLAN's utilizando os SVI's no Switch Multilayer 3650
-```python
+```bash
 !Acessando o modo de Configuração Global de Comandos
 configure terminal
 
@@ -93,7 +103,7 @@ write
 ```
 
 ## SEGUNDA ETAPA: Configuração do Gateway da SVI no Switch Layer 2 2960 (Lado Esquerdo)
-```python
+```bash
 !Acessando o modo de Configuração Global de Comandos
 configure terminal
 
@@ -112,7 +122,7 @@ write
 ```
 
 ## TERCEIRA ETAPA: Configuração do Gateway da SVI no Switch Layer 2 2960 (Lado Direito)
-```python
+```bash
 !Acessando o modo de Configuração Global de Comandos
 configure terminal
 
@@ -131,7 +141,7 @@ write
 ```
 
 ## QUARTA ETAPA: Verificando as Configurações dos Switches.
-```python
+```bash
 !Visualizando as Configurações do Running-Config (RAM)
 show running-config
 

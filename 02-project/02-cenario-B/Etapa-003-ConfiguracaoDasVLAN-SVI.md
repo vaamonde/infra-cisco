@@ -9,9 +9,23 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 26/11/2024<br>
+Data de atualização: 27/03/2025<br>
 Versão: 0.05<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
+
+Conteúdo estudado nessa configuração:<br>
+#01_ Conhecendo as VLANs (Virtual LANs – Redes Locais Virtuais) no Cisco Packet Tracer;<br>
+#02_ Conhecendo os Ranges das VLANs no Cisco Packet Tracer;<br>
+#03_ Tipos de VLANs no Cisco Packet Tracer;<br>
+#04_ Conhecendo os Tipos de Portas das VLANs no Cisco Packet Tracer;<br>
+#05_ Configurando as VLANs no Switch Multilayer 3650 (CENTRO - DISTRIBUIÇÃO);<br>
+#06_ Configurando as VLANs no Switch Cisco Layer 2 2960 (LADO ESQUERDO - ACESSO);<br>
+#07_ Configurando as VLANs no Switch Cisco Layer 2 2960 (LADO DIREITO - ACESSO);<br>
+#08_ Verificando as Configurações dos Switches e Roteadores.
+
+**OBSERVAÇÃO IMPORTANTE:** COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: *Configuração das VLANs do Cenário B do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática*
+
+#boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #cisco #infracisco #desafiovaamonde #desafioboraparapratica #desafiocisco #desafioinfracisco
 
 ## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
 
@@ -58,7 +72,7 @@ B) **VLANs Dinâmicas** (Dynamic - são criadas e alteradas dinamicamente via So
 Uma Porta de **Acesso (access)**, permite associar uma porta do Switch a uma VLAN, as portas do tipo acesso são usadas para conectar dispositivos finais (Desktop, Notebook, Impressoras, Access Point, etc), por padrão, todas as portas dos Switches estão associadas na *VLAN Padrão/Nativa 1*, que transporta os dados sem marcação (Untagged VLAN).
 
 ## QUINTA ETAPA: Configurando as VLANs no Switch Multilayer 3650 (CENTRO - DISTRIBUIÇÃO)
-```python
+```bash
 !Acessando o modo de Configuração Global de Comandos
 configure terminal
 
@@ -102,7 +116,7 @@ configure terminal
   !utilizando o separador , (vírgula) e adicionando o nome das portas na configuração.
   !EXEMPLO-01: interface range fastEthernet 0/1 - 5, fastEthernet 0/10, fastEthernet 0/15
   interface range GigabitEthernet 1/0/10 - 19
-    
+
     !Descrição das Interfaces dos Servidores
     description Interface de Acesso da VLAN 50 dos Servidores
 
@@ -160,7 +174,7 @@ write
 ```
 
 ## SEXTA ETAPA: Configurando as VLANs no Switch Cisco Layer 2 2960 (LADO ESQUERDO - ACESSO)
-```python
+```bash
 configure terminal
 
   !Criando as VLANs Standard (Padrão) no Switch Layer 2 2960
@@ -236,7 +250,7 @@ write
 ```
 
 ## SÉTIMA ETAPA: Configurando as VLANs no Switch Cisco Layer 2 2960 (LADO DIREITO - ACESSO)
-```python
+```bash
 configure terminal
 
   !Criando as VLANs Standard (Padrão) no Switch Layer 2 2960
@@ -312,7 +326,7 @@ write
 ```
 
 ## OITAVA ETAPA: Verificando as Configurações dos Switches e Roteadores.
-```python
+```bash
 !Visualizando as Configurações do Running-Config (RAM)
 show running-config
 

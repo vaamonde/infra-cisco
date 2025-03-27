@@ -9,9 +9,19 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 26/11/2024<br>
-Versão: 0.03<br>
+Data de atualização: 25/03/2025<br>
+Versão: 0.04<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
+
+Conteúdo estudado nessa configuração:<br>
+#01_ Configurando o Etherchannel no Switch Multilayer 3650 no Cisco Packet Tracer;<br>
+#02_ Configurando o Etherchannel no Switch Layer 2 2960 Lado Esquerdo no Cisco Packet Tracer;<br>
+#03_ Configurando o Etherchannel no Switch Layer 2 2960 Lado Direito no Cisco Packet Tracer;<br>
+#04_ Verificando as Configurações dos Etherchannel dos Switches no Cisco Packet Tracer.<br>
+
+**OBSERVAÇÃO IMPORTANTE:** COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: *Configuração do Etherchannel do Cenário B do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática*
+
+#boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #cisco #infracisco #desafiovaamonde #desafioboraparapratica #desafiocisco #desafioinfracisco
 
 ## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
 
@@ -56,7 +66,7 @@ O **EtherChannel Estático (Manual)** é uma configuração que combina vários 
 
 ## PRIMEIRA ETAPA: Configurando o Etherchannel no Switch Multilayer 3650 no Cisco Packet Tracer.
 
-```python
+```bash
 !Acessando o modo EXEC Privilegiado
 enable
 
@@ -112,7 +122,7 @@ enable
 
 ## SEGUNDA ETAPA: Configurando o Etherchannel no Switch Layer 2 2960 Lado Esquerdo no Cisco Packet Tracer.
 
-```python
+```bash
 !Acessando o modo EXEC Privilegiado
 enable
 
@@ -149,9 +159,9 @@ enable
   write
 ```
 
-## SEGUNDA ETAPA: Configurando o Etherchannel no Switch Layer 2 2960 Lado Direito no Cisco Packet Tracer.
+## TERCEIRA ETAPA: Configurando o Etherchannel no Switch Layer 2 2960 Lado Direito no Cisco Packet Tracer.
 
-```python
+```bash
 !Acessando o modo EXEC Privilegiado
 enable
 
@@ -186,4 +196,46 @@ enable
 
   !Salvando as configurações da RAM para a NVRAM
   write
+```
+
+## QUARTA ETAPA: Verificando as Configurações dos Etherchannel dos Switches no Cisco Packet Tracer.
+
+```bash
+!Visualizando as configurações da memória RAM
+show running-config | section interface
+
+!Listando as Interfaces do Etherchannel
+!Os estados das portas podem aparecer como: P – Ativa no grupo, D – Down, I – Independente 
+!(não participa do EtherChannel), S – Em espera ou U – Em uso.
+show etherchannel summary
+
+!Exibir informações detalhadas do EtherChannel:
+show etherchannel port-channel
+
+!Verificando o status de um Port-Channel específico:
+show interfaces port-channel <ID> etherchannel
+
+!Verificando o estado das interfaces físicas dentro do EtherChannel:
+show interfaces etherchannel
+
+!Verificando o status de cada porta membro:
+show interfaces status
+
+!Exibindo estatísticas das portas membros:
+show interfaces <interface> etherchannel
+
+!Testando o balanceamento de carga do EtherChannel:
+show etherchannel load-balance
+
+!Exibindo estatísticas de tráfego:
+show interfaces port-channel <ID> counters
+
+!Verificando informações do LACP:
+show lacp neighbor
+
+!Testando a conexão nos Desktops da Rede com o Protocolo ICMP
+ping 192.168.1.1
+ping 172.16.0.33
+tracert 192.168.1.1
+tracert 172.16.0.33
 ```

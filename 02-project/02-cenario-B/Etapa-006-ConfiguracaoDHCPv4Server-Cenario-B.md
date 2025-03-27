@@ -9,9 +9,19 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 26/11/2024<br>
-Versão: 0.03<br>
+Data de atualização: 27/03/2024<br>
+Versão: 0.04<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
+
+Conteúdo estudado nessa configuração:<br>
+#01_ Conhecendo o Serviço do DHCP Server no Cisco Packet Tracer<br>
+#02_ Configurando o Serviço do DHCP Server no Cisco Packet Tracer;<br>
+#03_ Configurando o Recurso de Ajuda do DHCP no Switch Multilayer 3650 no Cisco Packet Tracer;<br>
+#04_ Testando o Serviço do DHCP Server no Cisco Packet Tracer.<br>
+
+**OBSERVAÇÃO IMPORTANTE:** COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: *Configuração do DHCP Server do Cenário B do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática*
+
+#boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #cisco #infracisco #desafiovaamonde #desafioboraparapratica #desafiocisco #desafioinfracisco
 
 ## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
 
@@ -45,7 +55,7 @@ O protocolo padrão utilizado pelo DHCP Server é o: *UDP (User Datagram Protoco
 
 **OBSERVAÇÃO-03:** o Switch Cisco Catalyst Layer 3 3560 ou Router possui os recursos para a configuração do DHCP Server, para redes pequenas e de médio porte é recomendado o seu uso, para redes grandes ou complexas o seu uso é limitado em alguns recursos, principalmente de monitoramento, relatórios e integrações de serviços.
 
-```python
+```bash
 !Habilitando o Serviço do DHCP Server no Servidor 02 (172.16.0.33)
 Server-02
   Services
@@ -134,7 +144,7 @@ H) Porta 138: serviço de conjunto de dados NetBIOS.<br>
 
 **OBSERVAÇÃO-04:** vale lembrar que o Roteador por padrão não encaminha Mensagens de Broadcast para outras Redes conectadas.
 
-```python
+```bash
 !Acessando o modo de Configuração Global de Comandos
 configure terminal
 
@@ -180,9 +190,9 @@ write
 
 ```
 
-## TERCEIRA ETAPA: Testando o Serviço do DHCP Server no Cisco Packet Tracer.
+## QUARTA ETAPA: Testando o Serviço do DHCP Server no Cisco Packet Tracer.
 
-a) Abrindo o Prompt de Comando do Desktop;
+A) Abrindo o Prompt de Comando do Desktop;
 
 **DICA-03** não confunda Terminal com Command Prompt, Terminal é utilizado para se conectar no Switch ou Router utilizando o Cabo Console, já o Command Prompt (Prompt de Comando) é utilizado para testar as configurações de rede e acessar remotamente o Switch ou Router.
 

@@ -9,9 +9,20 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 26/11/2024<br>
-Versão: 0.05<br>
+Data de atualização: 27/03/2025<br>
+Versão: 0.06<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
+
+Conteúdo estudado nessa configuração:<br>
+#01_ Conhecendo as Portas Trunk (Tronco) no Cisco Packet Tracer;<br>
+#02_ Configurando as Portas Trunk no Switch Multilayer 3650 (CENTRO - DISTRIBUIÇÃO);<br>
+#03_ Configurando as Portas Trunk no Switch Cisco Layer 2 2960 (LADO ESQUERDO - ACESSO);<br>
+#04_ Configurando as Portas Trunk no Switch Cisco Layer 2 2960 (LADO DIREITO - ACESSO);<br>
+#05_ Verificando as Configurações dos Trunks nos Switches 3650 e 2960.<br>
+
+**OBSERVAÇÃO IMPORTANTE:** COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: *Configuração dos Trunks do Cenário B do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática*
+
+#boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #cisco #infracisco #desafiovaamonde #desafioboraparapratica #desafiocisco #desafioinfracisco
 
 ## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
 
@@ -28,16 +39,16 @@ G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração
 Uma **Porta de Tronco (trunk)**, normalmente é usada para interligação de Switches ou ligação de Roteadores e Servidores, ela permite a passagem de tráfego de várias VLANs, configurando uma porta como Trunk, todo o tráfego de todas as VLANs criadas no Switch podem passar por ela, no entanto o administrador pode limitar o número de VLANs que podem passar pelo Trunk.
 
 ## SEGUNDA ETAPA: Configurando as Portas Trunk no Switch Multilayer 3650 (CENTRO - DISTRIBUIÇÃO)
-```python
+```bash
 !Acessando o modo de Configuração Global de Comandos
 configure terminal
 
   !Configurando as Interface de Trunk com os Switches Layer 2 2960
   interface range GigabitEthernet 1/0/1 - 9
-    
+
     !Descrição das Interfaces de Trunk
     description Interface de Trunk com os Switches Layer 2 2960
-    
+
     !Configurando o modo de Trunk (Tronco) das Interfaces
     switchport mode trunk
 
@@ -56,7 +67,7 @@ write
 ```
 
 ## TERCEIRA ETAPA: Configurando as Portas Trunk no Switch Cisco Layer 2 2960 (LADO ESQUERDO - ACESSO)
-```python
+```bash
 !Acessando o modo de Configuração Global de Comandos
 configure terminal
 
@@ -76,7 +87,7 @@ write
 ```
 
 ## QUARTA ETAPA: Configurando as Portas Trunk no Switch Cisco Layer 2 2960 (LADO DIREITO - ACESSO)
-```python
+```bash
 !Acessando o modo de Configuração Global de Comandos
 configure terminal
 
@@ -96,7 +107,7 @@ write
 ```
 
 ## QUINTA ETAPA: Verificando as Configurações dos Trunks nos Switches 3650 e 2960.
-```python
+```bash
 !Visualizando as Configurações do Running-Config (RAM)
 show running-config
 

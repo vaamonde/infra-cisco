@@ -9,9 +9,18 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 18/05/2024<br>
-Versão: 0.02<br>
+Data de atualização: 27/03/2025<br>
+Versão: 0.03<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
+
+Conteúdo estudado nessa configuração:<br>
+#01_ Conhecendo o Serviço do FTP, HTTP e HTTPS Server no Cisco Packet Tracer;<br>
+#02_ Configuração de uma página HTML com nossas informações para testar o serviço HTTP e HTTPS;<br>
+#03_ Testando os serviços de FTP, HTTP e HTTPS no Cisco Packet Tracer.<br>
+
+**OBSERVAÇÃO IMPORTANTE:** COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: *Configuração do FTP e HTTP Server do Cenário B do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática*
+
+#boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #cisco #infracisco #desafiovaamonde #desafioboraparapratica #desafiocisco #desafioinfracisco
 
 ## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
 
@@ -39,24 +48,26 @@ O protocolo padrão utilizado pelo HTTP Server é o: *TCP (Transmission Control 
 
 O protocolo padrão utilizado pelo HTTPS Server é o: *TCP (Transmission Control Protocol)* na porta padrão: *443*.
 
-a) Configurações do Serviço de FTP Server no Cisco Packet Tracer:
+A) Configurações do Serviço de FTP Server no Cisco Packet Tracer:
 
 **OBSERVAÇÃO-01:** por padrão o Serviço de FTP Server no Cisco Packet Tracer está: *ligado*;
 
 **OBSERVAÇÃO-02:** diferente do TFTP o FTP trabalha com autenticação ou acesso anônimo (sem autenticação - famoso usuário: anonymous) e permissões de: *Escrita (Write), Leitura (Read), Remoção (Delete), Renomear (Rename) e Listar (List)* o conteúdo dos arquivos e diretórios.
 
-	!Habilitando o Serviço do FTP Server no Servidor 02
-	Server-02
-		Services
-			FTP
+```bash
+!Habilitando o Serviço do FTP Server no Servidor 02
+Server-02
+  Services
+    FTP
 
-	Service       On
-	User Setup    Username: senac      Password: pti@2018
-	              Write=Yes, Read=Yes, Delete=Yes, Rename=Yes, List=Yes
-	              Username: vaamonde   Password: pti@2018
-	              Write=No, Read=Yes, Delete=No, Rename=No, List=Yes
+Service       On
+User Setup    Username: senac      Password: pti@2018
+              Write=Yes, Read=Yes, Delete=Yes, Rename=Yes, List=Yes
+              Username: vaamonde   Password: pti@2018
+              Write=No, Read=Yes, Delete=No, Rename=No, List=Yes
+```
 
-b) Configurações do Serviço de HTTP/HTTPS Server no Cisco Packet Tracer:
+B) Configurações do Serviço de HTTP/HTTPS Server no Cisco Packet Tracer:
 
 **OBSERVAÇÃO-03:** por padrão o Serviço de HTTP/HTTPS Server no Cisco Packet Tracer está: *ligado*;
 
@@ -66,46 +77,51 @@ b) Configurações do Serviço de HTTP/HTTPS Server no Cisco Packet Tracer:
 
 **OBSERVAÇÃO-05:** o Cisco Packet Tracer é limitado para as configurações de Unidade Certificadora CA e geração dos certificados assinados, esse procedimento e feito em servidores reais como o Windows Server ou GNU/Linux.
 
-	!Habilitando o Serviço do HTTP e HTTPS Server no Servidor 02
-	Server-02
-		Services
-			HTTP
+```bash
+!Habilitando o Serviço do HTTP e HTTPS Server no Servidor 02
+Server-02
+  Services
+    HTTP
 
-	Service HTTP    On
-	Service HTTPS   On
-
-!TERCEIRA ETAPA: Configuração de uma página HTML com nossas informações para testar o serviço HTTP e HTTPS
-```html
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Bora para Prática</title>
-	</head>
-	<body>
-		<center>
-		<h1>Robson Vaamonde</h1>
-		<p>Configuração do Servidor HTTP e HTTPS no Cisco Packet Tracer</p>
-		<p><b>Projeto Bora para Prática!!!</b></p>
-		<p><b><i><u>Curso de Técnico em Informática</u></i></b></p>
-		</center>
-	</body>
-</html>
+Service HTTP    On
+Service HTTPS   On
 ```
 
-!Comandos básicos para testar o acesso ao FTP e HTTP/HTTPS
+## SEGUNDA ETAPA: Configuração de uma página HTML com nossas informações para testar o serviço HTTP e HTTPS
+```html
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Bora para Prática</title>
+    </head>
+    <body>
+      <center>
+      <h1>Robson Vaamonde</h1>
+      <p>Configuração do Servidor HTTP e HTTPS no Cisco Packet Tracer</p>
+      <p><b>Projeto Bora para Prática!!!</b></p>
+      <p><b><i><u>Curso de Técnico em Informática</u></i></b></p>
+      </center>
+    </body>
+  </html>
+```
 
-!PRIMEIRA ETAPA: testando localmente no servidor os serviços de rede
+## TERCEIRA ETAPA: Testando os serviços de FTP, HTTP e HTTPS no Cisco Packet Tracer
+```bash
+!testando localmente no servidor os serviços de rede
 nslookup ftp.vaamonde.pti
 ping ftp.vaamonde.pti
 
+!Testando o acesso ao servidor de FTP Server
 ftp ftp.vaamonde.pti
-	Username: vaamonde
-	Password: vaamonde
+  Username: vaamonde
+  Password: vaamonde
 
+!Testando o acesso ao servidor de HTTP Server
 http://localhost
 http://127.0.0.1
 
-!SEGUNDA ETAPA: testando remotamente no cliente Microsoft Windows
+
+!Testando remotamente no cliente Microsoft Windows
 http://www.vaamonde.pti
 https://www.vaamonde.pti
 Text Editor: vaamonde.txt
@@ -113,16 +129,17 @@ dir
 
 !Enviando arquivos para o servidor FTP
 ftp ftp.vaamonde.pti
-	Username: vaamonde
-	Password: vaamonde	
-	dir
-	put vaamonde.txt
-	quit
+  Username: vaamonde
+  Password: vaamonde	
+  dir
+  put vaamonde.txt
+  quit
 
 !Recebendo arquivos do servidor FTP
 ftp ftp.vaamonde.pti
-	Username: robson
-	Password: robson	
-	get vaamonde.txt
-	quit
+  Username: robson
+  Password: robson	
+  get vaamonde.txt
+  quit
 dir
+```

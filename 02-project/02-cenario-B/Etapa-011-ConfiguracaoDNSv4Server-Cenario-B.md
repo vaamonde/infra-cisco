@@ -9,9 +9,18 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 18/05/2024<br>
-Versão: 0.02<br>
+Data de atualização: 27/03/2025<br>
+Versão: 0.03<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
+
+Conteúdo estudado nessa configuração:<br>
+#01_ Conhecendo o Serviço do DNS Server no Cisco Packet Tracer;<br>
+#02_ Configurando o Serviço do DNS Server no Cisco Packet Tracer;<br>
+#03_ Testando o Serviço do DNS Server no Cisco Packet Tracer.<br>
+
+**OBSERVAÇÃO IMPORTANTE:** COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: *Configuração do DNS Server do Cenário B do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática*
+
+#boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #cisco #infracisco #desafiovaamonde #desafioboraparapratica #desafiocisco #desafioinfracisco
 
 ## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
 
@@ -55,6 +64,7 @@ O protocolo padrão utilizado pelo DNS Server é o: *UDP (User Datagram Protocol
 
 **OBSERVAÇÃO-05:** no Cisco Packet Tracer temos apenas a configuração da Zona de Pesquisa Direta, não está disponível a opção para configurar a Zona de Pesquisa Reversa.
 
+```bash
 !Habilitando o Serviço do DNS Server no Servidor 02
 Server-02
   Services
@@ -78,9 +88,17 @@ Resource Records:  Name = server-03        Type = A Record     Address = 172.16.
 Resource Records:  Name = server-04        Type = A Record     Address = 172.16.0.35
 Resource Records:  Name = server-05        Type = A Record     Address = 172.16.0.36
 
-a) Abrindo o Prompt de Comando do Desktop;
+A) Abrindo o Prompt de Comando do Desktop;
 
 **DICA-03** não confunda Terminal com Command Prompt, Terminal é utilizado para se conectar no Switch ou Router utilizando o Cabo Console, já o Command Prompt (Prompt de Comando) é utilizado para testar as configurações de rede e acessar remotamente o Switch ou Router.
+```
+
+## TERCEIRA ETAPA: Testando o Serviço do DNS Server no Cisco Packet Tracer.
+
+A) Abrindo o Prompt de Comando do Desktop;
+
+**DICA-03** não confunda Terminal com Command Prompt, Terminal é utilizado para se conectar no Switch ou Router utilizando o Cabo Console, já o Command Prompt (Prompt de Comando) é utilizado para testar as configurações de rede e acessar remotamente o Switch ou Router.
+
 ```bash
 !Verificando o endereço IPv4 configurado no Desktop
 C:\> ipconfig

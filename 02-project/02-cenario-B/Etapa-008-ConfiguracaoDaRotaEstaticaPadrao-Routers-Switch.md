@@ -9,9 +9,21 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 26/11/2024<br>
-Versão: 0.03<br>
+Data de atualização: 27/03/2025<br>
+Versão: 0.04<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
+
+Conteúdo estudado nessa configuração:<br>
+#01_ Configurando a Interface do Roteador 4321 do Cenário B no Cisco Packet Tracer;<br>
+#02_ Configurando a Interface do Roteador 1941 do Cenário A no Cisco Packet Tracer;<br>
+#03_ Configurando a Rota Padrão no Router 1941 do Cenário A no Cisco Packet Tracer;<br>
+#04_ Configurando a Rota Padrão no Switch Multilayer 3650 do Cenário B no Cisco Packet Tracer;<br>
+#05_ Configurando a Rota Padrão no Router 4321 do Cenário B no Cisco Packet Tracer;<br>
+#06_ Verificando as Configurações de Rotas no Router e Switch no Cisco Packet Tracer.
+
+**OBSERVAÇÃO IMPORTANTE:** COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: *Configuração da Rota Estática do Cenário B do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática*
+
+#boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #cisco #infracisco #desafiovaamonde #desafioboraparapratica #desafiocisco #desafioinfracisco
 
 ## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
 
@@ -25,7 +37,7 @@ G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração
 
 ## PRIMEIRA ETAPA: Configurando a Interface do Roteador 4321 do Cenário B no Cisco Packet Tracer.
 
-```python
+```bash
 !Acessando o modo EXEC Privilegiado
 enable
 
@@ -69,7 +81,7 @@ enable
 
 ## SEGUNDA ETAPA: Configurando a Interface do Roteador 1941 do Cenário A no Cisco Packet Tracer.
 
-```python
+```bash
 !Acessando o modo EXEC Privilegiado
 enable
 
@@ -93,7 +105,7 @@ enable
 
 ## TERCEIRA ETAPA: Configurando a Rota Padrão no Router 1941 do Cenário A no Cisco Packet Tracer.
 
-```python
+```bash
 !Acessando o modo EXEC Privilegiado
 enable
 
@@ -118,7 +130,7 @@ enable
 
 ## QUARTA ETAPA: Configurando a Rota Padrão no Switch Multilayer 3650 do Cenário B no Cisco Packet Tracer.
 
-```python
+```bash
 !Acessando o modo EXEC Privilegiado
 enable
 
@@ -136,7 +148,7 @@ enable
 
 ## QUINTA ETAPA: Configurando a Rota Padrão no Router 4321 do Cenário B no Cisco Packet Tracer.
 
-```python
+```bash
 !Acessando o modo EXEC Privilegiado
 enable
 
@@ -154,7 +166,7 @@ enable
 
 ## SEXTA ETAPA: Verificando as Configurações de Rotas no Router e Switch no Cisco Packet Tracer.
 
-```python
+```bash
 !Visualizando as configurações da memória RAM
 show running-config | section interface
 show running-config | section ip route
