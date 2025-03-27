@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 08/03/2025<br>
-Versão: 0.04<br>
+Data de atualização: 27/03/2025<br>
+Versão: 0.05<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -18,7 +18,7 @@ Conteúdo estudado nessa configuração:<br>
 #02_ SEGUNDA ETAPA: Automatizando a Configuração do Primeiro Router Cisco 1941.<br>
 #03_ TERCEIRA ETAPA: Verificando as Configurações do Primeiro Router Cisco 1941.<br>
 
-OBSERVAÇÃO IMPORTANTE: COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: Configuração Base Router 1941 do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática
+**OBSERVAÇÃO IMPORTANTE:** COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: *Configuração Base Router 1941 do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática*
 
 #boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #cisco #infracisco #desafiovaamonde #desafioboraparapratica #desafiocisco #desafioinfracisco
 
@@ -193,7 +193,7 @@ enable
 ## TERCEIRA ETAPA: Verificando as Configurações do Primeiro Router Cisco 1941.
 ```bash
 !Visualizando as Configurações do Running-Config (RAM)
-!OBSERVAÇÃO: ÚNICA LINHA QUE NÃO APARECE NAS CONFIGURAÇÃO É A: crypto key generate rsa
+!OBSERVAÇÃO: A ÚNICA LINHA QUE NÃO APARECE NAS CONFIGURAÇÕES DO SSH É A: crypto key generate rsa
 rt-01# show running-config
 
 !Fazendo um Filtro na Visualização do Running-Config somente da Sessão Line Console 0

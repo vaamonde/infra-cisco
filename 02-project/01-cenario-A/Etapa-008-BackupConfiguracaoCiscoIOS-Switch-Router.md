@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 03/12/2024<br>
-Versão: 0.06<br>
+Data de atualização: 27/03/2025<br>
+Versão: 0.07<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -18,7 +18,7 @@ Conteúdo estudado nessa configuração:<br>
 #02_ SEGUNDA ETAPA: Backup das Configurações do Cisco IOS do Primeiro Switch Cisco Catalyst Layer 2 2960<br>
 #03_ TERCEIRA ETAPA: Backup das Configurações do Cisco IOS do Primeiro Router Cisco 1941.<br>
 
-OBSERVAÇÃO IMPORTANTE: COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: Configuração do Backup Restore  do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática
+**OBSERVAÇÃO IMPORTANTE:** COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: *Configuração do Backup Restore  do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática*
 
 #boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #cisco #infracisco #desafiovaamonde #desafioboraparapratica #desafiocisco #desafioinfracisco
 
@@ -186,7 +186,7 @@ Server-01
 
 **OBSERVAÇÃO-07:** não é aconselhável alterar o nome da imagem, ela segue um padrão de nomenclatura que é recomendado pela Cisco.
 
-**EXEMPLO: 2960-lanbasek9-mz.150-2.SE4.bin** <br>
+**EXEMPLO-01:** 2960-lanbasek9-mz.150-2.SE4.bin <br>
 A) Primeira parte: 2960 plataforma/família do equipamento;<br>
 B) Segunda parte: lanbasek9 indicação do package/funcionalidade do IOS;<br>
 C) Terceira parte: compactação da Imagem m=RAM | z=zip;<br>

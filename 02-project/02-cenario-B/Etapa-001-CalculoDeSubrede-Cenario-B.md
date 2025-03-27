@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 26/11/2024<br>
-Versão: 0.05<br>
+Data de atualização: 27/03/2025<br>
+Versão: 0.06<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 ## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
@@ -25,8 +25,8 @@ G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração
 
 ## PRIMEIRA ETAPA: Determinação da Rede Classful do Cenário B
 ```bash
-Bloco de Rede Classful B fornecido: 172.16.0.0/16
-Cenário B irá utilizar: 8 (oito) Sub-redes.
+A) Bloco de Rede Classful B fornecido: 172.16.0.0/16
+B) Cenário B irá utilizar: 8 (oito) Sub-redes.
 ```
 
 ## SEGUNDA ETAPA: Cálculo de Sub-Redes do Cenário B:

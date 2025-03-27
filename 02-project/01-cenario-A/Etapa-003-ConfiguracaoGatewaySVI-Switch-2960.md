@@ -7,8 +7,8 @@
 #Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem<br>
 #YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 #Data de criação: 16/09/2024<br>
-#Data de atualização: 25/11/2024<br>
-#Versão: 0.06<br>
+#Data de atualização: 27/03/2025<br>
+#Versão: 0.07<br>
 #Testado e homologado no Linux Mint 22 Wilma x64<br>
 #Testado e homologado o Cisco Packet Tracer 8.2.x x64 e Rack Cisco SW-3560 e RT-2911
 
@@ -18,7 +18,7 @@ Conteúdo estudado nessa configuração:<br>
 #03_ TERCEIRA ETAPA: Configuração da Interface SVI no Cisco IOS.<br>
 #04_ QUARTA ETAPA: Automatizando a Configuração do Segundo Switch Cisco Catalyst 2960.<br>
 
-OBSERVAÇÃO IMPORTANTE: COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: Configuração SVI Switch 2960 do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática
+**OBSERVAÇÃO IMPORTANTE:** COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: *Configuração SVI Switch 2960 do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática*
 
 #boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #cisco #infracisco #desafiovaamonde #desafioboraparapratica #desafiocisco #desafioinfracisco
 
@@ -82,7 +82,7 @@ sw-01(config)# ip default-gateway 192.168.1.254
 sw-01(config)# interface vlan 1
 ```
 
-a) Configuração da Descrição da Interface Virtual VLAN-1.
+A) Configuração da Descrição da Interface Virtual VLAN-1.
 
 **DICA-05:** sempre utilizar o comando: *description* nas Interfaces para efeito de documentação.
 
@@ -91,7 +91,7 @@ a) Configuração da Descrição da Interface Virtual VLAN-1.
 sw-01(config-if)# description Interface de Gerenciamento do Switch SW-01
 ```
 
-b) Configuração do Endereçamento IPv4 da Interface Virtual VLAN-1.
+B) Configuração do Endereçamento IPv4 da Interface Virtual VLAN-1.
 
 **DICA-06:** o endereço IPv4 deve ser da mesma faixa de Rede ou Sub-Rede do Gateway Padrão configurado no Switch na Segunda Etapa.
 
@@ -102,7 +102,7 @@ b) Configuração do Endereçamento IPv4 da Interface Virtual VLAN-1.
 sw-01(config-if)# ip address 192.168.1.250 255.255.255.0
 ```
 
-c) Inicializando a Interface Virtual da VLAN-1.
+C) Inicializando a Interface Virtual da VLAN-1.
 
 **DICA-08:** por padrão todas as Interfaces estão no status: *desligada (Shutdown)* no Switch ou Router.
 
@@ -113,7 +113,7 @@ c) Inicializando a Interface Virtual da VLAN-1.
 sw-01(config-if)# no shutdown
 ```
 
-d) Saindo de todos os níveis e voltando para o modo EXEC Privilegiado.
+D) Saindo de todos os níveis e voltando para o modo EXEC Privilegiado.
 
 **DICA-10:** somente no modo EXEC Privilegiado você tem o comando: *copy* para salvar as configurações.
 
@@ -124,7 +124,7 @@ d) Saindo de todos os níveis e voltando para o modo EXEC Privilegiado.
 sw-01(config-if)# end
 ```
 
-e) Salvando as configurações da memória RAM (Running-Config) para a memória NVRAM (Startup-Config)
+E) Salvando as configurações da memória RAM (Running-Config) para a memória NVRAM (Startup-Config)
 
 **DICA-12:** nunca esqueça de salvar as configurações.
 ```bash
@@ -152,7 +152,7 @@ sw-01# show ip interface brief
 sw-01# show vlan brief
 ```
 
-f) Testando a conectividade entre o Switch e os Desktops da Rede
+F) Testando a conectividade entre o Switch e os Desktops da Rede
 
 **DICA-14** depois da configuração da SVI no Switch Cisco Catalyst Layer 2 você consegue agora pingar os Desktops da Rede utilizado o Protocolo ICMP (Internet Control Message Protocol) com o comando: *ping* para testar a interconectividade de rede.
 

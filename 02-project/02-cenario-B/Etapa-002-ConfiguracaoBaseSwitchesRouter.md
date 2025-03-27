@@ -9,9 +9,19 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 08/03/2025<br>
-Versão: 0.06<br>
+Data de atualização: 27/03/2025<br>
+Versão: 0.07<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
+
+Conteúdo estudado nessa configuração:<br>
+#01_ Configuração Base Switch Cisco Catalyst Layer 2 2960 (LADO ESQUERDO - ACESSO)<br>
+#02_ Configuração Base Switch Cisco Catalyst Layer 2 2960 (LADO DIREITO - ACESSO)<br>
+#03_ Configuração Base Switch Cisco Multilayer 3650 (CENTRO - DISTRIBUIÇÃO)<br>
+#04_ Verificando as Configurações dos Switches e Roteador.<br>
+
+**OBSERVAÇÃO IMPORTANTE:** COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: *Configuração Base do Cenário B do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática*
+
+#boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #cisco #infracisco #desafiovaamonde #desafioboraparapratica #desafiocisco #desafioinfracisco
 
 ## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
 
@@ -24,7 +34,7 @@ F) **IMPORTANTE:** informações importantes da tecnologia ou da configuração,
 G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração, com foco em adicionar informações extras da tecnologia ou da certificação.
 
 ## PRIMEIRA ETAPA: Configuração Base Switch Cisco Catalyst Layer 2 2960 (LADO ESQUERDO - ACESSO)
-```python
+```bash
 !Acessando o modo Exec Privilegiado
 enable
 
@@ -39,7 +49,7 @@ enable
 
     !Habilitando o serviço de criptografia de senhas do Tipo-7 Password 
     service password-encryption
-    
+
     !Habilitando o serviço de marcação de Data/Hora detalhado nos Logs
     service timestamps log datetime msec
 
@@ -127,7 +137,7 @@ enable
 ```
 
 ## SEGUNDA ETAPA: Configuração Base Switch Cisco Catalyst Layer 2 2960 (LADO DIREITO - ACESSO)
-```python
+```bash
 !Acessando o modo Exec Privilegiado
 enable
 
@@ -230,7 +240,7 @@ enable
 ```
 
 ## TERCEIRA ETAPA: Configuração Base Switch Cisco Multilayer 3650 (CENTRO - DISTRIBUIÇÃO)
-```python
+```bash
 !Acessando o modo Exec Privilegiado
 enable
 
@@ -339,7 +349,7 @@ enable
 ```
 
 ## QUARTA ETAPA: Configuração Base do Router Cisco 4321 (CENTRO - NÚCLEO)
-```python
+```bash
 !Acessando o modo EXEC Privilegiado
 enable
 
@@ -367,7 +377,7 @@ enable
 
     !Configuração do Banner da mensagem do dia
     banner motd #AVISO: acesso autorizado somente a funcionarios#
-    
+
     !Habilitando o comprimento mínimo da criação das senhas do Tipo-5 ou Tipo-7
     security passwords min-length 8
 
@@ -378,7 +388,7 @@ enable
     username robson secret pti@2018
     username vaamonde password pti@2018
     username admin privilege 15 secret pti@2018
-    
+
     !Configuração do nome de domínio FQDN (Fully Qualified Domain Name)
     ip domain-name pti.intra
 
@@ -449,7 +459,7 @@ enable
 ```
 
 ## QUINTA ETAPA: Verificando as Configurações dos Switches e Roteador.
-```python
+```bash
 !Visualizando as Configurações do Running-Config (RAM)
 !OBSERVAÇÃO: ÚNICA LINHA QUE NÃO APARECE NAS CONFIGURAÇÃO É A: crypto key generate rsa
 show running-config

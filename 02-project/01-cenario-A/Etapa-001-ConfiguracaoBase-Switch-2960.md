@@ -7,8 +7,8 @@
 #Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem<br>
 #YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 #Data de criação: 16/09/2024<br>
-#Data de atualização: 08/03/2025<br>
-#Versão: 0.08<br>
+#Data de atualização: 27/03/2025<br>
+#Versão: 0.09<br>
 #Testado e homologado no Linux Mint 22 Wilma x64<br>
 #Testado e homologado o Cisco Packet Tracer 8.2.x x64 e Rack Cisco SW-3560 e RT-2911
 
@@ -24,7 +24,7 @@ Conteúdo estudado nessa configuração:<br>
 #09_ NOVA ETAPA: Testando o acesso ao Switch Cisco Catalyst 2960.<br>
 #10_ DÉCIMA ETAPA: Automatizando a Configuração do Segundo Switch Cisco Catalyst 2960 Layer 2.<br>
 
-OBSERVAÇÃO IMPORTANTE: COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: Configuração Base Switch 2960 do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática
+**OBSERVAÇÃO IMPORTANTE:** COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: *Configuração Base Switch 2960 do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática*
 
 #boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #cisco #infracisco #desafiovaamonde #desafioboraparapratica #desafiocisco #desafioinfracisco
 
@@ -79,7 +79,7 @@ clear  clock  configure  connect  copy
 
 **DICA-03** se você está estudando para a Certificação Cisco CCNAv7, é recomendado digitar os comandos completos, utilize comandos abreviados somente quando você já domina o Cisco IOS.
 
-**EXEMPLO: enable = en | show running-config = sh runn | interface FastEthernet0/0 = int fa0/0**
+**EXEMPLO:** enable = en | show running-config = sh runn | interface FastEthernet0/0 = int fa0/0
 
 Para sair do modo EXEC Privilegiado você pode digitar o comando: *disable* ou *exit*.
 ```bash
@@ -98,9 +98,9 @@ Switch>
 
 01. Configuração de Data/Hora em Inglês, você pode usar o Mês abreviado ou completo na configuração.
 
-**EXEMPLO: March ou Mar | April ou Apr | November ou Nov | December ou Dec**
+**EXEMPLO:** March ou Mar | April ou Apr | November ou Nov | December ou Dec
 
-**EXEMPLO: Hora no formato Universal: Hora:Minutos:Segundos 00:00:00 - Data no formato: Dia Mês Completo ou Abreviado e Ano Completo: 01 March 2024**
+**EXEMPLO:** Hora no formato Universal: Hora:Minutos:Segundos 00:00:00 - Data no formato: Dia Mês Completo ou Abreviado e Ano Completo: 01 March 2024
 
 **DICA-04:** é recomendado utilizar o Protocolo NTP (Network Time Protocol) para manter sincronizado a Data e Hora no Switch ou Router.
 ```bash
@@ -156,7 +156,7 @@ sw-01(config)# logging buffered 4096
 
 **DICA-10:** se você desabilitar esse recurso o problema de travamento de comandos digitados fora do seu modo padrão no Cisco IOS é resolvido, mais você perde a resolução de nomes nos equipamentos, em Switch e Router esse recurso é pouco utilizado, somente quando é feito a integração com o Serviço de DNS (Domain Name Service).
 
-**EXEMPLO: switch# time (Translating "time"...domain server (255.255.255.255))**
+**EXEMPLO:** switch# time (Translating "time"...domain server (255.255.255.255))
 
 **DICA-11:** para desbloquear o terminal, você pressiona: *Ctrl + Shift + 6* ou espera a liberação do terminal que demora cerca de *60 segundos*.
 
@@ -169,7 +169,7 @@ sw-01(config)# no ip domain-lookup
 
 **DICA-13:** existe vários tipos de Banners no Cisco IOS, o MOTD (Message-of-the-Day - Mensagem do Dia) é o mais utilizado.
 
-**EXEMPLO: banner motd (Mensagem do Dia), banner login (Mensagem de Login), banner exec (Mensagem de Modo EXEC), banner incoming (Mensagem de Entrada)**
+**EXEMPLO:** banner motd (Mensagem do Dia), banner login (Mensagem de Login), banner exec (Mensagem de Modo EXEC), banner incoming (Mensagem de Entrada)
 
 **DICA-14:** é recomendado não utilizar acentuação, textos longos ou complexos no Banner MOTD e demais Banners, pois o terminal do Cisco IOS não reconhece esses caracteres.
 

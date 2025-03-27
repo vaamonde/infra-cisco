@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 25/11/2024<br>
-Versão: 0.02<br>
+Data de atualização: 27/03/2025<br>
+Versão: 0.03<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -18,7 +18,7 @@ Conteúdo estudado nessa configuração:<br>
 #02_ SEGUNDA ETAPA: Configuração da Interface LAN do Router no Cisco IOS.<br>
 #03_ TERCEIRA ETAPA: Testando e Acessando Remotamente do Router Cisco 1941.<br>
 
-OBSERVAÇÃO IMPORTANTE: COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: Configuração Interface LAN Router 1941 do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática
+**OBSERVAÇÃO IMPORTANTE:** COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: *Configuração Interface LAN Router 1941 do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática*
 
 #boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #cisco #infracisco #desafiovaamonde #desafioboraparapratica #desafiocisco #desafioinfracisco
 
@@ -61,7 +61,7 @@ rt-01(config)#
 rt-01(config)# interface gigabitEthernet 0/0
 ```
 
-a) Configuração da Descrição da Interface GigabitEthernet 0/0 da LAN.
+A) Configuração da Descrição da Interface GigabitEthernet 0/0 da LAN.
 
 **DICA-02:** sempre utilizar o comando: *description* nas Interfaces para efeito de documentação.
 
@@ -70,7 +70,7 @@ a) Configuração da Descrição da Interface GigabitEthernet 0/0 da LAN.
 rt-01(config-if)# description Interface de Gateway da Rede LAN
 ```
 
-b) Configuração do Endereçamento IPv4 da Interface GigabitEthernet 0/0 da LAN.
+B) Configuração do Endereçamento IPv4 da Interface GigabitEthernet 0/0 da LAN.
 
 **OBSERVAÇÃO-02:** configuração do endereço IPv4 deve ser: *IPv4 + Máscara de Rede Completa (ClassFull)*, não utilizar CIDR (Classes Inter-Domain Routing) nas configurações.
 
@@ -79,7 +79,7 @@ b) Configuração do Endereçamento IPv4 da Interface GigabitEthernet 0/0 da LAN
 rt-01(config-if)# ip address 192.168.1.254 255.255.255.0
 ```
 
-c) Inicializando a Interface GigabitEthernet 0/0 da LAN.
+C) Inicializando a Interface GigabitEthernet 0/0 da LAN.
 
 **DICA-03:** por padrão todas as Interfaces dos Roteadores estão no status: *desligada (Shutdown)*.
 
@@ -88,14 +88,14 @@ c) Inicializando a Interface GigabitEthernet 0/0 da LAN.
 rt-01(config-if)# no shutdown
 ```
 
-d) Saindo de todos os níveis e voltando para o modo EXEC Privilegiado.
+D) Saindo de todos os níveis e voltando para o modo EXEC Privilegiado.
 
 **DICA-04:** somente no modo EXEC Privilegiado você tem o comando: *copy* para salvar as configurações.
 ```bash
 rt-01(config-if)# end
 ```
 
-e) Salvando as configurações da memória RAM (Running-Config) para a memória NVRAM (Startup-Config)
+E) Salvando as configurações da memória RAM (Running-Config) para a memória NVRAM (Startup-Config)
 
 **DICA-05:** nunca esqueça de salvar as configurações.
 ```bash

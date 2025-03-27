@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 03/12/2024<br>
-Versão: 0.06<br>
+Data de atualização: 27/03/2025<br>
+Versão: 0.07<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -20,7 +20,7 @@ Conteúdo estudado nessa configuração:<br>
 #04_ QUARTA ETAPA: Testando o Serviço de DNS Server nos Switches e Routers.<br>
 #05_ QUINTA ETAPA: Automatizando a Configuração do Segundo Switch 2960 e Router 1941<br>
 
-OBSERVAÇÃO IMPORTANTE: COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: Configuração DNS Server do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática
+**OBSERVAÇÃO IMPORTANTE:** COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: *Configuração DNS Server do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática*
 
 #boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #cisco #infracisco #desafiovaamonde #desafioboraparapratica #desafiocisco #desafioinfracisco
 
@@ -134,7 +134,7 @@ sw-01# configure terminal
 sw-01(config)#
 ```
 
-a) Habilitando o recurso de Resolução de Nomes de Domínio no Switch ou no Router
+A) Habilitando o recurso de Resolução de Nomes de Domínio no Switch ou no Router
 
 **OBSERVAÇÃO-06:** esse recurso vem habilitado por padrão no Switch ou no Router, no começo no curso esse recurso foi desabilitado para corrigir a falha de digitar comandos errados no Cisco IOS e travar o terminal, só habilitar novamente esse recurso se você for utilizar o serviço de DNS no Switch ou no Router.
 
@@ -146,7 +146,7 @@ a) Habilitando o recurso de Resolução de Nomes de Domínio no Switch ou no Rou
 sw-01(config)# ip domain-lookup
 ```
 
-b) Configurando o Nome de Domínio no Switch ou no Router
+B) Configurando o Nome de Domínio no Switch ou no Router
 
 **OBSERVAÇÃO-08:** esse recurso já foi configurado no Switch e no Router, ele é necessário para o serviço do SSH Server e para o correto funcionando do serviço do DNS Server.
 
@@ -156,7 +156,7 @@ b) Configurando o Nome de Domínio no Switch ou no Router
 sw-01(config)# ip domain-name pti.intra
 ```
 
-c) Configurando o Endereço IPv4 do Servidor de DNS no Switch ou no Router
+C) Configurando o Endereço IPv4 do Servidor de DNS no Switch ou no Router
 
 **DICA-06** após a configuração do endereço IPv4 do Servidor de DNS no Switch ou no Router ele não usará mais o endereço de Broadcast IPv4 255.255.255.255 para a resolução de nomes de DNS, agora ele irá consultar o servidor de DNS para resolver os nomes de host.
 
@@ -166,7 +166,7 @@ c) Configurando o Endereço IPv4 do Servidor de DNS no Switch ou no Router
 sw-01(config)# ip name-server 192.168.1.1
 ```
 
-d) Adicionando manualmente a Resolução de Nomes e Endereços Estáticos no Switch ou no Router
+D) Adicionando manualmente a Resolução de Nomes e Endereços Estáticos no Switch ou no Router
 
 **DICA-07** por padrão o Switch ou Router consulta primeiro a Base Dados Local de Nomes e depois o serviço do DNS Server configurado na opção: *ip name-server*
 
@@ -177,14 +177,14 @@ d) Adicionando manualmente a Resolução de Nomes e Endereços Estáticos no Swi
 sw-01(config)# ip host google 8.8.8.8
 ```
 
-e) Saindo de todos os níveis e voltando para o modo EXEC Privilegiado.
+E) Saindo de todos os níveis e voltando para o modo EXEC Privilegiado.
 
 **DICA-08:** somente no modo EXEC Privilegiado você tem o comando: *copy* para salvar as configurações.
 ```bash
 sw-01(config-if)# end
 ```
 
-f) Salvando as configurações da memória RAM (Running-Config) para a memória NVRAM (Startup-Config)
+F) Salvando as configurações da memória RAM (Running-Config) para a memória NVRAM (Startup-Config)
 
 **DICA-09:** nunca esqueça de salvar as configurações.
 ```bash

@@ -7,8 +7,8 @@
 #Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem<br>
 #YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 #Data de criação: 16/09/2024<br>
-#Data de atualização: 31/01/2025<br>
-#Versão: 0.04<br>
+#Data de atualização: 27/03/2025<br>
+#Versão: 0.05<br>
 #Testado e homologado no Linux Mint 22 Wilma e 22.1 Xia x64<br>
 #Testado e homologado o Cisco Packet Tracer 8.2.x x64<br>
 #Testado e homologado o Microsoft Visual Studio Code VSCode no Linux Mint 22 Wilma e 22.1 Xia<br>
@@ -27,7 +27,7 @@ Conteúdo estudado nessa instalação:<br>
 #11_ Configurações básicas do VSCode para funcionar perfeitamente no Linux Mint<br>
 #12_ Trabalhando com as Extensões do Cisco no VSCode no Linux Mint<br>
 
-OBSERVAÇÃO IMPORTANTE: COMENTAR NO VÍDEO DO INSTALAÇÃO DO VSCODE SE VOCÊ CONSEGUIU FAZER A INSTALAÇÃO COM A SEGUINTE FRASE: Instalação do VSCODE Cisco realizado com sucesso!!! #BoraParaPrática
+**OBSERVAÇÃO IMPORTANTE:** COMENTAR NO VÍDEO DO INSTALAÇÃO DO VSCODE SE VOCÊ CONSEGUIU FAZER A INSTALAÇÃO COM A SEGUINTE FRASE: *Instalação do VSCODE Cisco realizado com sucesso!!! #BoraParaPrática*
 
 #boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #cisco #infracisco #desafiovaamonde #desafioboraparapratica #desafiocisco #desafioinfracisco
 
@@ -35,13 +35,13 @@ Site Oficial do Visual Studio Code: https://code.visualstudio.com/<br>
 Site Oficial do Visual Studio Code Web: https://vscode.dev/<br>
 Link do Marketplace: https://marketplace.visualstudio.com/VSCode
 
-O QUE É E PARA QUE SERVER O VSCODE: O Visual Studio Code é um editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS. Ele inclui suporte para depuração, controle de versionamento Git incorporado, realce de sintaxe, complementação inteligente de código, snippets e refatoração de código.
+**O QUE É E PARA QUE SERVER O VSCODE:** O Visual Studio Code é um editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS. Ele inclui suporte para depuração, controle de versionamento Git incorporado, realce de sintaxe, complementação inteligente de código, snippets e refatoração de código.
 
 [![VScode Git Github](http://img.youtube.com/vi/f9ZqzzhSzcA/0.jpg)](https://www.youtube.com/watch?v=f9ZqzzhSzcA "VScode Git Github")
 
 Link da vídeo aula: https://www.youtube.com/watch?v=f9ZqzzhSzcA
 
-**OBSERVAÇÃO IMPORTANTE: OS VÍDEOS DE INSTALAÇÃO E CONFIGURAÇÃO DO MICROSOFT VISUAL STUDIO CODE VSCODE, GIT E GITHUB SÃO DO CURSO GRATUITO DE PYTHON 3 DO PROJETO BORA PARA PRÁTICA, HOJE O CISCO SUPORTA PROGRAMAÇÃO EM PYTHON, RECOMENDO SEGUIR OS PROCEDIMENTOS ABAIXO PARA A CORRETA INSTALAÇÃO DESSAS FERRAMENTAS QUE SERÃO UTILIZADAS NESSE CURSO**
+**OBSERVAÇÃO IMPORTANTE:** OS VÍDEOS DE INSTALAÇÃO E CONFIGURAÇÃO DO MICROSOFT VISUAL STUDIO CODE VSCODE, GIT E GITHUB SÃO DO CURSO GRATUITO DE PYTHON 3 DO PROJETO BORA PARA PRÁTICA, HOJE O CISCO SUPORTA PROGRAMAÇÃO EM PYTHON, RECOMENDO SEGUIR OS PROCEDIMENTOS ABAIXO PARA A CORRETA INSTALAÇÃO DESSAS FERRAMENTAS QUE SERÃO UTILIZADAS NESSE CURSO
 
 [![Instalação Python 3](http://img.youtube.com/vi/klIKuVGRHmM/0.jpg)](https://www.youtube.com/watch?v=klIKuVGRHmM "Instalação Python 3")
 
@@ -55,7 +55,7 @@ Link da vídeo aula: https://www.youtube.com/watch?v=VBxmsmPK60s
 
 Link da documentação: https://github.com/vaamonde/python3/blob/main/01-introduction/02-git-gthub.md
 
-#01_ Verificando as Informações do Sistema Operacional Linux Mint<br>
+## 01_ Verificando as Informações do Sistema Operacional Linux Mint<br>
 ```bash
 #atalho para acessar o Terminal
 Terminal: Ctrl + Alt + T
@@ -71,7 +71,7 @@ Menu
   Informações do Sistema
 ```
 
-#02_ Atualização do Sistema Operacional Linux Mint<br>
+## 02_ Atualização do Sistema Operacional Linux Mint<br>
 ```bash
 #atualizando o sistema operacional via MintUpdate (Recomendado)
 A) Atualização do sistema utilizando o MintUpdate;
@@ -91,13 +91,13 @@ sudo apt autoclean
 sudo apt clean
 ```
 
-#03_ Instalando as Dependências do VSCode no Linux Mint<br>
+## 03_ Instalando as Dependências do VSCode no Linux Mint<br>
 ```bash
 #instalando as dependências do VSCode no Linux Mint 22.x
 sudo apt install vim git python3 python3-pip cloc
 ```
 
-#04_ Baixando o Microsoft Visual Studio Code VSCode para o Linux<br>
+## 04_ Baixando o Microsoft Visual Studio Code VSCode para o Linux<br>
 ```bash
 #link de download oficial do VSCode
 Link de download: https://code.visualstudio.com/download
@@ -105,7 +105,7 @@ Link de download: https://code.visualstudio.com/download
     Salvar aquivo
 ```
 
-#05_ Instalando o VSCode utilizando o Gdebi-Gtk no Linux Mint<br>
+## 05_ Instalando o VSCode utilizando o Gdebi-Gtk no Linux Mint<br>
 ```bash
 #instalando em modo gráfico (mais fácil) o VSCode
 Arquivos
@@ -117,7 +117,7 @@ Arquivos
     <Fechar>
 ```
 
-#06_ Verificando o novo repositório do VSCode no MintUpdate<br>
+## 06_ Verificando o novo repositório do VSCode no MintUpdate<br>
 ```bash
 #verificando o novo repositório no Linux Mint
 Menu
@@ -133,7 +133,7 @@ Menu
   <Fechar>
 ```
 
-#07_ Iniciando o VSCode no Linux Mint<br>
+## 07_ Iniciando o VSCode no Linux Mint<br>
 ```bash
 #iniciando o VSCode no Linux Mint
 Menu
@@ -144,7 +144,7 @@ Menu
       Disable: Mostrar página inicial na inicialização
 ```
 
-#08_ Configurando o VSCode como Aplicativo de Preferência no Linux Mint<br>
+## 08_ Configurando o VSCode como Aplicativo de Preferência no Linux Mint<br>
 ```bash
 #configuração básica do VSCode no Linux Mint
 Menu
@@ -158,7 +158,7 @@ Menu
   <Fechar>
 ```
 
-#09_ Adicionando o VSCode nas Lista de Abrir Com no Linux Mint<br>
+## 09_ Adicionando o VSCode nas Lista de Abrir Com no Linux Mint<br>
 ```bash
 #adicionando o VSCode na lista de Abrir com
 Gerenciador de Arquivos
@@ -171,7 +171,7 @@ Gerenciador de Arquivos
       <OK>
 ```
 
-#10_ Instalando e Configurando as Principais Extensões do Cisco no VSCode<br>
+## 10_ Instalando e Configurando as Principais Extensões do Cisco no VSCode<br>
 ```bash
 #Instalação das Extensões Básicas do VSCode
 Portuguese (Brazil) Language Pack for Visual Studio Code
@@ -206,7 +206,7 @@ Cisco IOS-XR Syntax
   (Sem necessidade de configuração)
 ```
 
-#11_ Configurações básicas do VSCode para funcionar perfeitamente no Linux Mint<br>
+## 11_ Configurações básicas do VSCode para funcionar perfeitamente no Linux Mint<br>
 ```bash
 #configurações básicas do VSCode para funcionar no Linux Mint
 Gerenciar
@@ -226,7 +226,7 @@ Gerenciar
       Files: Eol: \n (LF)
 ```
 
-#12_ Trabalhando com as Extensões do Cisco no VSCode no Linux Mint<br>
+## 12_ Trabalhando com as Extensões do Cisco no VSCode no Linux Mint<br>
 ```bash
 01) Cisco IOS Syntax
     Salvar os arquivos com a extensão: ios
