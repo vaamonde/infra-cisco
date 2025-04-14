@@ -78,6 +78,8 @@ Material de Apoio-01: https://github.com/vaamonde/infra-cisco/blob/main/05-pdf/I
 Material de Apoio-02: https://github.com/vaamonde/infra-cisco/blob/main/05-pdf/InfraestruturaDeRedes-02.pdf<br>
 Material de Apoio-03: https://github.com/vaamonde/infra-cisco/blob/main/05-pdf/InfraestruturaDeRedes-03.pdf<br>
 Material de Apoio-04: https://github.com/vaamonde/infra-cisco/blob/main/05-pdf/InfraestruturaDeRedes-04.pdf<br>
+Material de Apoio-04: https://github.com/vaamonde/infra-cisco/blob/main/05-pdf/InfraestruturaDeRedes-05.pdf<br>
+Material de Apoio-04: https://github.com/vaamonde/infra-cisco/blob/main/05-pdf/InfraestruturaDeRedes-06.pdf<br>
 Tabela ASCII: https://drive.google.com/file/d/1NS5qDgem0lJhq6O6aIE1sX5e5IedKjeT/view
 
 ## **Material de Apoio do Protocolo IPv4 e IPv6**
@@ -125,5 +127,3 @@ Teoria e Prática serão a base desse curso, todo o conteúdo apresentado será 
 [![Apresentação do Curso](http://img.youtube.com/vi/mrcFKp-C1fw/0.jpg)](https://www.youtube.com/watch?v=mrcFKp-C1fw "Apresentação do Curso")
 
 Link da vídeo aula: https://www.youtube.com/watch?v=mrcFKp-C1fw
-
-
