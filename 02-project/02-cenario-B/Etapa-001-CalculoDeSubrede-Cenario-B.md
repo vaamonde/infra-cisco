@@ -30,10 +30,10 @@ B) Cenário B irá utilizar: 8 (oito) Sub-redes.
 ```
 
 ## SEGUNDA ETAPA: Cálculo de Sub-Redes do Cenário B:
-```bash
-OBSERVAÇÃO IMPORTANTE: NESSE CENÁRIO NÃO ESTÁ SENDO CONSIDERADO A QUANTIDADE DE HOSTS POR REDE,
-SOMENTE A QUANTIDADE DE REDES PARA A CONFIGURAÇÃO DAS VLANS E ROTAS INTERNAS E EXTERNAS.
 
+**OBSERVAÇÃO IMPORTANTE:** NESSE CENÁRIO NÃO ESTÁ SENDO CONSIDERADO A QUANTIDADE DE HOSTS POR REDE, SOMENTE A QUANTIDADE DE REDES PARA A CONFIGURAÇÃO DAS VLANS E ROTAS INTERNAS E EXTERNAS.
+
+```bash
 A) Trabalhar no 4 (quarto octeto) mudando o CIDR padrão de: /16 para: /24;
 
 B) Necessidade de 8 (oito) Sub-Redes, utilizar 3 (três) Bits emprestado de hosts para esse cenário;

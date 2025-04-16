@@ -9,14 +9,15 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 27/03/2025<br>
-Versão: 0.07<br>
+Data de atualização: 16/04/2025<br>
+Versão: 0.08<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
 #01_ Configuração Base Switch Cisco Catalyst Layer 2 2960 (LADO ESQUERDO - ACESSO)<br>
 #02_ Configuração Base Switch Cisco Catalyst Layer 2 2960 (LADO DIREITO - ACESSO)<br>
 #03_ Configuração Base Switch Cisco Multilayer 3650 (CENTRO - DISTRIBUIÇÃO)<br>
+#04_ Configuração Base do Router Cisco 4321 (CENTRO - NÚCLEO)<br>
 #04_ Verificando as Configurações dos Switches e Roteador.<br>
 
 **OBSERVAÇÃO IMPORTANTE:** COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: *Configuração Base do Cenário B do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática*
@@ -53,7 +54,7 @@ enable
     !Habilitando o serviço de marcação de Data/Hora detalhado nos Logs
     service timestamps log datetime msec
 
-    !Habilitando o tamanho do Buffer dos Logs na Memória RAM
+    !Habilitando o tamanho do Buffer dos Logs na Memória RAM (NÃO COMENTADO NO CENÁRIO A)
     logging buffered 4096 
 
     !Desativando a resolução de nomes de domínio
@@ -85,7 +86,7 @@ enable
     !Habilitando o número máximo de tentativas de conexões simultâneas no SSH Server
     ip ssh authentication-retries 2
 
-    !Desativando os Serviços de Descobertas de equipamentos na rede
+    !Desativando os Serviços de Descobertas de equipamentos na rede (NÃO COMENTADO NO CENÁRIO A)
     no cdp run
     no lldp run
 
@@ -130,8 +131,8 @@ enable
 
   !Salvando as configurações da memória RAM para a memória NVRAM
   !OBSERVAÇÃO IMPORTANTE: deixar uma linha em branco no final do script para
-  !salvar automaticamente o script na hora da execução, fazendo a função de
-  !<Enter> no final do script.
+  !fazer a função de <Enter> e salvar automaticamente as configurações na hora
+  !da execução do script no console.
   write
 
 ```
@@ -156,7 +157,7 @@ enable
     !Habilitando o serviço de marcação de Data/Hora detalhado nos Logs
     service timestamps log datetime msec
 
-    !Habilitando o tamanho do Buffer dos Logs na Memória RAM
+    !Habilitando o tamanho do Buffer dos Logs na Memória RAM (NÃO COMENTADO NO CENÁRIO A)
     logging buffered 4096 
 
     !Desativando a resolução de nomes de domínio
@@ -188,7 +189,7 @@ enable
     !Habilitando o número máximo de tentativas de conexões simultâneas no SSH Server
     ip ssh authentication-retries 2
 
-    !Desativando os Serviços de Descobertas de equipamentos na rede
+    !Desativando os Serviços de Descobertas de equipamentos na rede (NÃO COMENTADO NO CENÁRIO A)
     no cdp run
     no lldp run
 
@@ -233,8 +234,8 @@ enable
 
   !Salvando as configurações da memória RAM para a memória NVRAM
   !OBSERVAÇÃO IMPORTANTE: deixar uma linha em branco no final do script para
-  !salvar automaticamente o script na hora da execução, fazendo a função de
-  !<Enter> no final do script.
+  !fazer a função de <Enter> e salvar automaticamente as configurações na hora
+  !da execução do script no console.
   write
 
 ```
@@ -262,7 +263,7 @@ enable
     !Habilitando o serviço de marcação de Data/Hora detalhado nos Logs do Debug
     service timestamps debug datetime msec
 
-    !Habilitando o tamanho do Buffer dos Logs na Memória RAM
+    !Habilitando o tamanho do Buffer dos Logs na Memória RAM (NÃO COMENTADO NO CENÁRIO A)
     logging buffered 4096
 
     !Desativando a resolução de nomes de domínio
@@ -297,7 +298,7 @@ enable
     !Habilitando o número máximo de tentativas de conexões simultâneas no SSH Server
     ip ssh authentication-retries 2
 
-    !Desativando os Serviços de Descobertas de equipamentos na rede
+    !Desativando os Serviços de Descobertas de equipamentos na rede (NÃO COMENTADO NO CENÁRIO A)
     no cdp run
     no lldp run
 
@@ -342,8 +343,8 @@ enable
 
   !Salvando as configurações da memória RAM para a memória NVRAM
   !OBSERVAÇÃO IMPORTANTE: deixar uma linha em branco no final do script para
-  !salvar automaticamente o script na hora da execução, fazendo a função de
-  !<Enter> no final do script.
+  !fazer a função de <Enter> e salvar automaticamente as configurações na hora
+  !da execução do script no console.
   write
 
 ```
@@ -369,7 +370,7 @@ enable
     service timestamps log datetime msec
     service timestamps debug datetime msec
 
-    !Habilitando o tamanho do Buffer dos Logs na Memória RAM
+    !Habilitando o tamanho do Buffer dos Logs na Memória RAM (NÃO COMENTADO NO CENÁRIO A)
     logging buffered 4096 
 
     !Desativando a resolução de nomes de domínio
@@ -407,7 +408,7 @@ enable
     !Bloqueando tentativas de conexões simultâneas com falha de autenticação no Router
     login block-for 120 attempts 2 within 60
 
-    !Desativando os Serviços de Descobertas de equipamentos na rede
+    !Desativando os Serviços de Descobertas de equipamentos na rede (NÃO COMENTADO NO CENÁRIO A)
     no cdp run
     no lldp run
 
@@ -452,8 +453,8 @@ enable
 
   !Salvando as configurações da memória RAM para a memória NVRAM
   !OBSERVAÇÃO IMPORTANTE: deixar uma linha em branco no final do script para
-  !salvar automaticamente o script na hora da execução, fazendo a função de
-  !<Enter> no final do script.
+  !fazer a função de <Enter> e salvar automaticamente as configurações na hora
+  !da execução do script no console.
   write
 
 ```
