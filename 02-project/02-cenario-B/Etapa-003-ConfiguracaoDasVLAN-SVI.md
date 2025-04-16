@@ -52,7 +52,7 @@ Um Switch com a capacidade de criar VLANs suporta dois tipos de configurações 
 
 ## SEGUNDA ETAPA: Conhecendo os Ranges das VLANs no Cisco Packet Tracer.
 
-Os range de VLANs nos Switches Cisco são divididos em: 
+Os ranges de VLANs nos Switches Cisco são divididos em: 
 
 A) **0 e 4095** Reservadas (Reserved - apenas para uso do sistema operacional IOS, você não pode ver ou usar essas VLANs);<br>
 B) **1 Padrão/Nativa** (Default/Native - você pode usar essa VLAN, está associada por padrão em todas as Portas do Switch, você não pode deletar essa VLAN);<br> 
@@ -70,6 +70,8 @@ B) **VLANs Dinâmicas** (Dynamic - são criadas e alteradas dinamicamente via So
 ## QUARTA ETAPA: Conhecendo os Tipos de Portas das VLANs no Cisco Packet Tracer.
 
 Uma Porta de **Acesso (access)**, permite associar uma porta do Switch a uma VLAN, as portas do tipo acesso são usadas para conectar dispositivos finais (Desktop, Notebook, Impressoras, Access Point, etc), por padrão, todas as portas dos Switches estão associadas na *VLAN Padrão/Nativa 1*, que transporta os dados sem marcação (Untagged VLAN).
+
+Por padrão todas as *Portas de Rede dos Switches Catalyst Cisco estão* configuradas no **Modo Dinâmico Automática** (switchport mode dynamic auto), nessa configuração a Interface tenta passar para o **Modo Trunk** se a outra extremidade também estiver configurada como **Dynamic Desirable** ou como **Trunk**. Caso contrário, permanece como **Modo Access**.
 
 ## QUINTA ETAPA: Configurando as VLANs no Switch Multilayer 3650 (CENTRO - DISTRIBUIÇÃO)
 ```bash
@@ -102,7 +104,7 @@ configure terminal
     name SVI-Switches
     exit
 
-  !Configurando a Interface de Gerenciamento SVI do Switch Multilayer 3650
+  !Configurando a Interface de Gerenciamento de SVI do Switch Multilayer 3650
   !OBSERVAÇÃO-02: as SVIs dos Switches Layer 2 e 3 serão configuradas utilizando a VLAN 99
   interface vlan 99
     description Interface de SVI de Gerenciamento Switch Multilayer 3650
@@ -110,7 +112,7 @@ configure terminal
     no shutdown
     exit
 
-  !Configurando a Interface de Acesso a VLAN 50 dos Servidores
+  !Configurando as Interfaces de Acesso a VLAN 50 dos Servidores
   !DICA-03: a opção range do comando interface possibilita fazer a mesma configuração em várias interfaces
   !OBSERVAÇÃO-03: existe a possibilidade de utilizar a opção de range para portas não consecutivas, 
   !utilizando o separador , (vírgula) e adicionando o nome das portas na configuração.
