@@ -7,8 +7,8 @@
 #Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem<br>
 #YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 #Data de criação: 16/09/2024<br>
-#Data de atualização: 27/03/2025<br>
-#Versão: 0.09<br>
+#Data de atualização: 27/04/2025<br>
+#Versão: 0.10<br>
 #Testado e homologado no Linux Mint 22 Wilma x64<br>
 #Testado e homologado o Cisco Packet Tracer 8.2.x x64 e Rack Cisco SW-3560 e RT-2911
 
@@ -300,11 +300,32 @@ sw-01#
 **DICA-31:** no Cisco IOS temos várias opções de visualizações das configurações utilizando o comando: *show*, o principal comando utilizado em todos os equipamentos da Cisco para verificar as configurações que estão rodando no momento é o: *show running-config* (configuração que está rodando na RAM).
 ```bash
 sw-01# show running-config
+Building configuration...
+
+Current configuration : 1763 bytes
+!
+...
+!
+end
+sw-01#
+```
+
+**DICA-32:** no Cisco IOS permite filtrar a saída dos comandos show usando pipes (|) com opções como: include (incluir/mostrar), exclude (excluir/ocultar), begin (início/primeira linha) e section (sessão). Esses filtros ajudam a encontrar rapidamente partes específicas da configuração, sem precisar rolar todo o arquivo.
+```bash
+!Fazendo um Filtro na Visualização do Running-Config somente da Sessão Console 0
+sw-01# show running-config | section include con 0
+line con 0
+ password 7 08701E1D290A00191308
+ logging synchronous
+ login local
+ exec-timeout 5 30
+sw-01#
 ```
 
 02. Saindo do Modo Privilegiado do Switch
 ```bash
 sw-01# disable
+sw-01>
 ```
 
 03. Saindo da conexão do Console do Switch
@@ -318,11 +339,11 @@ sw-01> exit
 ```bash
 AVISO: acesso autorizado somente a funcionarios
 User Access Verification
-Username: robson
-Password: pti@2018
+Username: SEU_USUÁRIO
+Password: SUA_SENHA
 
 sw-01> enable
-Password: pti@2018
+Password: SUA_SENHA_SEGURA
 
 sw-01# configure terminal
 sw-01(config)#
@@ -334,9 +355,9 @@ sw-01(config)#
 
 **OBSERVAÇÃO-14:** recomendo sempre utilizar um *Editor de Texto Profissional* para criar os scripts e automatizar as tarefas de configuração do Cisco IOS, hoje em dia é indicado utilizar o Visual Studio Code (VSCode) junto com as Extensões: *Cisco IOS Syntax e Cisco Config Highlight* para facilitar essa configuração.
 
-**DICA-32:** o caractere: *! (exclamação)* é utilizado como um recurso de *Comentário*, sua utilização server para comentar o código de automação do Cisco IOS ou para desativar um comando para não ser executado, *RECOMENDO FORTEMENTE DOCUMENTAR TODOS OS COMANDOS E PROCEDIMENTOS DE CONFIGURAÇÃO PARA FACILITAR O ENTENDIMENTO.*
+**DICA-33:** o caractere: *! (exclamação)* é utilizado como um recurso de *Comentário*, sua utilização server para comentar o código de automação do Cisco IOS ou para desativar um comando para não ser executado, *RECOMENDO FORTEMENTE DOCUMENTAR TODOS OS COMANDOS E PROCEDIMENTOS DE CONFIGURAÇÃO PARA FACILITAR O ENTENDIMENTO.*
 
-**DICA-33:** para facilitar a leitura do código, recomendo utilizar o recurso de **Indentação de Código** usando a Tecla TAB (Tabulador/Tabulação) para cada nível que você está configurando o Cisco IOS, isso facilitada a análise de erros (Debug) do código.
+**DICA-34:** para facilitar a leitura do código, recomendo utilizar o recurso de **Indentação de Código** usando a Tecla TAB (Tabulador/Tabulação) para cada nível que você está configurando o Cisco IOS, isso facilitada a análise de erros (Debug) do código.
 
 ```python
 !Automação da configuração do Switch 2
@@ -367,12 +388,12 @@ clock set 14:00:00 21 November 2024
     banner motd #AVISO: acesso autorizado somente a funcionarios#
 
     !Habilitando o uso senha do Tipo-5 Secret para acessar o modo EXEC Privilegiado
-    enable secret pti@2018
+    enable secret SUA_SENHA_SEGURA
 
     !Criação dos usuários locais utilizando senhas do Tipo-5 ou Tipo-7 e privilégios diferenciados
-    username robson secret pti@2018
-    username vaamonde password pti@2018
-    username admin privilege 15 secret pti@2018
+    username SEU_USUÁRIO_1 secret SUA_SENHA_SEGURA
+    username SEU_USUÁRIO_2 password SUA_SENHA_NÃO_SEGURA
+    username SEU_USUÁRIO_3 privilege 15 secret SUA_SENHA_SEGURA
 
     !Desativando os Serviços de Descobertas de equipamentos na rede
     no cdp run
@@ -385,7 +406,7 @@ clock set 14:00:00 21 November 2024
       login local
 
       !Habilitando senha de acesso do Tipo-7 Password
-      password pti@2018
+      password SUA_SENHA_NÃO_SEGURA
 
       !Sincronizando as mensagens de logs na tela
       logging synchronous

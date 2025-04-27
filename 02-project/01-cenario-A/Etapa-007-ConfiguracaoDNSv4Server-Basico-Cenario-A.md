@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 27/03/2025<br>
-Versão: 0.07<br>
+Data de atualização: 27/04/2025<br>
+Versão: 0.08<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -124,11 +124,11 @@ C:\> ssh -l admin sw-01   (Switch SW-01)
 ```bash
 AVISO: acesso autorizado somente a funcionarios
 User Access Verification
-Username: robson
-Password: pti@2018
+Username: SEU_USUÁRIO
+Password: SUA_SENHA
 
 sw-01> enable
-Password: pti@2018
+Password: SUA_SENHA
 
 sw-01# configure terminal
 sw-01(config)#
@@ -153,7 +153,7 @@ B) Configurando o Nome de Domínio no Switch ou no Router
 **DICA-05** a configuração do Nome de Domínio é recomendada mesmo que não seja utilizada no Switch ou no Router ou recursos de resolução de nomes do DNS.
 
 ```bash
-sw-01(config)# ip domain-name pti.intra
+sw-01(config)# ip domain-name SEU_DOMÍNIO.INTRA
 ```
 
 C) Configurando o Endereço IPv4 do Servidor de DNS no Switch ou no Router
@@ -182,6 +182,7 @@ E) Saindo de todos os níveis e voltando para o modo EXEC Privilegiado.
 **DICA-08:** somente no modo EXEC Privilegiado você tem o comando: *copy* para salvar as configurações.
 ```bash
 sw-01(config-if)# end
+sw-01#
 ```
 
 F) Salvando as configurações da memória RAM (Running-Config) para a memória NVRAM (Startup-Config)

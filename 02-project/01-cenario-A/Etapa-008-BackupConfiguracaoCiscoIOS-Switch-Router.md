@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 27/03/2025<br>
-Versão: 0.07<br>
+Data de atualização: 27/04/2025<br>
+Versão: 0.08<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -43,11 +43,11 @@ Link da vídeo aula: https://www.youtube.com/watch?v=0aw2uGtnBJw
 ```bash
 AVISO: acesso autorizado somente a funcionarios
 User Access Verification
-Username: robson
-Password: pti@2018
+Username: SEU_USUÁRIO
+Password: SUA_SENHA
 
 sw-01> enable
-Password: pti@2018
+Password: SUA_SENHA_SEGURA
 
 sw-01#
 ```
@@ -79,6 +79,7 @@ sw-01# show version
   ...
   64K bytes of flash-simulated non-volatile configuration memory.
   Configuration register is 0xF
+sw-01#
 ```
 
 03. Visualizando as informações da inicialização do Switch Layer 2 2960.
@@ -92,6 +93,7 @@ sw-01# show boot
   BOOT path-list      : 2960-lanbasek9-mz.150-2.SE4.bin    (Binário do Cisco IOS)
   Config file         : flash:/config.text                 (Arquivo de Inicialização do Cisco IOS)
   Private Config file : flash:/private-config.text         (Arquivo de Segurança da Inicialização)
+sw-01#
 ```
 
 04. Visualizando as informações do Flash Card (Memória de Massa) do Switch Layer 2 2960.
@@ -103,11 +105,13 @@ sw-01# show boot
 ```bash
 sw-01# show flash:
   64016384 bytes total (59344171 bytes free)
+sw-01#
 
 sw-01# dir flash:
   64016384 bytes total (59344171 bytes free)
   64016384 Bytes Total / 1000 = 64 MB
   59344171 Bytes Free  / 1000 = 60 MB
+sw-01#
 ```
 
 05. Salvando as configurações da memória RAM para a memória NVRAM.
@@ -134,6 +138,7 @@ sw-01#
 
 sw-01# dir flash:
   5  -rw-        1758          <no date>  startup-config
+sw-01#
 ```
 
 07. Salvando as configurações da memória NVRAM para o Servidor TFTP.
@@ -163,6 +168,7 @@ sw-01# dir nvram:
   1679 bytes total (237588 bytes free)
     1679 Bytes Total / 1000 = 1,7 KB
   237588 Bytes Free  / 1000 = 238 KB
+sw-01#
 
 !Copiando o arquivo de configuração da NVRAM para o Servidor TFTP
 sw-01# copy startup-config tftp:
@@ -199,6 +205,7 @@ E) Quinta parte: .bin extensão do arquivo binário do Cisco IOS).<br>
 !Verificando o Binário do Cisco IOS do Switch
 sw-01# dir flash:
   1  -rw-     4414921          <no date>  2960-lanbasek9-mz.150-2.SE4.bin
+sw-01#
 
 sw-01# copy flash: tftp:
   Source filename []? 2960-lanbasek9-mz.150-2.SE4.bin
@@ -281,6 +288,7 @@ rt-01# show version
   249856KB / 1000 = 250MB (250MB de Memória RAM Disponível)
   ...
   Configuration register is 0x2102
+rt-01#
 ```
 
 02. Visualizando informações do Flash Card (Memória de Massa) do Router 1941.
@@ -293,12 +301,14 @@ rt-01# show version
 rt-01# show flash:
   [33849219 bytes used, 221896413 available, 255744000 total]
   249856K bytes of processor board System flash (Read/Write)
+rt-01#
 
 rt-01# dir flash0:
   255744000 bytes total (221896413 bytes free)
   255744000 Bytes Total = 256MB
   33847587 Bytes Used = 34MB
   221896413 Bytes Available = 222MB
+rt-01#
 ```
 
 03. Fazendo o Backup das Configurações e do Cisco IOS para o TFTP.
@@ -327,6 +337,7 @@ rt-01# ping 192.168.1.1
 !Verificando o Arquivo Startup-Config da NVRAM
 rt-01# dir nvram:
   238  -rw-        1349          <no date>  startup-config
+rt-01#
 
 !Copiando o arquivo de configuração da NVRAM para o Servidor TFTP
 rt-01# copy startup-config tftp:
@@ -353,7 +364,7 @@ rt-01# copy flash: tftp:
 rt-01#
 
 !Saindo do modo EXEC Privilegiado
-disable
+rt-01# disable
 
 !Verificando os Backups no Servidor TFTP
 Server-01

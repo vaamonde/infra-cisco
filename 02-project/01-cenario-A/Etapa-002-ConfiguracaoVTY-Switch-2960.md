@@ -7,8 +7,8 @@
 #Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem<br>
 #YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 #Data de criação: 16/09/2024<br>
-#Data de atualização: 27/03/2025<br>
-#Versão: 0.08<br>
+#Data de atualização: 27/04/2025<br>
+#Versão: 0.09<br>
 #Testado e homologado no Linux Mint 22 Wilma x64<br>
 #Testado e homologado o Cisco Packet Tracer 8.2.x x64 e Rack Cisco SW-3560 e RT-2911
 
@@ -41,11 +41,11 @@ Link da vídeo aula: https://www.youtube.com/watch?v=_1lEPi1fXG8
 ```bash
 AVISO: acesso autorizado somente a funcionarios
 User Access Verification
-Username: robson
-Password: pti@2018
+Username: SEU_USUÁRIO
+Password: SUA_SENHA
 
 sw-01> enable
-Password: pti@2018
+Password: SUA_SENHA_SEGURA
 
 sw-01# configure terminal
 sw-01(config)#
@@ -120,6 +120,7 @@ sw-01(config-line)# transport input ssh
 **DICA-10:** lembre-se sempre de sair de todos os níveis para salvar as configurações.
 ```bash
 sw-01(config-line)# end
+sw-01#
 ```
 
 08. Salvando as configurações da memória RAM (Running-Config) para a memória NVRAM (Startup-Config).
@@ -139,9 +140,27 @@ sw-01#
 ```bash
 !Visualizando as Configurações do Running-Config (RAM)
 sw-01# show running-config
+  Building configuration...
 
+  Current configuration : 1763 bytes
+  !
+  ...
+  !
+  end
+sw-01#
+```
+```bash
 !Fazendo um Filtro na Visualização do Running-Config somente da Sessão Line VTY
 sw-01# show running-config | section include line vty
+  line vty 0 4
+    exec-timeout 5 30
+    password 7 08701E1D290A00191308
+    logging synchronous
+    login local
+    transport input ssh
+  line vty 5 15
+    login
+sw-01#
 ```
 
 ## TERCEIRA ETAPA: Automatizando a Configuração do Segundo Switch Cisco Catalyst 2960.
@@ -158,11 +177,11 @@ sw-01# show running-config | section include line vty
 ```bash
 AVISO: acesso autorizado somente a funcionarios
 User Access Verification
-Username: robson
-Password: pti@2018
+Username: SEU_USUÁRIO
+Password: SUA_SENHA
 
 sw-02> enable
-Password: pti@2018
+Password: SUA_SENHA_SEGURA
 
 sw-02#
 ```
@@ -177,7 +196,7 @@ configure terminal
     login local
 
     !Habilitando senha de acesso do Tipo-7 Password
-    password pti@2018
+    password SUA_SENHA_NÃO_SEGURA
 
     !Sincronizando as mensagens de logs na tela
     logging synchronous

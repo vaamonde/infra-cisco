@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 27/03/2025<br>
-Versão: 0.04<br>
+Data de atualização: 27/04/2025<br>
+Versão: 0.05<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -43,11 +43,11 @@ Link da vídeo aula: https://www.youtube.com/watch?v=bS1o83wWMUk
 ```bash
 AVISO: acesso autorizado somente a funcionarios
 User Access Verification
-Username: robson
-Password: pti@2018
+Username: SEU_USUÁRIO
+Password: SUA_SENHA
 
 sw-01> enable
-Password: pti@2018
+Password: SUA_SENHA_SEGURA
 
 sw-01# configure terminal
 sw-01(config)#
@@ -117,6 +117,7 @@ sw-01(config)# ip ssh authentication-retries 2
 **DICA-07:** você pode usar o comando: *do write* ou o comando: *copy running-config startup-config* para salvar as configurações sem sair do Modo Exec Privilegiado.
 ```bash
 sw-01(config)# end
+sw-01#
 ```
 
 07. Salvando as configurações da memória RAM (Running-Config) para a memória NVRAM (Startup-Config).
@@ -137,30 +138,92 @@ sw-01#
 !Visualizando as Configurações do Running-Config (RAM)
 !OBSERVAÇÃO: A ÚNICA LINHA QUE NÃO APARECE NAS CONFIGURAÇÕES DO SSH É A: crypto key generate rsa
 sw-01# show running-config
+  Building configuration...
 
+  Current configuration : 1763 bytes
+  !
+  ...
+  !
+  end
+sw-01#
+```
+```bash
 !Fazendo um Filtro na Visualização do Running-Config somente da Sessão Line VTY
 sw-01# show running-config | section include line vty
-
+  line vty 0 4
+    exec-timeout 5 30
+    password 7 08701E1D290A00191308
+    logging synchronous
+    login local
+    transport input ssh
+  line vty 5 15
+    login
+sw-01#
+```
+```bash
 !Fazendo um Filtro na Visualização do Running-Config somente do SSH
 !OBSERVAÇÃO: ÚNICA LINHA QUE NÃO APARECE NAS CONFIGURAÇÃO É A: crypto key generate rsa
-sw-01# show running-config | section include ssh
-
+sw-01# show running-config | include ip ssh
+  ip ssh version 2
+  ip ssh authentication-retries 2
+  ip ssh time-out 60
+sw-01#
+```
+```bash
 !Fazendo um Filtro na Visualização do Running-Config somente da Interface Vlan1
 sw-01# show running-config | section include interface Vlan1
-
+  interface Vlan1
+    description Interface de SVI
+    ip address 192.168.1.250 255.255.255.0
+sw-01#
+```
+```bash
 !Visualizando as configurações do SSH Server e Versão
 sw-01# show ip ssh
-
+  SSH Enabled - version 2.0
+  Authentication timeout: 60 secs; Authentication retries: 2
+sw-01#
+```
+```bash
 !Visualizando das chaves públicas RSA do SSH Server
 sw-01# show crypto key mypubkey rsa
-
+  % Key pair was generated at: 21:44:0 UTC fevereiro 4 2025
+  Key name: sw-01.SEU_DOMÍNIO.INTRA
+    Storage Device: not specified
+    Usage: General Purpose Key
+    Key is not exportable.
+    Key Data:
+    00005d5c  00007c53  0000627e  00007a79  00005802  00000027  000071e7  000018cb
+    00003fa6  000008b2  00000428  00001fac  00002e5d  00007dbf  00007fa8  00004273
+    00001673  0000237d  000006af  00000dd9  0000370c  00004c8d  00003128  4aad
+  % Key pair was generated at: 21:44:0 UTC fevereiro 4 2025
+  Key name: sw-01.SEU_DOMÍNIO.INTRA.server
+  Temporary key
+    Usage: Encryption Key
+    Key is not exportable.
+    Key Data:
+    0000440b  0000725a  000013a6  000078ca  00004533  000027a9  000037a6  00007647
+    0000708c  00001971  00006914  000026ed  00000409  000011ec  00007d10  00002fee
+    00006267  000031ee  000075f1  00001bd3  00007758  00005476  0000288a  7ab7
+sw-01#
+```
+```bash
 !Visualizando as conexões ativas do SSH Server.
 !OBSERVAÇÃO: ESSA OPÇÃO SÓ VAI FUNCIONAR QUANDO VOCÊ SE CONECTAR REMOTAMENTE NO SWITCH OU ROUTER.
 sw-01# show ssh
-
+  %No SSHv2 server connections running.
+  %No SSHv1 server connections running.
+sw-01#
+```
+```bash
 !Visualizando os Usuários Conectados no Switch
 !OBSERVAÇÃO: ESSA OPÇÃO VAI MOSTRAR O USUÁRIO LOGADO NO CONSOLE: con 0 OU NO VTY: vty 0
 sw-01# show users
+    Line       User             Host(s)              Idle       Location
+*  0 con 0     SEU_USUÁRIO      idle                 00:00:00 
+
+  Interface    User             Mode         Idle     Peer Address
+sw-01#
 ```
 
 ## TERCEIRA ETAPA: Testando e Acessando Remotamente do Switch Cisco Catalyst 2960.
@@ -173,22 +236,123 @@ a) Abrindo o Prompt de Comando do Desktop;
 ```bash
 !Verificando o endereço IPv4 configurado no Desktop
 C:\> ipconfig
+FastEthernet0 Connection:(default port)
 
+   Connection-specific DNS Suffix..: 
+   Link-local IPv6 Address.........: FE80::2E0:8FFF:FE82:E0BB
+   IPv6 Address....................: ::
+   IPv4 Address....................: 192.168.1.10
+   Subnet Mask.....................: 255.255.255.0
+   Default Gateway.................: ::
+                                     192.168.1.254
+
+Bluetooth Connection:
+
+   Connection-specific DNS Suffix..: 
+   Link-local IPv6 Address.........: ::
+   IPv6 Address....................: ::
+   IPv4 Address....................: 0.0.0.0
+   Subnet Mask.....................: 0.0.0.0
+   Default Gateway.................: ::
+                                     0.0.0.0
+C:\>
+```
+```bash
 !Verificando o endereço detalhado IPv4 configurado no Desktop
 C:\> ipconfig /all
+FastEthernet0 Connection:(default port)
 
+   Connection-specific DNS Suffix..: 
+   Physical Address................: 00E0.8F82.E0BB
+   Link-local IPv6 Address.........: FE80::2E0:8FFF:FE82:E0BB
+   IPv6 Address....................: ::
+   IPv4 Address....................: 192.168.1.10
+   Subnet Mask.....................: 255.255.255.0
+   Default Gateway.................: ::
+                                     192.168.1.254
+   DHCP Servers....................: 0.0.0.0
+   DHCPv6 IAID.....................: 
+   DHCPv6 Client DUID..............: 00-01-00-01-00-55-9C-4C-00-E0-8F-82-E0-BB
+   DNS Servers.....................: ::
+                                     192.168.1.1
+
+Bluetooth Connection:
+
+   Connection-specific DNS Suffix..: 
+   Physical Address................: 00E0.F7AA.695E
+   Link-local IPv6 Address.........: ::
+   IPv6 Address....................: ::
+   IPv4 Address....................: 0.0.0.0
+   Subnet Mask.....................: 0.0.0.0
+   Default Gateway.................: ::
+                                     0.0.0.0
+   DHCP Servers....................: 0.0.0.0
+   DHCPv6 IAID.....................: 
+   DHCPv6 Client DUID..............: 00-01-00-01-00-55-9C-4C-00-E0-8F-82-E0-BB
+   DNS Servers.....................: ::
+                                     192.168.1.1
+C:\>
+```
+```bash
 !Testando a comunicação com o Switch utilizando o pacote ICMP (Internet Control Message Protocol)
 C:\> ping 192.168.1.250           (Switch SW-01)
-C:\> ping 192.168.1.251           (Switch SW-02)
+Pinging 192.168.1.250 with 32 bytes of data:
 
+Reply from 192.168.1.250: bytes=32 time<1ms TTL=255
+Reply from 192.168.1.250: bytes=32 time<1ms TTL=255
+Reply from 192.168.1.250: bytes=32 time<1ms TTL=255
+Reply from 192.168.1.250: bytes=32 time<1ms TTL=255
+
+Ping statistics for 192.168.1.250:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0m
+C:\>
+```
+```bash
+C:\> ping 192.168.1.251           (Switch SW-02)
+Pinging 192.168.1.251 with 32 bytes of data:
+
+Reply from 192.168.1.251: bytes=32 time=12ms TTL=255
+Reply from 192.168.1.251: bytes=32 time<1ms TTL=255
+Reply from 192.168.1.251: bytes=32 time=9ms TTL=255
+Reply from 192.168.1.251: bytes=32 time<1ms TTL=255
+
+Ping statistics for 192.168.1.251:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 12ms, Average = 5ms
+C:\>
+```
+```bash
 !Testando o acesso remoto no Switch utilizando o protocolo Telnet (Teletype Network)
 C:\> telnet 192.168.1.250         (Switch SW-01)
-C:\> telnet 192.168.1.251         (Switch SW-02)
+Trying 192.168.1.250 ...Open
 
-!Acessando remotamente o Switch utilizando o protocolo SSH (Secure Shell)
+[Connection to 192.168.1.250 closed by foreign host]
+C:\>
+
+C:\> telnet 192.168.1.251         (Switch SW-02)
+Trying 192.168.1.250 ...Open
+
+[Connection to 192.168.1.250 closed by foreign host]
+C:\>
+```
+```bash
+!Acessando remotamente os Switches utilizando o protocolo SSH (Secure Shell)
 !OBSERVAÇÃO: -l (éli não é o número "1" (um) e sim "l" (éli) em minúsculo)
 C:\> ssh -l admin 192.168.1.250   (Switch SW-01)
+Password: 
+
+AVISO: acesso autorizado somente a funcionarios
+
+sw-01>
+
 C:\> ssh -l admin 192.168.1.251   (Switch SW-02)
+Trying 192.168.1.254 ...Open
+
+[Connection to 192.168.1.254 closed by foreign host]
+C:\>
 ```
 
 ## QUARTA ETAPA: Automatizando a Configuração do Segundo Switch Cisco Catalyst 2960.
@@ -205,11 +369,11 @@ C:\> ssh -l admin 192.168.1.251   (Switch SW-02)
 ```bash
 AVISO: acesso autorizado somente a funcionarios
 User Access Verification
-Username: robson
-Password: pti@2018
+Username: SEU_USUÁRIO
+Password: SUA_SENHA
 
 sw-02> enable
-Password: pti@2018
+Password: SUA_SENHA_SEGURA
 
 sw-02#
 ```
@@ -219,7 +383,7 @@ sw-02#
 configure terminal
 
   !Configuração do nome de domínio FQDN (Nome de Domínio Totalmente Qualificado)
-  ip domain-name pti.intra
+  ip domain-name SEU-DOMÍNIO.INTRA
 
   !Criação da chave de criptografia e habilitar o serviço de SSH Server local
   crypto key generate rsa general-keys modulus 1024

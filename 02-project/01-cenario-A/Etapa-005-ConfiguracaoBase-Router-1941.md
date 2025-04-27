@@ -9,7 +9,7 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 27/03/2025<br>
+Data de atualização: 27/04/2025<br>
 Versão: 0.05<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
@@ -81,6 +81,15 @@ Router (config)# login block-for 120 attempts 2 within 60
 
 **DICA-05:** para facilitar a leitura do código, recomendo utilizar o recurso de **Indentação de Código** usando a Tecla TAB (Tabulador/Tabulação) para cada nível que você está configurando o Cisco IOS, isso facilitada a análise de erros (Debug) do código.
 
+```bash
+         --- System Configuration Dialog ---
+
+Would you like to enter the initial configuration dialog? [yes/no]: no
+
+Press RETURN to get started!
+
+Router>
+```
 ```python
 !Acessando o modo EXEC Privilegiado
 enable
@@ -114,15 +123,15 @@ enable
     security passwords min-length 8
 
     !Habilitando o uso senha do Tipo-5 Secret para acessar o modo EXEC Privilegiado
-    enable secret pti@2018
+    enable secret SUA_SENHA_SEGURA
 
     !Criação dos usuários locais utilizando senhas do Tipo-5 ou Tipo-7 e privilégios diferenciados
-    username robson secret pti@2018
-    username vaamonde password pti@2018
-    username admin privilege 15 secret pti@2018
+    username USUÁRIO_1 secret SUA_SENHA_SEGURA
+    username USUÁRIO_2 password SUA_SENHA_NÃO_SEGURA
+    username USUARIO_3 privilege 15 secret SUA_SENHA_SEGURA
     
     !Configuração do nome de domínio FQDN (Fully Qualified Domain Name)
-    ip domain-name pti.intra
+    ip domain-name SEU_DOMÍNIO.INTRA
 
     !Criação da chave de criptografia e habilitando o serviço do SSH Server local
     crypto key generate rsa general-keys modulus 1024
@@ -150,7 +159,7 @@ enable
       login local
 
       !Habilitando senha de acesso do Tipo-7 Password
-      password pti@2018
+      password SUA_SENHA_NÃO_SEGURA
 
       !Sincronizando as mensagens de logs na tela
       logging synchronous
@@ -168,7 +177,7 @@ enable
       login local
 
       !Habilitando senha de acesso do Tipo-7 Password
-      password pti@2018
+      password SUA_SENHA_NÃO_SEGURA
 
       !Sincronizando as mensagens de logs na tela
       logging synchronous
@@ -195,28 +204,92 @@ enable
 !Visualizando as Configurações do Running-Config (RAM)
 !OBSERVAÇÃO: A ÚNICA LINHA QUE NÃO APARECE NAS CONFIGURAÇÕES DO SSH É A: crypto key generate rsa
 rt-01# show running-config
+  Building configuration...
 
+  Current configuration : 1763 bytes
+  !
+  ...
+  !
+  end
+rt-01#
+```
+```bash
 !Fazendo um Filtro na Visualização do Running-Config somente da Sessão Line Console 0
 rt-01# show running-config | section include con 0
-
+  line con 0
+    password 7 08701E1D290A00191308
+    logging synchronous
+    login local
+    exec-timeout 5 30
+rt-01#
+```
+```bash
 !Fazendo um Filtro na Visualização do Running-Config somente da Sessão Line VTY
 rt-01# show running-config | section include line vty
-
+  line vty 0 4
+    exec-timeout 5 30
+    password 7 08701E1D290A00191308
+    logging synchronous
+    login local
+    transport input ssh
+  line vty 5 15
+    login
+rt-01#
+```
+```bash
 !Fazendo um Filtro na Visualização do Running-Config somente do SSH
 !OBSERVAÇÃO: ÚNICA LINHA QUE NÃO APARECE NAS CONFIGURAÇÃO É A: crypto key generate rsa
-rt-01# show running-config | section include ssh
-
+rt-01# show running-config | include ip ssh
+  ip ssh version 2
+  ip ssh authentication-retries 2
+  ip ssh time-out 60
+rt-01#
+```
+```bash
 !Visualizando as configurações do SSH Server e Versão
 rt-01# show ip ssh
-
+  SSH Enabled - version 2.0
+  Authentication timeout: 60 secs; Authentication retries: 2
+rt-01#
+```
+```bash
 !Visualizando das chaves públicas RSA do SSH Server
 rt-01# show crypto key mypubkey rsa
-
+  % Key pair was generated at: 21:44:0 UTC fevereiro 4 2025
+  Key name: rt-01.SEU_DOMÍNIO.INTRA
+    Storage Device: not specified
+    Usage: General Purpose Key
+    Key is not exportable.
+    Key Data:
+    00005d5c  00007c53  0000627e  00007a79  00005802  00000027  000071e7  000018cb
+    00003fa6  000008b2  00000428  00001fac  00002e5d  00007dbf  00007fa8  00004273
+    00001673  0000237d  000006af  00000dd9  0000370c  00004c8d  00003128  4aad
+  % Key pair was generated at: 21:44:0 UTC fevereiro 4 2025
+  Key name: rt-01.SEU_DOMÍNIO.INTRA.server
+  Temporary key
+    Usage: Encryption Key
+    Key is not exportable.
+    Key Data:
+    0000440b  0000725a  000013a6  000078ca  00004533  000027a9  000037a6  00007647
+    0000708c  00001971  00006914  000026ed  00000409  000011ec  00007d10  00002fee
+    00006267  000031ee  000075f1  00001bd3  00007758  00005476  0000288a  7ab7
+rt-01#
+```
+```bash
 !Visualizando as conexões ativas do SSH Server.
 !OBSERVAÇÃO: ESSA OPÇÃO SÓ VAI FUNCIONAR QUANDO VOCÊ SE CONECTAR REMOTAMENTE NO SWITCH OU ROUTER.
 rt-01# show ssh
-
+  %No SSHv2 server connections running.
+  %No SSHv1 server connections running.
+rt-01#
+```
+```bash
 !Visualizando os Usuários Conectados no Switch
 !OBSERVAÇÃO: ESSA OPÇÃO VAI MOSTRAR O USUÁRIO LOGADO NO CONSOLE: con 0 OU NO VTY: vty 0
 rt-01# show users
+    Line       User             Host(s)              Idle       Location
+*  0 con 0     SEU_USUÁRIO      idle                 00:00:00 
+
+  Interface    User             Mode         Idle     Peer Address
+rt-01#
 ```

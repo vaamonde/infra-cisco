@@ -7,8 +7,8 @@
 #Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem<br>
 #YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 #Data de criação: 16/09/2024<br>
-#Data de atualização: 27/03/2025<br>
-#Versão: 0.07<br>
+#Data de atualização: 27/04/2025<br>
+#Versão: 0.08<br>
 #Testado e homologado no Linux Mint 22 Wilma x64<br>
 #Testado e homologado o Cisco Packet Tracer 8.2.x x64 e Rack Cisco SW-3560 e RT-2911
 
@@ -42,11 +42,11 @@ Link da vídeo aula: https://www.youtube.com/watch?v=ueh8gp37RG8
 ```bash
 AVISO: acesso autorizado somente a funcionarios
 User Access Verification
-Username: robson
-Password: pti@2018
+Username: SEU_USUÁRIO
+Password: SUA_SENHA
 
 sw-01> enable
-Password: pti@2018
+Password: SUA_SENHA_SEGURA
 
 sw-01# configure terminal
 sw-01(config)#
@@ -122,6 +122,7 @@ D) Saindo de todos os níveis e voltando para o modo EXEC Privilegiado.
 **EXEMPLO: sw-01(config-line)# do copy running-config startup-config | sw-01(config-line)# do show running-config | sw-01(config-line)# do write**
 ```bash
 sw-01(config-if)# end
+sw-01#
 ```
 
 E) Salvando as configurações da memória RAM (Running-Config) para a memória NVRAM (Startup-Config)
@@ -141,15 +142,54 @@ sw-01#
 ```bash
 !Visualizando as Configurações do Running-Config (RAM)
 sw-01# show running-config
+  Building configuration...
 
+  Current configuration : 1763 bytes
+  !
+  ...
+  !
+  end
+sw-01#
+```
+```bash
 !Fazendo um Filtro na Visualização do Running-Config somente da Interface Vlan1
 sw-01# show running-config | section include interface Vlan1
-
+  interface Vlan1
+    description Interface de SVI
+    ip address 192.168.1.250 255.255.255.0
+sw-01#
+```
+```bash
 !Visualizando as configurações das interfaces e portas de rede do Switch
 sw-01# show ip interface brief
-
-!Visualizando as configurações das VLAN's padrão do Switch
+  Interface              IP-Address      OK? Method Status                Protocol 
+  FastEthernet0/1        unassigned      YES manual up                    up 
+  FastEthernet0/2        unassigned      YES manual up                    up 
+  FastEthernet0/3        unassigned      YES manual down                  down
+  ...
+  FastEthernet0/24       unassigned      YES manual up                    up 
+  GigabitEthernet0/1     unassigned      YES manual up                    up 
+  GigabitEthernet0/2     unassigned      YES manual up                    up 
+  Vlan1                  192.168.1.250   YES manual up                    up
+sw-01#
+```
+```bash
+!Visualizando as configurações das VLANs padrão do Switch
 sw-01# show vlan brief
+  VLAN Name                             Status    Ports
+  ---- -------------------------------- --------- -------------------------------
+  1    default                          active    Fa0/1, Fa0/2, Fa0/3, Fa0/4
+                                                  Fa0/5, Fa0/6, Fa0/7, Fa0/8
+                                                  Fa0/9, Fa0/10, Fa0/11, Fa0/12
+                                                  Fa0/13, Fa0/14, Fa0/15, Fa0/16
+                                                  Fa0/17, Fa0/18, Fa0/19, Fa0/20
+                                                  Fa0/21, Fa0/22, Fa0/23, Fa0/24
+                                                  Gig0/1, Gig0/2
+  1002 fddi-default                     active    
+  1003 token-ring-default               active    
+  1004 fddinet-default                  active    
+  1005 trnet-default                    active
+sw-01#
 ```
 
 F) Testando a conectividade entre o Switch e os Desktops da Rede
@@ -164,9 +204,16 @@ sw-01# ping 192.168.1.250
   Sending 5, 100-byte ICMP Echos to 192.168.1.250, timeout is 2 seconds:
   !!!!!
   Success rate is 100 percent (5/5), round-trip min/avg/max = 8/10/15 ms
-
-!Pingando o Servidor
+sw-01#
+```
+```bash
+!Pingando o endereço IPv4 do Servidor
 sw-01# ping 192.168.1.1
+  Type escape sequence to abort.
+  Sending 5, 100-byte ICMP Echos to 192.168.1.1, timeout is 2 seconds:
+  .!!!!
+  Success rate is 80 percent (4/5), round-trip min/avg/max = 0/0/0 ms
+sw-01#
 ```
 
 ## QUARTA ETAPA: Automatizando a Configuração do Segundo Switch Cisco Catalyst 2960.
@@ -183,11 +230,11 @@ sw-01# ping 192.168.1.1
 ```bash
 AVISO: acesso autorizado somente a funcionarios
 User Access Verification
-Username: robson
-Password: pti@2018
+Username: SEU_USUÁRIO
+Password: SUA_SENHA
 
 sw-02> enable
-Password: pti@2018
+Password: SUA_SENHA_SEGURA
 
 sw-02#
 ```
