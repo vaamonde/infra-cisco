@@ -10,7 +10,7 @@ LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
 Data de atualização: 27/04/2025<br>
-Versão: 0.08<br>
+Versão: 0.09<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -65,6 +65,7 @@ sw-01#
 **OBSERVAÇÃO-02:** esse comando também mostrar as informações referente a *Configuração do Registro de Inicialização* do equipamento para efeito de manutenção ou Reset.
 
 ```bash
+!Verificando as informações do Cisco IOS do Switch
 sw-01# show version
   ...
   Switch uptime is 39 minutes
@@ -89,10 +90,17 @@ sw-01#
 **OBSERVAÇÃO-03:** essas informações são importante para o processo de quebra de senha do Switch se necessário.
 
 ```bash
+!Verificando as imagens do Cisco IOS configuradas no Boot do Switch
 sw-01# show boot
   BOOT path-list      : 2960-lanbasek9-mz.150-2.SE4.bin    (Binário do Cisco IOS)
   Config file         : flash:/config.text                 (Arquivo de Inicialização do Cisco IOS)
   Private Config file : flash:/private-config.text         (Arquivo de Segurança da Inicialização)
+  Enable Break        : no
+  Manual Boot         : no
+  HELPER path-list    : 
+  Auto upgrade        : yes
+  NVRAM/Config file
+           buffer size: 65536
 sw-01#
 ```
 
@@ -103,11 +111,24 @@ sw-01#
 **OBSERVAÇÃO-04:** diferente do Router, a memória Flash em Switch não pode ser acessada sem desmontar (Abrir) o equipamento (Caixa).
 
 ```bash
+!Verificando o conteúdo da Flash
 sw-01# show flash:
+  Directory of flash:/
+
+      1  -rw-     4670455          <no date>  2960-lanbasek9-mz.150-2.SE4.bin
+      4  -rw-        1763          <no date>  config.text
+
   64016384 bytes total (59344171 bytes free)
 sw-01#
-
+```
+```bash
+!Verificando o conteúdo da Flash com o comando Dir
 sw-01# dir flash:
+  Directory of flash:/
+
+      1  -rw-     4670455          <no date>  2960-lanbasek9-mz.150-2.SE4.bin
+      4  -rw-        1763          <no date>  config.text
+
   64016384 bytes total (59344171 bytes free)
   64016384 Bytes Total / 1000 = 64 MB
   59344171 Bytes Free  / 1000 = 60 MB
@@ -135,9 +156,16 @@ sw-01# copy startup-config flash:
   Destination filename [startup-config]?
   1758 bytes copied in 0.416 secs (4225 bytes/sec)
 sw-01#
-
+```
+```bash
 sw-01# dir flash:
-  5  -rw-        1758          <no date>  startup-config
+  Directory of flash:/
+
+      1  -rw-     4670455          <no date>  2960-lanbasek9-mz.150-2.SE4.bin
+      4  -rw-        1763          <no date>  config.text
+      5  -rw-        1763          <no date>  startup-config
+
+  64016384 bytes total (59342403 bytes free)
 sw-01#
 ```
 
@@ -158,18 +186,24 @@ Server-01
     TFTP
       Service: ON (Enable)
         <Remove File>
-
+```
+```bash
 !Pingando o Servidor de TFTP
 sw-01# ping 192.168.1.1
-
+```
+```bash
 !Verificando o Arquivo Startup-Config da NVRAM
 sw-01# dir nvram:
-  238  -rw-        1679          <no date>  startup-config
+  Directory of nvram:/
+
+    238  -rw-        1652          <no date>  startup-config
+
   1679 bytes total (237588 bytes free)
     1679 Bytes Total / 1000 = 1,7 KB
   237588 Bytes Free  / 1000 = 238 KB
 sw-01#
-
+```
+```bash
 !Copiando o arquivo de configuração da NVRAM para o Servidor TFTP
 sw-01# copy startup-config tftp:
   Address or name of remote host []? 192.168.1.1
@@ -178,8 +212,9 @@ sw-01# copy startup-config tftp:
   [OK - 1758 bytes]
   1758 bytes copied in 0.013 secs (135230 bytes/sec)
 sw-01#
-
-!Verificando o Backup no Servidor TFTP
+```
+```bash
+!Verificando os Backups no Servidor TFTP
 Server-01
   Services
     TFTP
@@ -204,9 +239,17 @@ E) Quinta parte: .bin extensão do arquivo binário do Cisco IOS).<br>
 ```bash
 !Verificando o Binário do Cisco IOS do Switch
 sw-01# dir flash:
-  1  -rw-     4414921          <no date>  2960-lanbasek9-mz.150-2.SE4.bin
-sw-01#
+  Directory of flash:/
 
+      1  -rw-     4670455          <no date>  2960-lanbasek9-mz.150-2.SE4.bin
+      4  -rw-        1763          <no date>  config.text
+      5  -rw-        1763          <no date>  startup-config
+
+  64016384 bytes total (59342403 bytes free)
+sw-01#
+```
+```bash
+!Fazendo o Backup do Binário do Cisco IOS do Switch
 sw-01# copy flash: tftp:
   Source filename []? 2960-lanbasek9-mz.150-2.SE4.bin
   Address or name of remote host []? 192.168.1.1
@@ -216,8 +259,9 @@ sw-01# copy flash: tftp:
   [OK - 4670455 bytes]
   4670455 bytes copied in 0.057 secs (6587503 bytes/sec)
 sw-01#
-
-!Verificando o Backup no Servidor TFTP
+```
+```bash
+!Verificando os Backups no Servidor TFTP
 Server-01
   Services
     TFTP
@@ -298,12 +342,27 @@ rt-01#
 **OBSERVAÇÃO-11:** o acesso a memória Flash em roteadores é feita utilizando módulos externos, geralmente não são soldados nos modelos antigos, modelos atuais está vindo chipado (soldado).
 
 ```bash
+!Verificando as informações da Flash do Cisco IOS do Router
 rt-01# show flash:
+System flash directory:
+  File  Length   Name/status
+    3   33591768 c1900-universalk9-mz.SPA.151-4.M4.bin
+    2   28282    sigdef-category.xml
+    1   227537   sigdef-default.xml
+
   [33849219 bytes used, 221896413 available, 255744000 total]
   249856K bytes of processor board System flash (Read/Write)
 rt-01#
-
+```
+```bash
+!Verificando as informações da Flash Card 0 do Router
 rt-01# dir flash0:
+  Directory of flash0:/
+
+      3  -rw-    33591768          <no date>  c1900-universalk9-mz.SPA.151-4.M4.bin
+      2  -rw-       28282          <no date>  sigdef-category.xml
+      1  -rw-      227537          <no date>  sigdef-default.xml
+
   255744000 bytes total (221896413 bytes free)
   255744000 Bytes Total = 256MB
   33847587 Bytes Used = 34MB
@@ -322,23 +381,27 @@ rt-01# copy running-config startup-config
   Building configuration...
   [OK]
 rt-01#
-
+```
+```bash
 !Salvando as configurações da memória NVRAM para a memória FLASH
 rt-01# copy startup-config flash: 
   Destination filename [startup-config]? 
   1453 bytes copied in 0.416 secs (3492 bytes/sec)
 rt-01#
-
+```
+```bash
 !Salvando as configurações da memória NVRAM para o Servidor TFTP
 
 !Pingando o Servidor de TFTP
 rt-01# ping 192.168.1.1
-
+```
+```bash
 !Verificando o Arquivo Startup-Config da NVRAM
 rt-01# dir nvram:
   238  -rw-        1349          <no date>  startup-config
 rt-01#
-
+```
+```bash
 !Copiando o arquivo de configuração da NVRAM para o Servidor TFTP
 rt-01# copy startup-config tftp:
   Address or name of remote host []? 192.168.1.1
@@ -347,7 +410,8 @@ rt-01# copy startup-config tftp:
   [OK - 1453 bytes]
   1453 bytes copied in 0 secs
 rt-01#
-
+```
+```bash
 !Salvando a imagem do Cisco IOS do Router 1941 para o Servidor TFTP
 rt-01# copy flash: tftp:
   Source filename []? c1900-universalk9-mz.SPA.151-4.M4.bin
@@ -365,7 +429,8 @@ rt-01#
 
 !Saindo do modo EXEC Privilegiado
 rt-01# disable
-
+```
+```bash
 !Verificando os Backups no Servidor TFTP
 Server-01
   Services

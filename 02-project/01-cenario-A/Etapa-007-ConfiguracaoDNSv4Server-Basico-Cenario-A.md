@@ -54,13 +54,15 @@ O protocolo padrão utilizado pelo DNS Server é o: *UDP (User Datagram Protocol
 
 **Registros DNS:** Os registros DNS são mapeamentos de arquivos ou sistemas que dizem a um servidor DNS para qual endereço IP um determinado domínio está associado. Também informa aos servidores DNS como lidar com as solicitações que estão sendo enviadas para cada nome de domínio.
 
-**Sintaxe DNS:** Diferentes sequências de letras são usadas para ditar as ações do servidor DNS. Essas letras são chamadas de sintaxe DNS (Exemplo: A (IPv4), AAAA (IPv6), CNAME, MX, PTR, NS, SOA, SRV, TXT, etc).
+**Sintaxe DNS:** Diferentes sequências de letras são usadas para ditar as ações do servidor DNS. Essas letras são chamadas de sintaxe *DNS (Exemplo: A (IPv4), AAAA (IPv6), CNAME, MX, PTR, NS, SOA, SRV, TXT, etc).*
 
-**Registro Tipo A....:** Significa Endereço e é o tipo mais básico de sintaxe DNS. Indica o endereço IP real para um domínio ou computador;<br>
-**Registro Tipo AAAA.:** Igual ao Tipo A mais utilizado nas configurações do IPv6;<br>
-**Registro Tipo CNAME:** Significa o Nome Canônico (Canonical Name Record) e seu papel é fazer que um domínio use um alias (Pseudônimo - Apelido) de outro domínio;<br>
-**Registro Tipo SOA..:** Significa Início de Autoridade. Obviamente é um dos registros de DNS mais importantes;<br>
-**Registro Tipo NS...:** Significa Name Server ele indica qual nome de servidor é autoritativo para o domínio.
+| Tipos de Registros | Descrição |
+|--------------------|-----------|
+| Registro Tipo A | Significa Endereço e é o tipo mais básico de sintaxe DNS. Indica o endereço IP real para um domínio ou computador |
+| Registro Tipo AAAA | Igual ao Tipo A mais utilizado nas configurações do IPv6 |
+| Registro Tipo CNAME | Significa o Nome Canônico (Canonical Name Record) e seu papel é fazer que um domínio use um alias (Pseudônimo - Apelido) de outro domínio |
+| Registro Tipo SOA | Significa Início de Autoridade. Obviamente é um dos registros de DNS mais importantes |
+| Registro Tipo NS | Significa Name Server ele indica qual nome de servidor é autoritativo para o domínio. |
 
 01. Configurações do Serviço de DNS Server no Cisco Packet Tracer.
 
@@ -105,7 +107,22 @@ C:\> ipconfig /all
 
 !Testando a Resolução de Nomes DNS no Desktop
 C:\> nslookup server-01
+Server: [192.168.1.1]
+Address:  192.168.1.1
+
+Non-authoritative answer:
+Name:   server-01
+Address:   192.168.1.1
+C:\>
+
 C:\> nslookup sw-01
+Server: [192.168.1.1]
+Address:  192.168.1.1
+
+Non-authoritative answer:
+Name:   sw-01
+Address:   192.168.1.250
+C:\>
 
 !Testando a comunicação com o Server 01 utilizando o pacote ICMP (Internet Control Message Protocol)
 C:\> ping server-01
@@ -203,6 +220,15 @@ sw-01# show running-config
 
 !Fazendo um Filtro na Visualização do Running-Config somente da Sessão IP
 sw-01# show running-config | section include ip
+  ip ssh version 2
+  ip ssh authentication-retries 2
+  ip ssh time-out 60
+  ip domain-name SEU_DOMÍNIO.INTRA
+  ip host google 8.8.8.8 
+  ip host rt-01 192.168.1.254 
+  ip name-server 192.168.1.1
+  ip default-gateway 192.168.1.254
+sw-01#
 ```
 
 ## QUARTA ETAPA: Testando o Serviço de DNS Server nos Switches e Routers.
