@@ -39,7 +39,7 @@ G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração
 Uma **Porta de Tronco (trunk)**, normalmente é usada para interligação de Switches ou ligação de Roteadores e Servidores, ela permite a passagem de tráfego de várias VLANs, configurando uma porta como Trunk, todo o tráfego de todas as VLANs criadas no Switch podem passar por ela, no entanto o administrador pode limitar o número de VLANs que podem passar pelo Trunk.
 
 ## SEGUNDA ETAPA: Configurando as Portas Trunk no Switch Multilayer 3650 (CENTRO - DISTRIBUIÇÃO)
-```bash
+```python
 !Acessando o modo de Configuração Global de Comandos
 configure terminal
 
@@ -67,7 +67,7 @@ write
 ```
 
 ## TERCEIRA ETAPA: Configurando as Portas Trunk no Switch Cisco Layer 2 2960 (LADO ESQUERDO - ACESSO)
-```bash
+```python
 !Acessando o modo de Configuração Global de Comandos
 configure terminal
 
@@ -87,7 +87,7 @@ write
 ```
 
 ## QUARTA ETAPA: Configurando as Portas Trunk no Switch Cisco Layer 2 2960 (LADO DIREITO - ACESSO)
-```bash
+```python
 !Acessando o modo de Configuração Global de Comandos
 configure terminal
 

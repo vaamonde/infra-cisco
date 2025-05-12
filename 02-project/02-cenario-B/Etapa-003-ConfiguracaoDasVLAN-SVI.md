@@ -74,7 +74,7 @@ Uma Porta de **Acesso (access)**, permite associar uma porta do Switch a uma VLA
 Por padrão todas as *Portas de Rede dos Switches Catalyst Cisco estão* configuradas no **Modo Dinâmico Automática** (switchport mode dynamic auto), nessa configuração a Interface tenta passar para o **Modo Trunk** se a outra extremidade também estiver configurada como **Dynamic Desirable** ou como **Trunk**. Caso contrário, permanece como **Modo Access**.
 
 ## QUINTA ETAPA: Configurando as VLANs no Switch Multilayer 3650 (CENTRO - DISTRIBUIÇÃO)
-```bash
+```python
 !Acessando o modo de Configuração Global de Comandos
 configure terminal
 
@@ -176,7 +176,7 @@ write
 ```
 
 ## SEXTA ETAPA: Configurando as VLANs no Switch Cisco Layer 2 2960 (LADO ESQUERDO - ACESSO)
-```bash
+```python
 configure terminal
 
   !Criando as VLANs Standard (Padrão) no Switch Layer 2 2960
@@ -252,7 +252,7 @@ write
 ```
 
 ## SÉTIMA ETAPA: Configurando as VLANs no Switch Cisco Layer 2 2960 (LADO DIREITO - ACESSO)
-```bash
+```python
 configure terminal
 
   !Criando as VLANs Standard (Padrão) no Switch Layer 2 2960
