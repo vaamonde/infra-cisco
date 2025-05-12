@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 16/04/2025<br>
-Versão: 0.08<br>
+Data de atualização: 12/05/2025<br>
+Versão: 0.09<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -35,7 +35,7 @@ F) **IMPORTANTE:** informações importantes da tecnologia ou da configuração,
 G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração, com foco em adicionar informações extras da tecnologia ou da certificação.
 
 ## PRIMEIRA ETAPA: Configuração Base Switch Cisco Catalyst Layer 2 2960 (LADO ESQUERDO - ACESSO)
-```bash
+```python
 !Acessando o modo Exec Privilegiado
 enable
 
@@ -64,15 +64,15 @@ enable
     banner motd #AVISO: acesso autorizado somente a funcionarios#
 
     !Habilitando o uso senha do Tipo-5 Secret para acessar o modo EXEC Privilegiado
-    enable secret pti@2018
+    enable secret SUA_SENHA_SEGURA
 
     !Criação dos usuários locais utilizando senhas do Tipo-5 ou Tipo-7 e privilégios diferenciados
-    username robson secret pti@2018
-    username vaamonde password pti@2018
-    username admin privilege 15 secret pti@2018
+    username SEU_USUÁRIO_1 secret SUA_SENHA_SEGURA
+    username SEU_USUÁRIO_2 password SUA_SENHA_NÃO_SEGURA
+    username SEU_USUÁRIO_3 privilege 15 secret SUA_SENHA_SEGURA
 
     !Configuração do nome de domínio FQDN (Nome de Domínio Totalmente Qualificado)
-    ip domain-name pti.intra
+    ip domain-name SEU_DOMÍNIO.INTRA
 
     !Criação da chave de criptografia e habilitar o serviço de SSH Server local
     crypto key generate rsa general-keys modulus 1024
@@ -97,7 +97,7 @@ enable
       login local
       
       !Habilitando senha de acesso do Tipo-7 Password
-      password pti@2018
+      password SUA_SENHA_NÃO_SEGURA
       
       !Sincronizando as mensagens de logs na tela
       logging synchronous
@@ -115,7 +115,7 @@ enable
       login local
 
       !Habilitando senha de acesso do Tipo-7 Password
-      password pti@2018
+      password SUA_SENHA_NÃO_SEGURA
 
       !Sincronizando as mensagens de logs na tela
       logging synchronous
@@ -138,7 +138,7 @@ enable
 ```
 
 ## SEGUNDA ETAPA: Configuração Base Switch Cisco Catalyst Layer 2 2960 (LADO DIREITO - ACESSO)
-```bash
+```python
 !Acessando o modo Exec Privilegiado
 enable
 
@@ -167,15 +167,15 @@ enable
     banner motd #AVISO: acesso autorizado somente a funcionarios#
 
     !Habilitando o uso senha do Tipo-5 Secret para acessar o modo EXEC Privilegiado
-    enable secret pti@2018
+    enable secret SUA_SENHA_SEGURA
 
     !Criação dos usuários locais utilizando senhas do Tipo-5 ou Tipo-7 e privilégios diferenciados
-    username robson secret pti@2018
-    username vaamonde password pti@2018
-    username admin privilege 15 secret pti@2018
+    username SEU_USUÁRIO_1 secret SUA_SENHA_SEGURA
+    username SEU_USUÁRIO_2 password SUA_SENHA_NÃO_SEGURA
+    username SEU_USUÁRIO_3 privilege 15 secret SUA_SENHA_SEGURA
 
     !Configuração do nome de domínio FQDN (Nome de Domínio Totalmente Qualificado)
-    ip domain-name pti.intra
+    ip domain-name SEU_DOMÍNIO.INTRA
 
     !Criação da chave de criptografia e habilitar o serviço de SSH Server local
     crypto key generate rsa general-keys modulus 1024
@@ -200,7 +200,7 @@ enable
       login local
       
       !Habilitando senha de acesso do Tipo-7 Password
-      password pti@2018
+      password SUA_SENHA_NÃO_SEGURA
       
       !Sincronizando as mensagens de logs na tela
       logging synchronous
@@ -218,7 +218,7 @@ enable
       login local
 
       !Habilitando senha de acesso do Tipo-7 Password
-      password pti@2018
+      password SUA_SENHA_NÃO_SEGURA
 
       !Sincronizando as mensagens de logs na tela
       logging synchronous
@@ -241,7 +241,7 @@ enable
 ```
 
 ## TERCEIRA ETAPA: Configuração Base Switch Cisco Multilayer 3650 (CENTRO - DISTRIBUIÇÃO)
-```bash
+```python
 !Acessando o modo Exec Privilegiado
 enable
 
@@ -273,18 +273,18 @@ enable
     banner motd #AVISO: acesso autorizado somente a funcionarios#
 
     !Habilitando o uso senha do Tipo-5 Secret para acessar o modo EXEC Privilegiado
-    enable secret pti@2018
+    enable secret SUA_SENHA_SEGURA
 
     !Criação dos usuários locais utilizando senhas do Tipo-5 ou Tipo-7 e privilégios diferenciados
-    username robson secret pti@2018
-    username vaamonde password pti@2018
-    username admin privilege 15 secret pti@2018
+    username SEU_USUÁRIO_1 secret SUA_SENHA_SEGURA
+    username SEU_USUÁRIO_2 password SUA_SENHA_NÃO_SEGURA
+    username SEU_USUÁRIO_3 privilege 15 secret SUA_SENHA_SEGURA
 
     !Bloqueando tentativas de conexões simultâneas com falha de autenticação no Switch
     login block-for 120 attempts 2 within 60
 
     !Configuração do nome de domínio FQDN (Nome de Domínio Totalmente Qualificado)
-    ip domain-name pti.intra
+    ip domain-name SEU_DOMÍNIO.INTRA
 
     !Criação da chave de criptografia e habilitar o serviço de SSH Server local
     crypto key generate rsa general-keys modulus 1024
@@ -309,7 +309,7 @@ enable
       login local
       
       !Habilitando senha de acesso do Tipo-7 Password
-      password pti@2018
+      password SUA_SENHA_NÃO_SEGURA
       
       !Sincronizando as mensagens de logs na tela
       logging synchronous
@@ -327,7 +327,7 @@ enable
       login local
 
       !Habilitando senha de acesso do Tipo-7 Password
-      password pti@2018
+      password SUA_SENHA_NÃO_SEGURA
 
       !Sincronizando as mensagens de logs na tela
       logging synchronous
@@ -350,7 +350,7 @@ enable
 ```
 
 ## QUARTA ETAPA: Configuração Base do Router Cisco 4321 (CENTRO - NÚCLEO)
-```bash
+```python
 !Acessando o modo EXEC Privilegiado
 enable
 
@@ -383,15 +383,15 @@ enable
     security passwords min-length 8
 
     !Habilitando o uso senha do Tipo-5 Secret para acessar o modo EXEC Privilegiado
-    enable secret pti@2018
+    enable secret SUA_SENHA_SEGURA
 
     !Criação dos usuários locais utilizando senhas do Tipo-5 ou Tipo-7 e privilégios diferenciados
-    username robson secret pti@2018
-    username vaamonde password pti@2018
-    username admin privilege 15 secret pti@2018
+    username SEU_USUÁRIO_1 secret SUA_SENHA_SEGURA
+    username SEU_USUÁRIO_2 password SUA_SENHA_NÃO_SEGURA
+    username SEU_USUÁRIO_3 privilege 15 secret SUA_SENHA_SEGURA
 
     !Configuração do nome de domínio FQDN (Fully Qualified Domain Name)
-    ip domain-name pti.intra
+    ip domain-name SEU_DOMÍNIO.INTRA
 
     !Criação da chave de criptografia e habilitando o serviço do SSH Server local
     crypto key generate rsa general-keys modulus 1024
@@ -419,7 +419,7 @@ enable
       login local
 
       !Habilitando senha de acesso do Tipo-7 Password
-      password pti@2018
+      password SUA_SENHA_NÃO_SEGURA
 
       !Sincronizando as mensagens de logs na tela
       logging synchronous
@@ -437,7 +437,7 @@ enable
       login local
 
       !Habilitando senha de acesso do Tipo-7 Password
-      password pti@2018
+      password SUA_SENHA_NÃO_SEGURA
 
       !Sincronizando as mensagens de logs na tela
       logging synchronous
@@ -473,7 +473,7 @@ show running-config | section include line vty
 
 !Fazendo um Filtro na Visualização do Running-Config somente do SSH
 !OBSERVAÇÃO: ÚNICA LINHA QUE NÃO APARECE NAS CONFIGURAÇÃO É A: crypto key generate rsa
-show running-config | section include ssh
+show running-config | section include ip ssh
 
 !Visualizando as configurações do SSH Server e Versão
 show ip ssh
