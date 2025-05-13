@@ -7,8 +7,8 @@
 #Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem<br>
 #YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 #Data de criação: 16/09/2024<br>
-#Data de atualização: 27/04/2025<br>
-#Versão: 0.10<br>
+#Data de atualização: 13/05/2025<br>
+#Versão: 0.11<br>
 #Testado e homologado no Linux Mint 22 Wilma x64<br>
 #Testado e homologado o Cisco Packet Tracer 8.2.x x64 e Rack Cisco SW-3560 e RT-2911
 
@@ -322,13 +322,23 @@ line con 0
 sw-01#
 ```
 
-02. Saindo do Modo Privilegiado do Switch
+02. Visualizando a Data e Hora do Switch
+```bash
+sw-01# show clock
+```
+
+03. Visualizando os Logs do Switch
+```bash
+sw-01# show logging
+```
+
+04. Saindo do Modo Privilegiado do Switch
 ```bash
 sw-01# disable
 sw-01>
 ```
 
-03. Saindo da conexão do Console do Switch
+05. Saindo da conexão do Console do Switch
 ```bash
 sw-01> exit
 ```

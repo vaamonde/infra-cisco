@@ -119,7 +119,7 @@ D) Saindo de todos os níveis e voltando para o modo EXEC Privilegiado.
 
 **DICA-11:** existe também o comando: *do*, esse comando permite executar qualquer comando fora do seu nível padrão.
 
-**EXEMPLO: sw-01(config-line)# do copy running-config startup-config | sw-01(config-line)# do show running-config | sw-01(config-line)# do write**
+**EXEMPLO:** sw-01(config-line)# do copy running-config startup-config | sw-01(config-line)# do show running-config | sw-01(config-line)# do write
 ```bash
 sw-01(config-if)# end
 sw-01#
@@ -198,7 +198,7 @@ F) Testando a conectividade entre o Switch e os Desktops da Rede
 
 **OBSERVAÇÃO-08** o carácter: *! (exclamação)* utilizado no comando: ping significa que os pacotes ICMP enviado para o destino foi recebido com sucesso, o padrão é enviar: *5 Pacotes (Sending 5)* já o carácter: *. (ponto)* significa que os pacotes ICMP foram perdidos ou o destino não recebeu os pacotes.
 ```bash
-!Pingando a SVI do Switch Layer 2
+!Pingando a SVI do Switch Layer 2 2960 sw-01
 sw-01# ping 192.168.1.250
   Type escape sequence to abort.
   Sending 5, 100-byte ICMP Echos to 192.168.1.250, timeout is 2 seconds:

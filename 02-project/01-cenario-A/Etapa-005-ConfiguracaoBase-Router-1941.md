@@ -214,6 +214,14 @@ rt-01# show running-config
 rt-01#
 ```
 ```bash
+!Visualizando a Data e Hora do Router
+rt-01# show clock
+```
+```bash
+!Visualizando os Logs detalhados do Router
+rt-01# show logging
+```
+```bash
 !Fazendo um Filtro na Visualização do Running-Config somente da Sessão Line Console 0
 rt-01# show running-config | section include con 0
   line con 0

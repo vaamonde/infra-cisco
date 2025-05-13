@@ -461,6 +461,9 @@ enable
 
 ## QUINTA ETAPA: Verificando as Configurações dos Switches e Roteador.
 ```bash
+!Visualizando a Data e Hora do Switch ou Router
+show clock
+
 !Visualizando as Configurações do Running-Config (RAM)
 !OBSERVAÇÃO: ÚNICA LINHA QUE NÃO APARECE NAS CONFIGURAÇÃO É A: crypto key generate rsa
 show running-config
@@ -488,4 +491,7 @@ show ssh
 !Visualizando os Usuários Conectados no Switch
 !OBSERVAÇÃO: ESSA OPÇÃO VAI MOSTRAR O USUÁRIO LOGADO NO CONSOLE: con 0 OU NO VTY: vty 0
 show users
+
+!Visualizando os Logs de Evento do Switch e Router
+show logging
 ```
