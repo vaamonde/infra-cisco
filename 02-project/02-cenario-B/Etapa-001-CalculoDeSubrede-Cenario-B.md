@@ -13,6 +13,16 @@ Data de atualização: 27/03/2025<br>
 Versão: 0.06<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
+Conteúdo estudado nessa configuração:<br>
+#01_ PRIMEIRA ETAPA: Determinação da Rede Classful do Cenário B<br>
+#02_ SEGUNDA ETAPA: Cálculo de Sub-Redes do Cenário B<br>
+#03_ TERCEIRA ETAPA: Determinação das VLAN's para cada Serviço do Cenário B<br>
+#04_ QUARTA ETAPA: Determinação das Sub-Redes para cada Serviço do Cenário B<br>
+
+**OBSERVAÇÃO IMPORTANTE:** COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A OS CÁLCULOS COM A SEGUINTE FRASE: *Cálculos do Endereço IPv4 do Cenário B do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática*
+
+#boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #cisco #infracisco #desafiovaamonde #desafioboraparapratica #desafiocisco #desafioinfracisco
+
 ## INFORMAÇÕES IMPORTANTES SOBRE ESSA DOCUMENTAÇÃO:
 
 A) **ACRÉSCIMO:** informações ou comandos que não estava no script original e nem comentado no vídeo, algo importante para o cenário ou dicas de alunos;<br>
