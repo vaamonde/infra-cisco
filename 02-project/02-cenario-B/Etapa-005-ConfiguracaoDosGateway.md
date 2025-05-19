@@ -148,6 +148,9 @@ show running-config
 !Visualizando as Configurações do Running-Config (RAM) filtrando só as interfaces
 show running-config | section interface
 
+!Visualizando os Gateways do Switch 2960
+show running-config | section ip default-gateway
+
 !Visualizando os status das Interfaces de Rede
 show ip interface brief
 

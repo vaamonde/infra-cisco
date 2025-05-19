@@ -118,8 +118,8 @@ show running-config | section interface
 show ip interface brief
 
 !Verificando as informações das Interfaces de Trunk
-show interface status
-show interface trunk
+show interfaces status
+show interfaces trunk
 show interfaces GigabitEthernet 1/0/1 status
 show interfaces GigabitEthernet 1/0/1 switchport
 ```
