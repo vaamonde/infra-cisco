@@ -77,7 +77,9 @@ enable
 !Visualizando as configurações da memória RAM
 show running-config | section interface
 
-!Verificando as informações das Interfaces e Roteamento
+!Verificando as informações das Interfaces
 show ip interface brief
+
+!Verificando as informações de Gateway Padrão
 show ip route
 ```
