@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 27/03/2025<br>
-Versão: 0.06<br>
+Data de atualização: 19/05/2025<br>
+Versão: 0.07<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -34,7 +34,7 @@ F) **IMPORTANTE:** informações importantes da tecnologia ou da configuração,
 G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração, com foco em adicionar informações extras da tecnologia ou da certificação.
 
 ## PRIMEIRA ETAPA: Configuração dos Gateways das VLAN's utilizando os SVI's no Switch Multilayer 3650
-```bash
+```python
 !Acessando o modo de Configuração Global de Comandos
 configure terminal
 
@@ -103,7 +103,7 @@ write
 ```
 
 ## SEGUNDA ETAPA: Configuração do Gateway da SVI no Switch Layer 2 2960 (Lado Esquerdo)
-```bash
+```python
 !Acessando o modo de Configuração Global de Comandos
 configure terminal
 
@@ -122,7 +122,7 @@ write
 ```
 
 ## TERCEIRA ETAPA: Configuração do Gateway da SVI no Switch Layer 2 2960 (Lado Direito)
-```bash
+```python
 !Acessando o modo de Configuração Global de Comandos
 configure terminal
 
@@ -141,14 +141,16 @@ write
 ```
 
 ## QUARTA ETAPA: Verificando as Configurações dos Switches.
-```bash
+```python
 !Visualizando as Configurações do Running-Config (RAM)
 show running-config
 
-!Visualizando as configurações da memória RAM
+!Visualizando as Configurações do Running-Config (RAM) filtrando só as interfaces
 show running-config | section interface
 
-!Verificando as informações das Interfaces de Trunk
+!Visualizando os status das Interfaces de Rede
 show ip interface brief
+
+!Visualizando a Tabela de Rotas (Roteamento) do Switch Multilayer
 show ip route
 ```

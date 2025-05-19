@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 27/03/2025<br>
-Versão: 0.06<br>
+Data de atualização: 19/05/2025<br>
+Versão: 0.07<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -107,12 +107,15 @@ write
 ```
 
 ## QUINTA ETAPA: Verificando as Configurações dos Trunks nos Switches 3650 e 2960.
-```bash
+```python
 !Visualizando as Configurações do Running-Config (RAM)
 show running-config
 
-!Visualizando as configurações da memória RAM
+!Visualizando as configurações do Running-Config (RAM) filtrando só as interfaces
 show running-config | section interface
+
+!Visualizando os status das Interfaces de Rede
+show ip interface brief
 
 !Verificando as informações das Interfaces de Trunk
 show interface status

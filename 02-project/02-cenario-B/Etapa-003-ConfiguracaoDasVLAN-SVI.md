@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 27/03/2025<br>
-Versão: 0.05<br>
+Data de atualização: 19/05/2025<br>
+Versão: 0.06<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -149,7 +149,7 @@ configure terminal
     exit
 
   !Configurando a Interface de Acesso a VLAN 60 do Access Point 802.11-AC
-  interface GigabitEthernet 1/0/20 - 23
+  interface range GigabitEthernet 1/0/20 - 23
     description Interface de Acesso da VLAN 60 do Access Point AC
     switchport mode access
     switchport nonegotiate
@@ -160,6 +160,9 @@ configure terminal
   !OBSERVAÇÃO IMPORTANTE: Esse recurso previne conectar dispositivos nas portas que estão Ligadas 
   !(No Shutdown) por padrão e te acesso a rede sem restrição.
   interface range GigabitEthernet 1/0/5 - 9, GigabitEthernet 1/0/14 - 19, GigabitEthernet 1/0/21 - 23, GigabitEthernet 1/1/1 - 4
+
+    !Descrição das Interfaces
+    description Interfaces Desligadas
 
     !Desligando todas as Portas de Redes do Switch Layer 3
     shutdown
@@ -229,19 +232,19 @@ configure terminal
 
   !Configurando a Interface da VLAN 40 Gerencia
   interface range fastEthernet 0/15 - 20
-    description Interface de Acesso da VLAN 30 Faturamento
+    description Interface de Acesso da VLAN 30 Gerencia
     switchport mode access
     switchport nonegotiate
     switchport access vlan 40
     exit
 
   !Desligando as Interfaces que não estão sendo utilizadas
-  interface range fastEthernet 0/2 - 4, fastEthernet 0/6 - 9, fastEthernet 0/11 - 14, fastEthernet 0/16 - 20, fastEthernet 0/21 - 22
+  interface range fastEthernet 0/2 - 4, fastEthernet 0/6 - 9, fastEthernet 0/11 - 14, fastEthernet 0/16 - 22
+    description Interfaces Desligadas
     shutdown
-    exit
 
-  !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
-  end
+    !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
+    end
 
 !Salvando as configurações da memória RAM para a memória NVRAM
 !OBSERVAÇÃO IMPORTANTE: deixar uma linha em branco no final do script para
@@ -305,19 +308,19 @@ configure terminal
 
   !Configurando a Interface da VLAN 40 Gerencia
   interface range fastEthernet 0/15 - 20
-    description Interface de Acesso da VLAN 30 Faturamento
+    description Interface de Acesso da VLAN 30 Gerencia
     switchport mode access
     switchport nonegotiate
     switchport access vlan 40
     exit
 
   !Desligando as Interfaces que não estão sendo utilizadas
-  interface range fastEthernet 0/2 - 4, fastEthernet 0/6 - 9, fastEthernet 0/11 - 14, fastEthernet 0/16 - 20, fastEthernet 0/21 - 22
+  interface range fastEthernet 0/2 - 4, fastEthernet 0/6 - 9, fastEthernet 0/11 - 14, fastEthernet 0/16 - 22
+    description Interfaces Desligadas
     shutdown
-    exit
 
-  !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
-  end
+    !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
+    end
 
 !Salvando as configurações da memória RAM para a memória NVRAM
 !OBSERVAÇÃO IMPORTANTE: deixar uma linha em branco no final do script para
@@ -327,13 +330,16 @@ write
 
 ```
 
-## OITAVA ETAPA: Verificando as Configurações dos Switches e Roteadores.
-```bash
+## OITAVA ETAPA: Verificando as Configurações dos Switches 3650 e 2960.
+```python
 !Visualizando as Configurações do Running-Config (RAM)
 show running-config
 
-!Visualizando as configurações da memória RAM
+!Visualizando as configurações do Running-Config (RAM) filtrando só as interfaces
 show running-config | section interface
+
+!Visualizando os status das Interfaces de Rede
+show ip interface brief
 
 !Verificando as informações das VLAN (Tabela, Id e Name)
 show vlan brief
