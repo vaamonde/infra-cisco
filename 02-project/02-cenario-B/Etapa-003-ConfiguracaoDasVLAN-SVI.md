@@ -308,7 +308,7 @@ configure terminal
 
   !Configurando a Interface da VLAN 40 Gerencia
   interface range fastEthernet 0/15 - 20
-    description Interface de Acesso da VLAN 30 Gerencia
+    description Interface de Acesso da VLAN 40 Gerencia
     switchport mode access
     switchport nonegotiate
     switchport access vlan 40
