@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 27/03/2025<br>
-Versão: 0.05<br>
+Data de atualização: 20/05/2025<br>
+Versão: 0.06<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -33,7 +33,7 @@ G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração
 
 ## PRIMEIRA ETAPA: Configurando a Interface Roteada no Switch Multilayer 3650 no Cisco Packet Tracer.
 
-```bash
+```python
 !Acessando o modo EXEC Privilegiado
 enable
 
@@ -73,9 +73,12 @@ enable
 
 ## SEGUNDA ETAPA: Verificando as Configurações do Switch Multilayer 3650 no Cisco Packet Tracer.
 
-```bash
+```python
 !Visualizando as configurações da memória RAM
 show running-config | section interface
+
+!Visualizando os Gateways do Switch 3650
+show running-config | section ip default-gateway
 
 !Verificando as informações das Interfaces
 show ip interface brief

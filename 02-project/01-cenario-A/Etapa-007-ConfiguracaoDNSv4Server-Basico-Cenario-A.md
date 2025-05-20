@@ -71,7 +71,8 @@ O protocolo padrão utilizado pelo DNS Server é o: *UDP (User Datagram Protocol
 **OBSERVAÇÃO-04:** no Cisco Packet Tracer as configuração de Sintaxe DNS são limitadas somente ao tipos: *A (IPv4), AAAA (IPv6), CNAME, SOA e NS* estão disponíveis para configuração.
 
 **OBSERVAÇÃO-05:** no Cisco Packet Tracer temos apenas a configuração da Zona de Pesquisa Direta, não está disponível a opção para configurar a Zona de Pesquisa Reversa.
-```bash
+
+```python
 !Habilitando o Serviço do DNS Server no Servidor 01
 Server-01
   Services
@@ -98,6 +99,7 @@ Resource Records:  Name = celular-02      Type = A Record     Address = 192.168.
 a) Abrindo o Prompt de Comando do Desktop.
 
 **DICA-03** não confunda Terminal com Command Prompt, Terminal é utilizado para se conectar no Switch ou Router utilizando o Cabo Console, já o Command Prompt (Prompt de Comando) é utilizado para testar as configurações de rede e acessar remotamente o Switch ou Router.
+
 ```bash
 !Verificando o endereço IPv4 configurado no Desktop
 C:\> ipconfig

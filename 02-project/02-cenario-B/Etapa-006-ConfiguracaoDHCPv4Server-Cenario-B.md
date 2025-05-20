@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 19/05/2024<br>
-Versão: 0.05<br>
+Data de atualização: 20/05/2024<br>
+Versão: 0.06<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -119,7 +119,7 @@ write
 **OBSERVAÇÃO-03:** o Switch Cisco Catalyst Layer 3 3560 ou Router possui os recursos para a configuração do DHCP Server, para redes pequenas e de médio porte é recomendado o seu uso, para redes grandes ou complexas o seu uso é limitado em alguns recursos, principalmente de monitoramento, relatórios e integrações de serviços.
 
 ```python
-!Habilitando o Serviço do DHCP Server no Servidor 02 (172.16.0.33)
+!Habilitando o Serviço do DHCP Server no Servidor 02 (172.16.0.33/27)
 Server-02
   Services
     DHCP
@@ -214,4 +214,7 @@ C:\> ipconfig /all
 
 !Testando a comunicação com o Server 02 utilizando o pacote ICMP (Internet Control Message Protocol)
 C:\> ping 172.16.0.33
+
+!Testando a rota de rede com o Server 02 utilizando o pacote ICMP
+C:\> tracert 172.16.0.33
 ```

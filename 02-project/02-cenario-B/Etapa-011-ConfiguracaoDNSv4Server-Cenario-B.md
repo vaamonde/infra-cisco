@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 27/03/2025<br>
-Versão: 0.03<br>
+Data de atualização: 20/05/2025<br>
+Versão: 0.04<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -48,23 +48,25 @@ O protocolo padrão utilizado pelo DNS Server é o: *UDP (User Datagram Protocol
 
 **Registros DNS:** Os registros DNS são mapeamentos de arquivos ou sistemas que dizem a um servidor DNS para qual endereço IP um determinado domínio está associado. Também informa aos servidores DNS como lidar com as solicitações que estão sendo enviadas para cada nome de domínio.
 
-**Sintaxe DNS:** Diferentes sequências de letras são usadas para ditar as ações do servidor DNS. Essas letras são chamadas de sintaxe DNS (Exemplo: A, AAAA, CNAME, MX, PTR, NS, SOA, SRV, TXT, etc).
+**Sintaxe DNS:** Diferentes sequências de letras são usadas para ditar as ações do servidor DNS. Essas letras são chamadas de sintaxe *DNS (Exemplo: A (IPv4), AAAA (IPv6), CNAME, MX, PTR, NS, SOA, SRV, TXT, etc).*
 
-**Registro Tipo A....:** Significa Endereço e é o tipo mais básico de sintaxe DNS. Indica o endereço IP real para um domínio ou computador;<br>
-**Registro Tipo AAAA.:** Igual ao Tipo A mais utilizado nas configurações do IPv6;<br>
-**Registro Tipo CNAME:** Significa o Nome Canônico (Canonical Name Record) e seu papel é fazer que um domínio use um alias (Pseudônimo - Apelido) de outro domínio;<br>
-**Registro Tipo SOA..:** Significa Início de Autoridade. Obviamente é um dos registros de DNS mais importantes;<br>
-**Registro Tipo NS...:** Significa Name Server ele indica qual nome de servidor é autoritativo para o domínio.
+| Tipos de Registros | Descrição |
+|--------------------|-----------|
+| Registro Tipo A | Significa Endereço e é o tipo mais básico de sintaxe DNS. Indica o endereço IP real para um domínio ou computador |
+| Registro Tipo AAAA | Igual ao Tipo A mais utilizado nas configurações do IPv6 |
+| Registro Tipo CNAME | Significa o Nome Canônico (Canonical Name Record) e seu papel é fazer que um domínio use um alias (Pseudônimo - Apelido) de outro domínio |
+| Registro Tipo SOA | Significa Início de Autoridade. Obviamente é um dos registros de DNS mais importantes |
+| Registro Tipo NS | Significa Name Server ele indica qual nome de servidor é autoritativo para o domínio. |
 
-## SEGUNDA ETAPA: Configurando o Serviço do DNS Server no Cisco Packet Tracer.
+01. Configurações do Serviço de DNS Server no Cisco Packet Tracer.
 
 **OBSERVAÇÃO-03:** por padrão o Serviço de DNS Server no Cisco Packet Tracer está: *desligado*.
 
-**OBSERVAÇÃO-04:** no Cisco Packet Tracer as configuração de Sintaxe DNS são limitadas somente ao tipos: *A, AAA, CNAME, SOA e NS* estão disponíveis para configuração.
+**OBSERVAÇÃO-04:** no Cisco Packet Tracer as configuração de Sintaxe DNS são limitadas somente ao tipos: *A (IPv4), AAAA (IPv6), CNAME, SOA e NS* estão disponíveis para configuração.
 
 **OBSERVAÇÃO-05:** no Cisco Packet Tracer temos apenas a configuração da Zona de Pesquisa Direta, não está disponível a opção para configurar a Zona de Pesquisa Reversa.
 
-```bash
+```python
 !Habilitando o Serviço do DNS Server no Servidor 02
 Server-02
   Services
@@ -87,10 +89,9 @@ Resource Records:  Name = ftp.senac.br     Type = CNAME        Host Name = serve
 Resource Records:  Name = server-03        Type = A Record     Address = 172.16.0.34
 Resource Records:  Name = server-04        Type = A Record     Address = 172.16.0.35
 Resource Records:  Name = server-05        Type = A Record     Address = 172.16.0.36
-
-A) Abrindo o Prompt de Comando do Desktop;
-
-**DICA-03** não confunda Terminal com Command Prompt, Terminal é utilizado para se conectar no Switch ou Router utilizando o Cabo Console, já o Command Prompt (Prompt de Comando) é utilizado para testar as configurações de rede e acessar remotamente o Switch ou Router.
+Resource Records:  Name = sw-03            Type = A Record     Address = 172.16.0.97
+Resource Records:  Name = sw-04            Type = A Record     Address = 172.16.0.98
+Resource Records:  Name = sw-05            Type = A Record     Address = 172.16.0.99
 ```
 
 ## TERCEIRA ETAPA: Testando o Serviço do DNS Server no Cisco Packet Tracer.
@@ -109,6 +110,47 @@ C:\> ipconfig /all
 !Testando a Resolução de Nomes DNS no Desktop
 C:\> nslookup server-02
 
-!Testando a comunicação com o Server 01 utilizando o pacote ICMP (Internet Control Message Protocol)
+!Testando a comunicação com o Server 02 utilizando o pacote ICMP (Internet Control Message Protocol)
 C:\> ping server-02
+
+!Testando a comunicação com o Switch 03 utilizando o pacote ICMP (Internet Control Message Protocol)
+C:\> ping sw-03
+
+!Acessando remotamente o Switch utilizando o protocolo SSH (Secure Shell)
+!OBSERVAÇÃO: -l (éli não é o número "1" (um) e sim "l" (éli) em minúsculo)
+C:\> ssh -l admin sw-03   (Switch SW-03)
+```
+
+## QUARTA ETAPA: Automatizando a Configuração do Switch Multilayer 3650 e Switch Layer 2 2960.
+
+01. Utilizando o Visual Studio Code (VSCode) para automatizar as configurações do Cisco IOS.
+
+**OBSERVAÇÃO-12:** recomendo sempre utilizar um *Editor de Texto Profissional* para criar os scripts e automatizar as tarefas de configuração do Cisco IOS, hoje em dia é indicado utilizar o Visual Studio Code (VSCode) junto com as Extensões: *Cisco IOS Syntax e Cisco Config Highlight* para facilitar essa configuração.
+
+**DICA-10:** o caractere: *! (exclamação)* é utilizado como um recurso de *Comentário*, sua utilização server para comentar o código de automação do Cisco IOS ou para desativar um comando para não ser executado, *RECOMENDO FORTEMENTE DOCUMENTAR TODOS OS COMANDOS E PROCEDIMENTOS DE CONFIGURAÇÃO PARA FACILITAR O ENTENDIMENTO.*
+
+**DICA-11:** para facilitar a leitura do código, recomendo utilizar o recurso de **Indentação de Código** usando a Tecla TAB (Tabulador/Tabulação) para cada nível que você está configurando o Cisco IOS, isso facilitada a análise de erros (Debug) do código.
+
+```python
+!Acessando o modo de Configuração Global de comandos
+configure terminal
+
+  !Habilitando o serviço de resolução de nomes de DNS
+  ip domain-lookup
+
+  !Configurando o serviço de resolução de nomes de DNS
+  ip name-server 172.16.0.33
+
+  !Adicionando manualmente um host e endereço IP
+  ip host google 8.8.8.8
+  
+  !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
+  end
+
+!Salvando as configurações da memória RAM para a memória NVRAM
+!OBSERVAÇÃO IMPORTANTE: deixar uma linha em branco no final do script para
+!salvar automaticamente o script na hora da execução, fazendo a função de
+!<Enter> no final do script.
+write
+
 ```

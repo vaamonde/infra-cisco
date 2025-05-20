@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 27/03/2025<br>
-Versão: 0.03<br>
+Data de atualização: 20/05/2025<br>
+Versão: 0.04<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -54,7 +54,7 @@ A) Configurações do Serviço de FTP Server no Cisco Packet Tracer:
 
 **OBSERVAÇÃO-02:** diferente do TFTP o FTP trabalha com autenticação ou acesso anônimo (sem autenticação - famoso usuário: anonymous) e permissões de: *Escrita (Write), Leitura (Read), Remoção (Delete), Renomear (Rename) e Listar (List)* o conteúdo dos arquivos e diretórios.
 
-```bash
+```python
 !Habilitando o Serviço do FTP Server no Servidor 02
 Server-02
   Services
@@ -77,7 +77,7 @@ B) Configurações do Serviço de HTTP/HTTPS Server no Cisco Packet Tracer:
 
 **OBSERVAÇÃO-05:** o Cisco Packet Tracer é limitado para as configurações de Unidade Certificadora CA e geração dos certificados assinados, esse procedimento e feito em servidores reais como o Windows Server ou GNU/Linux.
 
-```bash
+```python
 !Habilitando o Serviço do HTTP e HTTPS Server no Servidor 02
 Server-02
   Services
@@ -106,6 +106,7 @@ Service HTTPS   On
 ```
 
 ## TERCEIRA ETAPA: Testando os serviços de FTP, HTTP e HTTPS no Cisco Packet Tracer
+
 ```bash
 !testando localmente no servidor os serviços de rede
 nslookup ftp.vaamonde.pti

@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 27/03/2025<br>
-Versão: 0.04<br>
+Data de atualização: 20/05/2025<br>
+Versão: 0.05<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -37,7 +37,7 @@ G) **OBSERVAÇÃO:** informações relevantes da tecnologia ou da configuração
 
 ## PRIMEIRA ETAPA: Configurando a Interface do Roteador 4321 do Cenário B no Cisco Packet Tracer.
 
-```bash
+```python
 !Acessando o modo EXEC Privilegiado
 enable
 
@@ -59,7 +59,7 @@ enable
     !Configurando a Interface de Interligação com o Router 1941 (RT-01)
     interface GigabitEthernet 0/0/0
 
-      !Habilitando o Tipo de Média utilizado no Porta GigabitEthernet
+      !Habilitando o Tipo de Média utilizado na Porta GigabitEthernet
       media-type sfp
 
       !Configurando a descrição da Interface
@@ -81,7 +81,7 @@ enable
 
 ## SEGUNDA ETAPA: Configurando a Interface do Roteador 1941 do Cenário A no Cisco Packet Tracer.
 
-```bash
+```python
 !Acessando o modo EXEC Privilegiado
 enable
 
@@ -105,7 +105,7 @@ enable
 
 ## TERCEIRA ETAPA: Configurando a Rota Padrão no Router 1941 do Cenário A no Cisco Packet Tracer.
 
-```bash
+```python
 !Acessando o modo EXEC Privilegiado
 enable
 
@@ -130,7 +130,7 @@ enable
 
 ## QUARTA ETAPA: Configurando a Rota Padrão no Switch Multilayer 3650 do Cenário B no Cisco Packet Tracer.
 
-```bash
+```python
 !Acessando o modo EXEC Privilegiado
 enable
 
@@ -145,10 +145,9 @@ enable
   write
 ```
 
-
 ## QUINTA ETAPA: Configurando a Rota Padrão no Router 4321 do Cenário B no Cisco Packet Tracer.
 
-```bash
+```python
 !Acessando o modo EXEC Privilegiado
 enable
 
@@ -167,12 +166,16 @@ enable
 ## SEXTA ETAPA: Verificando as Configurações de Rotas no Router e Switch no Cisco Packet Tracer.
 
 ```bash
-!Visualizando as configurações da memória RAM
+!Visualizando as configurações da memória RAM das Interfaces
 show running-config | section interface
+
+!Visualizando as configurações da memória RAM das Rotas Estática
 show running-config | section ip route
 
-!Verificando as informações das Interfaces e Tabela de Roteamento Local
+!Verificando as informações das Interfaces Local
 show ip interface brief
+
+!Verificando as informações da Tabela de Roteamento Local
 show ip route
 
 !Testando a conexão nos Desktops da Rede com o Protocolo ICMP

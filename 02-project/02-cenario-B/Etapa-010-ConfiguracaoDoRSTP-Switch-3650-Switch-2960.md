@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 27/03/2025<br>
-Versão: 0.04<br>
+Data de atualização: 20/05/2025<br>
+Versão: 0.05<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -64,11 +64,11 @@ Os *3 estágios* da Negociação do RSTP são: **Discarding (Descartando), Learn
 
 Os *4 status* da Negociação das Portas do RSTP são: **Root Port (Porta Raiz), Designated Port (Porta Designadas), Alternate Port (Porta Alternativa) e Backup Port (Porta Backup).**
 
-A vantagem do *RSTP em conjunto com o PVST (Per VLAN Spanning-Tree) ou PVST+ (Per VLAN Spanning-Tree Plus )* é a possibilidade de criar instâncias individuais para cada VLAN na Topologia do STP, facilitando a administração e configuração dos melhores caminhos para cada VLAN na Topologia da rede.
+A vantagem do *RSTP em conjunto com o PVST (Per VLAN Spanning-Tree) ou PVST+ (Per VLAN Spanning-Tree Plus)* é a possibilidade de criar instâncias individuais para cada VLAN na Topologia do STP, facilitando a administração e configuração dos melhores caminhos para cada VLAN na Topologia da rede.
 
 ## PRIMEIRA ETAPA: Configurando o RSTP no Switch Multilayer 3650 no Cisco Packet Tracer.
 
-```bash
+```python
 !Acessando o modo EXEC Privilegiado
 enable
 
@@ -102,7 +102,7 @@ enable
 
 ## SEGUNDA ETAPA: Configurando o RSTP no Switch Layer 2 2960 Lado Esquerdo no Cisco Packet Tracer.
 
-```bash
+```python
 !Acessando o modo EXEC Privilegiado
 enable
 
@@ -121,7 +121,7 @@ enable
 
 ## TERCEIRA ETAPA: Configurando o RSTP no Switch Layer 2 2960 Lado Direito no Cisco Packet Tracer.
 
-```bash
+```python
 !Acessando o modo EXEC Privilegiado
 enable
 
@@ -140,7 +140,7 @@ enable
 
 ## QUARTA ETAPA: Verificando o RSTP nos Switches Multilayer e Layer 2 no Cisco Packet Tracer.
 
-```bash
+```python
 !Visualizando as configurações da memória RAM
 show running-config | section spanning-tree
 

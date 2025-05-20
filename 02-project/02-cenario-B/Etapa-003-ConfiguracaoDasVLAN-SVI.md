@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 19/05/2025<br>
-Versão: 0.06<br>
+Data de atualização: 20/05/2025<br>
+Versão: 0.07<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -341,8 +341,10 @@ show running-config | section interface
 !Visualizando os status das Interfaces de Rede
 show ip interface brief
 
-!Verificando as informações das VLAN (Tabela, Id e Name)
+!Verificando o banco de dados de VLAN (vlan.dat) local do Switch
 show vlan brief
+
+!Verificando as informações das VLANs (Tabela, Id e Name)
 show vlan id 10
 show vlan name FIN
 ```

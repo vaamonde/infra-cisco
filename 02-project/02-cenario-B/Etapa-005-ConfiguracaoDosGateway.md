@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 19/05/2025<br>
-Versão: 0.07<br>
+Data de atualização: 20/05/2025<br>
+Versão: 0.08<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -148,12 +148,12 @@ show running-config
 !Visualizando as Configurações do Running-Config (RAM) filtrando só as interfaces
 show running-config | section interface
 
-!Visualizando os Gateways do Switch 2960
-show running-config | section ip default-gateway
-
 !Visualizando os status das Interfaces de Rede
 show ip interface brief
 
 !Visualizando a Tabela de Rotas (Roteamento) do Switch Multilayer
 show ip route
+
+!Visualizando os Gateways do Switch 2960
+show running-config | section ip default-gateway
 ```

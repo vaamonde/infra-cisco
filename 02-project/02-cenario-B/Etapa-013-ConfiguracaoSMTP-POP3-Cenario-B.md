@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 27/03/2025<br>
-Versão: 0.03<br>
+Data de atualização: 20/05/2025<br>
+Versão: 0.04<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -35,7 +35,7 @@ O **SMTP (Simple Mail Transfer Protocol)** é o protocolo padrão de envio de me
 
 O protocolo padrão utilizado pelo SMTP Server é o *TCP (Transmission Control Protocol)* na porta padrão: *25*
 
-**OBSERVAÇÃO-01:** desde: *01/01/2013* o CGI.br solicitou o bloqueio do envio de e-mails utilizando a porta padrão: 25 
+**OBSERVAÇÃO-01:** desde: *01/01/2013* o CGI.br (Comitê Gestor da Internet) solicitou o bloqueio do envio de e-mails utilizando a porta padrão: **25**
 
 **OBSERVAÇÃO-02:** atualmente a porta utilizada pelo SMTP é a: **TCP 587**, essa mudança tem o foco na diminuição de *SPAM*
 
@@ -67,7 +67,7 @@ O protocolo MAPI utiliza um conjunto de protocolos *TCP (Transmission Control Pr
 
 **OBSERVAÇÃO-04:** esses recursos de e-mail avançado são limitados no Cisco Packet Tracer. 
 
-```bash
+```python
 !Habilitando o Serviço do SMTP Server no Servidor 02
 Server-02
   Services

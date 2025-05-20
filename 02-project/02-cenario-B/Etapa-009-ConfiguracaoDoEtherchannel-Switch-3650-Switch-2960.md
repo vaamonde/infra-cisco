@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 25/03/2025<br>
-Versão: 0.04<br>
+Data de atualização: 20/05/2025<br>
+Versão: 0.05<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -66,7 +66,7 @@ O **EtherChannel Estático (Manual)** é uma configuração que combina vários 
 
 ## PRIMEIRA ETAPA: Configurando o Etherchannel no Switch Multilayer 3650 no Cisco Packet Tracer.
 
-```bash
+```python
 !Acessando o modo EXEC Privilegiado
 enable
 
@@ -122,7 +122,7 @@ enable
 
 ## SEGUNDA ETAPA: Configurando o Etherchannel no Switch Layer 2 2960 Lado Esquerdo no Cisco Packet Tracer.
 
-```bash
+```python
 !Acessando o modo EXEC Privilegiado
 enable
 
@@ -161,7 +161,7 @@ enable
 
 ## TERCEIRA ETAPA: Configurando o Etherchannel no Switch Layer 2 2960 Lado Direito no Cisco Packet Tracer.
 
-```bash
+```python
 !Acessando o modo EXEC Privilegiado
 enable
 
@@ -200,7 +200,7 @@ enable
 
 ## QUARTA ETAPA: Verificando as Configurações dos Etherchannel dos Switches no Cisco Packet Tracer.
 
-```bash
+```python
 !Visualizando as configurações da memória RAM
 show running-config | section interface
 
@@ -230,7 +230,7 @@ show etherchannel load-balance
 !Exibindo estatísticas de tráfego:
 show interfaces port-channel <ID> counters
 
-!Verificando informações do LACP:
+!Verificando as informações do LACP (Link Aggregation Control Protocol):
 show lacp neighbor
 
 !Testando a conexão nos Desktops da Rede com o Protocolo ICMP
