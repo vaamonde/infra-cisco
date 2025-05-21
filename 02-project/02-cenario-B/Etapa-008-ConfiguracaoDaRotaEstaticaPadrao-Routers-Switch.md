@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 20/05/2025<br>
-Versão: 0.05<br>
+Data de atualização: 21/05/2025<br>
+Versão: 0.06<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -18,7 +18,7 @@ Conteúdo estudado nessa configuração:<br>
 #02_ Configurando a Interface do Roteador 1941 do Cenário A no Cisco Packet Tracer;<br>
 #03_ Configurando a Rota Padrão no Router 1941 do Cenário A no Cisco Packet Tracer;<br>
 #04_ Configurando a Rota Padrão no Switch Multilayer 3650 do Cenário B no Cisco Packet Tracer;<br>
-#05_ Configurando a Rota Padrão no Router 4321 do Cenário B no Cisco Packet Tracer;<br>
+#05_ Configurando a Rota Padrão e Rota Estática no Router 4321 do Cenário B no Cisco Packet Tracer;<br>
 #06_ Verificando as Configurações de Rotas no Router e Switch no Cisco Packet Tracer.
 
 **OBSERVAÇÃO IMPORTANTE:** COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: *Configuração da Rota Estática do Cenário B do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática*
@@ -43,18 +43,6 @@ enable
 
   !Acessando o modo de Configuração Global de Comandos
   configure terminal
-
-    !Configurando a Interface de Interligação com Switch Multilayer 3650
-    interface GigabitEthernet 0/0/1
-
-      !Configurando a descrição da Interface
-      description Interface de LAN com o Switch Multilayer 3650
-
-      !Configuração do endereço IPv4 do Router 4321
-      !OBSERVAÇÃO-05: esse endereço será o Gateway para o Switch Multilayer 3650
-      ip address 172.16.0.30 255.255.255.224
-      no shutdown
-      exit
 
     !Configurando a Interface de Interligação com o Router 1941 (RT-01)
     interface GigabitEthernet 0/0/0
@@ -145,7 +133,7 @@ enable
   write
 ```
 
-## QUINTA ETAPA: Configurando a Rota Padrão no Router 4321 do Cenário B no Cisco Packet Tracer.
+## QUINTA ETAPA: Configurando a Rota Padrão e Rota Estática no Router 4321 do Cenário B no Cisco Packet Tracer.
 
 ```python
 !Acessando o modo EXEC Privilegiado
@@ -165,7 +153,7 @@ enable
 
 ## SEXTA ETAPA: Verificando as Configurações de Rotas no Router e Switch no Cisco Packet Tracer.
 
-```bash
+```python
 !Visualizando as configurações da memória RAM das Interfaces
 show running-config | section interface
 

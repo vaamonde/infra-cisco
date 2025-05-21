@@ -9,13 +9,14 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 20/05/2025<br>
+Data de atualização: 21/05/2025<br>
 Versão: 0.06<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
 #01_ Configurando a Interface Roteada no Switch Multilayer 3650 no Cisco Packet Tracer;<br>
-#02_ Verificando as Configurações do Switch Multilayer 3650 no Cisco Packet Tracer.<br>
+#02_ SEGUNDA ETAPA: Configurando a Interface do Roteador 4321 do Cenário B no Cisco Packet Tracer.
+#03_ Verificando as Configurações do Switch Multilayer 3650 no Cisco Packet Tracer.<br>
 
 **OBSERVAÇÃO IMPORTANTE:** COMENTAR NO VÍDEO DO CONFIGURAÇÃO DO CISCO PACKET TRACER SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: *Configuração da Interface Roteada do Cenário B do Cisco Packet Tracer realizado com sucesso!!! #BoraParaPrática*
 
@@ -71,18 +72,47 @@ enable
   write
 ```
 
-## SEGUNDA ETAPA: Verificando as Configurações do Switch Multilayer 3650 no Cisco Packet Tracer.
+## SEGUNDA ETAPA: Configurando a Interface do Roteador 4321 do Cenário B no Cisco Packet Tracer.
+
+```python
+!Acessando o modo EXEC Privilegiado
+enable
+
+  !Acessando o modo de Configuração Global de Comandos
+  configure terminal
+
+    !Configurando a Interface de Interligação com Switch Multilayer 3650
+    interface GigabitEthernet 0/0/1
+
+      !Configurando a descrição da Interface
+      description Interface de LAN com o Switch Multilayer 3650
+
+      !Configuração do endereço IPv4 do Router 4321
+      !OBSERVAÇÃO-05: esse endereço será o Gateway para o Switch Multilayer 3650
+      ip address 172.16.0.30 255.255.255.224
+      no shutdown
+      exit
+```
+
+## TECEIRA ETAPA: Verificando as Configurações do Switch Multilayer 3650 e do Router 4321 no Cisco Packet Tracer.
 
 ```python
 !Visualizando as configurações da memória RAM
 show running-config | section interface
 
-!Visualizando os Gateways do Switch 3650
+!Visualizando as configurações das Interfaces
+show running-config | section interface
+
+!Visualizando o Gateway do Switch 3650
 show running-config | section ip default-gateway
 
 !Verificando as informações das Interfaces
 show ip interface brief
 
-!Verificando as informações de Gateway Padrão
+!Verificando as informações de Gateway Padrão e Rotas
 show ip route
+
+!Testando a comunicação entre o Switch e o Router
+ping 172.16.0.29
+ping 172.16.0.30
 ```
