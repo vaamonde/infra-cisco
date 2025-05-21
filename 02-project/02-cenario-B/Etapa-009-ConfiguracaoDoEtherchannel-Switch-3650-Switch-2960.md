@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 20/05/2025<br>
-Versão: 0.05<br>
+Data de atualização: 21/05/2025<br>
+Versão: 0.06<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -62,7 +62,7 @@ O **EtherChannel Estático (Manual)** é uma configuração que combina vários 
 |Detecção de falhas     |❌ Não detecta         |✅ Sim           |✅ Sim             |
 |Balanceamento de carga |✅ Sim                 |✅ Sim           |✅ Sim             |
 |Negociação automática  |❌ Não                 |✅ Sim           |✅ Sim             |
-|Melhor uso             |Links fixos e estáveis |Redes 100% Cisco |Ambientes mistos
+|Melhor uso             |Links fixos e estáveis |Redes 100% Cisco |Ambientes mistos   |
 
 ## PRIMEIRA ETAPA: Configurando o Etherchannel no Switch Multilayer 3650 no Cisco Packet Tracer.
 
@@ -135,6 +135,7 @@ enable
       no shutdown
       exit
 
+    !Configurando o Suporte ao Spanning-Tree Portfast na Interface Etherchannel
     interface Port-Channel1
       switchport
       switchport mode trunk
@@ -148,6 +149,7 @@ enable
       no shutdown
       exit
 
+    !Configurando o Suporte ao Spanning-Tree Portfast na Interface Etherchannel
     interface Port-Channel3
         switchport
         switchport mode trunk
@@ -174,6 +176,7 @@ enable
       no shutdown
       exit
 
+    !Configurando o Suporte ao Spanning-Tree Portfast na Interface Etherchannel
     interface Port-Channel2
       switchport
       switchport mode trunk
@@ -187,6 +190,7 @@ enable
       no shutdown
       exit
 
+    !Configurando o Suporte ao Spanning-Tree Portfast na Interface Etherchannel
     interface Port-Channel3
       switchport
       switchport mode trunk

@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 20/05/2025<br>
-Versão: 0.04<br>
+Data de atualização: 21/05/2025<br>
+Versão: 0.05<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -73,25 +73,25 @@ Server-02
     DNS
 
 DNS Service:       On
-Resource Records:  Name = server-02        Type = A Record     Address = 172.16.0.33
-Resource Records:  Name = ns1.senac.br     Type = NS           Server Name = server-02
-Resource Records:  Name = senac.br         Type = SOA          Primary Server Name = ns1.senac.br
-                                                               Mail Box = vaamonde@senac.br
-                                                               Minimum TTL = 3600 (1h ou 60 minutos)
-                                                               Refresh Time = 3600 (1h ou 60 minutos)
-                                                               Retry Time = 600 (10 minutos)
-                                                               Expiry Time = 86400 (24h ou 1440 minutos)
-Resource Records:  Name = senac.br         Type = CNAME        Host Name = server-03
-Resource Records:  Name = www.senac.br     Type = CNAME        Host Name = server-03
-Resource Records:  Name = pop3.senac.br    Type = CNAME        Host Name = server-03
-Resource Records:  Name = smtp.senac.br    Type = CNAME        Host Name = server-03
-Resource Records:  Name = ftp.senac.br     Type = CNAME        Host Name = server-03
-Resource Records:  Name = server-03        Type = A Record     Address = 172.16.0.34
-Resource Records:  Name = server-04        Type = A Record     Address = 172.16.0.35
-Resource Records:  Name = server-05        Type = A Record     Address = 172.16.0.36
-Resource Records:  Name = sw-03            Type = A Record     Address = 172.16.0.97
-Resource Records:  Name = sw-04            Type = A Record     Address = 172.16.0.98
-Resource Records:  Name = sw-05            Type = A Record     Address = 172.16.0.99
+Resource Records:  Name = server-02               Type = A Record     Address = 172.16.0.33
+Resource Records:  Name = ns1.SEU_DOMÍNIO.INTRA   Type = NS           Server Name = server-02
+Resource Records:  Name = SEUDOMÍNIO.INTRA        Type = SOA          Primary Server Name = ns1.SEUDOMÍNIO.INTRA
+                                                                      Mail Box = seu_usuário@SEUDOMÍNIO.INTRA
+                                                                      Minimum TTL = 3600 (1h ou 60 minutos)
+                                                                      Refresh Time = 3600 (1h ou 60 minutos)
+                                                                      Retry Time = 600 (10 minutos)
+                                                                      Expiry Time = 86400 (24h ou 1440 minutos)
+Resource Records:  Name = SEU_DOMÍNIO.INTRA       Type = CNAME        Host Name = server-03
+Resource Records:  Name = www.SEU_DOMÍNIO.INTRA   Type = CNAME        Host Name = server-03
+Resource Records:  Name = pop3.SEU_DOMÍNIO.INTRA  Type = CNAME        Host Name = server-03
+Resource Records:  Name = smtp.SEU_DOMÍNIO.INTRA  Type = CNAME        Host Name = server-03
+Resource Records:  Name = ftp.SEU_DOMÍNIO.INTRA   Type = CNAME        Host Name = server-03
+Resource Records:  Name = server-03               Type = A Record     Address = 172.16.0.34
+Resource Records:  Name = server-04               Type = A Record     Address = 172.16.0.35
+Resource Records:  Name = server-05               Type = A Record     Address = 172.16.0.36
+Resource Records:  Name = sw-03                   Type = A Record     Address = 172.16.0.97
+Resource Records:  Name = sw-04                   Type = A Record     Address = 172.16.0.98
+Resource Records:  Name = sw-05                   Type = A Record     Address = 172.16.0.99
 ```
 
 ## TERCEIRA ETAPA: Testando o Serviço do DNS Server no Cisco Packet Tracer.

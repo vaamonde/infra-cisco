@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 20/05/2025<br>
-Versão: 0.05<br>
+Data de atualização: 21/05/2025<br>
+Versão: 0.06<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -37,7 +37,7 @@ O **STP (Spanning Tree Protocol)** é um Protocolo da Camada 2 que é executado 
 
 O STP cria uma árvore de Switches presentes na rede e elege o *Switch de Referência*, a partir do qual será criada a árvore, esse Switch é denominado de **Ponte Raiz (Root Bridge)**. A eleição do Root Bridge é feita com base na *Prioridade (Priority)* e também com base no menor endereço *MAC (MAC-Address)*, em uma rede por padrão, pode existir apenas um **Switch Root Bridge na Topologia**.
 
-A prioridade padrão do STP nos Switches da Cisco é: **32768** acrescentado mais: *1 (um)* que faz referência a *Identificação do Sistema (ID sys-id-ext)* com base no valor da **VLAN Padrão ou VLAN configurada**, EXEMPLO: *Bridge ID Priority: 32769 (priority 32768 sys-id-ext 1)*
+A prioridade padrão do STP nos Switches da Cisco é: **32768** acrescentado mais: *1 (um)* que faz referência a *Identificação do Sistema (ID sys-id-ext)* com base no valor da **VLAN Padrão ou VLAN configurada**, EXEMPLO: *Bridge ID Priority: 32769 (priority 32768 + sys-id-ext 1)*
 
 A construção da árvore da topologia do STP e feita através do envio dos quadros de: **BPDU (Bridge Protocol Data Unit)**. Os BPDUs são frames enviados para a troca de informações tais como o: *Bridge ID* e o *Custo de Caminho de um Nó* para o Switch Root Bridge.
 
@@ -56,7 +56,7 @@ O tempo de convergência do Protocolo STP pode variar de: **30 até 50 segundos*
 
 Portas no status de **Blocking** demora cerca de *20 segundos*, portas no status de **Listening** demora cerca de *15 segundos*, portas nos status de **Learning** demora cerca de *15 segundos*, somente após esses estágios a porta entre no modo de **Forwarding**, hoje esse processo e considerado muito lento para as redes atuais.
 
-O **RSTP (Rapid Spanning Tree - rapid-pvst Per-Vlan Rapid Spanning Tree Mode)** é o protocolo de detecção de topologias de rede que fornecer uma convergência mais rápida para criar uma rede sem *laços de loop de camada 2*, padronizado pelo IEEE 802.1w e desenvolvido pela Cisco.
+O **RSTP (Rapid Spanning Tree - rapid-pvst Per-Vlan Rapid Spanning Tree Mode)** é o protocolo de detecção de topologias de rede que fornecer uma convergência mais rápida para criar uma rede sem *laços de loop de camada 2*, padronizado pelo *IEEE 802.1w* e desenvolvido pela Cisco.
 
 O tempo de convergência do RSTP vária em torno de **2 segundos** em relação ao tempo de convergência padrão do STP que vária de **30 até 50s.**
 
