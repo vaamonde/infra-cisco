@@ -78,27 +78,31 @@ enable
     !OBSERVAÇÃO-04: salvar os Logs no Servidor de Syslog garante a auditoria de falhas nos equipamentos
     logging on
     
+    !Habilitando o tamanho do Buffer dos Logs na Memória RAM
+    !OBSERVAÇÃO-05: a configuração da Marcação de Data/Hora detalhado nos Log já foi executada no Script Base
+    logging buffered 4096 
+
     !Configurando o Endereço IPv4 do Servidor de Syslog
-    !OBSERVAÇÃO-05: não é possível utilizar nomes para servidores de Syslog no Cisco Packet Tracer, somente IPv4
+    !OBSERVAÇÃO-06: não é possível utilizar nomes para servidores de Syslog no Cisco Packet Tracer, somente IPv4
     logging host 172.16.0.99
     
     !Configurando o Nível de Log que será enviado para o Servidor de Syslog
     !DICA-02: o nível de detalhamento do Log facilita a análise de erros e possíveis falhas de segurança
-    !OBSERVAÇÃO-06: no Cisco Packet Tracer temos apenas a opção: Debugging (severity=7)
+    !OBSERVAÇÃO-07: no Cisco Packet Tracer temos apenas a opção: Debugging (severity=7)
     logging trap debugging
     
     !Habilitando os Logs de Autenticação que será enviado para o Servidor de Syslog
     !DICA-03: esse recurso aumenta o nível de segurança e auditoria da rede em relação a autenticação física ou remota
-    !OBSERVAÇÃO-07: recomendado habilitar os recursos de sucesso e falhas de autenticação física ou remota
-    !OBSERVAÇÃO-08: essas informações em conjunto com as regras de segurança aumenta o nível de confiabilidade da rede
-    !OBSERVAÇÃO-09: esse recurso não está disponível no Switch Layer 2 2960
+    !OBSERVAÇÃO-08: recomendado habilitar os recursos de sucesso e falhas de autenticação física ou remota
+    !OBSERVAÇÃO-09: essas informações em conjunto com as regras de segurança aumenta o nível de confiabilidade da rede
+    !OBSERVAÇÃO-10: esse recurso não está disponível no Switch Layer 2 2960
     login on-success log
     login on-failure log
     
     !Habilitando os Logs de Nível de Privilégio de Autenticação do Usuário
     !DICA-04: esse recurso mostra no momento da autenticação qual é o nível de privilégio do usuário
-    !OBSERVAÇÃO-10: esse recurso facilita a administração e o monitoramento dos equipamentos utilizados na rede
-    !OBSERVAÇÃO-11: esse recurso não está disponível no Switch Layer 2 2960
+    !OBSERVAÇÃO-11: esse recurso facilita a administração e o monitoramento dos equipamentos utilizados na rede
+    !OBSERVAÇÃO-12: esse recurso não está disponível no Switch Layer 2 2960
     logging userinfo
     
     !Saindo de todos os níveis e voltando para o modo EXEC Privilegiado
@@ -118,7 +122,7 @@ show running-config | include log
 
 !DICA-05: o comando Debug é muito utilizado para analisar informações detalhadas de recursos ou comandos
 
-!OBSERVAÇÃO-12: muito cuidado quando habilitar o Debug, não esqueça de desabilitar no final da análise,
+!OBSERVAÇÃO-13: muito cuidado quando habilitar o Debug, não esqueça de desabilitar no final da análise,
 !esse recurso consome muita memória RAM e processamento CPU do hardware causando lentidão ou travamento.
 
 !Habilitando o Debug do ICMP no Switch Layer 3 ou Router
