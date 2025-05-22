@@ -151,11 +151,11 @@ enable
 
     !Configurando o Suporte ao Spanning-Tree Portfast na Interface Etherchannel
     interface Port-Channel3
-        switchport
-        switchport mode trunk
-        spanning-tree portfast trunk
-        no shutdown
-        end
+      switchport
+      switchport mode trunk
+      spanning-tree portfast trunk
+      no shutdown
+      end
 
   !Salvando as configurações da RAM para a NVRAM
   write

@@ -109,13 +109,13 @@ Service HTTPS   On
 
 ```bash
 !testando localmente no servidor os serviços de rede
-nslookup ftp.vaamonde.pti
-ping ftp.vaamonde.pti
+nslookup ftp.SEU_DOMÍNIO.INTRA
+ping ftp.SEU_DOMÍNIO.INTRA
 
 !Testando o acesso ao servidor de FTP Server
-ftp ftp.vaamonde.pti
-  Username: vaamonde
-  Password: vaamonde
+ftp ftp.SEU_DOMÍNIO.INTRA
+  Username: seu_usuário
+  Password: sua_senha
 
 !Testando o acesso ao servidor de HTTP Server
 http://localhost
@@ -123,21 +123,21 @@ http://127.0.0.1
 
 
 !Testando remotamente no cliente Microsoft Windows
-http://www.vaamonde.pti
-https://www.vaamonde.pti
+http://www.SEU_DOMÍNIO.INTRA
+https://www.SEU_DOMÍNIO.INTRA
 Text Editor: vaamonde.txt
 dir
 
 !Enviando arquivos para o servidor FTP
-ftp ftp.vaamonde.pti
-  Username: vaamonde
-  Password: vaamonde	
+ftp ftp.SEU_DOMÍNIO.INTRA
+  Username: seu_usuário
+  Password: sua_senha
   dir
   put vaamonde.txt
   quit
 
 !Recebendo arquivos do servidor FTP
-ftp ftp.vaamonde.pti
+ftp ftp.SEU_DOMÍNIO.INTRA
   Username: robson
   Password: robson	
   get vaamonde.txt

@@ -75,15 +75,15 @@ Server-02
 
 SMTP Service        On
 POP3 Service        On
-Domain Name         vaamonde.pti     SET
-User Setup          User: robsonvaamonde    Password: 123456    (+)     Email: robsonvaamonde@vaamonde.pti
-                    User: leandroramos      Password: 123456    (+)     Email: leandroramos@vaamonde.pti
-                    User: josedeassis       Password: 123456    (+)     Email: josedeassis@vaamonde.pti
-                    User: jeffersoncosta    Password: 123456    (+)     Email: jeffersoncosta@vaamonde.pti
-                    User: rogeriosampaio    Password: 123456    (+)     Email: rogeriosampaio@vaamonde.pti
-                    User: sirlenesanches    Password: 123456    (+)     Email: sirlenesanches@vaamonde.pti
-                    User: denisnovais       Password: 123456    (+)     Email: denisnovais@vaamonde.pti
-                    User: vaamonde          Password: 123456    (+)     Email: vaamonde@vaamonde.pti
+Domain Name         SEU_DOMÍNIO.INTRA       SET
+User Setup          User: robsonvaamonde    Password: 123456    (+)     Email: robsonvaamonde@SEU_DOMÍNIO.INTRA
+                    User: leandroramos      Password: 123456    (+)     Email: leandroramos@SEU_DOMÍNIO.INTRA
+                    User: josedeassis       Password: 123456    (+)     Email: josedeassis@SEU_DOMÍNIO.INTRA
+                    User: jeffersoncosta    Password: 123456    (+)     Email: jeffersoncosta@SEU_DOMÍNIO.INTRA
+                    User: rogeriosampaio    Password: 123456    (+)     Email: rogeriosampaio@SEU_DOMÍNIO.INTRA
+                    User: sirlenesanches    Password: 123456    (+)     Email: sirlenesanches@SEU_DOMÍNIO.INTRA
+                    User: denisnovais       Password: 123456    (+)     Email: denisnovais@SEU_DOMÍNIO.INTRA
+                    User: vaamonde          Password: 123456    (+)     Email: vaamonde@SEU_DOMÍNIO.INTRA
 ```
 
 ## SEGUNDA ETAPA: Configurações do Clientes de SMTP e POP3 no Cisco Packet Tracer
@@ -94,20 +94,20 @@ User Setup          User: robsonvaamonde    Password: 123456    (+)     Email: r
 
 ```bash
 !Testando as resoluções de nome do SMTP e POP3
-nslookup smtp.vaamonde.pti
-nsllokup pop3.vaamonde.pti
+nslookup smtp.SEU_DOMÍNIO.INTRA
+nsllokup pop3.SEU_DOMÍNIO.INTRA
 
 !Configurando o cliente de email
 Configure Mail
 Your Name               Admin SOA
-Email Address           vaamonde@vaamonde.pti
+Email Address           seu_usuário@SEU_DOMÍNIO.INTRA
 
 Server Information
-Incoming Mail Server    pop3.vaamonde.pti
-Outgoing Mail Server    smtp.vaamonde.pti
+Incoming Mail Server    pop3.SEU_DOMÍNIO.INTRA
+Outgoing Mail Server    smtp.SEU_DOMÍNIO.INTRA
 
 Logon Information
-User Name               vaamonde
-Password                123456
+User Name               seu_usuário
+Password                sua_senha
 (SAVE)
 ```

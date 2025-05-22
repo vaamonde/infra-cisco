@@ -73,25 +73,28 @@ Server-02
     DNS
 
 DNS Service:       On
-Resource Records:  Name = server-02               Type = A Record     Address = 172.16.0.33
-Resource Records:  Name = ns1.SEU_DOMÍNIO.INTRA   Type = NS           Server Name = server-02
-Resource Records:  Name = SEUDOMÍNIO.INTRA        Type = SOA          Primary Server Name = ns1.SEUDOMÍNIO.INTRA
-                                                                      Mail Box = seu_usuário@SEUDOMÍNIO.INTRA
-                                                                      Minimum TTL = 3600 (1h ou 60 minutos)
-                                                                      Refresh Time = 3600 (1h ou 60 minutos)
-                                                                      Retry Time = 600 (10 minutos)
-                                                                      Expiry Time = 86400 (24h ou 1440 minutos)
-Resource Records:  Name = SEU_DOMÍNIO.INTRA       Type = CNAME        Host Name = server-03
-Resource Records:  Name = www.SEU_DOMÍNIO.INTRA   Type = CNAME        Host Name = server-03
-Resource Records:  Name = pop3.SEU_DOMÍNIO.INTRA  Type = CNAME        Host Name = server-03
-Resource Records:  Name = smtp.SEU_DOMÍNIO.INTRA  Type = CNAME        Host Name = server-03
-Resource Records:  Name = ftp.SEU_DOMÍNIO.INTRA   Type = CNAME        Host Name = server-03
-Resource Records:  Name = server-03               Type = A Record     Address = 172.16.0.34
-Resource Records:  Name = server-04               Type = A Record     Address = 172.16.0.35
-Resource Records:  Name = server-05               Type = A Record     Address = 172.16.0.36
-Resource Records:  Name = sw-03                   Type = A Record     Address = 172.16.0.97
-Resource Records:  Name = sw-04                   Type = A Record     Address = 172.16.0.98
-Resource Records:  Name = sw-05                   Type = A Record     Address = 172.16.0.99
+Resource Records:  Name = server-02                 Type = A Record     Address = 172.16.0.33
+Resource Records:  Name = ns1.SEU_DOMÍNIO.INTRA     Type = NS           Server Name = server-02
+Resource Records:  Name = SEUDOMÍNIO.INTRA          Type = SOA          Primary Server Name = ns1.SEUDOMÍNIO.INTRA
+                                                                        Mail Box = seu_usuário@SEUDOMÍNIO.INTRA
+                                                                        Minimum TTL = 3600 (1h ou 60 minutos)
+                                                                        Refresh Time = 3600 (1h ou 60 minutos)
+                                                                        Retry Time = 600 (10 minutos)
+                                                                        Expiry Time = 86400 (24h ou 1440 minutos)
+Resource Records:  Name = SEU_DOMÍNIO.INTRA         Type = CNAME        Host Name = server-03
+Resource Records:  Name = www.SEU_DOMÍNIO.INTRA     Type = CNAME        Host Name = server-03
+Resource Records:  Name = pop3.SEU_DOMÍNIO.INTRA    Type = CNAME        Host Name = server-04
+Resource Records:  Name = smtp.SEU_DOMÍNIO.INTRA    Type = CNAME        Host Name = server-04
+Resource Records:  Name = ftp.SEU_DOMÍNIO.INTRA     Type = CNAME        Host Name = server-03
+Resource Records:  Name = tftp.SEU_DOMÍNIO.INTRA    Type = CNAME        Host Name = server-02
+Resource Records:  Name = ntp.SEU_DOMÍNIO.INTRA     Type = CNAME        Host Name = server-05
+Resource Records:  Name = syslog.SEU_DOMÍNIO.INTRA  Type = CNAME        Host Name = server-05
+Resource Records:  Name = server-03                 Type = A Record     Address = 172.16.0.34
+Resource Records:  Name = server-04                 Type = A Record     Address = 172.16.0.35
+Resource Records:  Name = server-05                 Type = A Record     Address = 172.16.0.36
+Resource Records:  Name = sw-03                     Type = A Record     Address = 172.16.0.97
+Resource Records:  Name = sw-04                     Type = A Record     Address = 172.16.0.98
+Resource Records:  Name = sw-05                     Type = A Record     Address = 172.16.0.99
 ```
 
 ## TERCEIRA ETAPA: Testando o Serviço do DNS Server no Cisco Packet Tracer.
@@ -121,7 +124,7 @@ C:\> ping sw-03
 C:\> ssh -l admin sw-03   (Switch SW-03)
 ```
 
-## QUARTA ETAPA: Automatizando a Configuração do Switch Multilayer 3650 e Switch Layer 2 2960.
+## QUARTA ETAPA: Automatizando a Configuração do Switch Multilayer 3650, Switch Layer 2 2960 e Router 4321.
 
 01. Utilizando o Visual Studio Code (VSCode) para automatizar as configurações do Cisco IOS.
 
