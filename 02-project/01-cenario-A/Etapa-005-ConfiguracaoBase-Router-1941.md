@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 27/04/2025<br>
-Versão: 0.05<br>
+Data de atualização: 22/05/2025<br>
+Versão: 0.06<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -84,7 +84,7 @@ Router (config)# login block-for 120 attempts 2 within 60
 ```bash
          --- System Configuration Dialog ---
 
-Would you like to enter the initial configuration dialog? [yes/no]: no
+Would you like to enter the initial configuration dialog? [yes/no]: no <Enter>
 
 Press RETURN to get started!
 
@@ -216,10 +216,33 @@ rt-01#
 ```bash
 !Visualizando a Data e Hora do Router
 rt-01# show clock
+*0:21:17.962 UTC Mon Mar 1 1993
 ```
 ```bash
 !Visualizando os Logs detalhados do Router
 rt-01# show logging
+Syslog logging: enabled (0 messages dropped, 0 messages rate-limited,
+          0 flushes, 0 overruns, xml disabled, filtering disabled)
+
+No Active Message Discriminator.
+
+No Inactive Message Discriminator.
+
+    Console logging: level debugging, 11 messages logged, xml disabled,
+          filtering disabled
+    Monitor logging: level debugging, 11 messages logged, xml disabled,
+          filtering disabled
+    Buffer logging:  disabled, xml disabled,
+          filtering disabled
+
+    Logging Exception size (4096 bytes)
+    Count and timestamp logging messages: disabled
+    Persistent logging: disabled
+
+No active filter modules.
+
+ESM: 0 messages dropped
+    Trap logging: level informational, 11 message lines logged
 ```
 ```bash
 !Fazendo um Filtro na Visualização do Running-Config somente da Sessão Line Console 0

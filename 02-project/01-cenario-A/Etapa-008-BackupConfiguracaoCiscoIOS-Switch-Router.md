@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 27/04/2025<br>
-Versão: 0.09<br>
+Data de atualização: 22/05/2025<br>
+Versão: 0.10<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -171,16 +171,15 @@ sw-01#
 
 07. Salvando as configurações da memória NVRAM para o Servidor TFTP.
 
-**DICA-07:** o serviço de TFTP (Trivial File Transfer Protocol) utiliza o Protocolo: *UDP* na Porta Padrão: *69*, por padrão está ativo no Servidor do Cisco Packet Tracer, precisando apenas habilitar o endereço IPv4 ou IPv6.
+**DICA-07:** o serviço de *TFTP (Trivial File Transfer Protocol)* utiliza o Protocolo: *UDP* na Porta Padrão: *69*, por padrão está ativo no Servidor do Cisco Packet Tracer, precisando apenas habilitar o endereço IPv4 ou IPv6.
 
-**OBSERVAÇÃO-05:** o protocolo UDP (User Datagram Protocol) não é confiável, porque ele não exige confirmação de recebimento.
+**OBSERVAÇÃO-05:** o protocolo *UDP (User Datagram Protocol)* não é confiável, porque ele não exige confirmação de recebimento.
 
 **OBSERVAÇÃO-06:** o protocolo TFTP foi escolhido pela Cisco para ser o sistema padrão de Atualização e Backup dos Switch e Router.
 
+**OBSERVAÇÃO IMPORTANTE:** RECOMENDO, NESSE CENÁRIO REMOVER TODOS OS ARQUIVOS NO TFTP PARA FACILITAR A ANALISE DOS BACKUPS ENVIADOS.
 ```bash
 !Verificando o Status do Serviço do Servidor TFTP
-!OBSERVAÇÃO IMPORTANTE: RECOMENDO, NESSE CENÁRIO REMOVER TODOS OS ARQUIVOS NO TFTP
-!PARA FACILITAR A ANALISE DOS BACKUPS ENVIADOS.
 Server-01
   Services
     TFTP
@@ -298,7 +297,7 @@ sw-01# disable
 sw-01> exit
 ```
 
-**OBSERVAÇÃO IMPORTANTE:** no comando: show running-config algumas opções não aparece no arquivo de configuração como as linhas:<br> 
+**OBSERVAÇÃO IMPORTANTE:** no comando: *show running-config* algumas opções não aparece no arquivo de configuração como as linhas:<br> 
 A) crypto key generate rsa general-keys modulus 1024;<br>
 B) no caso das senhas do Tipo-5 (secret) ou Tipo-7 (password) elas estão criptografadas, na hora de fazer uma restauração (restore) será necessário alterar as senhas;<br>
 C) outra detalhe está relacionado as Interfaces de Rede que o comando: no shutdown não está no arquivo sendo necessário;<br>

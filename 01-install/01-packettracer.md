@@ -129,11 +129,11 @@ vim python3 libqt5websockets5 libqt5multimedia5 libqt5xml5t64 libqt5sql5t64
     Software adicional deve ser instalado: <Continuar>
 03) Na tela: Software License Agreement clique em: <Next>
 04) Marque a opção: do you accept the terms of this EULA?: <Yes> clique em: <Next>
+```
 
-#OBSERVAÇÃO IMPORTANTE: Se você utilizar o Gdebi para instalar o Cisco Packet Tracer e apresentar
-#uma falha no final da instalação, recomendo utilizar o comando: dpkg para forçar a instalação em 
-#modo Terminal. UTILIZAR ESSE PROCEDIMENTO SOMENTE SE TIVER FALHA NA INSTALAÇÃO EM MODO GRÁFICO.
+**OBSERVAÇÃO IMPORTANTE:** Se você utilizar o *Gdebi* para instalar o Cisco Packet Tracer e apresentar uma falha no final da instalação, recomendo utilizar o comando: **dpkg** para forçar a instalação em modo Terminal (UTILIZAR ESSE PROCEDIMENTO SOMENTE SE TIVER FALHA NA INSTALAÇÃO EM MODO GRÁFICO).
 
+```bash
 #atalho para acessar o Terminal
 Terminal: Ctrl + Alt + T
 

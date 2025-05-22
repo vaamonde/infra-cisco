@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 27/04/2025<br>
-Versão: 0.08<br>
+Data de atualização: 22/05/2025<br>
+Versão: 0.09<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -128,9 +128,31 @@ C:\>
 
 !Testando a comunicação com o Server 01 utilizando o pacote ICMP (Internet Control Message Protocol)
 C:\> ping server-01
+  Pinging 192.168.1.1 with 32 bytes of data:
+
+  Reply from 192.168.1.1: bytes=32 time<1ms TTL=128
+  Reply from 192.168.1.1: bytes=32 time<1ms TTL=128
+  Reply from 192.168.1.1: bytes=32 time<1ms TTL=128
+  Reply from 192.168.1.1: bytes=32 time<1ms TTL=128
+
+  Ping statistics for 192.168.1.1:
+      Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+  Approximate round trip times in milli-seconds:
+      Minimum = 0ms, Maximum = 0ms, Average = 0ms
 
 !Testando a comunicação com o Switch 01 utilizando o pacote ICMP (Internet Control Message Protocol)
 C:\> ping sw-01
+  Pinging 192.168.1.250 with 32 bytes of data:
+
+  Request timed out.
+  Reply from 192.168.1.250: bytes=32 time=1ms TTL=255
+  Reply from 192.168.1.250: bytes=32 time<1ms TTL=255
+  Reply from 192.168.1.250: bytes=32 time<1ms TTL=255
+
+  Ping statistics for 192.168.1.250:
+      Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),
+  Approximate round trip times in milli-seconds:
+      Minimum = 0ms, Maximum = 1ms, Average = 0ms
 
 !Acessando remotamente o Switch utilizando o protocolo SSH (Secure Shell)
 !OBSERVAÇÃO: -l (éli não é o número "1" (um) e sim "l" (éli) em minúsculo)
@@ -219,6 +241,14 @@ rt-01#
 ```bash
 !Visualizando as Configurações do Running-Config (RAM)
 sw-01# show running-config
+  Building configuration...
+
+  Current configuration : 1763 bytes
+  !
+  ...
+  !
+  end
+sw-01#
 
 !Fazendo um Filtro na Visualização do Running-Config somente da Sessão IP
 sw-01# show running-config | section include ip
@@ -235,23 +265,26 @@ sw-01#
 
 ## QUARTA ETAPA: Testando o Serviço de DNS Server nos Switches e Routers.
 
-01. Testando a resolução de nomes no Switch e Router
+01. Testando a resolução de nomes nos Switches e Router
+
+**OBSERVAÇÃO IMPORTANTE:** CARACTERES UTILIZADOS NA SAÍDA DO COMANDO PING NO CISCO
+
+| Caracteres | Descrição |
+|------------|-----------|
+| "!" | Receipt of a reply (Echo reply recebido (ping Ok)) |
+| "." | The Network service timed out while waiting for a reply (Echo reply não chegou no tempo limite) |
+| "?" | Unknown packet type (Tipo de pacote desconhecido) |
+| "|" | Ping Interrupted (Interrompido, cancelado) |
+| "&" | Package lifetime exceeded (Tempo de vida do pacote excedido) |
+| "!H" | Host unreachable (Negado administrativamente (access-list)) |
+| "C" | Congested network (Rede congestionada) |
+| "M" | Could not fragment (Problema na fragmentação) |
+| "N" | Network (Rede inalcançável) |
+| "P" | Protocol (Protocolo inalcançável (problema no protocolo)) |
+| "Q" | Source quench (Destino ocupado) |
+| "U" | Destination Unreachable (Destino inalcançável (falta de rota, access-list…)) |
 
 ```bash
-!OBSERVAÇÃO IMPORTANTE: CARACTERES UTILIZADOS NA SAÍDA DO COMANDO PING NO CISCO
-!a) "!"  = Receipt of a reply (Echo reply recebido (ping Ok))
-!b) "."  = The Network service timed out while waiting for a reply (Echo reply não chegou no tempo limite)
-!c) "?"  = Unknown packet type (Tipo de pacote desconhecido)
-!d) "|"  = Ping Interrupted (Interrompido, cancelado)
-!e) "&"  = Package lifetime exceeded (Tempo de vida do pacote excedido)
-!f) "!H" = Host unreachable (Negado administrativamente (access-list))
-!g) "C"  = Congested network (Rede congestionada)
-!h) "M"  = Could not fragment (Problema na fragmentação)
-!i) "N"  = Network (Rede inalcançável)
-!j) "P"  = Protocol (Protocolo inalcançável (problema no protocolo))
-!k) "Q"  = Source quench (Destino ocupado)
-!l) "U"  = Destination Unreachable (Destino inalcançável (falta de rota, access-list…))
-
 !Digitando um comando errado no Modo EXEC Privilegiado
 sw-01# time
   Translating "time"...domain server (192.168.1.1)

@@ -7,8 +7,8 @@
 #Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem<br>
 #YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 #Data de criação: 16/09/2024<br>
-#Data de atualização: 27/04/2025<br>
-#Versão: 0.08<br>
+#Data de atualização: 22/05/2025<br>
+#Versão: 0.09<br>
 #Testado e homologado no Linux Mint 22 Wilma x64<br>
 #Testado e homologado o Cisco Packet Tracer 8.2.x x64 e Rack Cisco SW-3560 e RT-2911
 
@@ -197,6 +197,10 @@ F) Testando a conectividade entre o Switch e os Desktops da Rede
 **DICA-14** depois da configuração da SVI no Switch Cisco Catalyst Layer 2 você consegue agora pingar os Desktops da Rede utilizado o Protocolo ICMP (Internet Control Message Protocol) com o comando: *ping* para testar a interconectividade de rede.
 
 **OBSERVAÇÃO-08** o carácter: *! (exclamação)* utilizado no comando: ping significa que os pacotes ICMP enviado para o destino foi recebido com sucesso, o padrão é enviar: *5 Pacotes (Sending 5)* já o carácter: *. (ponto)* significa que os pacotes ICMP foram perdidos ou o destino não recebeu os pacotes.
+
+**OBSERVAÇÃO-09** na última linha do comando: *ping* do Cisco IOS e mostrado a opção: **Success rate is 100 percent (5/5)** que representa que 100% dos pacotes foram enviado e recebidos totalizando: *5 (cinco) Pacotes Enviados e 5 (cinco) Pacotes Recebidos*, na opção: **round-trip** que é o tempo de vida de ida e volta dos pacotes (RTT - Round Trip Time) medido em milissegundos, Mínimo (min): 8 ms — O menor tempo registrado, Médio (avg): 10 ms — Média dos tempos e Máximo (max): 15 ms — O maior tempo registrado.
+
+**DICA-15:** RTT é o tempo que um pacote leva para sair do dispositivo de origem, chegar ao destino e retornar. Esse tempo inclui: *Latência da Rede, Processamento dos dispositivos intermediários e Variações momentâneas (jitter).*
 ```bash
 !Pingando a SVI do Switch Layer 2 2960 sw-01
 sw-01# ping 192.168.1.250
@@ -220,11 +224,11 @@ sw-01#
 
 01. Utilizando o Visual Studio Code (VSCode) para automatizar as configurações do Cisco IOS.
 
-**OBSERVAÇÃO-09:** recomendo sempre utilizar um *Editor de Texto Profissional* para criar os scripts e automatizar as tarefas de configuração do Cisco IOS, hoje em dia é indicado utilizar o Visual Studio Code (VSCode) junto com as Extensões: *Cisco IOS Syntax e Cisco Config Highlight* para facilitar essa configuração.
+**OBSERVAÇÃO-10:** recomendo sempre utilizar um *Editor de Texto Profissional* para criar os scripts e automatizar as tarefas de configuração do Cisco IOS, hoje em dia é indicado utilizar o Visual Studio Code (VSCode) junto com as Extensões: *Cisco IOS Syntax e Cisco Config Highlight* para facilitar essa configuração.
 
-**DICA-15:** o caractere: *! (exclamação)* é utilizado como um recurso de *Comentário*, sua utilização server para comentar o código de automação do Cisco IOS ou para desativar um comando para não ser executado, *RECOMENDO FORTEMENTE DOCUMENTAR TODOS OS COMANDOS E PROCEDIMENTOS DE CONFIGURAÇÃO PARA FACILITAR O ENTENDIMENTO.*
+**DICA-16:** o caractere: *! (exclamação)* é utilizado como um recurso de *Comentário*, sua utilização server para comentar o código de automação do Cisco IOS ou para desativar um comando para não ser executado, *RECOMENDO FORTEMENTE DOCUMENTAR TODOS OS COMANDOS E PROCEDIMENTOS DE CONFIGURAÇÃO PARA FACILITAR O ENTENDIMENTO.*
 
-**DICA-16:** para facilitar a leitura do código, recomendo utilizar o recurso de **Indentação de Código** usando a Tecla TAB (Tabulador/Tabulação) para cada nível que você está configurando o Cisco IOS, isso facilitada a análise de erros (Debug) do código.
+**DICA-17:** para facilitar a leitura do código, recomendo utilizar o recurso de **Indentação de Código** usando a Tecla TAB (Tabulador/Tabulação) para cada nível que você está configurando o Cisco IOS, isso facilitada a análise de erros (Debug) do código.
 
 01. Acessando o modo EXEC Privilegiado e o modo de Configuração Global de Comandos.
 ```bash

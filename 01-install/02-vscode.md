@@ -181,7 +181,7 @@ Portuguese (Brazil) Language Pack for Visual Studio Code
 Brazilian Portuguese - Code Spell Checker (Corretor Ortográfico de Código)
 Manter selecionado a extensão: Brazilian Portuguese - Code Spell Checker
   Pressionar F1
-    Show Spell Checker Configuration Info (OPÇÃO FOI DESATIVADO NA NOVA VERSÃO)
+    Show Spell Checker Configuration Info (OPÇÃO FOI DESATIVADA NA NOVA VERSÃO)
       User
         Language
           English (en_us)
@@ -212,8 +212,8 @@ Cisco IOS-XR Syntax
 Gerenciar
   Configurações
     Code Spell Checker
-      C Spell: Enabled Language Ids: (OPÇÃO FOI DESATIVADO NA NOVA VERSÃO)
-        Adicionar Item: shellscript (OPÇÃO FOI DESATIVADO NA NOVA VERSÃO)
+      C Spell: Enabled Language Ids: (OPÇÃO FOI DESATIVADA NA NOVA VERSÃO)
+        Adicionar Item: shellscript (OPÇÃO FOI DESATIVADA NA NOVA VERSÃO)
       C Spell: Language: en,en-US,pt,pt-BR
       C Spell: Max Duplicate Problems: 500000
       C Spell: Max Number Of Problems: 500000

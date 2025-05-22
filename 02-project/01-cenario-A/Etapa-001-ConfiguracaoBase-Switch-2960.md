@@ -7,8 +7,8 @@
 #Instagram Procedimentos em TI: https://www.instagram.com/procedimentoem<br>
 #YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 #Data de criação: 16/09/2024<br>
-#Data de atualização: 13/05/2025<br>
-#Versão: 0.11<br>
+#Data de atualização: 22/05/2025<br>
+#Versão: 0.12<br>
 #Testado e homologado no Linux Mint 22 Wilma x64<br>
 #Testado e homologado o Cisco Packet Tracer 8.2.x x64 e Rack Cisco SW-3560 e RT-2911
 
@@ -104,7 +104,7 @@ Switch>
 
 **DICA-04:** é recomendado utilizar o Protocolo NTP (Network Time Protocol) para manter sincronizado a Data e Hora no Switch ou Router.
 ```bash
-Switch# clock set 14:00:00 21 November 2024
+Switch# clock set 14:00:00 21 November 2025
 ```
 
 ## QUARTA ETAPA: Acessando o Modo de Configuração Global no Cisco IOS.
@@ -193,13 +193,20 @@ sw-01(config)# enable secret SUA_SENHA_SEGURA
 
 07. Criação dos usuários locais utilizando senhas do Tipo-5 ou Tipo-7 e privilégios diferenciados.
 
-**DICA-16:** existe 16 níveis de privilégios no Cisco IOS (0 mais baixo até 15 mais alto);
+**DICA-16:** existe 16 (dezesseis) níveis de Privilégios no Cisco IOS (0 mais baixo até 15 mais alto);
+
+| Nível | Descrição | Permissões Principais |
+| ----- | --------- | --------------------- |
+| 0     | **Mínimo**  | Apenas comandos básicos: `logout`, `enable`, `disable`, `exit`, e `help`. |
+| 1     | **Usuário padrão (User EXEC)** | Visualiza status básico, verifica conexões, executa `ping`, `traceroute`, e acessa comandos de diagnóstico simples. |
+| 2-14  | **Intermediários (Personalizados)**  | São níveis configuráveis. Podem ser atribuídos comandos específicos para operações específicas sem liberar o modo privilegiado completo (`enable`). |
+| 15    | **Administrador total (Privileged EXEC)** | Acesso total. Executa todos os comandos, incluindo configurações globais, interfaces, roteamento, segurança, manipulação de arquivos, reinicialização e atualização de firmware. |
 
 **DICA-17:** não é recomendado criar usuários utilizando senhas do Tipo-7 (senhas fracas, fácil de quebrar);
 
-**DICA-18:** existe a possibilidade de se autenticar no Switch utilizando os protocolos RADIUS (Remote Authentication Dial-In User Service) ou TACACS (Terminal Access Controller Access-Control System);
+**DICA-18:** existe a possibilidade de se autenticar no Switch utilizando os protocolos *RADIUS (Remote Authentication Dial-In User Service) ou TACACS (Terminal Access Controller Access-Control System)*;
 
-**DICA-19:** usuários com Privilégio 15 não precisa digitar o comando: *enable* após se logar no Switch ou Router.
+**DICA-19:** usuários com Privilégio 15 não precisa digitar o comando: **enable** após se logar no Switch ou Router.
 
 **OBSERVAÇÃO-06:** criação de usuários comuns para administrar o Switch, privilégio padrão recomendado: 1.
 ```bash
@@ -222,7 +229,7 @@ sw-01(config)# no lldp run
 
 ## SEXTA ETAPA: Configuração da Linha Console no Cisco IOS.
 
-01. Acessando a Linha (line) Console, porta padrão de acesso *Out-of-Band (Fora da Banda)* do Switch Cisco.
+01. Acessando a Linha (line) Console (Command Line Interface), porta padrão de acesso *Out-of-Band (Fora da Banda)* do Switch Cisco.
 
 **DICA-21:** conexão feita utilizando o *Cabo Console RS232/DB9 ou USB* e software de Acesso Remoto ao Console (PuTTY, Minicom, etc...).
 
@@ -325,11 +332,34 @@ sw-01#
 02. Visualizando a Data e Hora do Switch
 ```bash
 sw-01# show clock
+*0:9:24.347 UTC Mon Mar 1 1993
 ```
 
 03. Visualizando os Logs do Switch
 ```bash
 sw-01# show logging
+Syslog logging: enabled (0 messages dropped, 0 messages rate-limited,
+          0 flushes, 0 overruns, xml disabled, filtering disabled)
+
+No Active Message Discriminator.
+
+No Inactive Message Discriminator.
+
+    Console logging: level debugging, 11 messages logged, xml disabled,
+          filtering disabled
+    Monitor logging: level debugging, 11 messages logged, xml disabled,
+          filtering disabled
+    Buffer logging:  disabled, xml disabled,
+          filtering disabled
+
+    Logging Exception size (4096 bytes)
+    Count and timestamp logging messages: disabled
+    Persistent logging: disabled
+
+No active filter modules.
+
+ESM: 0 messages dropped
+    Trap logging: level informational, 11 message lines logged
 ```
 
 04. Saindo do Modo Privilegiado do Switch
@@ -374,7 +404,7 @@ sw-01(config)#
 enable
 
 !Configuração de Data/Hora em inglês, você pode usar abreviado ou completo
-clock set 14:00:00 21 November 2024
+clock set 14:00:00 21 November 2025
 
   !Acessando o modo de configuração global de comandos
   configure terminal
