@@ -83,7 +83,7 @@ enable
       exit
 
     !Criando a Interface Virtual do Grupo 1 do Etherchannel
-    interface Port-Channel1
+    interface Port-channel 1
 
       !Configurando o Modo de Switching da Interface Etherchannel
       switchport
@@ -109,7 +109,7 @@ enable
       exit
 
     !Criando a Interface Virtual do Grupo 2 do Etherchannel
-    interface Port-Channel2
+    interface Port-channel 2
       switchport
       switchport mode trunk
       spanning-tree portfast trunk
@@ -132,11 +132,10 @@ enable
     !Acessando o Range de Interface GigabitEthernet de Ligação com o Switch Multilayer 3650
     interface range GigabitEthernet 0/1 - 2
       channel-group 1 mode passive
-      no shutdown
       exit
 
     !Configurando o Suporte ao Spanning-Tree Portfast na Interface Etherchannel
-    interface Port-Channel1
+    interface Port-channel 1
       switchport
       switchport mode trunk
       spanning-tree portfast trunk
@@ -146,11 +145,10 @@ enable
     !Acessando o Range de Interface FastEthernet de Ligação com o Switch Layer 2960
     interface range FastEthernet 0/23 - 24
       channel-group 3 mode active
-      no shutdown
       exit
 
     !Configurando o Suporte ao Spanning-Tree Portfast na Interface Etherchannel
-    interface Port-Channel3
+    interface Port-channel 3
       switchport
       switchport mode trunk
       spanning-tree portfast trunk
@@ -173,11 +171,10 @@ enable
     !Acessando o Range de Interface GigabitEthernet de Ligação com o Switch Multilayer 3650
     interface range GigabitEthernet 0/1 - 2
       channel-group 2 mode passive
-      no shutdown
       exit
 
     !Configurando o Suporte ao Spanning-Tree Portfast na Interface Etherchannel
-    interface Port-Channel2
+    interface Port-channel 2
       switchport
       switchport mode trunk
       spanning-tree portfast trunk
@@ -187,11 +184,10 @@ enable
     !Acessando o Range de Interface FastEthernet de Ligação com o Switch Layer 2960
     interface range FastEthernet 0/23 - 24
       channel-group 3 mode passive
-      no shutdown
       exit
 
     !Configurando o Suporte ao Spanning-Tree Portfast na Interface Etherchannel
-    interface Port-Channel3
+    interface Port-channel 3
       switchport
       switchport mode trunk
       spanning-tree portfast trunk
@@ -208,34 +204,28 @@ enable
 !Visualizando as configurações da memória RAM
 show running-config | section interface
 
+!Visualizando as configurações das Interfaces Port-Channel
+show running-config | section interface Port-channel
+
 !Listando as Interfaces do Etherchannel
 !Os estados das portas podem aparecer como: P – Ativa no grupo, D – Down, I – Independente 
 !(não participa do EtherChannel), S – Em espera ou U – Em uso.
 show etherchannel summary
 
-!Exibir informações detalhadas do EtherChannel:
+!Visualizando informações detalhadas do EtherChannel
 show etherchannel port-channel
 
-!Verificando o status de um Port-Channel específico:
-show interfaces port-channel <ID> etherchannel
+!Visualizando o status de um Port-Channel específico:
+show interfaces Port-channel <ID> status
 
-!Verificando o estado das interfaces físicas dentro do EtherChannel:
+!Verificando o estado detalhado das interfaces físicas dentro do EtherChannel:
 show interfaces etherchannel
 
-!Verificando o status de cada porta membro:
+!Verificando o status de cada porta membro do EtherChannel
 show interfaces status
-
-!Exibindo estatísticas das portas membros:
-show interfaces <interface> etherchannel
 
 !Testando o balanceamento de carga do EtherChannel:
 show etherchannel load-balance
-
-!Exibindo estatísticas de tráfego:
-show interfaces port-channel <ID> counters
-
-!Verificando as informações do LACP (Link Aggregation Control Protocol):
-show lacp neighbor
 
 !Testando a conexão nos Desktops da Rede com o Protocolo ICMP
 ping 192.168.1.1
