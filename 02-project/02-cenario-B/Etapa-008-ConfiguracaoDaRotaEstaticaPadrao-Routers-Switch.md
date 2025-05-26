@@ -48,6 +48,7 @@ enable
     interface GigabitEthernet 0/0/0
 
       !Habilitando o Tipo de Média utilizado na Porta GigabitEthernet
+      !OBSERVAÇÃO-01: O Router 4321 utilizada a porta GigabitEthernet 0/0/0 tanto para Par-Metálico como para Fibra Óptica
       media-type sfp
 
       !Configurando a descrição da Interface
@@ -103,11 +104,11 @@ enable
     !Configurando a Rota Estática Padrão de Saída para o Router 4321
     !DICA-02: rota estática é indicada para links Ponto-a-Ponto e para redes simples, com poucos roteadores (saltos/caminhos)
     !DICA-03: rota estática recebe a letra: S (static) no início da rota declarada manualmente na Tabela de Roteamento
-    !OBSERVAÇÃO-06: na tabela de roteamento temos as opções: L - local (Endereço Local) e C - connected (Rede Diretamente Conectada)
-    !OBSERVAÇÃO-07: rota estática é configurada manualmente em cada equipamento da rede, sua atualização não é dinâmica (automática)
-    !OBSERVAÇÃO-08: rota estática tem a Distância Administrativa (AD - Confiabilidade) de: 1 (um)
-    !OBSERVAÇÃO-09: rota estática tem Métrica (Custo) de: 0 (zero)
-    !OBSERVAÇÃO-10: rota estática pode encaminhar redes por: Endereço IPv4/IPv6 de Próximo Salto ou Interface de Saída
+    !OBSERVAÇÃO-05: na tabela de roteamento temos as opções: L - local (Endereço Local) e C - connected (Rede Diretamente Conectada)
+    !OBSERVAÇÃO-06: rota estática é configurada manualmente em cada equipamento da rede, sua atualização não é dinâmica (automática)
+    !OBSERVAÇÃO-07: rota estática tem a Distância Administrativa (AD - Confiabilidade) de: 1 (um)
+    !OBSERVAÇÃO-08: rota estática tem Métrica (Custo) de: 0 (zero)
+    !OBSERVAÇÃO-09: rota estática pode encaminhar redes por: Endereço IPv4/IPv6 de Próximo Salto ou Interface de Saída
     !EXEMPLO-02: ip route Rede_de_Destino Máscara_de_Rede_de_Destino Interface_de_Saída ou IP_do_Próximo_Salto Distância_Administrativa
     ip route 0.0.0.0 0.0.0.0 10.0.0.2
     end
