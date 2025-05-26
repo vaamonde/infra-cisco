@@ -167,6 +167,9 @@ show ip interface brief
 !Verificando as informações da Tabela de Roteamento Local
 show ip route
 
+!Filtrando somente as rotas Estáticas no Switch e Router
+show ip route static
+
 !Testando a conexão nos Desktops da Rede com o Protocolo ICMP
 ping 192.168.1.1
 ping 172.16.0.33

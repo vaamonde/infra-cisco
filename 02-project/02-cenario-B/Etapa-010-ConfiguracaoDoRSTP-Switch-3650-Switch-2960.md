@@ -76,7 +76,7 @@ enable
   configure terminal
 
     !Configurando o Spanning-Tree na VLAN 1 para ser o Root Bridge Primário da Topologia
-    !DICA-01: geralmente Switch Layer 3 que estão configurados na camada de Distribuição são eleitos Root Bridge
+    !DICA-01: geralmente Switch Layer 3 que estão configurados na camada de Distribuição são eleitos como Root Bridge
     !OBSERVAÇÃO-01: na configuração da prioridade do STP da VLAN do Switch, temos as opções: 0 até 61440 (com incremento de 4096)
     !OBSERVAÇÃO-02: na configuração do Switch Root Bridge do STP, temos as opções de: primary (Primário) ou secondary (Secundário)
     !OBSERVAÇÃO-03: podemos adicionar mais VLANs para a árvore do STP, utilizando as mesmas opções do comando: ip arp inspection ou
