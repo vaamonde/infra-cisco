@@ -48,7 +48,7 @@ D) A interface escolhida com o modo **Root Port** tem o *Menor Custo* para o *De
 E) As interfaces que não são consideradas **Designated Port** são colocadas no **Modo de Bloqueio (Blocked Port - BLK)**;<br>
 F) Na topologia do STP, apenas uma Porta e colocada no modo de *Blocked Port* por padrão, somente um processo STP e criado para toda a árvore do STP.
 
-Os 5 estágios da Negociação das Portas do STP são: **Disabled (Desativado), Blocking (Bloqueado), Listening (Ouvindo), Learning (Aprendendo) e Forwarding (Encaminhamento)**
+Os *5 (cinco) estágios* da Negociação das Portas do STP são: **Disabled (Desativado), Blocking (Bloqueado), Listening (Ouvindo), Learning (Aprendendo) e Forwarding (Encaminhamento)**
 
 Os tempos utilizados pelo STP são: **2s Hello (Avisos), 15s Forward Delay (Atraso de Encaminhamento) e 20s Max Age (Idade Máxima)**
 
@@ -60,9 +60,9 @@ O **RSTP (Rapid Spanning Tree - rapid-pvst Per-Vlan Rapid Spanning Tree Mode)** 
 
 O tempo de convergência do RSTP vária em torno de **2 segundos** em relação ao tempo de convergência padrão do STP que vária de **30 até 50s.**
 
-Os *3 estágios* da Negociação do RSTP são: **Discarding (Descartando), Learning (Aprendendo) e Forwarding (Encaminhamento).**
+Os *3 (três) estágios* da Negociação do RSTP são: **Discarding (Descartando), Learning (Aprendendo) e Forwarding (Encaminhamento).**
 
-Os *4 status* da Negociação das Portas do RSTP são: **Root Port (Porta Raiz), Designated Port (Porta Designadas), Alternate Port (Porta Alternativa) e Backup Port (Porta Backup).**
+Os *4 (quatro) status* da Negociação das Portas do RSTP são: **Root Port (Porta Raiz), Designated Port (Porta Designadas), Alternate Port (Porta Alternativa) e Backup Port (Porta Backup).**
 
 A vantagem do *RSTP em conjunto com o PVST (Per VLAN Spanning-Tree) ou PVST+ (Per VLAN Spanning-Tree Plus)* é a possibilidade de criar instâncias individuais para cada VLAN na Topologia do STP, facilitando a administração e configuração dos melhores caminhos para cada VLAN na Topologia da rede.
 
