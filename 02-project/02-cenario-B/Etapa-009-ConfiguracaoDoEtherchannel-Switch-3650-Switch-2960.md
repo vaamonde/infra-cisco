@@ -91,12 +91,6 @@ enable
       !Configurando o Modo Trunk da Interface Etherchannel
       switchport mode trunk
 
-      !Configurando o Suporte ao Spanning-Tree Portfast na Interface Etherchannel
-      !DICA-01: em Portas Trunk (Tronco) conectadas em Roteadores ou Servidores é recomendado acelerar a velocidade de 
-      !encaminhamento de quadros (Frames) nessas Interfaces, agilizando o processo de convergência da topologia
-      !OBSERVAÇÃO-01: essa configuração não deve ser utilizada em Interfaces de Trunk entre Switches na Topologia
-      spanning-tree portfast trunk
-
       !Iniciando a Interface Etherchannel
       no shutdown
 
@@ -112,7 +106,6 @@ enable
     interface Port-channel 2
       switchport
       switchport mode trunk
-      spanning-tree portfast trunk
       no shutdown
       end
 
@@ -138,7 +131,6 @@ enable
     interface Port-channel 1
       switchport
       switchport mode trunk
-      spanning-tree portfast trunk
       no shutdown
       exit
 
@@ -151,7 +143,6 @@ enable
     interface Port-channel 3
       switchport
       switchport mode trunk
-      spanning-tree portfast trunk
       no shutdown
       end
 
@@ -177,7 +168,6 @@ enable
     interface Port-channel 2
       switchport
       switchport mode trunk
-      spanning-tree portfast trunk
       no shutdown
       exit
 
@@ -189,8 +179,7 @@ enable
     !Configurando o Suporte ao Spanning-Tree Portfast na Interface Etherchannel
     interface Port-channel 3
       switchport
-      switchport mode trunk
-      spanning-tree portfast trunk
+      switchport mode trunkk
       no shutdown
       end
 
