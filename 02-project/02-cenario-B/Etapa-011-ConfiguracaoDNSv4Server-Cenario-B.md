@@ -81,7 +81,7 @@ Resource Records:  Name = SEU_DOMÍNIO.BR            Type = SOA          Primary
                                                                           Refresh Time = 3600 (1h ou 60 minutos)
                                                                           Retry Time = 600 (10 minutos)
                                                                           Expiry Time = 86400 (24h ou 1440 minutos)
-Resource Records:  Name = SEU_DOMÍNIO.BR            Type = CNAME        Host Name = server-03
+Resource Records:  Name = SEU_DOMÍNIO.BR            Type = CNAME        Host Name = server-02
 Resource Records:  Name = www.SEU_DOMÍNIO.BR        Type = CNAME        Host Name = server-03
 Resource Records:  Name = pop3.SEU_DOMÍNIO.BR       Type = CNAME        Host Name = server-04
 Resource Records:  Name = smtp.SEU_DOMÍNIO.BR       Type = CNAME        Host Name = server-04
@@ -95,6 +95,7 @@ Resource Records:  Name = server-05                 Type = A Record     Address 
 Resource Records:  Name = sw-03                     Type = A Record     Address = 172.16.0.97
 Resource Records:  Name = sw-04                     Type = A Record     Address = 172.16.0.98
 Resource Records:  Name = sw-05                     Type = A Record     Address = 172.16.0.99
+Resource Records:  Name = rt-02                     Type = A Record     Address = 172.16.0.30
 ```
 
 ## TERCEIRA ETAPA: Testando o Serviço do DNS Server no Cisco Packet Tracer.
