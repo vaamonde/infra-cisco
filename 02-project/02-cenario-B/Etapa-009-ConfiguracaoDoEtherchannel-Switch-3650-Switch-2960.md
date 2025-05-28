@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 21/05/2025<br>
-Versão: 0.06<br>
+Data de atualização: 28/05/2025<br>
+Versão: 0.07<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 Conteúdo estudado nessa configuração:<br>
@@ -45,7 +45,7 @@ O **EtherChannel LACP (Link Aggregation Control Protocol)** é um protocolo que 
 
 O **EtherChannel Estático (Manual)** é uma configuração que combina vários links físicos em um canal lógico, sem negociação (Modo "on", sem o uso do LACP ou PAgP). Ele permite o compartilhamento de carga de tráfego e redundância em caso de falha de um ou mais links. 
 
-**Resumo**
+**Resumo Geral entre os Protocolos Etherchannel**
 
 |Tipo      |Protocolo     |Modos                |Disponíveis   |Compatibilidade	Características  |
 |----------|--------------|---------------------|--------------|---------------------------------|
@@ -53,7 +53,7 @@ O **EtherChannel Estático (Manual)** é uma configuração que combina vários 
 |PAgP      |Cisco	        |"auto","desirable"   |Apenas Cisco  |Automático, proprietário         |
 |LACP      |IEEE 802.3ad  |"passive", "active"  |Multivendor   |Mais flexível e seguro           |
 
-**Comparação Geral**
+**Comparação Geral entre os Protocolos Etherchannel**
 
 |Característica         |EtherChannel Estático  |PAgP (Cisco)     |LACP (IEEE 802.3ad)|
 |-----------------------|-----------------------|-----------------|-------------------|
@@ -82,7 +82,7 @@ enable
       !Saindo das Interfaces GigabitEthernet
       exit
 
-    !Criando a Interface Virtual do Grupo 1 do Etherchannel
+    !Configurando a Interface Virtual do Grupo 1 do Etherchannel
     interface Port-channel 1
 
       !Configurando o Modo de Switching da Interface Etherchannel
@@ -102,7 +102,7 @@ enable
       channel-group 2 mode active
       exit
 
-    !Criando a Interface Virtual do Grupo 2 do Etherchannel
+    !Configurando a Interface Virtual do Grupo 2 do Etherchannel
     interface Port-channel 2
       switchport
       switchport mode trunk
@@ -127,7 +127,7 @@ enable
       channel-group 1 mode passive
       exit
 
-    !Configurando o Suporte ao Spanning-Tree Portfast na Interface Etherchannel
+    !Configurando a Interface Virtual do Grupo 1 do Etherchannell
     interface Port-channel 1
       switchport
       switchport mode trunk
@@ -139,7 +139,7 @@ enable
       channel-group 3 mode active
       exit
 
-    !Configurando o Suporte ao Spanning-Tree Portfast na Interface Etherchannel
+    !Configurando a Interface Virtual do Grupo 3 do Etherchannel
     interface Port-channel 3
       switchport
       switchport mode trunk
@@ -164,7 +164,7 @@ enable
       channel-group 2 mode passive
       exit
 
-    !Configurando o Suporte ao Spanning-Tree Portfast na Interface Etherchannel
+    !Configurando a Interface Virtual do Grupo 2 do Etherchannell
     interface Port-channel 2
       switchport
       switchport mode trunk
@@ -176,7 +176,7 @@ enable
       channel-group 3 mode passive
       exit
 
-    !Configurando o Suporte ao Spanning-Tree Portfast na Interface Etherchannel
+    !Configurando a Interface Virtual do Grupo 3 do Etherchannel
     interface Port-channel 3
       switchport
       switchport mode trunkk

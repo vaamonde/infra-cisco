@@ -194,7 +194,7 @@ B) Configurando o Nome de Domínio no Switch ou no Router
 **DICA-05** a configuração do Nome de Domínio é recomendada mesmo que não seja utilizada no Switch ou no Router ou recursos de resolução de nomes do DNS.
 
 ```bash
-sw-01(config)# ip domain-name SEU_DOMÍNIO.INTRA
+sw-01(config)# ip domain-name SEU_DOMÍNIO.BR
 ```
 
 C) Configurando o Endereço IPv4 do Servidor de DNS no Switch ou no Router

@@ -131,7 +131,7 @@ enable
     username USUARIO_3 privilege 15 secret SUA_SENHA_SEGURA
     
     !Configuração do nome de domínio FQDN (Fully Qualified Domain Name)
-    ip domain-name SEU_DOMÍNIO.INTRA
+    ip domain-name SEU_DOMÍNIO.BR
 
     !Criação da chave de criptografia e habilitando o serviço do SSH Server local
     crypto key generate rsa general-keys modulus 1024

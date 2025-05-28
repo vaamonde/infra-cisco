@@ -61,7 +61,7 @@ sw-01(config)#
 
 **ADENDO-01** um nome de domínio, muitas vezes chamado apenas de domínio, é um nome fácil de lembrar, associado sempre a um endereço IPv4 ou IPv6 físico na Internet ou na Rede Local separado sempre por um: *. (ponto)*.
 ```bash
-sw-01(config)# ip domain-name SEU_DOMÍNIO.INTRA
+sw-01(config)# ip domain-name SEU_DOMÍNIO.BR
 ```
 
 02. Criação/Geração da chave de criptografia do Serviço do SSH (Secure Socket Shell) Server local.
@@ -383,7 +383,7 @@ sw-02#
 configure terminal
 
   !Configuração do nome de domínio FQDN (Nome de Domínio Totalmente Qualificado)
-  ip domain-name SEU-DOMÍNIO.INTRA
+  ip domain-name SEU-DOMÍNIO.BR
 
   !Criação da chave de criptografia e habilitar o serviço de SSH Server local
   crypto key generate rsa general-keys modulus 1024

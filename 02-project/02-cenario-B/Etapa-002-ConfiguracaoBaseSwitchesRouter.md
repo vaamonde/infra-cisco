@@ -72,7 +72,7 @@ enable
     username SEU_USUÁRIO_3 privilege 15 secret SUA_SENHA_SEGURA
 
     !Configuração do nome de domínio FQDN (Nome de Domínio Totalmente Qualificado)
-    ip domain-name SEU_DOMÍNIO.INTRA
+    ip domain-name SEU_DOMÍNIO.BR
 
     !Criação da chave de criptografia e habilitar o serviço de SSH Server local
     crypto key generate rsa general-keys modulus 1024
@@ -175,7 +175,7 @@ enable
     username SEU_USUÁRIO_3 privilege 15 secret SUA_SENHA_SEGURA
 
     !Configuração do nome de domínio FQDN (Nome de Domínio Totalmente Qualificado)
-    ip domain-name SEU_DOMÍNIO.INTRA
+    ip domain-name SEU_DOMÍNIO.BR
 
     !Criação da chave de criptografia e habilitar o serviço de SSH Server local
     crypto key generate rsa general-keys modulus 1024
@@ -284,7 +284,7 @@ enable
     login block-for 120 attempts 2 within 60
 
     !Configuração do nome de domínio FQDN (Nome de Domínio Totalmente Qualificado)
-    ip domain-name SEU_DOMÍNIO.INTRA
+    ip domain-name SEU_DOMÍNIO.BR
 
     !Criação da chave de criptografia e habilitar o serviço de SSH Server local
     crypto key generate rsa general-keys modulus 1024
@@ -391,7 +391,7 @@ enable
     username SEU_USUÁRIO_3 privilege 15 secret SUA_SENHA_SEGURA
 
     !Configuração do nome de domínio FQDN (Fully Qualified Domain Name)
-    ip domain-name SEU_DOMÍNIO.INTRA
+    ip domain-name SEU_DOMÍNIO.BR
 
     !Criação da chave de criptografia e habilitando o serviço do SSH Server local
     crypto key generate rsa general-keys modulus 1024

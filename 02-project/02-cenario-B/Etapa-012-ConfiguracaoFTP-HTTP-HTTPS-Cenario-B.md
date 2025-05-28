@@ -109,11 +109,11 @@ Service HTTPS   On
 
 ```bash
 !testando localmente no servidor os serviços de rede
-nslookup ftp.SEU_DOMÍNIO.INTRA
-ping ftp.SEU_DOMÍNIO.INTRA
+nslookup ftp.SEU_DOMÍNIO.BR
+ping ftp.SEU_DOMÍNIO.BR
 
 !Testando o acesso ao servidor de FTP Server
-ftp ftp.SEU_DOMÍNIO.INTRA
+ftp ftp.SEU_DOMÍNIO.BR
   Username: seu_usuário
   Password: sua_senha
 
@@ -123,9 +123,9 @@ http://127.0.0.1
 
 
 !Testando remotamente no cliente Microsoft Windows
-http://www.SEU_DOMÍNIO.INTRA
-https://www.SEU_DOMÍNIO.INTRA
-Text Editor: vaamonde.txt
+http://www.SEU_DOMÍNIO.BR
+https://www.SEU_DOMÍNIO.BR
+Text Editor: seu_nome.txt
 dir
 
 !Enviando arquivos para o servidor FTP
@@ -133,14 +133,14 @@ ftp ftp.SEU_DOMÍNIO.INTRA
   Username: seu_usuário
   Password: sua_senha
   dir
-  put vaamonde.txt
+  put seu_nome.txt
   quit
 
 !Recebendo arquivos do servidor FTP
 ftp ftp.SEU_DOMÍNIO.INTRA
-  Username: robson
-  Password: robson	
-  get vaamonde.txt
+  Username: seu_usuário
+  Password: sua_senha
+  get seu_nome.txt
   quit
 dir
 ```

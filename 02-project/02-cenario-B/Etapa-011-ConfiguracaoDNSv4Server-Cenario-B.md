@@ -74,21 +74,21 @@ Server-02
 
 DNS Service:       On
 Resource Records:  Name = server-02                 Type = A Record     Address = 172.16.0.33
-Resource Records:  Name = ns1.SEU_DOMÍNIO.INTRA     Type = NS           Server Name = server-02
-Resource Records:  Name = SEUDOMÍNIO.INTRA          Type = SOA          Primary Server Name = ns1.SEUDOMÍNIO.INTRA
-                                                                        Mail Box = seu_usuário@SEUDOMÍNIO.INTRA
-                                                                        Minimum TTL = 3600 (1h ou 60 minutos)
-                                                                        Refresh Time = 3600 (1h ou 60 minutos)
-                                                                        Retry Time = 600 (10 minutos)
-                                                                        Expiry Time = 86400 (24h ou 1440 minutos)
-Resource Records:  Name = SEU_DOMÍNIO.INTRA         Type = CNAME        Host Name = server-03
-Resource Records:  Name = www.SEU_DOMÍNIO.INTRA     Type = CNAME        Host Name = server-03
-Resource Records:  Name = pop3.SEU_DOMÍNIO.INTRA    Type = CNAME        Host Name = server-04
-Resource Records:  Name = smtp.SEU_DOMÍNIO.INTRA    Type = CNAME        Host Name = server-04
-Resource Records:  Name = ftp.SEU_DOMÍNIO.INTRA     Type = CNAME        Host Name = server-03
-Resource Records:  Name = tftp.SEU_DOMÍNIO.INTRA    Type = CNAME        Host Name = server-02
-Resource Records:  Name = ntp.SEU_DOMÍNIO.INTRA     Type = CNAME        Host Name = server-05
-Resource Records:  Name = syslog.SEU_DOMÍNIO.INTRA  Type = CNAME        Host Name = server-05
+Resource Records:  Name = ns1.SEU_DOMÍNIO.BR        Type = NS           Server Name = server-02
+Resource Records:  Name = SEU_DOMÍNIO.BR            Type = SOA          Primary Server Name = ns1.SEU_DOMÍNIO.BR
+                                                                          Mail Box = seu_usuário@SEU_DOMÍNIO.BR
+                                                                          Minimum TTL = 3600 (1h ou 60 minutos)
+                                                                          Refresh Time = 3600 (1h ou 60 minutos)
+                                                                          Retry Time = 600 (10 minutos)
+                                                                          Expiry Time = 86400 (24h ou 1440 minutos)
+Resource Records:  Name = SEU_DOMÍNIO.BR            Type = CNAME        Host Name = server-03
+Resource Records:  Name = www.SEU_DOMÍNIO.BR        Type = CNAME        Host Name = server-03
+Resource Records:  Name = pop3.SEU_DOMÍNIO.BR       Type = CNAME        Host Name = server-04
+Resource Records:  Name = smtp.SEU_DOMÍNIO.BR       Type = CNAME        Host Name = server-04
+Resource Records:  Name = ftp.SEU_DOMÍNIO.BR        Type = CNAME        Host Name = server-03
+Resource Records:  Name = tftp.SEU_DOMÍNIO.BR       Type = CNAME        Host Name = server-02
+Resource Records:  Name = ntp.SEU_DOMÍNIO.BR        Type = CNAME        Host Name = server-05
+Resource Records:  Name = syslog.SEU_DOMÍNIO.BR     Type = CNAME        Host Name = server-05
 Resource Records:  Name = server-03                 Type = A Record     Address = 172.16.0.34
 Resource Records:  Name = server-04                 Type = A Record     Address = 172.16.0.35
 Resource Records:  Name = server-05                 Type = A Record     Address = 172.16.0.36

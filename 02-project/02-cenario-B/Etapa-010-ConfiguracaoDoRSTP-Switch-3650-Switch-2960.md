@@ -76,21 +76,26 @@ enable
   configure terminal
 
     !Configurando o Spanning-Tree na VLAN 1 para ser o Root Bridge Primário da Topologia
-    !DICA-01: geralmente Switch Layer 3 que estão configurados na camada de Distribuição são eleitos como Root Bridge
-    !OBSERVAÇÃO-01: na configuração da prioridade do STP da VLAN do Switch, temos as opções: 0 até 61440 (com incremento de 4096)
-    !OBSERVAÇÃO-02: na configuração do Switch Root Bridge do STP, temos as opções de: primary (Primário) ou secondary (Secundário)
-    !OBSERVAÇÃO-03: podemos adicionar mais VLANs para a árvore do STP, utilizando as mesmas opções do comando: ip arp inspection ou
-    !dhcp snooping - EXEMPLO: spanning-tree vlan 10 20 30 | spanning-tree vlan 10-30 | spanning-tree vlan 1,5,8,10-30
-    !IMPORTANTE-01: com essa configuração, automaticamente o Bridge ID da Switch será decrementado, sendo eleito o Root Bridge com
-    !a menor Prioridade (Priority) entre os demais Switches Layer 2 da Rede
+    !DICA-01: geralmente Switch Layer 3 que estão configurados na camada de Distribuição
+    !são eleitos como Root Bridge
+    !OBSERVAÇÃO-01: na configuração da prioridade do STP da VLAN do Switch, temos as opções:
+    !0 até 61440 (com incremento de 4096)
+    !OBSERVAÇÃO-02: na configuração do Switch Root Bridge do STP, temos as opções de: primary
+    !(Primário) ou secondary (Secundário)
+    !OBSERVAÇÃO-03: podemos adicionar mais VLANs para a árvore do STP, utilizando as mesmas
+    !opções do comando: ip arp inspection ou dhcp snooping - EXEMPLO: spanning-tree vlan 10 
+    !20 30 | spanning-tree vlan 10-30 | spanning-tree vlan 1,5,8,10-30
+    !IMPORTANTE-01: com essa configuração, automaticamente o Bridge ID da Switch será decrementado,
+    !sendo eleito o Root Bridge com a menor Prioridade (Priority) entre os demais Switches L2 da Rede
     spanning-tree vlan 1 root primary
 
     !Configurando o Modo de Rapid-Spanning Tree no Switch Multilayer 3650
     !DICA-02: configurar o Rapid-PVST acelera o processo de convergência da rede
     !OBSERVAÇÃO-04: a configuração padrão do Modo do STP dos Switches da Cisco e: PVST
     !OBSERVAÇÃO-05: no Cisco Packet Tracer temos o suporte aos Modos do STP: pvst ou rapid-pvst 
-    !IMPORTANTE-02: caso você altere o modo do STP em um Switch na rede é recomendado manter a padronização em todos os Switches 
-    !para o mesmo Modo do STP, para não ter conflitos de eleições ou configurações erradas da árvore do STP
+    !IMPORTANTE-02: caso você altere o modo do STP em um Switch na rede é recomendado manter a 
+    !padronização em todos os Switches para o mesmo Modo do STP, para não ter conflitos de eleições
+    !ou configurações erradas da árvore do STP
     spanning-tree mode rapid-pvst
 
     !Saindo de todos os níveis
