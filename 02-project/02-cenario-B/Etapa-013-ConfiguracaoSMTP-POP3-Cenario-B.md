@@ -68,46 +68,66 @@ O protocolo MAPI utiliza um conjunto de protocolos *TCP (Transmission Control Pr
 **OBSERVAÇÃO-04:** esses recursos de e-mail avançado são limitados no Cisco Packet Tracer. 
 
 ```python
-!Habilitando o Serviço do SMTP Server no Servidor 02
-Server-02
+!Habilitando o Serviço do SMTP Server no Servidor 04
+Server-04
   Services
     SMTP
 
 SMTP Service        On
 POP3 Service        On
-Domain Name         SEU_DOMÍNIO.INTRA       SET
+Domain Name         SEU_DOMÍNIO.BR          SET
 User Setup          User: robsonvaamonde    Password: 123456    (+)     Email: robsonvaamonde@SEU_DOMÍNIO.INTRA
+                    User: theodorhinz       Password: 123456    (+)     Email: theodorhinz@SEU_DOMÍNIO.INTRA
                     User: leandroramos      Password: 123456    (+)     Email: leandroramos@SEU_DOMÍNIO.INTRA
                     User: josedeassis       Password: 123456    (+)     Email: josedeassis@SEU_DOMÍNIO.INTRA
                     User: jeffersoncosta    Password: 123456    (+)     Email: jeffersoncosta@SEU_DOMÍNIO.INTRA
                     User: rogeriosampaio    Password: 123456    (+)     Email: rogeriosampaio@SEU_DOMÍNIO.INTRA
                     User: sirlenesanches    Password: 123456    (+)     Email: sirlenesanches@SEU_DOMÍNIO.INTRA
                     User: denisnovais       Password: 123456    (+)     Email: denisnovais@SEU_DOMÍNIO.INTRA
-                    User: vaamonde          Password: 123456    (+)     Email: vaamonde@SEU_DOMÍNIO.INTRA
+                    User: talliswallef      Password: 123456    (+)     Email: talliswallef@SEU_DOMÍNIO.INTRA
+                    User: viniciuscesar     Password: 123456    (+)     Email: viniciuscesar@SEU_DOMÍNIO.INTRA
+                    User: edilsonjesus      Password: 123456    (+)     Email: edilsonjesus@SEU_DOMÍNIO.INTRA
+                    User: kellycristina     Password: 123456    (+)     Email: kellycristina@SEU_DOMÍNIO.INTRA
 ```
 
 ## SEGUNDA ETAPA: Configurações do Clientes de SMTP e POP3 no Cisco Packet Tracer
 
-!DICA: o principal cliente de e-mail utilizado hoje em dia no mercado corporativo é o: Microsoft Outlook
-!OBSERVAÇÃO: existe outros clientes de e-mail como: Thunderbid, Evolution, SeaMonkey, eM Client, etc
-!OBSERVAÇÃO: não confundir Cliente de Email com Webmail, nesse caso o acesso e feito via Navegador
+**DICA-06:** o principal cliente de e-mail utilizado hoje em dia no mercado corporativo é o: *Microsoft Outlook*
+
+**OBSERVAÇÃO-05:** existe outros clientes de e-mail como: *Thunderbid, Evolution, SeaMonkey, eM Client, etc.*
+
+**OBSERVAÇÃO-06:** não confunda Cliente de Email com Webmail, nesse caso o acesso e feito via Navegador.
 
 ```bash
-!Testando as resoluções de nome do SMTP e POP3
-nslookup smtp.SEU_DOMÍNIO.INTRA
-nsllokup pop3.SEU_DOMÍNIO.INTRA
+#Testando as resoluções de nome do SMTP e POP3
+C:\> nslookup smtp.SEU_DOMÍNIO.BR
+C:\> nsllokup pop3.SEU_DOMÍNIO.BR
 
-!Configurando o cliente de email
-Configure Mail
-Your Name               Admin SOA
-Email Address           seu_usuário@SEU_DOMÍNIO.INTRA
+#Configurando o cliente de email
+Email
+  Configure Mail
+  Your Name               NOME DO SEU USUÁRIO
+  Email Address           seu_usuário@SEU_DOMÍNIO.BR
 
-Server Information
-Incoming Mail Server    pop3.SEU_DOMÍNIO.INTRA
-Outgoing Mail Server    smtp.SEU_DOMÍNIO.INTRA
+  Server Information
+  Incoming Mail Server    pop3.SEU_DOMÍNIO.BR
+  Outgoing Mail Server    smtp.SEU_DOMÍNIO.BR
 
-Logon Information
-User Name               seu_usuário
-Password                sua_senha
-(SAVE)
+  Logon Information
+  User Name               seu_usuário
+  Password                sua_senha
+<Save>
+
+#Enviando um email de teste para a sua própria conta
+Mail Browser
+  Mails
+    Compose
+      To: seu_usuário@SEU_DOMÍNIO.BR
+      Subject: Teste de Envio de Email
+      Body: Teste de Envio de Email
+    <Send>
+
+#Recebendo o Email de teste no seu Mail Box
+Mail Browser
+  Receive
 ```

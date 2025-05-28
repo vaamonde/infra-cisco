@@ -89,7 +89,7 @@ enable
       !DICA-04: por padrão apenas um servidor de NTP é configurado no Cisco Packet Tracer, em equipamentos reais permite mais
       !DICA-05: Switch Layer 3 ou Router pode ser Servidores de NTP na Rede usando a opção: ntp master 1 (stratum)
       !OBSERVAÇÃO-05: não é possível utilizar nomes para servidores de NTP no Cisco Packet Tracer, somente endereços IPv4
-      ntp server 172.16.0.99
+      ntp server 172.16.0.36
       
       !Habilitando o sincronismo da Data e Hora do NTP Server com o Hardware
       !DICA-06: essa opção habilitar o recurso de sincronização de Data/Hora de Software e Hardware

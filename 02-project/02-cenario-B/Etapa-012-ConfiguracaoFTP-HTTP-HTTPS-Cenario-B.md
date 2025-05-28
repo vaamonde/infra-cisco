@@ -55,8 +55,8 @@ A) Configurações do Serviço de FTP Server no Cisco Packet Tracer:
 **OBSERVAÇÃO-02:** diferente do TFTP o FTP trabalha com autenticação ou acesso anônimo (sem autenticação - famoso usuário: anonymous) e permissões de: *Escrita (Write), Leitura (Read), Remoção (Delete), Renomear (Rename) e Listar (List)* o conteúdo dos arquivos e diretórios.
 
 ```python
-!Habilitando o Serviço do FTP Server no Servidor 02
-Server-02
+!Habilitando o Serviço do FTP Server no Servidor 03
+Server-03
   Services
     FTP
 
@@ -78,8 +78,8 @@ B) Configurações do Serviço de HTTP/HTTPS Server no Cisco Packet Tracer:
 **OBSERVAÇÃO-05:** o Cisco Packet Tracer é limitado para as configurações de Unidade Certificadora CA e geração dos certificados assinados, esse procedimento e feito em servidores reais como o Windows Server ou GNU/Linux.
 
 ```python
-!Habilitando o Serviço do HTTP e HTTPS Server no Servidor 02
-Server-02
+!Habilitando o Serviço do HTTP e HTTPS Server no Servidor 03
+Server-03
   Services
     HTTP
 
@@ -108,39 +108,47 @@ Service HTTPS   On
 ## TERCEIRA ETAPA: Testando os serviços de FTP, HTTP e HTTPS no Cisco Packet Tracer
 
 ```bash
-!testando localmente no servidor os serviços de rede
-nslookup ftp.SEU_DOMÍNIO.BR
-ping ftp.SEU_DOMÍNIO.BR
+#Testando localmente no servidor os serviços de rede
+C:\> nslookup ftp.SEU_DOMÍNIO.BR
+C:\> ping ftp.SEU_DOMÍNIO.BR
 
-!Testando o acesso ao servidor de FTP Server
-ftp ftp.SEU_DOMÍNIO.BR
+#Testando o acesso ao servidor de FTP Server
+C:\> ftp ftp.SEU_DOMÍNIO.BR
   Username: seu_usuário
   Password: sua_senha
 
-!Testando o acesso ao servidor de HTTP Server
-http://localhost
-http://127.0.0.1
+#Testando o acesso ao servidor de HTTP Server
+Web Browser http://localhost
+Web Browser http://127.0.0.1
 
 
-!Testando remotamente no cliente Microsoft Windows
-http://www.SEU_DOMÍNIO.BR
-https://www.SEU_DOMÍNIO.BR
-Text Editor: seu_nome.txt
-dir
+#Testando remotamente no cliente Microsoft Windows
+Web Browser http://www.SEU_DOMÍNIO.BR
+Web Browser https://www.SEU_DOMÍNIO.BR
 
-!Enviando arquivos para o servidor FTP
-ftp ftp.SEU_DOMÍNIO.INTRA
+#Criando um arquivo de texto no Editor de Texto
+Text Editor:
+  File
+    Save
+      Enter the new File Name: seu_nome.txt
+    <OK>
+
+#Visualizando o arquivo criado no Prompt de Comando
+C:\> dir
+
+#Enviando arquivos para o servidor FTP
+C:\> ftp ftp.SEU_DOMÍNIO.INTRA
   Username: seu_usuário
   Password: sua_senha
   dir
   put seu_nome.txt
   quit
 
-!Recebendo arquivos do servidor FTP
-ftp ftp.SEU_DOMÍNIO.INTRA
+#Recebendo arquivos do servidor FTP
+C:\> ftp ftp.SEU_DOMÍNIO.INTRA
   Username: seu_usuário
   Password: sua_senha
   get seu_nome.txt
   quit
-dir
+C:\> dir
 ```

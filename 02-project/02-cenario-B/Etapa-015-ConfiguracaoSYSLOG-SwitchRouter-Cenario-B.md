@@ -84,7 +84,7 @@ enable
 
     !Configurando o Endereço IPv4 do Servidor de Syslog
     !OBSERVAÇÃO-06: não é possível utilizar nomes para servidores de Syslog no Cisco Packet Tracer, somente IPv4
-    logging host 172.16.0.99
+    logging host 172.16.0.36
     
     !Configurando o Nível de Log que será enviado para o Servidor de Syslog
     !DICA-02: o nível de detalhamento do Log facilita a análise de erros e possíveis falhas de segurança

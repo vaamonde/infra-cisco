@@ -105,23 +105,23 @@ A) Abrindo o Prompt de Comando do Desktop;
 **DICA-03** não confunda Terminal com Command Prompt, Terminal é utilizado para se conectar no Switch ou Router utilizando o Cabo Console, já o Command Prompt (Prompt de Comando) é utilizado para testar as configurações de rede e acessar remotamente o Switch ou Router.
 
 ```bash
-!Verificando o endereço IPv4 configurado no Desktop
+#Verificando o endereço IPv4 configurado no Desktop
 C:\> ipconfig
 
-!Verificando o endereço detalhado IPv4 configurado no Desktop
+#Verificando o endereço detalhado IPv4 configurado no Desktop
 C:\> ipconfig /all
 
-!Testando a Resolução de Nomes DNS no Desktop
+#Testando a Resolução de Nomes DNS no Desktop
 C:\> nslookup server-02
 
-!Testando a comunicação com o Server 02 utilizando o pacote ICMP (Internet Control Message Protocol)
+#Testando a comunicação com o Server 02 utilizando o pacote ICMP (Internet Control Message Protocol)
 C:\> ping server-02
 
-!Testando a comunicação com o Switch 03 utilizando o pacote ICMP (Internet Control Message Protocol)
+#Testando a comunicação com o Switch 03 utilizando o pacote ICMP (Internet Control Message Protocol)
 C:\> ping sw-03
 
-!Acessando remotamente o Switch utilizando o protocolo SSH (Secure Shell)
-!OBSERVAÇÃO: -l (éli não é o número "1" (um) e sim "l" (éli) em minúsculo)
+#Acessando remotamente o Switch utilizando o protocolo SSH (Secure Shell)
+#OBSERVAÇÃO: -l (éli não é o número "1" (um) e sim "l" (éli) em minúsculo)
 C:\> ssh -l admin sw-03   (Switch SW-03)
 ```
 
