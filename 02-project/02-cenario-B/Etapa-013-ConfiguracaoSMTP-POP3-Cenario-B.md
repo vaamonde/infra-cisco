@@ -73,9 +73,12 @@ Server-04
   Services
     SMTP
 
+!Habilitando e Configurando o serviço do SMTP e POP3
 SMTP Service        On
 POP3 Service        On
 Domain Name         SEU_DOMÍNIO.BR          SET
+
+!Criando os usuários de Email do Serviço de SMTP e POP3
 User Setup          User: robsonvaamonde    Password: 123456    (+)     Email: robsonvaamonde@SEU_DOMÍNIO.INTRA
                     User: theodorhinz       Password: 123456    (+)     Email: theodorhinz@SEU_DOMÍNIO.INTRA
                     User: leandroramos      Password: 123456    (+)     Email: leandroramos@SEU_DOMÍNIO.INTRA

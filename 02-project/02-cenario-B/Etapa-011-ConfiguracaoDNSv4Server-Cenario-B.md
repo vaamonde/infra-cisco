@@ -72,15 +72,16 @@ Server-02
   Services
     DNS
 
+!Criando os Registro principais no Servidor de DNS Server
 DNS Service:       On
 Resource Records:  Name = server-02                 Type = A Record     Address = 172.16.0.33
 Resource Records:  Name = ns1.SEU_DOMÍNIO.BR        Type = NS           Server Name = server-02
 Resource Records:  Name = SEU_DOMÍNIO.BR            Type = SOA          Primary Server Name = ns1.SEU_DOMÍNIO.BR
-                                                                          Mail Box = seu_usuário@SEU_DOMÍNIO.BR
-                                                                          Minimum TTL = 3600 (1h ou 60 minutos)
-                                                                          Refresh Time = 3600 (1h ou 60 minutos)
-                                                                          Retry Time = 600 (10 minutos)
-                                                                          Expiry Time = 86400 (24h ou 1440 minutos)
+                                                                        Mail Box = seu_usuário@SEU_DOMÍNIO.BR
+                                                                        Minimum TTL = 3600 (1h ou 60 minutos)
+                                                                        Refresh Time = 3600 (1h ou 60 minutos)
+                                                                        Retry Time = 600 (10 minutos)
+                                                                        Expiry Time = 86400 (24h ou 1440 minutos)
 Resource Records:  Name = SEU_DOMÍNIO.BR            Type = CNAME        Host Name = server-02
 Resource Records:  Name = www.SEU_DOMÍNIO.BR        Type = CNAME        Host Name = server-03
 Resource Records:  Name = pop3.SEU_DOMÍNIO.BR       Type = CNAME        Host Name = server-04

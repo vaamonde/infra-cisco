@@ -60,11 +60,17 @@ Server-03
   Services
     FTP
 
+!Serviço do FTP habilitado por padrão, criando os usuários de teste do FTP Server
 Service       On
 User Setup    Username: seu_usuário01   Password: sua_senha
               Write=Yes, Read=Yes, Delete=Yes, Rename=Yes, List=Yes
               Username: seu_usuário02   Password: sua_senha
               Write=No, Read=Yes, Delete=No, Rename=No, List=Yes
+
+!Remover todos os arquivos do FTP Server para testar o envio remoto
+File
+  OBSERVAÇÃO: REMOVER TODOS OS ARQUIVOS DO FTP
+    <Remove File>
 ```
 
 B) Configurações do Serviço de HTTP/HTTPS Server no Cisco Packet Tracer:
@@ -83,8 +89,21 @@ Server-03
   Services
     HTTP
 
+!Serviços do HTTP e HTTPS Server no Servidor 03 habilitados por padrão
 Service HTTP    On
 Service HTTPS   On
+
+!Remover todos os arquivos do servidor de HTTP e HTTPS
+File Manager
+  OBSERVAÇÃO: REMOVER TODOS OS ARQUIVOS DO HTTP E HTTPS CLICANDO EM: (delete)
+
+!Criar um novo arquivo index.html para testar o servidor de HTTP e HTTPS
+File Manager
+  <New File>
+    File name: index.html
+      OBSERVAÇÃO: COPIAR E EDITAR O CÓDIGO HTML ABAIXO E COLOCAR NO CORPO DO ARQUIVO
+    <Save>
+  <File Manager>
 ```
 
 ## SEGUNDA ETAPA: Configuração de uma página HTML com nossas informações para testar o serviço HTTP e HTTPS
@@ -112,15 +131,14 @@ Service HTTPS   On
 C:\> nslookup ftp.SEU_DOMÍNIO.BR
 C:\> ping ftp.SEU_DOMÍNIO.BR
 
-#Testando o acesso ao servidor de FTP Server
+#Testando o acesso ao servidor de FTP Server no Servidor-03
 C:\> ftp ftp.SEU_DOMÍNIO.BR
   Username: seu_usuário
   Password: sua_senha
 
-#Testando o acesso ao servidor de HTTP Server
+#Testando o acesso ao servidor de HTTP Server no Servidor-03
 Web Browser http://localhost
 Web Browser http://127.0.0.1
-
 
 #Testando remotamente no cliente Microsoft Windows
 Web Browser http://www.SEU_DOMÍNIO.BR
@@ -136,15 +154,16 @@ Text Editor:
 #Visualizando o arquivo criado no Prompt de Comando
 C:\> dir
 
-#Enviando arquivos para o servidor FTP
+#Enviando arquivos para o servidor de FTP Remoto
 C:\> ftp ftp.SEU_DOMÍNIO.INTRA
   Username: seu_usuário
   Password: sua_senha
   dir
   put seu_nome.txt
   quit
+C:\> 
 
-#Recebendo arquivos do servidor FTP
+#Recebendo arquivos do servidor de FTP Remoto
 C:\> ftp ftp.SEU_DOMÍNIO.INTRA
   Username: seu_usuário
   Password: sua_senha
