@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 08/03/2025<br>
-Versão: 0.02<br>
+Data de atualização: 04/06/2025<br>
+Versão: 0.03<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 ## PRIMEIRA ETAPA: Configuração Base do Router Cisco 2911
@@ -59,12 +59,15 @@ enable
     banner motd #AVISO: acesso autorizado somente a funcionarios#
 
     !Habilitar a senha do Tipo-5 secret para o modo enable privilegiado
+    !OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 90 
+    !(#02_ Usuário e Senha padrão dos Switches e Routers Cisco de cada Grupo:)
     enable secret ????
 
     !Criação dos usuários, senhas do Tipo-5 e privilégios diferenciados
     !Consultar Planilha de Nomes de Usuários
-    !OBSERVAÇÃO: Caso o grupo tenha menos integrantes, desconsiderar a
-    !criação de 04 (quatro) usuários
+    !OBSERVAÇÃO: Caso o grupo tenha menos integrantes, desconsiderar a criação de 04 (quatro) usuários
+    !OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 90 
+    !(#02_ Usuário e Senha padrão dos Switches e Routers Cisco de cada Grupo:)
     username ???nome_do_primeiro_integrante??? privilege 15 secret ????
     username ???nome_do_segundo_integrante??? privilege 15 secret ????
     username ???nome_do_terceiro_integrante??? privilege 15 secret ????
@@ -81,6 +84,8 @@ enable
     line console 0
 
       !Habilitando senha do tipo Password Tipo-7
+      !OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 90 
+      !(#02_ Usuário e Senha padrão dos Switches e Routers Cisco de cada Grupo:)
       password ????
 
       !Forçando fazer login com usuário e senha local

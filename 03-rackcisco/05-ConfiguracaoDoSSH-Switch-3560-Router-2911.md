@@ -23,6 +23,8 @@ enable
   configure terminal
 
     !Configuração do nome de domínio, obrigatório para a configuração do SSH
+    !OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 90 
+    !(#02_ Usuário e Senha padrão dos Switches e Routers Cisco de cada Grupo:)
     ip domain-name ????
 
     !Criação da chave de criptografia e habilitação do serviço de SSH
@@ -70,6 +72,8 @@ enable
   configure terminal
 
     !Configuração do nome de domínio, obrigatório para a configuração do SSH
+    !OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 90 
+    !(#02_ Usuário e Senha padrão dos Switches e Routers Cisco de cada Grupo:)
     ip domain-name ????
 
     !Criação da chave de criptografia e habilitação do serviço de SSH

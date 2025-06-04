@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 16/05/2024<br>
-Versão: 0.01<br>
+Data de atualização: 04/06/2024<br>
+Versão: 0.02<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 ## PRIMEIRA ETAPA: Configuração das Linhas Virtuais do Switch Cisco Catalyst 3560 
@@ -26,6 +26,8 @@ enable
     line vty 0 4
 
       !Habilitando senha do tipo Password Tipo-7
+      !OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 90 
+      !(#02_ Usuário e Senha padrão dos Switches e Routers Cisco de cada Grupo:)
       password ????
 
       !Forçando fazer login com usuário e senha local
@@ -63,6 +65,8 @@ enable
     line vty 0 4
 
       !Habilitando senha do tipo Password Tipo-7
+      !OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 90 
+      !(#02_ Usuário e Senha padrão dos Switches e Routers Cisco de cada Grupo:)
       password ????
 
       !Forçando fazer login com usuário e senha local
