@@ -102,10 +102,32 @@ enable
 
   !Salvando as configurações
   copy running-config startup-config
+```
 
-  !Visualizando as configurações
-  show running-config
+## SEGUNDA ETAPA: Verificando as Configurações do Router 2911.
 
+```python
+!Visualizando a Data e Hora do Switch ou Router
+show clock
+
+!Visualizando as Configurações do Running-Config (RAM)
+!OBSERVAÇÃO: ÚNICA LINHA QUE NÃO APARECE NAS CONFIGURAÇÃO É A: crypto key generate rsa
+show running-config
+
+!Fazendo um Filtro na Visualização do Running-Config somente da Sessão Line Console 0
+show running-config | section include con 0
+
+!Visualizando os Usuários Conectados no Switch
+!OBSERVAÇÃO: ESSA OPÇÃO VAI MOSTRAR O USUÁRIO LOGADO NO CONSOLE: con 0 OU NO VTY: vty 0
+show users
+
+!Visualizando os Logs de Evento do Switch e Router
+show logging
+```
+
+## TERCEIRA ETAPA: Testando a autenticação dos Usuários do Switch 3560.
+
+```python
   !Saindo do modo EXEC privilegiado
   disable
 
