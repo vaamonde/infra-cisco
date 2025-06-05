@@ -31,7 +31,6 @@ enable
   dir flash:
 
   !Salvando as configurações para NOTEPAD++ ou VSCode
-  !OBSERVAÇÃO IMPORTANTE: será mostrado em sala de aula os procedimentos
   show running-config
 ```
 
@@ -51,6 +50,5 @@ enable
   dir flash:
 
   !Salvando as configurações para NOTEPAD++ ou VSCode
-  !OBSERVAÇÃO IMPORTANTE: será mostrado em sala de aula os procedimentos
   show running-config
 ```

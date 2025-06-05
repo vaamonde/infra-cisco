@@ -132,13 +132,13 @@ F) Grupo-06: WiFi 6 (802.11ax) 5.0Ghz Channel Width (MHz): 40MHz - Channel: 046 
 
 05. Baixar os Softwares de Análise de Rede Sem-Fio no seu Smartphone
 
-  a) WiFiMan: https://play.google.com/store/apps/details?id=com.ubnt.usurvey&hl=pt_BR&gl=US<br>
-  b) SIMET Mobile: https://play.google.com/store/apps/details?id=br.ceptro.simet.client.android&hl=pt_BR&gl=US
+  A) WiFiMan: https://play.google.com/store/apps/details?id=com.ubnt.usurvey&hl=pt_BR&gl=US<br>
+  B) SIMET Mobile: https://play.google.com/store/apps/details?id=br.ceptro.simet.client.android&hl=pt_BR&gl=US
 
 06. Sites On-Line para Testar a Velocidade da Internet no seu Computador
 
-  a) SIMET (Nic.br): https://beta.simet.nic.br/<br>
-  b) SpeedTest: https://www.speedtest.net/<br>
-  c) Fast (Netflix): https://fast.com/pt/<br>
-  d) MLab: https://speed.measurementlab.net/#/<br>
-  e) NPerf: https://www.nperf.com/pt/
+  A) SIMET (Nic.br): https://beta.simet.nic.br/<br>
+  B) SpeedTest: https://www.speedtest.net/<br>
+  C) Fast (Netflix): https://fast.com/pt/<br>
+  D) MLab: https://speed.measurementlab.net/#/<br>
+  E) NPerf: https://www.nperf.com/pt/

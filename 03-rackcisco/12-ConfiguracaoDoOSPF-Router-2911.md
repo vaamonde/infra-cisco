@@ -13,9 +13,9 @@ Data de atualização: 16/05/2024<br>
 Versão: 0.01<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
-## Protocolos de Roteamento utilizados no Cisco (APROFUNDAMENTO DE ESTUDO PARA CERTIFICAÇÃO CISCO, COMPTIA, MIKROTIK, ETC)
+## Protocolos de Roteamento utilizados no Cisco (APROFUNDAMENTO DE ESTUDO PARA CERTIFICAÇÃO CISCO, COMPTIA, MIKROTIK, UBIQUITI, ETC)
 
-**==== Protocolos: PDU, TCP, UDP, IPv4/IPv6 e MAC ====**
+**==== Protocolos: PDU, TCP, UDP, IPv4/IPv6, MAC, CAM e ARP ====**
 ```bash
 A) PDU  (Protocol Data Unit - Protocolo de Unidade de Dados - Camada de Dados do Usuário) 
 B) TCP  (Transmission Control Protocol - Protocolo de Controle de Transmissão - Com Confiabilidade)
@@ -23,35 +23,37 @@ C) UDP  (User Datagram Protocol - Protocolo de Datagrama do Usuário - Sem Confi
 D) IPv4 (Internet Protocol - Protocolo de Internet versão 4 - Decimal (Base 10) - 32 Bits - 4 Octetos)
 E) IPv6 (Internet Protocol - Protocolo de Internet versão 6 - Hexadecimal (Base 16) - 128 Bits - 8 Hextetos)
 F) MAC  (Media Access Control - Controle de Acesso a Média - Hexadecimal (Base 16) - 48 Bits - 12 dígitos Hexadecimal)
+G) CAM  (Content Addressable Memory - Tabela de Memória de Acesso Rápido - Endereço MAC para Porta de Rede)
+H) ARP  (Address Resolution Protocol - Protocolo de Resolução de Endereços - Endereço IPv4 para Endereço MAC)
 ```
 
-**==== Protocolos: AS, IGP, EGP e BGP ====**
+**==== Protocolos: AS, IGP (RIP, RIPng, EIGRP, OSPF e IS-IS), EGP e BGP (eBGP, iBGP e MP-BGP) ====**
 ```bash
 A) AS  (Autonomous System - Sistema Autônomo)
-A) IGP (Interior Gateway Protocol - Protocolo de Gateway Interior: RIP, RIPng, EIGRP, OSPF e IS-IS)
-    -> RIP (V1/V2) – Routing Information Protocol
-    -> RIPng – Routing Information Protocol Next Generation IPv6
-    -> EIGRP – Enhanced Interior Gateway Routing Protocol
-    -> OSPF (V2/V3) – Open Shortest Path First
-    -> IS-IS – Intermediate System to Intermediate System
+A) IGP (Interior Gateway Protocol - Protocolo de Gateway Interno: RIP, RIPng, EIGRP, OSPF e IS-IS)
+    -> RIP (V1/V2) – Routing Information Protocol (Protocolo de Informações de Roteamento)
+    -> RIPng – Routing Information Protocol Next Generation IPv6 (Protocolo de Informações de Roteamento IPv6 de Próxima Geração)
+    -> EIGRP – Enhanced Interior Gateway Routing Protocol (Protocolo de Roteamento de Gateway Interno Aprimorado)
+    -> OSPF (V2/V3) – Open Shortest Path First (Caminho mais Curto Primeiro)
+    -> IS-IS – Intermediate System to Intermediate System (Sistema Intermediário para Sistema Intermediário)
 B) EGP (Exterior Gateway Protocol - Protocolo de Gateway Externo: Antigo e Obsoleto)
 C) BGP (Border Gateway Protocol - Protocolo de Gateway de Borda: eBGP, iBGP e MP-BGP)
-    -> eBGP – External Border Gateway Protocol
-    -> iBGP – Internal Border Gateway Protocol
-    -> MP-BGP – Multiprotocol Border Gateway Protocol
+    -> eBGP – External Border Gateway Protocol (Protocolo de Gateway de Fronteira Externa)
+    -> iBGP – Internal Border Gateway Protocol (Protocolo de Gateway de Fronteira Interna)
+    -> MP-BGP – Multiprotocol Border Gateway Protocol (Protocolo de Gateway de Borda Multiprotocolo)
 ```
 
 **==== Distância Administrativa (Escolha do Melhor Caminho e Confiabilidade do Link) ====**
 ```bash
 A) AD   0 --> Interface Diretamente Conectada (Ethernet, FastEthernet, GigabitEthernet, etc)
-B) AD   1 --> Rota Estática, Rota Flutuante ou Gateway Padrão
+B) AD   1 --> Rota Estática, Rota Flutuante ou Gateway Padrão (Rota Padrão)
 C) AD  90 --> EIGRP (Enhanced Interior Gateway Routing Protocol - Protocolo de Roteamento de Gateway Interno Aprimorado)
 D) AD 110 --> OSPF (Open Shortest Path First - Caminho Mais Curto Primeiro)
 E) AD 115 --> IS-IS (Intermediary System / Intermediary System - Caminho Mais Curto para as Rotas)
 E) AD 120 --> RIP (Routing Information Protocol - Protocolo de Informações de Roteamento)
 ```
 
-**==== Métrica (Custo do Link) dos Protocolos ====**
+**==== Métrica (Custo do Link) dos Protocolos IGP ====**
 ```bash
 A) Rota Estática --> Custo 0 (Mais Prioridade)
 B) EIGRP         --> Largura de Banda, Atraso, Confiabilidade, Utilização, MTU (Maximum Transmission Unit) e Contagem de Saltos
@@ -60,7 +62,7 @@ D) IS-IS         --> Caminho mais Curto com base na soma das métricas ao longo 
 E) RIP           --> Contagem de Saltos no Máximo de 15 (Routes)
 ```
 
-**==== Tecnologias de Link de WAN (Wide Area Network) utilizados no Brasil ====**
+**==== Tecnologias de Links de WAN (Wide Area Network) mais utilizados no Brasil ====**
 ```bash
 A) Links Dedicados e Circuitos Privados: Fibra Óptica Dedicada (Ponto a Ponto ou Internet Dedicada);
 B) MPLS (Multiprotocol Label Switching): Rede privada gerenciada pelo provedor;
