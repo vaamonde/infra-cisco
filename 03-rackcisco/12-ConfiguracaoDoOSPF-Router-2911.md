@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 16/05/2024<br>
-Versão: 0.01<br>
+Data de atualização: 06/06/2024<br>
+Versão: 0.02<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 ## Protocolos de Roteamento utilizados no Cisco (APROFUNDAMENTO DE ESTUDO PARA CERTIFICAÇÃO CISCO, COMPTIA, MIKROTIK, UBIQUITI, ETC)
@@ -46,7 +46,7 @@ C) BGP (Border Gateway Protocol - Protocolo de Gateway de Borda: eBGP, iBGP e MP
 **==== Distância Administrativa (Escolha do Melhor Caminho e Confiabilidade do Link) ====**
 ```bash
 A) AD   0 --> Interface Diretamente Conectada (Ethernet, FastEthernet, GigabitEthernet, etc)
-B) AD   1 --> Rota Estática, Rota Flutuante ou Gateway Padrão (Rota Padrão)
+B) AD   1 --> Rota Estática, Rota Padrão, Rota Flutuante ou Gateway Padrão
 C) AD  90 --> EIGRP (Enhanced Interior Gateway Routing Protocol - Protocolo de Roteamento de Gateway Interno Aprimorado)
 D) AD 110 --> OSPF (Open Shortest Path First - Caminho Mais Curto Primeiro)
 E) AD 115 --> IS-IS (Intermediary System / Intermediary System - Caminho Mais Curto para as Rotas)
@@ -55,7 +55,7 @@ E) AD 120 --> RIP (Routing Information Protocol - Protocolo de Informações de 
 
 **==== Métrica (Custo do Link) dos Protocolos IGP ====**
 ```bash
-A) Rota Estática --> Custo 0 (Mais Prioridade)
+A) Rota Estática --> Custo 0 (Mais Prioridade / Rota Preferencial)
 B) EIGRP         --> Largura de Banda, Atraso, Confiabilidade, Utilização, MTU (Maximum Transmission Unit) e Contagem de Saltos
 C) OSPF          --> Largura de Banda Acumulativa, Menor Custo e Menor Distância
 D) IS-IS         --> Caminho mais Curto com base na soma das métricas ao longo de um caminho

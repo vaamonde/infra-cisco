@@ -13,6 +13,8 @@ Data de atualização: 16/05/2024<br>
 Versão: 0.01<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
+**O QUE É E PARA QUE SERVER O CABO SERIAL V35:** O cabo serial V.35 é um tipo de cabo utilizado em roteadores Cisco (e outros equipamentos de rede) para fazer a conexão com links de WAN (Wide Area Network), como linhas dedicadas fornecidas por operadoras de telecomunicações. Padrão V.35 é uma recomendação da ITU-T (União Internacional de Telecomunicações) para interfaces físicas de comunicação serial de alta velocidade, normalmente até 2 Mbps.
+
 **DCE (Data Circuit-Terminating Equipment):** Equipamento responsável por estabelecer, manter e encerrar a comunicação em um link de dados. Ele geralmente fornece a interface para conexão com a rede. Exemplos: modems, roteadores e CSU/DSU.
 
 **DTE (Data Terminal Equipment):** Dispositivo terminal que se comunica através da rede. Ele gera ou recebe os dados, mas depende do DCE para transmissão. Exemplos: computadores, switches e roteadores (quando atuam como terminais).

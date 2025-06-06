@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 16/05/2024<br>
-Versão: 0.01<br>
+Data de atualização: 06/06/2024<br>
+Versão: 0.02<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 ## PRIMEIRA ETAPA: Instalação e Configuração do GNU/Linux Mint e Windows 10
@@ -29,7 +29,7 @@ A) LinuxMint
     Rede
       Adaptador 1
         Conectado a: Placa em mode Bridge (Alterar)
-        Nome: Realtek PCI GbE Family Controller (Alterar)
+        Nome: Realtek PCI GbE Family Controller (Alterar conforme necessidade)
   <OK>
 
 B) Windows10
@@ -37,7 +37,7 @@ B) Windows10
     Rede
       Adaptador 1
         Conectado a: Placa em mode Bridge (Alterar)
-        Nome: Realtek PCI GbE Family Controller (Alterar)
+        Nome: Realtek PCI GbE Family Controller (Alterar conforme necessidade)
   <OK>
 ```
 
@@ -45,7 +45,7 @@ B) Windows10
 
 ```bash
 A) Conectar o cabo de rede na placa de rede off-board;
-B) Conectar o cabo de rede no ponto de rede do Rack Cisco do seu usuário;
+B) Conectar o cabo de rede no ponto de rede do Rack Cisco da VLAN do seu usuário;
 C) Verificar se os LEDs da Placa de Rede e do Switch estão ligados;
 D) Desativar e Ativar novamente a Placa de Rede no Linux Mint.
 ```
@@ -55,14 +55,14 @@ D) Desativar e Ativar novamente a Placa de Rede no Linux Mint.
 ```bash
 A) Linux Mint
   Terminal: Ctrl + Alt + T 
-    ifconfig   (verificar a linha: inet 172.16.???.??? da sua Sub-Rede)
-    route -n   (verificar a linha: 0.0.0.0 172.16.???.254 da sua Sub-Rede)
+    ifconfig   (verificar a linha: inet 172.16.???.??? VLAN da sua Sub-Rede)
+    route -n   (verificar a linha: 0.0.0.0 172.16.???.254 VLAN da sua Sub-Rede)
     resolvectl (verificar a linha: Current DNS Server 8.8.8.8)
 
 B) Windows 10
   Powershell
-    ipconfig /all (verificar a linha: Endereço IPV4 172.16.???.??? da sua Sub-Rede)
-    ipconfig /all (verificar a linha: Gateway Padrão 172.16.???.254 da sua Sub-Rede)
+    ipconfig /all (verificar a linha: Endereço IPV4 172.16.???.??? VLAN da sua Sub-Rede)
+    ipconfig /all (verificar a linha: Gateway Padrão 172.16.???.254 VLAN da sua Sub-Rede)
     ipconfig /all (verificar a linha: Servidores DNS 8.8.8.8)
 ```
 
@@ -70,11 +70,11 @@ B) Windows 10
 
 ```bash
 Linux Mint ou Windows 10 
-  ping 172.16.???.253
-  ping 172.16.???.254
+  ping 172.16.???.253 (VLAN da SVI do Switch)
+  ping 172.16.???.254 (Gateway da VLAN do seu Usuário)
 ```
 
-05. Testar o ping dos Desktops em sua VLAN's no Linux e no Windows
+05. Testar os pings dos Desktops das VLAN's no Linux e no Windows
 
 **OBSERVAÇÃO:** NO WINDOWS 10, POR PADRÃO O FIREWALL ESTÁ HABILITADO, RECOMENDO DESABILITAR O FIREWALL PARA TESTAR OS PINGS EM TODOS OS EQUIPAMENTOS PARA NÃO TER FALHAS DE CONEXÃO.
 
@@ -86,12 +86,9 @@ Linux Mint ou Windows 10
 
 06. Acessar remotamente o Switch Cisco Catalyst 3560 e Router Cisco 2911 utilizando o SSH
 
-```bash
-OBSERVAÇÃO IMPORTANTE: NOS SISTEMAS OPERACIONAIS GNU/LINUX MINT E NO WINDOWS 10, UTILIZANDO O 
-TERMINAL OU POWERSHELL A CONEXÃO COM O SWITCH E ROUTER VIA COMANDO SSH PRECISA SER MODIFICADA 
-DEVIDO AO ALGORÍTIMO DE CRIPTOGRAFIA DE SENHA DOS EQUIPAMENTOS DA CISCO UTILIZAR UM PADRÃO
-DIFERENTE, ESSE ERRO NÃO ACONTECE QUANDO VOCÊ UTILIZAR O SOFTWARE PUTTY (RECOMENDADO).
+**OBSERVAÇÃO IMPORTANTE:** NOS SISTEMAS OPERACIONAIS GNU/LINUX MINT E NO WINDOWS 10, UTILIZANDO O TERMINAL OU POWERSHELL A CONEXÃO COM O SWITCH E ROUTER VIA COMANDO SSH PRECISA SER MODIFICADA DEVIDO AO ALGORÍTIMO DE CRIPTOGRAFIA DE SENHA DOS EQUIPAMENTOS DA CISCO UTILIZAR UM PADRÃO DIFERENTE, ESSE ERRO NÃO ACONTECE QUANDO VOCÊ UTILIZAR O SOFTWARE PUTTY (RECOMENDADO).
 
+```bash
 A) Linux Mint
   Terminal: Ctrl + Alt + T
     #Linha do SSH para acessar o Switch 3560
