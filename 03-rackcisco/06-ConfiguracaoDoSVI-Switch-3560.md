@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 16/05/2024<br>
-Versão: 0.01<br>
+Data de atualização: 08/06/2024<br>
+Versão: 0.02<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 ## PRIMEIRA ETAPA: Configuração SVI (Switch Virtual Interface) no Switch Cisco Catalyst 3560 
@@ -32,6 +32,15 @@ enable
     !OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 77
     !(TERCEIRA ETAPA: Determinação das Redes (Sub-Redes) e VLAN (Virtual-LAN) de Cada Grupo)
     interface vlan ???
+
+    !Habilitando o serviço de Roteamento do Switch Layer 3
+    ip routing
+
+    !Criando uma rota estática padrão para o gerenciamento remoto do Switch Layer 3
+    !Utilizado para acessar resolver o problema de acesso remoto do equipamento entre VLANs
+    !OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 129 
+    !(QUARTA ETAPA: Determinação dos Endereços de SVI (Switch Virtual Interface) e Gateway de cada Grupo)
+    ip route 0.0.0.0 0.0.0.0 172.16.???.254
 
       !Configuração da descrição
       description Interface SVI de Gerenciamento do Grupo-0???
