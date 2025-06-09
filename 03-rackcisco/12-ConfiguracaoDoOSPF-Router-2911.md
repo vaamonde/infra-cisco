@@ -9,11 +9,17 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 06/06/2024<br>
-Versão: 0.02<br>
+Data de atualização: 09/06/2024<br>
+Versão: 0.03<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 ## Protocolos de Roteamento utilizados no Cisco (APROFUNDAMENTO DE ESTUDO PARA CERTIFICAÇÃO CISCO, COMPTIA, MIKROTIK, UBIQUITI, ETC)
+
+01) Certificação Cisco CCNA (Cisco Certified Network Associate): https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccna/index.html<br>
+02) Certificação MikroTik MTCNA (MikroTik Certified Network Associate): https://mikrotik.com/training/about<br>
+03) Certificação Ubiquiti UWA (Unifi Wireless Admin): https://www.ui.com/training/<br>
+04) Certificação CompTIA Network+ (Plus): https://partners.comptia.org/certifications/network<br>
+05) Certificação Furukawa FCP (Furukawa Certified Professional): https://www.furukawalatam.com/pt-br/ift-detalhes/professional<br>
 
 **==== Protocolos: PDU, TCP, UDP, IPv4/IPv6, MAC, CAM e ARP ====**
 ```bash

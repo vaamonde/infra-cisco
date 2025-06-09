@@ -109,7 +109,7 @@ enable
     ip routing
 
     !Criando uma rota estática padrão para o gerenciamento remoto do Switch Layer 3
-    !Utilizado para acessar resolver o problema de acesso remoto do equipamento entre VLANs
+    !Utilizado para resolver o problema de acesso remoto do Switch entre VLANs
     !OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 129 
     !(QUARTA ETAPA: Determinação dos Endereços de SVI (Switch Virtual Interface) e Gateway de cada Grupo)
     ip route 0.0.0.0 0.0.0.0 172.16.???.254
@@ -142,6 +142,9 @@ enable
   !Visualizando informações detalhadas das Interfaces de Trunk
   show interfaces fastEthernet 0/24 status
   show interfaces fastEthernet 0/24 switchport
+
+  !Visualizando a tabela de roteamento local
+  show ip route
 
   !Comandos para testar a conexão do Switch 3560 com o Router 2911
 
