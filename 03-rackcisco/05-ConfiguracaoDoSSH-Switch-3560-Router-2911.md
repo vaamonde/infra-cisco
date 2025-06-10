@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 16/05/2024<br>
-Versão: 0.01<br>
+Data de atualização: 10/06/2024<br>
+Versão: 0.02<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 ## PRIMEIRA ETAPA: Configuração do SSH Server no Switch Cisco Catalyst 3560 
@@ -45,21 +45,6 @@ enable
 
   !Salvando as configurações
   copy running-config startup-config
-
-  !Visualizando as configurações
-  show running-config
-
-  !Visualizando as configurações do SSH Server
-  show ip ssh
-
-  !Visualizando das chaves públicas RSA
-  show crypto key mypubkey rsa
-
-  !Visualizando as conexões ativas do SSH Server
-  show ssh (só vai funcionar quando você se conectar remoto no Switch)
-
-  !Visualizando as conexões remotas estabelecidas no Switch
-  show users (só vai funcionar quando você se conectar remoto no Switch)
 ```
 
 ## SEGUNDA ETAPA: Configuração do SSH Server no Router Cisco 2911 
@@ -94,19 +79,26 @@ enable
 
   !Salvando as configurações
   copy running-config startup-config
+```
 
-  !Visualizando as configurações
-  show running-config
+## TERCEIRA ETAPA: Verificando as Configurações do Switch 3560 e Router 2911.
 
-  !Visualizando as configurações do SSH Server
-  show ip ssh
+```python
+!Visualizando as Configurações do Running-Config (RAM)
+show running-config
 
-  !Visualizando das chaves públicas RSA
-  show crypto key mypubkey rsa
+!Fazendo um Filtro na Visualização do Running-Config somente da Sessão IP SSH
+show running-config | section include ip ssh
 
-  !Visualizando as conexões ativas do SSH Server
-  show ssh (só vai funcionar quando você se conectar remoto no Router)
+!Visualizando as configurações do SSH Server
+show ip ssh
 
-  !Visualizando as conexões remotas estabelecidas no Router
-  show users (só vai funcionar quando você se conectar remoto no Router)
+!Visualizando das chaves públicas RSA do SSH Server
+show crypto key mypubkey rsa
+
+!Visualizando as conexões ativas do SSH Server
+show ssh (só vai funcionar quando você se conectar remoto no Router)
+
+!Visualizando as conexões remotas estabelecidas no Router ou Switch
+show users (só vai funcionar quando você se conectar remoto no Router)
 ```

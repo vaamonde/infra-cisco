@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 09/06/2024<br>
-Versão: 0.03<br>
+Data de atualização: 10/06/2024<br>
+Versão: 0.04<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 ## PRIMEIRA ETAPA: Configuração SVI (Switch Virtual Interface) no Switch Cisco Catalyst 3560 
@@ -49,16 +49,23 @@ enable
 
   !Salvando as configurações
   copy running-config startup-config
+```
 
-  !Visualizando as configurações
-  show running-config
+## SEGUNDA ETAPA: Verificando as Configurações do Switch 3560.
 
-  !Visualizando as configurações de endereçamento IPv4
-  show ip interface brief
+```python
+!Visualizando as Configurações do Running-Config (RAM)
+show running-config
 
-  !Visualizando as informações de VLAN
-  show vlan brief
+!Fazendo um Filtro na Visualização do Running-Config somente da Sessão Interface VLAN
+show running-config | section include interface vlan
 
-  !Visualizando informações detalhadas da VLAN
-  show vlan id ???
+!Visualizando as configurações de endereçamento IPv4 do Switch
+show ip interface brief
+
+!Visualizando as informações de VLANs do Switch
+show vlan brief
+
+!Visualizando informações detalhadas da VLAN
+show vlan id ???
 ```
