@@ -16,7 +16,6 @@ Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 ## PRIMEIRA ETAPA: Backup das Configurações do Switch Cisco Catalyst 3560 e do Router Cisco 2911
 
 01. Backup das configurações do Router Cisco 2911
-
 ```python
 !Acessando o modo exec privilegiado
 enable
@@ -35,7 +34,6 @@ enable
 ```
 
 01. Backup das configurações do Switch Cisco Catalyst 3560
-
 ```python
 !Acessando o modo exec privilegiado
 enable
