@@ -56,11 +56,12 @@ Link da vídeo aula: https://www.youtube.com/watch?v=VBxmsmPK60s
 Link da documentação: https://github.com/vaamonde/python3/blob/main/01-introduction/02-git-gthub.md
 
 ## 01_ Verificando as Informações do Sistema Operacional Linux Mint<br>
+
+**OBSERVAÇÃO IMPORTANTE:** Linux Mint 22.x é derivado do Ubuntu Desktop 24.04.x Noble Numbat
+
 ```bash
 #atalho para acessar o Terminal
 Terminal: Ctrl + Alt + T
-
-#OBSERVAÇÃO IMPORTANTE: Linux Mint 22.x é derivado do Ubuntu Desktop 24.04.x Noble Numbat
 
 #verificando as versões e codinome do sistema operacional
 sudo cat /etc/os-release
@@ -158,7 +159,7 @@ Menu
   <Fechar>
 ```
 
-## 09_ Adicionando o VSCode nas Lista de Abrir Com no Linux Mint<br>
+## 09_ Adicionando o VSCode na Lista de Abrir Com no Linux Mint<br>
 ```bash
 #adicionando o VSCode na lista de Abrir com
 Gerenciador de Arquivos

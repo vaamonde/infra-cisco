@@ -39,17 +39,18 @@ MEGA.nz do Projeto Bora para Prática: https://mega.nz/folder/Co9GHIyK#2kzNnN7Xz
 Link da vídeo aula: https://www.youtube.com/watch?v=GVG1LrHN2Cg
 
 ## 01_ Verificando as Informações do Sistema Operacional Linux Mint<br>
+
+**OBSERVAÇÃO IMPORTANTE:** Linux Mint 22.x é derivado do Ubuntu Desktop 24.04.x Noble Numbat
+
 ```bash
 #atalho para acessar o Terminal
 Terminal: Ctrl + Alt + T
-
-#OBSERVAÇÃO IMPORTANTE: Linux Mint 22.x é derivado do Ubuntu Desktop 24.04.x Noble Numbat
 
 #verificando as versões e codinome do sistema operacional
 sudo cat /etc/os-release
 sudo cat /etc/lsb-release
 
-#verificando a versão do ambiente gráfico
+#verificando a versão do ambiente gráfico Cinnamon
 sudo cinnamon --version
 
 #modo gráfico para verificar as informações de sistema operacional e hardware
@@ -61,7 +62,7 @@ Menu
 ```bash
 #atualizando o sistema operacional via MintUpdate (Recomendado)
 A) Atualização do sistema utilizando o MintUpdate;
-b) Atualização do sistema utilizando o Apt;
+B) Atualização do sistema utilizando o Apt;
 
 #atualizando o sistema operacional via Terminal
 Terminal: Ctrl + Alt + T
@@ -198,7 +199,7 @@ Options
   <Close>
 ```
 
-## 09_ Download do Cisco Packet Tracer para Windows<br>
+## 09_ Download do Cisco Packet Tracer para Microsoft Windows<br>
 
 Link Oficial do Netacad: https://www.netacad.com/pt-br/courses/packet-tracer<br>
 Link Oficial do Packet Tracer Network: https://www.packettracernetwork.com/<br>
@@ -209,7 +210,7 @@ Link do Mega.nz do Bora para Prática: https://mega.nz/folder/Co9GHIyK#2kzNnN7Xz
 PARA CRIAR UMA CONTA NO NETACAD ACESSE O LINK: https://id.cisco.com/signin/register
 
 ```bash
-#baixando o Cisco PAcket Tracer pelo Netacad
+#baixando o Cisco Packet Tracer pelo Netacad
 Legacy Netacad
   Resources
     Download Packet Tracer
