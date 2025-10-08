@@ -198,7 +198,7 @@ F) Testando a conectividade entre o Switch e os Desktops da Rede
 
 **OBSERVAÇÃO-08** o carácter: *! (exclamação)* utilizado no comando: ping significa que os pacotes ICMP enviado para o destino foi recebido com sucesso, o padrão é enviar: *5 Pacotes (Sending 5)* já o carácter: *. (ponto)* significa que os pacotes ICMP foram perdidos ou o destino não recebeu os pacotes.
 
-**OBSERVAÇÃO-09** na última linha do comando: *ping* do Cisco IOS e mostrado a opção: **Success rate is 100 percent (5/5)** que representa que 100% dos pacotes foram enviado e recebidos totalizando: *5 (cinco) Pacotes Enviados e 5 (cinco) Pacotes Recebidos*, na opção: **round-trip** que é o tempo de vida de ida e volta dos pacotes (RTT - Round Trip Time) medido em milissegundos, Mínimo (min): 8 ms — O menor tempo registrado, Médio (avg): 10 ms — Média dos tempos e Máximo (max): 15 ms — O maior tempo registrado.
+**OBSERVAÇÃO-09** na última linha do comando: *ping* do Cisco IOS mostra a opção: **Success rate is 100 percent (5/5)** que representa que 100% dos pacotes foram enviado e recebidos totalizando: *5 (cinco) Pacotes Enviados e 5 (cinco) Pacotes Recebidos*, na opção: **round-trip** que é o tempo de vida de ida e volta dos pacotes (RTT - Round Trip Time) medido em milissegundos, Mínimo (min): 8 ms — O menor tempo registrado, Médio (avg): 10 ms — Média dos tempos e Máximo (max): 15 ms — O maior tempo registrado.
 
 **DICA-15:** RTT é o tempo que um pacote leva para sair do dispositivo de origem, chegar ao destino e retornar. Esse tempo inclui: *Latência da Rede, Processamento dos dispositivos intermediários e Variações momentâneas (jitter).*
 ```bash

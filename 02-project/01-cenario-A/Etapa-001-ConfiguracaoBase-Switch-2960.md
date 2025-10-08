@@ -98,13 +98,13 @@ Switch>
 
 01. Configuração de Data/Hora em Inglês, você pode usar o Mês abreviado ou completo na configuração.
 
-**EXEMPLO:** March ou Mar | April ou Apr | November ou Nov | December ou Dec
+**EXEMPLO:** March ou Mar | April ou Apr | October ou Oct | November ou Nov | December ou Dec
 
 **EXEMPLO:** Hora no formato Universal: Hora:Minutos:Segundos 00:00:00 - Data no formato: Dia Mês Completo ou Abreviado e Ano Completo: 01 March 2024
 
 **DICA-04:** é recomendado utilizar o Protocolo NTP (Network Time Protocol) para manter sincronizado a Data e Hora no Switch ou Router.
 ```bash
-Switch# clock set 14:00:00 21 November 2025
+Switch# clock set 14:00:00 08 October 2025
 ```
 
 ## QUARTA ETAPA: Acessando o Modo de Configuração Global no Cisco IOS.
