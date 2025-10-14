@@ -104,7 +104,7 @@ Switch>
 
 **DICA-04:** é recomendado utilizar o Protocolo NTP (Network Time Protocol) para manter sincronizado a Data e Hora no Switch ou Router.
 ```bash
-Switch# clock set 14:00:00 08 October 2025
+Switch# clock set 14:00:00 10 October 2025
 ```
 
 ## QUARTA ETAPA: Acessando o Modo de Configuração Global no Cisco IOS.
