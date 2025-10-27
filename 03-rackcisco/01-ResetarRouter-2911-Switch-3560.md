@@ -9,11 +9,11 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 10/06/2025<br>
-Versão: 0.03<br>
-Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
+Data de atualização: 24/10/2025<br>
+Versão: 0.04<br>
+Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560, SW-9200L, RT-2911 e RT-8200L
 
-## PRIMEIRA ETAPA: Reset do Switch 2960 ou 3560 (Configurações de Fábrica)
+## PRIMEIRA ETAPA: Reset do Switch Cisco Catalyst 2960 ou 3560 (Configurações de Fábrica)
 
 **OBSERVAÇÃO IMPORTANTE: Utilizar o PuTTY para acessar o Switch utilizando o Cabo Console.**
 
@@ -33,7 +33,7 @@ Press RETURN to get started!
 Switch>
 ```
 
-04. Limpando as configurações residuais dos outros grupos do Switch 3560.
+04. Limpando as configurações residuais dos outros grupos do Switch Cisco Catalyst Layer 3 3560.
 
 ```python
 Switch>
@@ -68,7 +68,7 @@ H) Limpar as VLAN: delete flash:vlan.dat
 I) Reinicializar o Switch: reload
 ```
 
-## SEGUNDA ETAPA: Reset do Roteador (Router) 2911
+## SEGUNDA ETAPA: Reset do Roteador (Router) Cisco 2911
 
 **OBSERVAÇÃO IMPORTANTE: Utilizar o PuTTY para acessar o Router utilizando o Cabo Console.**
 
@@ -148,3 +148,6 @@ E) Salvar as configurações: copy running-config startup-config <Enter>
 F) Reinicializar o router: reload <Enter>
 G) Verificar a chave de registro: enable <Enter>, show version <Enter>
 ```
+
+## TERCEIRA ETAPA: Reset do Switch Cisco Catalyst 9200L
+

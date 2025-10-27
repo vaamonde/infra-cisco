@@ -9,9 +9,9 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 16/05/2024<br>
-Versão: 0.01<br>
-Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
+Data de atualização: 24/10/2024<br>
+Versão: 0.02<br>
+Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560, SW-9200L, RT-2911 e RT-8200L
 
 ## PRIMEIRA ETAPA: Documentação dos Pontos de Rede do Rack Cisco.
 
@@ -22,7 +22,7 @@ Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 A) Primeiro Patch Panel: Pontos de Rede de: 01 até 24;
 B) Segundo Patch Panel.: Pontos de Rede de: 25 até 30.
 ```
-03. Todos os Patch Cords do Rack Cisco estão identificados pela sigla: **R.Cisco - Ponto 0x.**
+03. Todos os Patch Cords do Rack Cisco estão identificados pela sigla: **R.Cisco - Ponto 0x.** e Etiqueta na Cor **VERDE**
 
 04. No Rack Cisco existe: **2 (dois) Patch Panel** que serão utilizados para o *Espelhamento das Portas dos Switches Cisco Catalyst Layer-3 3560.*
 
@@ -71,6 +71,16 @@ D) Grupo-04: 1 (um) Switch Cisco Catalyst Layer-3 3560 e 1 (um) Router Cisco 291
 E) Grupo-05: 1 (um) Switch Cisco Catalyst Layer-3 3560 e 1 (um) Router Cisco 2911
 F) Grupo-06: 1 (um) Switch Cisco Catalyst Layer-3 3560 e 1 (um) Router Cisco 2911
 ```
+**NOVOS KITS DO RACK CISCO:** EM 2025 FOI ATUALIZADO O RACK CISCO COM OS SEGUINTES KITS:
+```bash
+A) Grupo-01: 1 (um) Switch Cisco Catalyst Layer-3 3560 e 1 (um) Router Cisco 2911
+B) Grupo-02: 1 (um) Switch Cisco Catalyst Multilayer 9200L e 1 (um) Router Cisco Edge 8300L
+C) Grupo-03: 1 (um) Switch Cisco Catalyst Multilayer 9200L  e 1 (um) Router Cisco Edge 8300L
+D) Grupo-04: 1 (um) Switch Cisco Catalyst Multilayer 9200L  e 1 (um) Router Cisco Edge 8300L
+E) Grupo-05: 1 (um) Switch Cisco Catalyst Multilayer 9200L  e 1 (um) Router Cisco Edge 8300L
+F) Grupo-06: 1 (um) Switch Cisco Catalyst Layer-3 3560 e 1 (um) Router Cisco 2911
+```
+
 06. Cada Grupo deverá ser composto no máximo de: **4 (quatro) integrantes**, cada integrante do grupo vai utilizar seu Ponto de Rede e deverá sobrar: **1 (um) ponto de rede** para o *Roteador Sem-Fio.*
 
 7. Cada Integrante do Grupo terá as seguintes funções:
@@ -91,10 +101,10 @@ ESSES EQUIPAMENTOS VÃO FAZER A FUNÇÃO DE SIMULAÇÃO DO ISP (INTERNET SERVICE
 
 01. Nos scripts de configuração Base do Switch e Router existe as linhas de configuração dos usuários e senhas conforme abaixo:
 ```bash
-A) Senha padrão: 123@senac
+A) Senha padrão: 123@Tatuape
 B) Usuário: seguir o padrão da documentação dos scripts alterando o seu valor dentro de ???__ __???.
    Exemplo: username ???nome_do_primeiro_integrante??? privilege 15 secret ????
-            username vaamonde privilege 15 secret 123@senac
+            username vaamonde privilege 15 secret 123@Tatuape
 C) Domínio padrão: senac.br
 ```
 **OBSERVAÇÃO IMPORTANTE: sempre que aparecer o carácter: ? (interrogação), você deverá retirar o carácter e alterar o seu valor, o uso de ? (interrogação) não é permitido nas configurações do Cisco IOS.**
