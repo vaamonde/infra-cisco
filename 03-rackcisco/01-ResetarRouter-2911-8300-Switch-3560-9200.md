@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 24/10/2025<br>
-Versão: 0.04<br>
+Data de atualização: 28/10/2025<br>
+Versão: 0.05<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560, SW-9200L, RT-2911 e RT-8200L
 
 ## PRIMEIRA ETAPA: Reset do Switch Cisco Catalyst 2960 ou 3560 (Configurações de Fábrica)
@@ -151,3 +151,4 @@ G) Verificar a chave de registro: enable <Enter>, show version <Enter>
 
 ## TERCEIRA ETAPA: Reset do Switch Cisco Catalyst 9200L
 
+## TERCEIRA ETAPA: Reset do Router Cisco Catalyst 8300L

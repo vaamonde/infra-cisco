@@ -73,12 +73,12 @@ F) Grupo-06: 1 (um) Switch Cisco Catalyst Layer-3 3560 e 1 (um) Router Cisco 291
 ```
 **NOVOS KITS DO RACK CISCO:** EM 2025 FOI ATUALIZADO O RACK CISCO COM OS SEGUINTES KITS:
 ```bash
-A) Grupo-01: 1 (um) Switch Cisco Catalyst Layer-3 3560 e 1 (um) Router Cisco 2911
+A) Grupo-01: 1 (um) Switch Cisco Catalyst Layer-3 3560 e 1 (um) Router Cisco 2911 (FILIAL 01)
 B) Grupo-02: 1 (um) Switch Cisco Catalyst Multilayer 9200L e 1 (um) Router Cisco Edge 8300L
 C) Grupo-03: 1 (um) Switch Cisco Catalyst Multilayer 9200L  e 1 (um) Router Cisco Edge 8300L
 D) Grupo-04: 1 (um) Switch Cisco Catalyst Multilayer 9200L  e 1 (um) Router Cisco Edge 8300L
 E) Grupo-05: 1 (um) Switch Cisco Catalyst Multilayer 9200L  e 1 (um) Router Cisco Edge 8300L
-F) Grupo-06: 1 (um) Switch Cisco Catalyst Layer-3 3560 e 1 (um) Router Cisco 2911
+F) Grupo-06: 1 (um) Switch Cisco Catalyst Layer-3 3560 e 1 (um) Router Cisco 2911 (FILIAL 02)
 ```
 
 06. Cada Grupo deverá ser composto no máximo de: **4 (quatro) integrantes**, cada integrante do grupo vai utilizar seu Ponto de Rede e deverá sobrar: **1 (um) ponto de rede** para o *Roteador Sem-Fio.*
@@ -89,11 +89,11 @@ A) 1 (um) Integrante Responsável pelo Cabeamento Estruturado (CABLING);
 B) 1 (um) Integrante Responsável pelo Switch Cisco Catalyst 3560 (SWITCHING);
 C) 1 (um) Integrante Responsável pelo Router Cisco 2911 (ROUTING);
 D) 1 (um) Integrante Responsável pelo Link WAN, Internet e Documentação (DOCS);
-E) TODOS OS INTEGRANTES SERÃO RESPONSÁVEIS PELOS DESKTOPS LINUX MINT 22.1 E WINDOWS 10.
+E) TODOS OS INTEGRANTES SERÃO RESPONSÁVEIS PELOS DESKTOPS LINUX MINT 22.2 E WINDOWS 10 ou 11.
 ```
 **OBSERVAÇÃO IMPORTANTE: Os equipamentos abaixo serão utilizados pelo Docente em aula.**
 ```bash
-PROFESSOR: 1 (um) Router Cisco 4321, 1 (um) Router Cisco 2811 e 1 (um) Switch 2960-XR
+PROFESSOR: 1 (um) Router Cisco 4321 e 1 (um) Switch Catalyst Multilayer 2960-XR
 ESSES EQUIPAMENTOS VÃO FAZER A FUNÇÃO DE SIMULAÇÃO DO ISP (INTERNET SERVICE PROVIDER).
 ```
 

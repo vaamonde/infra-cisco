@@ -9,11 +9,11 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 09/06/2024<br>
-Versão: 0.02<br>
-Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
+Data de atualização: 28/10/2025<br>
+Versão: 0.03<br>
+Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560, SW-9200L, RT-2911 e RT-8200L
 
-## PRIMEIRA ETAPA: Configuração das VLAN's e Trunk no Switch Cisco Catalyst 3560 
+## PRIMEIRA ETAPA: Configuração das VLAN's e Trunk no Switch Cisco Catalyst 3560 e 9200
 
 ```python
 !Acessando o modo Exec Privilegiado
@@ -22,7 +22,7 @@ enable
   !Acessar modo de configuração global
   configure terminal
 
-    !Criando as VLANs Standard (Padrão) no Switch Layer 3 3560
+    !Criando as VLANs Standard (Padrão) no Switch Layer 3 3560 ou 9200
     !OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 77
     !(TERCEIRA ETAPA: Determinação das Redes (Sub-Redes) e VLAN (Virtual-LAN) de Cada Grupo)
 
@@ -93,12 +93,12 @@ enable
       switchport access vlan ???
       exit
 
-    !Desativando as Interfaces que não serão utilizadas no Switch Layer 3 3560
+    !Desativando as Interfaces que não serão utilizadas no Switch Layer 3 3560 ou 9200
     interface range fastEthernet 0/7 - 23
       shutdown
       exit
 
-    !Configurando a Interface de Trunk do Switch 3560 com o Router 2911
+    !Configurando a Interface de Trunk do Switch 3560 ou 9200 com o Router 2911 ou 8300
     interface fastEthernet 0/24
       description Interface de Trunk com o Router 2911 do Grupo-0???
       switchport trunk encapsulation dot1q
@@ -117,44 +117,48 @@ enable
 
   !Salvando as configurações
   copy running-config startup-config
+```
 
-  !Visualizando as configurações
-  show running-config
+## SEGUNDA ETAPA: Verificando as Configurações do Switch Cisco Catalyst 3560 e 9200
 
-  !Visualizando as configurações de endereçamento IPv4
-  show ip interface brief
+```python
+!Visualizando as configurações
+show running-config
 
-  !Visualizando as informações de VLAN
-  show vlan brief
+!Visualizando as configurações de endereçamento IPv4
+show ip interface brief
 
-  !Visualizando informações de uma VLAN utilizando o ID
-  show vlan id ???
+!Visualizando as informações de VLAN
+show vlan brief
 
-  !Visualizando informações de uma VLAN utilizando o Nome
-  show vlan name ???
+!Visualizando informações de uma VLAN utilizando o ID
+show vlan id ???
 
-  !Visualizando as informações de Status das Interfaces
-  show interface status
+!Visualizando informações de uma VLAN utilizando o Nome
+show vlan name ???
 
-  !Visualizando informações de Interfaces Trunk
-  show interface trunk
+!Visualizando as informações de Status das Interfaces
+show interface status
 
-  !Visualizando informações detalhadas das Interfaces de Trunk
-  show interfaces fastEthernet 0/24 status
-  show interfaces fastEthernet 0/24 switchport
+!Visualizando informações de Interfaces Trunk
+show interface trunk
 
-  !Visualizando a tabela de roteamento local
-  show ip route
+!Visualizando informações detalhadas das Interfaces de Trunk
+show interfaces fastEthernet 0/24 status
+show interfaces fastEthernet 0/24 switchport
 
-  !Comandos para testar a conexão do Switch 3560 com o Router 2911
+!Visualizando a tabela de roteamento local
+show ip route
 
-  !Pingando o endereço de SVI do Switch 3560
-  ping 172.16.???.253
+!Comandos para testar a conexão do Switch 3560 com o Router 2911
 
-  !Pingando o endereço de Gateway da Subinterface do Router 2911 
-  ping 172.16.???.254
+!Pingando o endereço de SVI do Switch 3560
+ping 172.16.???.253
 
-  !Acessando via SSH o Router 2911 a partir do Switch 3560
-  !OBSERVAÇÃO: -l (éli não é o número "1" (um) e sim "l" (éli) em minúsculo)
-  ssh -l ???seu_usuário??? 172.16.???.254
+!Pingando o endereço de Gateway da Subinterface do Router 2911 
+ping 172.16.???.254
+
+!Acessando via SSH o Router 2911 a partir do Switch 3560
+!OBSERVAÇÃO: -l (éli não é o número "1" (um) e sim "l" (éli) em minúsculo)
+ssh -l ???seu_usuário??? 172.16.???.254
 ```

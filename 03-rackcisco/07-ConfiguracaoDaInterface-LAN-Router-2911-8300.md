@@ -9,11 +9,11 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 10/06/2025<br>
-Versão: 0.02<br>
-Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
+Data de atualização: 28/10/2025<br>
+Versão: 0.03<br>
+Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560, SW-9200L, RT-2911 e RT-8200L
 
-## PRIMEIRA ETAPA: Configuração das SubInterfaces das VLAN's no Router Cisco 2911 
+## PRIMEIRA ETAPA: Configuração das SubInterfaces das VLAN's no Router Cisco 2911 e 8300
 
 ```python
 !Acessando o modo Exec Privilegiado
@@ -82,7 +82,7 @@ enable
   copy running-config startup-config
 ```
 
-## SEGUNDA ETAPA: Verificando as Configurações do Router 2911.
+## SEGUNDA ETAPA: Verificando as Configurações do Router 2911 ou 8300.
 
 ```python
 !Visualizando as Configurações do Running-Config (RAM)

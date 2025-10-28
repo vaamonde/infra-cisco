@@ -9,11 +9,11 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 10/06/2025<br>
-Versão: 0.04<br>
-Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
+Data de atualização: 28/10/2025<br>
+Versão: 0.05<br>
+Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560, SW-9200L, RT-2911 e RT-8200L
 
-## PRIMEIRA ETAPA: Configuração Base do Switch Cisco Catalyst Layer-3 3560 
+## PRIMEIRA ETAPA: Configuração Base do Switch Cisco Catalyst Layer-3 3560 ou Multilayer 9200L
 
 ```python
 !Acessando o modo Exec Privilegiado
@@ -27,9 +27,9 @@ enable
   !Acessar modo de Configuração Global
   configure terminal
 
-    !Configuração do nome do Switch 3560
+    !Configuração do nome do Switch 3560 ou 9200L
     !Obrigatório para a configuração do SSH e demais serviços de redes
-    !Mudar o nome do Switch 3560 para cada equipamento do seu grupo
+    !Mudar o nome do Switch 3560 ou 9200L para cada equipamento do seu grupo
     !OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 68 
     !(#03_ Nome dos Switches, Routers e Access Point de Cada Grupo:)
     hostname sw-g???
@@ -70,6 +70,9 @@ enable
     username ???nome_do_terceiro_integrante??? privilege 15 secret ????
     username ???nome_do_quarto_integrante??? privilege 15 secret ????
 
+    !Criação do usuário VAAMONDE para administração do equipamento
+    username vaamonde privilege 15 secret 123@Tatuape
+
     !Desativando os Serviços de Descobertas de equipamentos na rede
     !OBSERVAÇÃO: por padrão os serviços de descobertas de equipamentos estão habilitados
     !globalmente no Switch e Router Cisco, desabilitar o CDP ou LLDP garante a segurança
@@ -101,7 +104,7 @@ enable
   copy running-config startup-config
 ```
 
-## SEGUNDA ETAPA: Verificando as Configurações do Switch Cisco Catalyst 3560 .
+## SEGUNDA ETAPA: Verificando as Configurações do Switch Cisco Catalyst 3560 ou Multilayer 9200L
 
 ```python
 !Visualizando a Data e Hora do Switch ou Router
@@ -122,7 +125,7 @@ show users
 show logging
 ```
 
-## TERCEIRA ETAPA: Testando a autenticação dos Usuários do Switch Cisco Catalyst 3560 .
+## TERCEIRA ETAPA: Testando a autenticação dos Usuários do Switch Cisco Catalyst 3560 ou Multilayer 9200L
 
 ```python
 !Saindo do modo EXEC privilegiado
