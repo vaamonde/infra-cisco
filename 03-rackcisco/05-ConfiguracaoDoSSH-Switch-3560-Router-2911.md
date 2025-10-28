@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 10/06/2024<br>
-Versão: 0.02<br>
+Data de atualização: 27/10/2025<br>
+Versão: 0.03<br>
 Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 ## PRIMEIRA ETAPA: Configuração do SSH Server no Switch Cisco Catalyst 3560 
@@ -28,8 +28,8 @@ enable
     ip domain-name ????
 
     !Criação da chave de criptografia e habilitação do serviço de SSH
-    !Utilizar módulo de criptografia de 1024 bits
-    crypto key generate rsa general-keys modulus 1024
+    !Utilizar módulo de criptografia de 2048 bits
+    crypto key generate rsa general-keys modulus 2048
 
     !Habilitando a versão 2 do serviço do SSH
     ip ssh version 2
@@ -62,8 +62,8 @@ enable
     ip domain-name ????
 
     !Criação da chave de criptografia e habilitação do serviço de SSH
-    !Utilizar módulo de criptografia de 1024 bits
-    crypto key generate rsa general-keys modulus 1024
+    !Utilizar módulo de criptografia de 2048 bits
+    crypto key generate rsa general-keys modulus 2048
 
     !Habilitando a versão 2 do serviço do SSH
     ip ssh version 2
