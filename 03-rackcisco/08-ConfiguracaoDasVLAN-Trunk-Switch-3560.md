@@ -46,10 +46,10 @@ enable
       name wifi
       exit
 
-    !OBSERVAÇÃO IMPORTANTE: a Interface fastEthernet 0/1 não será usada nesse projeto (Interface Reservada).
+    !OBSERVAÇÃO IMPORTANTE: a Interface gigabitEthernet 0/1 não será usada nesse projeto (Interface Reservada).
 
     !Configurando a Interface de Acesso a VLAN do Primeiro Usuário
-    interface fastEthernet 0/2
+    interface gigabitEthernet 1/0/2
 
       !Configurando a Interface de Acesso a VLAN
       description Interface de Acesso da VLAN ??? do ???Nome_E_Sobrenome_Primeiro_Usuário???
@@ -64,21 +64,21 @@ enable
       exit
 
     !Configurando a Interface de Acesso a VLAN do Segundo Usuário
-    interface fastEthernet 0/3
+    interface gigabitEthernet 1/0/3
       description Interface de Acesso da VLAN ??? do ???Nome_E_Sobrenome_Segundo_Usuário???
       switchport mode access
       switchport access vlan ???
       exit
 
     !Configurando a Interface de Acesso a VLAN do Terceiro Usuário
-    interface fastEthernet 0/4
+    interface gigabitEthernet 1/0/4
       description Interface de Acesso da VLAN ??? do ???Nome_E_Sobrenome_Terceiro_Usuário???
       switchport mode access
       switchport access vlan ???
       exit
 
     !Configurando a Interface de Acesso a VLAN do Quarto Usuário
-    interface fastEthernet 0/5
+    interface gigabitEthernet 1/0/5
       description Interface de Acesso da VLAN ??? do ???Nome_E_Sobrenome_Quarto_Usuário???
       switchport mode access
       switchport access vlan ???
@@ -87,19 +87,19 @@ enable
     !Configurando a Interface de Acesso a VLAN da Rede Sem-Fio (Wi-Fi/Wireless)
     !OBSERVAÇÃO IMPORTANTE: A interface fastEthernet 0/6 sempre será utilizada para a VLAN
     !da Rede Sem-Fio (Wi-Fi/Wireless) não alterar a porta.
-    interface fastEthernet 0/6
+    interface gigabitEthernet 1/0/6
       description Interface de Acesso da VLAN ???Wireless do Grupo-0???
       switchport mode access
       switchport access vlan ???
       exit
 
     !Desativando as Interfaces que não serão utilizadas no Switch Layer 3 3560 ou 9200
-    interface range fastEthernet 0/7 - 23
+    interface range gigabitEthernet 1/0/7 - 23
       shutdown
       exit
 
     !Configurando a Interface de Trunk do Switch 3560 ou 9200 com o Router 2911 ou 8300
-    interface fastEthernet 0/24
+    interface gigabitEthernet 1/0/24
       description Interface de Trunk com o Router 2911 do Grupo-0???
       switchport trunk encapsulation dot1q
       switchport mode trunk
@@ -144,8 +144,8 @@ show interface status
 show interface trunk
 
 !Visualizando informações detalhadas das Interfaces de Trunk
-show interfaces fastEthernet 0/24 status
-show interfaces fastEthernet 0/24 switchport
+show interfaces gigabitEthernet 1/0/24 status
+show interfaces gigabitEthernet 1/0/24 switchport
 
 !Visualizando a tabela de roteamento local
 show ip route
