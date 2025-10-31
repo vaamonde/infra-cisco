@@ -150,15 +150,15 @@ show interfaces gigabitEthernet 1/0/24 switchport
 !Visualizando a tabela de roteamento local
 show ip route
 
-!Comandos para testar a conexão do Switch 3560 com o Router 2911
+!Comandos para testar a conexão do Switch 3560 ou 9200L com o Router 2911 ou 8300L
 
-!Pingando o endereço de SVI do Switch 3560
+!Pingando o endereço de SVI do Switch 3560 ou 9200L
 ping 172.16.???.253
 
-!Pingando o endereço de Gateway da Subinterface do Router 2911 
+!Pingando o endereço de Gateway da Subinterface do Router 2911 ou 8300L
 ping 172.16.???.254
 
-!Acessando via SSH o Router 2911 a partir do Switch 3560
+!Acessando via SSH o Router 2911 ou 8300L a partir do Switch 3560 ou 9200L
 !OBSERVAÇÃO: -l (éli não é o número "1" (um) e sim "l" (éli) em minúsculo)
 ssh -l ???seu_usuário??? 172.16.???.254
 ```

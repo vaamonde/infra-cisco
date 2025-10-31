@@ -122,12 +122,12 @@ Exemplo:
 ```
 03. Nome dos Switches, Routers e Access Point de Cada Grupo:
 ```bash
-A) Grupo-01:   Hostname Switch 3560: sw-g01   Hostname Router 2911: rt-g01   Access Point: ap-g01
-B) Grupo-02:   Hostname Switch 3560: sw-g02   Hostname Router 2911: rt-g02   Access Point: ap-g02
-C) Grupo-03:   Hostname Switch 3560: sw-g03   Hostname Router 2911: rt-g03   Access Point: ap-g03
-E) Grupo-04:   Hostname Switch 3560: sw-g04   Hostname Router 2911: rt-g04   Access Point: ap-g04
-F) Grupo-05:   Hostname Switch 3560: sw-g05   Hostname Router 2911: rt-g05   Access Point: ap-g05
-G) Grupo-06:   Hostname Switch 3560: sw-g06   Hostname Router 2911: rt-g06   Access Point: ap-g06
+A) Grupo-01:   Hostname Switch 3560/9200L: sw-g01   Hostname Router 2911/8300: rt-g01   Access Point: ap-g01
+B) Grupo-02:   Hostname Switch 3560/9200L: sw-g02   Hostname Router 2911/8300: rt-g02   Access Point: ap-g02
+C) Grupo-03:   Hostname Switch 3560/9200L: sw-g03   Hostname Router 2911/8300: rt-g03   Access Point: ap-g03
+E) Grupo-04:   Hostname Switch 3560/9200L: sw-g04   Hostname Router 2911/8300: rt-g04   Access Point: ap-g04
+F) Grupo-05:   Hostname Switch 3560/9200L: sw-g05   Hostname Router 2911/8300: rt-g05   Access Point: ap-g05
+G) Grupo-06:   Hostname Switch 3560/9200L: sw-g06   Hostname Router 2911/8300: rt-g06   Access Point: ap-g06
 ```
 
 ## TERCEIRA ETAPA: Determinação das Redes (Sub-Redes) e VLAN (Virtual-LAN) de Cada Grupo
@@ -187,21 +187,21 @@ F) Grupo-06: Subredes:   172.16.60.0/24   VLAN:  60  -  utilizada no SVI do Swit
 
 01. Determinação do endereço IPv4 da VLAN de SVI e Gateway do Switch Layer 3
 ```bash
-A) Grupo-01:  SVI Switch 3560:  172.16.10.253/24  -  Gateway: 172.16.10.254 (Interface Virtual Router 2911)
-B) Grupo-02:  SVI Switch 3560:  172.16.20.253/24  -  Gateway: 172.16.20.254 (Interface Virtual Router 2911)
-C) Grupo-03:  SVI Switch 3560:  172.16.30.253/24  -  Gateway: 172.16.30.254 (Interface Virtual Router 2911)
-D) Grupo-04:  SVI Switch 3560:  172.16.40.253/24  -  Gateway: 172.16.40.254 (Interface Virtual Router 2911)
-E) Grupo-05:  SVI Switch 3560:  172.16.50.253/24  -  Gateway: 172.16.50.254 (Interface Virtual Router 2911)
-F) Grupo-06:  SVI Switch 3560:  172.16.60.253/24  -  Gateway: 172.16.60.254 (Interface Virtual Router 2911)
+A) Grupo-01:  SVI Switch 3560/9200L:  172.16.10.253/24  -  Gateway: 172.16.10.254 (Interface Virtual Router 2911/8300)
+B) Grupo-02:  SVI Switch 3560/9200L:  172.16.20.253/24  -  Gateway: 172.16.20.254 (Interface Virtual Router 2911/8300)
+C) Grupo-03:  SVI Switch 3560/9200L:  172.16.30.253/24  -  Gateway: 172.16.30.254 (Interface Virtual Router 2911/8300)
+D) Grupo-04:  SVI Switch 3560/9200L:  172.16.40.253/24  -  Gateway: 172.16.40.254 (Interface Virtual Router 2911/8300)
+E) Grupo-05:  SVI Switch 3560/9200L:  172.16.50.253/24  -  Gateway: 172.16.50.254 (Interface Virtual Router 2911/8300)
+F) Grupo-06:  SVI Switch 3560/9200L:  172.16.60.253/24  -  Gateway: 172.16.60.254 (Interface Virtual Router 2911/8300)
 ```
 
 ## QUINTA ETAPA: Determinação das Portas de Rede de cada VLAN dos Usuários dos Grupos
 
-**OBSERVAÇÃO IMPORTANTE:** a Porta de Rede: FastEthernet 0/1 não será utilizada nas configurações.
+**OBSERVAÇÃO IMPORTANTE:** a Porta de Rede: gigabitEthernet 0/1 não será utilizada nas configurações.
 
-**OBSERVAÇÃO IMPORTANTE:** a Porta de Rede: FastEthernet 0/24 será o Trunk entre o Switch 3560 e o Router 2911.
+**OBSERVAÇÃO IMPORTANTE:** a Porta de Rede: gigabitEthernet 0/24 será o Trunk entre o Switch 3560/9200L e o Router 2911/8300.
 
-**OBSERVAÇÃO IMPORTANTE:** O nome da VLAN deverá ser o **Primeiro Nome dos Alunos do Grupo**, exemplo: *Robson Vaamonde - nome da VLAN 11: robson (sempre em minúsculo), Leandro Ramos - nome da VLAN 12: leandro, etc...*
+**OBSERVAÇÃO IMPORTANTE:** O nome da VLAN deverá ser o **Primeiro Nome dos Alunos do Grupo**, exemplo: *Robson Vaamonde - nome da VLAN 11: robson (sempre em minúsculo), Ivone Vaamonde - nome da VLAN 12: leandro, etc...*
 
 **OBSERVAÇÃO:** CASO O GRUPO NÃO TENHA: *04 (QUATRO) ALUNOS*, DESCONSIDERAR A CRIAÇÃO DAS VLAN'S CORRESPONDENTE, EXEMPLO: *GRUPO COM 3 (TRÊS) ALUNOS DESCONSIDERAR A QUARTA VLAN DO GRUPO MAIS MANTER A VLAN DA REDE SEM-FIO COM O SEU NÚMERO E NOME*.
 
@@ -246,7 +246,7 @@ F) Grupo-06: Porta: 2    VLAN: 61    Nome: ??Primeiro_Nome_do_Primeiro_Aluno??
 
 ## SEXTA ETAPA: Determinação das Sub-Interfaces de Gateway de cada VLAN dos Grupos
 
-01. Determinação do endereço IPv4 de Gateway do Router 2911 utilizadas para Rotear as VLAN's
+01. Determinação do endereço IPv4 de Gateway do Router 2911/8300 utilizadas para Rotear as VLAN's
 ```bash
 A) Grupo-01: Subinterface: 10    IPv4: 172.16.10.254/24
              Subinterface: 11    IPv4: 172.16.11.254/24
