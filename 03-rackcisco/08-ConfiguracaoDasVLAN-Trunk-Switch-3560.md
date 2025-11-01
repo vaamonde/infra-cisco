@@ -100,8 +100,7 @@ enable
 
     !Configurando a Interface de Trunk do Switch 3560 ou 9200 com o Router 2911 ou 8300
     interface gigabitEthernet 1/0/24
-      description Interface de Trunk com o Router 2911 do Grupo-0???
-      switchport trunk encapsulation dot1q
+      description Interface de Trunk com o Router 2911 ou 8300 do Grupo-0???
       switchport mode trunk
       exit
     
