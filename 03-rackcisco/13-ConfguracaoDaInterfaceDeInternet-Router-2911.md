@@ -23,9 +23,9 @@ enable
   configure terminal
 
     !Configuração da interface GigabitEthernet 0/1 para acesso a Internet
-    interface gigabitEthernet 0/1
+    interface gigabitEthernet 0/0/1
 
-      !Descrição da Interface GigabitEthernet 0/1
+      !Descrição da Interface GigabitEthernet 0/0/1
       description Interface de acesso a Internet do Grupo-0???
 
       !Configuração do endereçamento IPv4 Dinâmico via DHCP Client
