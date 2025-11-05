@@ -9,15 +9,15 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 06/06/2024<br>
-Versão: 0.02<br>
-Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
+Data de atualização: 05/10/2025<br>
+Versão: 0.03<br>
+Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560, SW-9200L, RT-2911 e RT-8200L
 
 ## PRIMEIRA ETAPA: Instalação e Configuração do GNU/Linux Mint e Windows 10
 
 **OBSERVAÇÃO: TODOS OS INTEGRANTES DOS GRUPOS DEVERÃO INSTALAR O LINUX MINT E O WINDOWS 10 UTILIZANDO O VIRTUALBOX NA UNIDADE DE DISCO CORRESPONDENTE PARA O ARMAZENAMENTO CORRETO DOS VHDs VIRTUAIS, PROCEDIMENTO SERÁ PASSADO EM SALA DE AULA**
 
-**OBSERVAÇÃO IMPORTANTE:** Utilizar as máquinas virtuais do Linux Mint e Windows 10 no VirtualBOX, nesse cenário as máquinas virtuais estarão conectadas na Rede do Switch Cisco Catalyst 3560 e vai obter os endereços IPv4 fornecidos pelo Router Cisco 2911 via DHCP.
+**OBSERVAÇÃO IMPORTANTE:** Utilizar as máquinas virtuais do Linux Mint e Windows 10 no VirtualBOX, nesse cenário as máquinas virtuais estarão conectadas na Rede do Switch Cisco Catalyst 3560 ou 9200L e vai obter os endereços IPv4 fornecidos pelo Router Cisco 2911 ou 8300L via DHCP.
 
 **OBSERVAÇÃO** Caso a Placa de Rede Off-Board não esteja funcionando, informar o docente para documentar e utilizar a Placa de Rede On-Board.
 
@@ -66,7 +66,7 @@ B) Windows 10
     ipconfig /all (verificar a linha: Servidores DNS 8.8.8.8)
 ```
 
-04. Testar o ping no Router 2911 e do Switch 3560 no Linux e no Windows
+04. Testar o ping no Router 2911 ou 8300L e do Switch 3560 ou 9200L no Linux e no Windows
 
 ```bash
 Linux Mint ou Windows 10 
@@ -84,7 +84,7 @@ Linux Mint ou Windows 10
   ping 172.16.???.???  (Pingar os Desktops Windows e Linux de outras VLANs)
 ```
 
-06. Acessar remotamente o Switch Cisco Catalyst 3560 e Router Cisco 2911 utilizando o SSH
+06. Acessar remotamente o Switch Cisco Catalyst 3560 ou 9200L e Router Cisco 2911 ou 8300L utilizando o SSH
 
 **OBSERVAÇÃO IMPORTANTE:** NOS SISTEMAS OPERACIONAIS GNU/LINUX MINT E NO WINDOWS 10, UTILIZANDO O TERMINAL OU POWERSHELL A CONEXÃO COM O SWITCH E ROUTER VIA COMANDO SSH PRECISA SER MODIFICADA DEVIDO AO ALGORÍTIMO DE CRIPTOGRAFIA DE SENHA DOS EQUIPAMENTOS DA CISCO UTILIZAR UM PADRÃO DIFERENTE, ESSE ERRO NÃO ACONTECE QUANDO VOCÊ UTILIZAR O SOFTWARE PUTTY (RECOMENDADO).
 

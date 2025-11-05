@@ -9,13 +9,13 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 16/05/2024<br>
-Versão: 0.01<br>
-Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
+Data de atualização: 05/10/2025<br>
+Versão: 0.02<br>
+Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560, SW-9200L, RT-2911 e RT-8200L
 
-## PRIMEIRA ETAPA: Backup das Configurações do Switch Cisco Catalyst 3560 e do Router Cisco 2911
+## PRIMEIRA ETAPA: Backup das Configurações do Switch Cisco Catalyst 3560 ou 9200 e do Router Cisco 2911 ou 8300
 
-01. Backup das configurações do Router Cisco 2911
+01. Backup das configurações do Router Cisco 2911 ou 8300
 ```python
 !Acessando o modo exec privilegiado
 enable
@@ -33,7 +33,7 @@ enable
   show running-config
 ```
 
-01. Backup das configurações do Switch Cisco Catalyst 3560
+01. Backup das configurações do Switch Cisco Catalyst 3560 ou 9200
 ```python
 !Acessando o modo exec privilegiado
 enable

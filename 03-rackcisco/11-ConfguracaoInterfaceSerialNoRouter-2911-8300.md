@@ -9,9 +9,9 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/05/2024<br>
-Data de atualização: 16/05/2024<br>
-Versão: 0.01<br>
-Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
+Data de atualização: 05/10/2025<br>
+Versão: 0.02<br>
+Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560, SW-9200L, RT-2911 e RT-8200L
 
 **O QUE É E PARA QUE SERVER O CABO SERIAL V35:** O cabo serial V.35 é um tipo de cabo utilizado em roteadores Cisco (e outros equipamentos de rede) para fazer a conexão com links de WAN (Wide Area Network), como linhas dedicadas fornecidas por operadoras de telecomunicações. Padrão V.35 é uma recomendação da ITU-T (União Internacional de Telecomunicações) para interfaces físicas de comunicação serial de alta velocidade, normalmente até 2 Mbps.
 
@@ -27,7 +27,7 @@ Testado e homologado no Cisco Packet Tracer 8.2.x e Rack Cisco SW-3560 e RT-2911
 
 **E1 (European System 1):** Origem: Europa, Velocidade: 2,048 Mbps, Canais: 32 canais de 64 Kbps cada (30 para voz/dados + 2 para controle e sincronização), Uso: Mais comum na Europa, América Latina e outras partes do mundo.
 
-## PRIMEIRA ETAPA: Configuração da Interface Serial no Router Cisco 2911
+## PRIMEIRA ETAPA: Configuração da Interface Serial no Router Cisco 2911 ou 8300
 
 ```python
 !Acessando o modo Exec Privilegiado
