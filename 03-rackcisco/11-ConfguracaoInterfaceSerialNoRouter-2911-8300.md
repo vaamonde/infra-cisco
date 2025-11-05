@@ -37,7 +37,7 @@ enable
   configure terminal
 
     !Configuração da interface Serial0/0/0 DCE (Data Circuit-Terminating Equipment)
-    interface serial 0/0/0
+    interface serial 0/1/0
 
       !Descrição da Interface Serial DCE
       !OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 232
@@ -62,7 +62,7 @@ enable
       exit
 
     !Configuração da interface Serial0/0/1 DTE (Data Terminal Equipment)
-    interface serial 0/0/1
+    interface serial 0/1/1
 
       !Descrição da Interface Serial DTE
       !OBSERVAÇÃO IMPORTANTE: veja o arquivo 00-DocumentacaoDaRede.txt a partir da linha: 232
