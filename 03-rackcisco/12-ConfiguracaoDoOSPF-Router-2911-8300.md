@@ -124,11 +124,11 @@ enable
 
       !Desativando os anúncios do Protocolo OSPF na Interface da LAN
       !Essa interface não vai anunciar suas rotas pela interface, mais pode receber anúncios
-      passive-interface gigabitEthernet 0/0
+      passive-interface gigabitEthernet 0/0/0
 
       !Desativando os anúncios do Protocolo OSPF na Interface de Internet
       !Essa interface não vai anunciar suas rotas pela interface, mais pode receber anúncios
-      passive-interface gigabitEthernet 0/1
+      passive-interface gigabitEthernet 0/0/1
 
       !Configuração da referência de largura de banda (Métrica) do Protocolo OSPF
       !Utilizado para o cálculo de custo dos links, padrão 10^8 = 100000000 bps (100 Mbps)
@@ -199,5 +199,6 @@ enable
   !Visualizando as informações de interfaces do OSPF
   show ip ospf interface
 ```
+
 
 ## A PARTIR DESSE MOMENTO TODOS OS GRUPOS DEVERÃO SE PINGAR, PINGAR O ENDEREÇO IPv4 DE CADA SWITCH DOS GRUPOS E TAMBÉM OS DESKTOPS.
