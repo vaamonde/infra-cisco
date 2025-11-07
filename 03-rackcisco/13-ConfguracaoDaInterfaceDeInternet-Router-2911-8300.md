@@ -62,11 +62,15 @@ enable
 
   !Traçar as Rotas para os Servidores do Google no Router
   traceroute 8.8.8.8
+```
 
-  !Nos Desktops Linux Mint ou Windows 10 deverá pingar e traçar as rotas via DNS
-  ping 8.8.8.8
-  ping google.com
-  traceroute -n google.com (Linux Mint)
-  tracepath -n google.com  (Linux Mint)
-  tracert -n google.com    (Windows 10)
+## PRIMEIRA ETAPA: Testando as conexões com a Internet nos Desktops Windows e Linux Mint
+
+```python
+!Nos Desktops Linux Mint ou Windows 10 deverá pingar e traçar as rotas via DNS
+ping 8.8.8.8
+ping google.com
+traceroute -n google.com (Linux Mint)
+tracepath -n google.com  (Linux Mint)
+tracert -n google.com    (Windows 10)
 ```
